@@ -1,0 +1,114 @@
+2019-09-09 18:29:40.971 WIB [19] LOG:  database system was interrupted; last known up at 2019-09-09 18:06:29 WIB
+2019-09-09 18:29:42.502 WIB [20] FATAL:  the database system is starting up
+2019-09-09 18:29:45.368 WIB [21] FATAL:  the database system is starting up
+2019-09-09 18:29:53.184 WIB [22] FATAL:  the database system is starting up
+2019-09-09 18:29:57.913 WIB [23] FATAL:  the database system is starting up
+2019-09-09 18:30:02.101 WIB [19] LOG:  database system was not properly shut down; automatic recovery in progress
+2019-09-09 18:30:02.366 WIB [19] LOG:  redo starts at 0/FD47418
+2019-09-09 18:30:02.368 WIB [19] LOG:  invalid record length at 0/FD474F8: wanted 24, got 0
+2019-09-09 18:30:02.368 WIB [19] LOG:  redo done at 0/FD474C0
+2019-09-09 18:30:02.952 WIB [1] LOG:  database system is ready to accept connections
+2019-09-09 18:34:19.293 WIB [33] ERROR:  column reference "unit_kerja_nama" is ambiguous at character 30
+2019-09-09 18:34:19.293 WIB [33] DETAIL:  It could refer to either a PL/pgSQL variable or a table column.
+2019-09-09 18:34:19.293 WIB [33] QUERY:  SELECT  
+			kasda_unit_kerja, unit_kerja_nama, kasda_keterangan, kasda_noreferensi, kasda_debet, kasda_kredit
+		FROM trx.kasda 
+		LEFT join mst.unit_kerja ON kasda_unit_kerja = unit_kerja_id 
+		WHERE kasda_tanggal = p_tanggal::date
+		order by kasda_unit_kerja
+2019-09-09 18:34:19.293 WIB [33] CONTEXT:  PL/pgSQL function trx.harian_detail_get(integer) line 3 at RETURN QUERY
+2019-09-09 18:34:19.293 WIB [33] STATEMENT:  select * from trx.harian_detail_get(20190801)
+2019-09-09 18:34:51.039 WIB [33] ERROR:  syntax error at or near "select" at character 517
+2019-09-09 18:34:51.039 WIB [33] STATEMENT:  CREATE OR REPLACE FUNCTION "trx"."harian_detail_get"(p_tanggal integer)
+	  RETURNS TABLE(unit_kerja TEXT, kerja_nama TEXT, keterangan text, noreferensi TEXT, debet numeric, kredit numeric) AS $BODY$
+	BEGIN 
+	RETURN QUERY
+		SELECT  
+			kasda_unit_kerja, unit_kerja_nama, kasda_keterangan, kasda_noreferensi, kasda_debet, kasda_kredit
+		FROM trx.kasda 
+		LEFT join mst.unit_kerja ON kasda_unit_kerja = unit_kerja_id 
+		WHERE kasda_tanggal = p_tanggal::date
+		order by kasda_unit_kerja;
+	END
+	$BODY$
+	  LANGUAGE plpgsql VOLATILE
+	
+	
+	select * from trx.harian_detail_get(20190801)
+2019-09-09 18:35:03.482 WIB [33] ERROR:  cannot cast type integer to date at character 222
+2019-09-09 18:35:03.482 WIB [33] QUERY:  SELECT  
+			kasda_unit_kerja, unit_kerja_nama, kasda_keterangan, kasda_noreferensi, kasda_debet, kasda_kredit
+		FROM trx.kasda 
+		LEFT join mst.unit_kerja ON kasda_unit_kerja = unit_kerja_id 
+		WHERE kasda_tanggal = p_tanggal::date
+		order by kasda_unit_kerja
+2019-09-09 18:35:03.482 WIB [33] CONTEXT:  PL/pgSQL function trx.harian_detail_get(integer) line 3 at RETURN QUERY
+2019-09-09 18:35:03.482 WIB [33] STATEMENT:  select * from trx.harian_detail_get(20190801)
+2019-09-09 18:35:21.207 WIB [33] ERROR:  function trx.harian_detail_get(integer) does not exist at character 15
+2019-09-09 18:35:21.207 WIB [33] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2019-09-09 18:35:21.207 WIB [33] STATEMENT:  select * from trx.harian_detail_get(20190801)
+2019-09-09 18:35:34.656 WIB [33] ERROR:  structure of query does not match function result type
+2019-09-09 18:35:34.656 WIB [33] DETAIL:  Returned type bigint does not match expected type numeric in column 5.
+2019-09-09 18:35:34.656 WIB [33] CONTEXT:  PL/pgSQL function trx.harian_detail_get(text) line 3 at RETURN QUERY
+2019-09-09 18:35:34.656 WIB [33] STATEMENT:  select * from trx.harian_detail_get('20190801')
+2019-09-09 18:35:50.541 WIB [33] ERROR:  function trx.harian_detail_get(integer) does not exist
+2019-09-09 18:35:50.541 WIB [33] STATEMENT:  DROP FUNCTION "trx"."harian_detail_get"(p_tanggal integer)
+2019-09-09 18:36:26.999 WIB [33] ERROR:  structure of query does not match function result type
+2019-09-09 18:36:26.999 WIB [33] DETAIL:  Returned type bigint does not match expected type numeric in column 5.
+2019-09-09 18:36:26.999 WIB [33] CONTEXT:  PL/pgSQL function trx.harian_detail_get(text) line 3 at RETURN QUERY
+2019-09-09 18:36:26.999 WIB [33] STATEMENT:  select * from trx.harian_detail_get('20190801')
+2019-09-09 18:36:46.196 WIB [33] ERROR:  structure of query does not match function result type
+2019-09-09 18:36:46.196 WIB [33] DETAIL:  Returned type bigint does not match expected type integer in column 5.
+2019-09-09 18:36:46.196 WIB [33] CONTEXT:  PL/pgSQL function trx.harian_detail_get(text) line 3 at RETURN QUERY
+2019-09-09 18:36:46.196 WIB [33] STATEMENT:  select * from trx.harian_detail_get('20190801')
+2019-09-09 18:41:26.873 WIB [33] ERROR:  structure of query does not match function result type
+2019-09-09 18:41:26.873 WIB [33] DETAIL:  Returned type bigint does not match expected type numeric in column 5.
+2019-09-09 18:41:26.873 WIB [33] CONTEXT:  PL/pgSQL function trx.harian_detail_get(text) line 3 at RETURN QUERY
+2019-09-09 18:41:26.873 WIB [33] STATEMENT:  select * from trx.harian_detail_get('20190801')
+2019-09-09 18:43:55.700 WIB [33] ERROR:  cannot change return type of existing function
+2019-09-09 18:43:55.700 WIB [33] DETAIL:  Row type defined by OUT parameters is different.
+2019-09-09 18:43:55.700 WIB [33] HINT:  Use DROP FUNCTION trx.harian_detail_get(text) first.
+2019-09-09 18:43:55.700 WIB [33] STATEMENT:  CREATE OR REPLACE FUNCTION "trx"."harian_detail_get"(p_tanggal text)
+	  RETURNS TABLE(unit_kerja TEXT, kerja_nama TEXT, keterangan text, noreferensi TEXT, debet INTEGER, kredit INTEGER) AS $BODY$
+	BEGIN 
+	RETURN QUERY
+		SELECT  
+			kasda_unit_kerja, unit_kerja_nama, kasda_keterangan, kasda_noreferensi, kasda_debet, kasda_kredit
+		FROM trx.kasda 
+		LEFT join mst.unit_kerja ON kasda_unit_kerja = unit_kerja_id 
+		WHERE kasda_tanggal = p_tanggal::date
+		order by kasda_unit_kerja;
+	END
+	$BODY$
+	  LANGUAGE plpgsql VOLATILE
+2019-09-09 18:44:02.499 WIB [70] ERROR:  structure of query does not match function result type
+2019-09-09 18:44:02.499 WIB [70] DETAIL:  Returned type bigint does not match expected type integer in column 5.
+2019-09-09 18:44:02.499 WIB [70] CONTEXT:  PL/pgSQL function trx.harian_detail_get(text) line 3 at RETURN QUERY
+2019-09-09 18:44:02.499 WIB [70] STATEMENT:  SELECT unit_kerja, kerja_nama, keterangan, noreferensi, debet, kredit        FROM trx.harian_detail_get('20190801')
+2019-09-09 18:44:21.629 WIB [72] ERROR:  integer out of range
+2019-09-09 18:44:21.629 WIB [72] CONTEXT:  PL/pgSQL function trx.harian_detail_get(text) line 3 at RETURN QUERY
+2019-09-09 18:44:21.629 WIB [72] STATEMENT:  SELECT unit_kerja, kerja_nama, keterangan, noreferensi, debet, kredit        FROM trx.harian_detail_get('20190801')
+2019-09-09 18:45:48.668 WIB [77] ERROR:  zero-length delimited identifier at or near """" at character 71
+2019-09-09 18:45:48.668 WIB [77] STATEMENT:  SELECT unit_kerja, kerja_nama, keterangan, noreferensi, NULLIF(debet, "")::int, kredit        FROM trx.harian_detail_get('20190801')
+2019-09-09 18:55:25.192 WIB [33] ERROR:  column "debet" does not exist at character 31
+2019-09-09 18:55:25.192 WIB [33] STATEMENT:  select * from trx.kasda where debet > 2147483647
+2019-09-09 19:43:50.125 WIB [33] ERROR:  column "p_tanggal" does not exist at character 257
+2019-09-09 19:43:50.125 WIB [33] STATEMENT:  SELECT  json_agg(row_to_json(t))  FROM 
+			(
+	SELECT  
+			kasda_unit_kerja, unit_kerja_nama, kasda_keterangan, kasda_noreferensi, kasda_debet, kasda_kredit
+		FROM trx.kasda 
+		LEFT JOIN mst.unit_kerja ON kasda_unit_kerja = unit_kerja_id 
+		WHERE kasda_tanggal = p_tanggal::date
+		ORDER BY kasda_unit_kerja
+	) t
+2019-09-09 22:50:58.941 WIB [443] ERROR:  column "unit_kerja" does not exist at character 8
+2019-09-09 22:50:58.941 WIB [443] STATEMENT:  SELECT unit_kerja, kerja_nama, keterangan, noreferensi, debet, kredit,kasda_tanggal        FROM trx.harian_detail_get('20190801')
+2019-09-09 22:51:32.020 WIB [446] ERROR:  column "unit_kerja" does not exist at character 8
+2019-09-09 22:51:32.020 WIB [446] STATEMENT:  SELECT unit_kerja, kerja_nama, keterangan, noreferensi, debet, kredit,kasda_tanggal        FROM trx.kasda WHERE kasda_tanggal = '20190801'
+2019-09-09 22:51:34.343 WIB [446] ERROR:  column "unit_kerja" does not exist at character 8
+2019-09-09 22:51:34.343 WIB [446] STATEMENT:  SELECT unit_kerja, kerja_nama, keterangan, noreferensi, debet, kredit,kasda_tanggal        FROM trx.kasda WHERE kasda_tanggal = '20190801'
+2019-09-09 22:51:43.582 WIB [448] ERROR:  column "kerja_nama" does not exist at character 26
+2019-09-09 22:51:43.582 WIB [448] STATEMENT:  SELECT kasda_unit_kerja, kerja_nama, keterangan, noreferensi, debet, kredit,kasda_tanggal        FROM trx.kasda WHERE kasda_tanggal = '20190801'
+2019-09-09 22:52:00.794 WIB [450] ERROR:  column "unit_kerja_nama" does not exist at character 26
+2019-09-09 22:52:00.794 WIB [450] STATEMENT:  SELECT kasda_unit_kerja, unit_kerja_nama, kasda_keterangan, kasda_noreferensi, kasda_debet, kasda_kredit,kasda_tanggal        FROM trx.kasda WHERE kasda_tanggal = '20190801'

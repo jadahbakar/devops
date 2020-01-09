@@ -1,0 +1,10 @@
+2019-01-23 13:55:08.076 WIB [19] LOG:  database system was interrupted; last known up at 2019-01-23 08:40:07 WIB
+2019-01-23 13:55:24.069 WIB [19] LOG:  database system was not properly shut down; automatic recovery in progress
+2019-01-23 13:55:24.709 WIB [19] LOG:  redo starts at 0/5849920
+2019-01-23 13:55:24.710 WIB [19] LOG:  invalid record length at 0/5849A00: wanted 24, got 0
+2019-01-23 13:55:24.710 WIB [19] LOG:  redo done at 0/58499C8
+2019-01-23 13:55:25.853 WIB [1] LOG:  database system is ready to accept connections
+2019-01-24 09:34:48.933 WIB [373] ERROR:  invalid input syntax for type json at character 514
+2019-01-24 09:34:48.933 WIB [373] DETAIL:  Token "'" is invalid.
+2019-01-24 09:34:48.933 WIB [373] CONTEXT:  JSON data, line 1: ['...
+2019-01-24 09:34:48.933 WIB [373] STATEMENT:  INSERT INTO "tmp"."rkf" ("rkf_sts", "rkf_id", "rkf_user", "rkf_user_from", "rkf_tahun", "rkf_jenis_id", "rkf_proker", "rkf_status_proker", "rkf_skala_proker", "rkf_kat_proker", "rkf_bsc", "rkf_konsultan", "rkf_unit_pelaksana", "rkf_visi", "rkf_misi", "rkf_coreplan", "rkf_kud", "rkf_tujuan_proker", "rkf_indikator", "rkf_targetfin", "rkf_jadwal") VALUES (1, 612, NULL, '001DTI', 2019, 1, 'Membuat kebijakan Customer Profitability Analysis (CPA)', NULL, NULL, NULL, NULL, NULL, '[]', '[]', '[]', '[]', '[]', '[]', '[''''Terbitnya SK mengenai Customer Profitability Analysis (CPA)'''']', NULL, '["1", "2", "3", "4", "5", "6"]')

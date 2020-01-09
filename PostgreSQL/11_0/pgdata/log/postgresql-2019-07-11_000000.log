@@ -1,0 +1,6 @@
+2019-07-11 13:56:24.347 WIB [26] ERROR:  column "rkf.rkf_id" must appear in the GROUP BY clause or be used in an aggregate function at character 8
+2019-07-11 13:56:24.347 WIB [26] STATEMENT:  select * 
+	FROM mst.rkf WHERE rkf_user_from = '001PPB' AND rkf_tahun = 2019 AND rkf_jenis_id = 2
+	GROUP BY rkf_sts
+2019-07-11 16:20:01.536 WIB [24] LOG:  stats_timestamp 2019-07-11 16:20:01.539286+07 is later than collector's time 2019-07-11 16:20:01.536654+07 for database 57743
+2019-07-11 21:32:39.893 WIB [24] LOG:  stats_timestamp 2019-07-11 21:32:39.895005+07 is later than collector's time 2019-07-11 21:32:39.893136+07 for database 57743

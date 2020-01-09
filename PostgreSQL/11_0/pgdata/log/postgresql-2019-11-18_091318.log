@@ -1,0 +1,219 @@
+2019-11-18 09:13:18.663 WIB [19] LOG:  database system was interrupted; last known up at 2019-11-15 15:14:01 WIB
+2019-11-18 09:13:33.897 WIB [19] LOG:  database system was not properly shut down; automatic recovery in progress
+2019-11-18 09:13:34.071 WIB [19] LOG:  redo starts at 0/14EEBDA8
+2019-11-18 09:13:34.071 WIB [19] LOG:  invalid record length at 0/14EEBDE0: wanted 24, got 0
+2019-11-18 09:13:34.071 WIB [19] LOG:  redo done at 0/14EEBDA8
+2019-11-18 09:13:34.488 WIB [1] LOG:  database system is ready to accept connections
+2019-11-18 10:30:47.536 WIB [26] FATAL:  password authentication failed for user "postgres"
+2019-11-18 10:30:47.536 WIB [26] DETAIL:  Password does not match for user "postgres".
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-11-18 10:31:31.804 WIB [27] ERROR:  database "testing" already exists
+2019-11-18 10:31:31.804 WIB [27] STATEMENT:  CREATE DATABASE testing
+	    WITH 
+	    OWNER = testing
+	    ENCODING = 'UTF8'
+	    CONNECTION LIMIT = -1;
+	
+2019-11-18 10:32:22.967 WIB [35] FATAL:  password authentication failed for user "testing"
+2019-11-18 10:32:22.967 WIB [35] DETAIL:  Password does not match for user "testing".
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-11-18 10:38:31.581 WIB [45] ERROR:  permission denied for schema mst
+2019-11-18 10:38:31.581 WIB [45] STATEMENT:  DROP TABLE "mst"."users";
+2019-11-18 10:38:44.342 WIB [45] ERROR:  permission denied for schema mst at character 15
+2019-11-18 10:38:44.342 WIB [45] STATEMENT:  SELECT * FROM "mst"."users" LIMIT 1000 OFFSET 0
+2019-11-18 10:41:19.270 WIB [45] ERROR:  syntax error at or near "KEY" at character 206
+2019-11-18 10:41:19.270 WIB [45] STATEMENT:  CREATE TABLE mst.authentication (
+	  id TEXT NOT NULL,
+	  user_id INTEGER NOT NULL,
+	  secret_id INTEGER NOT NULL,
+	  created_at timestamp NULL DEFAULT NULL,
+	  updated_at timestamp NULL DEFAULT NULL,
+	  UNIQUE KEY authentication_id_unique (id),
+	  KEY authentication_secret_id_foreign (secret_id),
+	  KEY authentication_user_id_foreign (user_id),
+	  CONSTRAINT authentication_secret_id_foreign FOREIGN KEY (secret_id) REFERENCES secret (id),
+	  CONSTRAINT authentication_user_id_foreign FOREIGN KEY (user_id) REFERENCES users (id)
+	)
+2019-11-18 10:41:27.222 WIB [45] ERROR:  syntax error at or near "KEY" at character 206
+2019-11-18 10:41:27.222 WIB [45] STATEMENT:  CREATE TABLE mst.authentication (
+	  id TEXT NOT NULL,
+	  user_id INTEGER NOT NULL,
+	  secret_id INTEGER NOT NULL,
+	  created_at timestamp NULL DEFAULT NULL,
+	  updated_at timestamp NULL DEFAULT NULL,
+	  UNIQUE KEY authentication_id_unique (id),
+	  KEY authentication_secret_id_foreign (secret_id),
+	  KEY authentication_user_id_foreign (user_id),
+	  CONSTRAINT authentication_secret_id_foreign FOREIGN KEY (secret_id) REFERENCES secret (id),
+	  CONSTRAINT authentication_user_id_foreign FOREIGN KEY (user_id) REFERENCES users (id)
+	)
+2019-11-18 10:41:28.121 WIB [45] ERROR:  syntax error at or near "KEY" at character 206
+2019-11-18 10:41:28.121 WIB [45] STATEMENT:  CREATE TABLE mst.authentication (
+	  id TEXT NOT NULL,
+	  user_id INTEGER NOT NULL,
+	  secret_id INTEGER NOT NULL,
+	  created_at timestamp NULL DEFAULT NULL,
+	  updated_at timestamp NULL DEFAULT NULL,
+	  UNIQUE KEY authentication_id_unique (id),
+	  KEY authentication_secret_id_foreign (secret_id),
+	  KEY authentication_user_id_foreign (user_id),
+	  CONSTRAINT authentication_secret_id_foreign FOREIGN KEY (secret_id) REFERENCES secret (id),
+	  CONSTRAINT authentication_user_id_foreign FOREIGN KEY (user_id) REFERENCES users (id)
+	)
+2019-11-18 10:41:54.083 WIB [45] ERROR:  syntax error at or near "KEY" at character 206
+2019-11-18 10:41:54.083 WIB [45] STATEMENT:  CREATE TABLE mst.authentication (
+	  id TEXT NOT NULL,
+	  user_id INTEGER NOT NULL,
+	  secret_id INTEGER NOT NULL,
+	  created_at timestamp NULL DEFAULT NULL,
+	  updated_at timestamp NULL DEFAULT NULL,
+	  UNIQUE KEY authentication_id_unique (id),
+	  CONSTRAINT authentication_secret_id_foreign FOREIGN KEY (secret_id) REFERENCES secret (id),
+	  CONSTRAINT authentication_user_id_foreign FOREIGN KEY (user_id) REFERENCES users (id)
+	)
+2019-11-18 10:41:55.092 WIB [45] ERROR:  syntax error at or near "KEY" at character 206
+2019-11-18 10:41:55.092 WIB [45] STATEMENT:  CREATE TABLE mst.authentication (
+	  id TEXT NOT NULL,
+	  user_id INTEGER NOT NULL,
+	  secret_id INTEGER NOT NULL,
+	  created_at timestamp NULL DEFAULT NULL,
+	  updated_at timestamp NULL DEFAULT NULL,
+	  UNIQUE KEY authentication_id_unique (id),
+	  CONSTRAINT authentication_secret_id_foreign FOREIGN KEY (secret_id) REFERENCES secret (id),
+	  CONSTRAINT authentication_user_id_foreign FOREIGN KEY (user_id) REFERENCES users (id)
+	)
+2019-11-18 10:41:55.432 WIB [45] ERROR:  syntax error at or near "KEY" at character 206
+2019-11-18 10:41:55.432 WIB [45] STATEMENT:  CREATE TABLE mst.authentication (
+	  id TEXT NOT NULL,
+	  user_id INTEGER NOT NULL,
+	  secret_id INTEGER NOT NULL,
+	  created_at timestamp NULL DEFAULT NULL,
+	  updated_at timestamp NULL DEFAULT NULL,
+	  UNIQUE KEY authentication_id_unique (id),
+	  CONSTRAINT authentication_secret_id_foreign FOREIGN KEY (secret_id) REFERENCES secret (id),
+	  CONSTRAINT authentication_user_id_foreign FOREIGN KEY (user_id) REFERENCES users (id)
+	)
+2019-11-18 10:41:55.665 WIB [45] ERROR:  syntax error at or near "KEY" at character 206
+2019-11-18 10:41:55.665 WIB [45] STATEMENT:  CREATE TABLE mst.authentication (
+	  id TEXT NOT NULL,
+	  user_id INTEGER NOT NULL,
+	  secret_id INTEGER NOT NULL,
+	  created_at timestamp NULL DEFAULT NULL,
+	  updated_at timestamp NULL DEFAULT NULL,
+	  UNIQUE KEY authentication_id_unique (id),
+	  CONSTRAINT authentication_secret_id_foreign FOREIGN KEY (secret_id) REFERENCES secret (id),
+	  CONSTRAINT authentication_user_id_foreign FOREIGN KEY (user_id) REFERENCES users (id)
+	)
+2019-11-18 10:41:55.873 WIB [45] ERROR:  syntax error at or near "KEY" at character 206
+2019-11-18 10:41:55.873 WIB [45] STATEMENT:  CREATE TABLE mst.authentication (
+	  id TEXT NOT NULL,
+	  user_id INTEGER NOT NULL,
+	  secret_id INTEGER NOT NULL,
+	  created_at timestamp NULL DEFAULT NULL,
+	  updated_at timestamp NULL DEFAULT NULL,
+	  UNIQUE KEY authentication_id_unique (id),
+	  CONSTRAINT authentication_secret_id_foreign FOREIGN KEY (secret_id) REFERENCES secret (id),
+	  CONSTRAINT authentication_user_id_foreign FOREIGN KEY (user_id) REFERENCES users (id)
+	)
+2019-11-18 10:43:21.767 WIB [45] ERROR:  syntax error at or near "KEY" at character 62
+2019-11-18 10:43:21.767 WIB [45] STATEMENT:  CREATE TABLE mst.authentication (
+	  id TEXT NOT NULL  UNIQUE KEY,
+	  user_id INTEGER NOT NULL,
+	  secret_id INTEGER NOT NULL,
+	  created_at timestamp NULL DEFAULT NULL,
+	  updated_at timestamp NULL DEFAULT NULL,
+	  CONSTRAINT authentication_secret_id_foreign FOREIGN KEY (secret_id) REFERENCES secret (id),
+	  CONSTRAINT authentication_user_id_foreign FOREIGN KEY (user_id) REFERENCES users (id)
+	)
+2019-11-18 10:47:14.396 WIB [45] ERROR:  syntax error at or near "KEY" at character 62
+2019-11-18 10:47:14.396 WIB [45] STATEMENT:  CREATE TABLE mst.authentication (
+	  id TEXT NOT NULL  UNIQUE KEY,
+	  user_id INTEGER NOT NULL,
+	  secret_id INTEGER NOT NULL,
+	  created_at timestamp NULL DEFAULT NULL,
+	  updated_at timestamp NULL DEFAULT NULL
+	)
+2019-11-18 10:47:40.996 WIB [45] ERROR:  permission denied for schema mst at character 14
+2019-11-18 10:47:40.996 WIB [45] STATEMENT:  CREATE TABLE mst.authentication (
+	  id TEXT NOT NULL UNIQUE,
+	  user_id INTEGER NOT NULL,
+	  secret_id INTEGER NOT NULL,
+	  created_at timestamp NULL DEFAULT NULL,
+	  updated_at timestamp NULL DEFAULT NULL
+	)
+2019-11-18 10:47:53.772 WIB [45] ERROR:  permission denied for schema mst at character 14
+2019-11-18 10:47:53.772 WIB [45] STATEMENT:  CREATE TABLE mst.authentication (
+	  id TEXT NOT NULL,
+	  user_id INTEGER NOT NULL,
+	  secret_id INTEGER NOT NULL,
+	  created_at timestamp NULL DEFAULT NULL,
+	  updated_at timestamp NULL DEFAULT NULL,
+		UNIQUE(id)
+	)
+2019-11-18 10:47:55.907 WIB [45] ERROR:  permission denied for schema mst at character 14
+2019-11-18 10:47:55.907 WIB [45] STATEMENT:  CREATE TABLE mst.authentication (
+	  id TEXT NOT NULL,
+	  user_id INTEGER NOT NULL,
+	  secret_id INTEGER NOT NULL,
+	  created_at timestamp NULL DEFAULT NULL,
+	  updated_at timestamp NULL DEFAULT NULL,
+		UNIQUE(id)
+	)
+2019-11-18 10:48:53.436 WIB [45] ERROR:  relation "secret" already exists
+2019-11-18 10:48:53.436 WIB [45] STATEMENT:  CREATE TABLE mst.secret (
+	  id SERIAL PRIMARY KEY ,
+	  secret TEXT NOT NULL,
+	  description TEXT NOT NULL,
+	  permission json NOT NULL,
+	  created_at timestamp NULL DEFAULT NULL,
+	  updated_at timestamp NULL DEFAULT NULL,
+		UNIQUE(secret)
+	)
+2019-11-18 11:17:19.287 WIB [179] FATAL:  password authentication failed for user "testing"
+2019-11-18 11:17:19.287 WIB [179] DETAIL:  Password does not match for user "testing".
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-11-18 11:18:04.055 WIB [183] FATAL:  password authentication failed for user "testing"
+2019-11-18 11:18:04.055 WIB [183] DETAIL:  Password does not match for user "testing".
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-11-18 11:30:06.060 WIB [221] ERROR:  syntax error at or near "," at character 101
+2019-11-18 11:30:06.060 WIB [221] STATEMENT:  INSERT INTO mst.users (name, email, password, remember_token, created_at, updated_at)
+	      VALUES(?, ?, ?, ?, ?, ?) RETURNING id
+2019-11-18 11:32:00.871 WIB [230] ERROR:  syntax error at or near "," at character 101
+2019-11-18 11:32:00.871 WIB [230] STATEMENT:  INSERT INTO mst.users (name, email, password, remember_token, created_at, updated_at)
+	      VALUES(?, ?, ?, ?, ?, ?) RETURNING id
+2019-11-18 11:37:20.318 WIB [246] ERROR:  column "name" does not exist at character 101
+2019-11-18 11:37:20.318 WIB [246] HINT:  There is a column named "name" in table "users", but it cannot be referenced from this part of the query.
+2019-11-18 11:37:20.318 WIB [246] STATEMENT:  INSERT INTO mst.users (name, email, password, remember_token, created_at, updated_at)
+	      VALUES (name, email, password, token, createAt, updateAt) RETURNING id
+2019-11-18 11:43:15.974 WIB [265] ERROR:  column "name" does not exist at character 101
+2019-11-18 11:43:15.974 WIB [265] HINT:  There is a column named "name" in table "users", but it cannot be referenced from this part of the query.
+2019-11-18 11:43:15.974 WIB [265] STATEMENT:  INSERT INTO mst.users (name, email, password, remember_token, created_at, updated_at)
+	      VALUES (name, email, password, token, createAt, updateAt) RETURNING id
+2019-11-18 11:45:31.266 WIB [273] ERROR:  syntax error at or near "11" at character 242
+2019-11-18 11:45:31.266 WIB [273] STATEMENT:  INSERT INTO mst.users (name, email, password, remember_token, created_at, updated_at)
+	      VALUES (dedy, dedy@gmail.com, a94a8fe5ccb19ba61c4c0873d391e987982fbbd3, f65b957e3b1169c9c6517e017244982dcd1f3f1cc64d641c47d9638e28ce956c, 2019-11-18 11:45:31, 2019-11-18 11:45:31) RETURNING id
+2019-11-18 11:46:03.246 WIB [276] ERROR:  syntax error at or near "11" at character 242
+2019-11-18 11:46:03.246 WIB [276] STATEMENT:  INSERT INTO mst.users (name, email, password, remember_token, created_at, updated_at)
+	      VALUES (dedy, dedy@gmail.com, a94a8fe5ccb19ba61c4c0873d391e987982fbbd3, f2e612f879026383513f1fa4275e21c6475d734717c07ee990d814babe084019, 2019-11-18 11:46:03, 2019-11-18 11:46:03) RETURNING id
+2019-11-18 11:46:55.647 WIB [279] ERROR:  syntax error at or near "c249650ad9a45fe2a673cfe1327887d26ce4ebce847ff3de78bf39ee3792fd" at character 167
+2019-11-18 11:46:55.647 WIB [279] STATEMENT:  INSERT INTO mst.users (name, email, password, remember_token, created_at, updated_at)
+	      VALUES (dedy, dedy@gmail.com, a94a8fe5ccb19ba61c4c0873d391e987982fbbd3, 37c249650ad9a45fe2a673cfe1327887d26ce4ebce847ff3de78bf39ee3792fd, 2019-11-18 11:46:55, 2019-11-18 11:46:55) RETURNING id
+2019-11-18 11:47:04.619 WIB [281] ERROR:  syntax error at or near "11" at character 242
+2019-11-18 11:47:04.619 WIB [281] STATEMENT:  INSERT INTO mst.users (name, email, password, remember_token, created_at, updated_at)
+	      VALUES (dedy, dedy@gmail.com, a94a8fe5ccb19ba61c4c0873d391e987982fbbd3, aa4ef77a497d4bab26c8a8aa255c0b9263f1d971780ca09d1be8fde54357e514, 2019-11-18 11:47:04, 2019-11-18 11:47:04) RETURNING id
+2019-11-18 11:47:06.790 WIB [281] ERROR:  syntax error at or near "d6a056b9bb901ded98141d4a70b62d4016d2cffc8b4144c386a0bb8053068" at character 168
+2019-11-18 11:47:06.790 WIB [281] STATEMENT:  INSERT INTO mst.users (name, email, password, remember_token, created_at, updated_at)
+	      VALUES (dedy, dedy@gmail.com, a94a8fe5ccb19ba61c4c0873d391e987982fbbd3, 661d6a056b9bb901ded98141d4a70b62d4016d2cffc8b4144c386a0bb8053068, 2019-11-18 11:47:06, 2019-11-18 11:47:06) RETURNING id
+2019-11-18 11:55:23.760 WIB [307] ERROR:  syntax error at or near "ea82d91b6137d2d85760d55247b5e0c3c965d92dca8833597b7ac3727b4127" at character 163
+2019-11-18 11:55:23.760 WIB [307] STATEMENT:  INSERT INTO mst.users (name, email, password, remember_token, created_at, updated_at)
+	  VALUES (dedy, dedy@gmail.com, a94a8fe5ccb19ba61c4c0873d391e987982fbbd3, 45ea82d91b6137d2d85760d55247b5e0c3c965d92dca8833597b7ac3727b4127, 2019-11-18 11:55:23, 2019-11-18 11:55:23) RETURNING id
+2019-11-18 11:56:00.182 WIB [309] ERROR:  syntax error at or near "11" at character 238
+2019-11-18 11:56:00.182 WIB [309] STATEMENT:  INSERT INTO mst.users (name, email, password, remember_token, created_at, updated_at)
+	  VALUES (dedy, dedy@gmail.com, a94a8fe5ccb19ba61c4c0873d391e987982fbbd3, de60693ca36189b83782b419fc8bf57f105b3c9b39a8acec53f09ccc4afb95ea, 2019-11-18 11:56:00::date, 2019-11-18 11:56:00::date) RETURNING id
+2019-11-18 11:59:49.461 WIB [322] ERROR:  syntax error at or near "ba2346119c53dbee493f7c7aa421fd3dd8165d66698ac72e15664b27b6b7c76" at character 162
+2019-11-18 11:59:49.461 WIB [322] STATEMENT:  INSERT INTO mst.users (name, email, password, remember_token, created_at, updated_at)
+	  VALUES (dedy, dedy@gmail.com, a94a8fe5ccb19ba61c4c0873d391e987982fbbd3, 9ba2346119c53dbee493f7c7aa421fd3dd8165d66698ac72e15664b27b6b7c76, '2019-11-18 11:59:49'::date, '2019-11-18 11:59:49'::date) RETURNING id
+2019-11-18 12:00:25.197 WIB [324] ERROR:  duplicate key value violates unique constraint "users_email_key"
+2019-11-18 12:00:25.197 WIB [324] DETAIL:  Key (email)=(dedy@gmail.com) already exists.
+2019-11-18 12:00:25.197 WIB [324] STATEMENT:  INSERT INTO mst.users (name, email, password, remember_token, created_at, updated_at)
+	  VALUES ('dedy', 'dedy@gmail.com', 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3', 'edd8d4a1f180e353da8263cbaee9785028b01d7a13d3d54162f8ec00f20c9c40', '2019-11-18 12:00:25'::date, '2019-11-18 12:00:25'::date) RETURNING id

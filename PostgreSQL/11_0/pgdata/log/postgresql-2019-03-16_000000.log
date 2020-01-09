@@ -1,0 +1,26 @@
+2019-03-16 12:53:30.024 WIB [3114] ERROR:  column "kecamatan_kelurahan" does not exist at character 62
+2019-03-16 12:53:30.024 WIB [3114] STATEMENT:  SELECT kecamatan_id, kecamatan_nama FROM mst.kecamatan WHERE kecamatan_kelurahan = '3374080' 
+2019-03-16 17:06:23.711 WIB [3810] FATAL:  database "planning" does not exist
+2019-03-16 17:07:20.211 WIB [3816] ERROR:  permission denied for schema sec
+2019-03-16 17:07:20.211 WIB [3816] STATEMENT:  DROP TABLE "sec"."menu_child";
+2019-03-16 17:07:46.631 WIB [3816] ERROR:  permission denied for schema sec
+2019-03-16 17:07:46.631 WIB [3816] STATEMENT:  DROP TABLE "sec"."menu_parent";
+2019-03-16 17:10:03.301 WIB [3819] ERROR:  permission denied for schema sec
+2019-03-16 17:10:03.301 WIB [3819] STATEMENT:  DROP SEQUENCE IF EXISTS "sec"."roles_role_id_seq"
+2019-03-16 17:13:03.401 WIB [3807] ERROR:  permission denied for schema sec at character 28
+2019-03-16 17:13:03.401 WIB [3807] STATEMENT:  SELECT COUNT(*)::text FROM sec.roles;
+2019-03-16 17:16:47.373 WIB [3807] ERROR:  permission denied for schema sec at character 28
+2019-03-16 17:16:47.373 WIB [3807] STATEMENT:  SELECT COUNT(*)::text FROM sec.roles;
+2019-03-16 21:53:26.573 WIB [3831] ERROR:  permission denied for schema sec at character 15
+2019-03-16 21:53:26.573 WIB [3831] STATEMENT:  SELECT * FROM "sec"."role_menu" LIMIT 1000 OFFSET 0
+2019-03-16 21:54:41.343 WIB [4097] ERROR:  permission denied for schema sec
+2019-03-16 21:54:41.343 WIB [4097] STATEMENT:  ALTER TABLE "sec"."role_menu" RENAME TO "roles_menu";
+2019-03-16 21:55:13.607 WIB [4097] ERROR:  permission denied for schema sec
+2019-03-16 21:55:13.607 WIB [4097] STATEMENT:  ALTER TABLE "sec"."role_menu" RENAME TO "roles_menu";
+2019-03-16 21:57:40.558 WIB [3822] ERROR:  syntax error at end of input at character 106
+2019-03-16 21:57:40.558 WIB [3822] STATEMENT:  INSERT INTO sec.roles VALUES 
+	(1,1,'Administrator'),
+	(2,1,'Supervisor'),
+	(3,1,'Operator'),
+	(4,1,'User'),
+	

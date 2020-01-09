@@ -1,0 +1,3 @@
+2019-11-27 19:53:42.363 WIB [24] LOG:  stats_timestamp 2019-11-27 19:53:42.374132+07 is later than collector's time 2019-11-27 19:53:42.363188+07 for database 0
+2019-11-28 06:01:02.306 WIB [3050] ERROR:  relation "rkf_pkey" already exists
+2019-11-28 06:01:02.306 WIB [3050] STATEMENT:  ALTER TABLE "tmp"."rkf" ADD CONSTRAINT "rkf_pkey" PRIMARY KEY ("rkf_id")

@@ -1,0 +1,11 @@
+2019-11-04 20:40:28.933 WIB [19] LOG:  database system was interrupted; last known up at 2019-11-01 10:05:22 WIB
+2019-11-04 20:40:47.394 WIB [19] LOG:  database system was not properly shut down; automatic recovery in progress
+2019-11-04 20:40:47.600 WIB [19] LOG:  redo starts at 0/127074F0
+2019-11-04 20:40:47.601 WIB [19] LOG:  invalid record length at 0/12707528: wanted 24, got 0
+2019-11-04 20:40:47.601 WIB [19] LOG:  redo done at 0/127074F0
+2019-11-04 20:40:48.160 WIB [1] LOG:  database system is ready to accept connections
+2019-11-04 20:40:55.780 WIB [26] FATAL:  password authentication failed for user "postgres"
+2019-11-04 20:40:55.780 WIB [26] DETAIL:  Password does not match for user "postgres".
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-11-04 20:47:02.686 WIB [50] FATAL:  database "eplanning" does not exist
+2019-11-04 20:47:11.694 WIB [51] FATAL:  database "eplanning" does not exist

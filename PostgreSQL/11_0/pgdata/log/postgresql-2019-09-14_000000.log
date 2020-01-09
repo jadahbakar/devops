@@ -1,0 +1,13 @@
+2019-09-15 18:02:26.842 WIB [376] ERROR:  relation "mst.users" does not exist at character 15
+2019-09-15 18:02:26.842 WIB [376] STATEMENT:  SELECT * FROM mst.users ORDER BY id ASC
+2019-09-15 18:03:37.705 WIB [379] ERROR:  relation "mst.users" does not exist at character 15
+2019-09-15 18:03:37.705 WIB [379] STATEMENT:  SELECT * FROM mst.users ORDER BY id ASC
+2019-09-15 18:05:47.023 WIB [392] ERROR:  relation "mst.users" does not exist at character 15
+2019-09-15 18:05:47.023 WIB [392] STATEMENT:  SELECT * FROM mst.users ORDER BY id ASC
+2019-09-15 18:05:58.488 WIB [394] ERROR:  relation "users" does not exist at character 15
+2019-09-15 18:05:58.488 WIB [394] STATEMENT:  SELECT * FROM users ORDER BY id ASC
+2019-09-15 18:06:20.305 WIB [396] ERROR:  relation "mst.users" does not exist at character 15
+2019-09-15 18:06:20.305 WIB [396] STATEMENT:  SELECT * FROM mst.users ORDER BY id ASC
+2019-09-15 18:20:28.289 WIB [24] LOG:  stats_timestamp 2019-09-15 18:20:28.296646+07 is later than collector's time 2019-09-15 18:20:28.289167+07 for database 221184
+2019-09-16 08:01:07.729 WIB [782] ERROR:  relation "users" does not exist at character 13
+2019-09-16 08:01:07.729 WIB [782] STATEMENT:  DELETE FROM users WHERE id = $1

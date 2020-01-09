@@ -1,0 +1,201 @@
+2019-04-01 11:44:51.058 WIB [440] ERROR:  syntax error at or near "}" at character 29
+2019-04-01 11:44:51.058 WIB [440] STATEMENT:  SELECT sec.generate_parent(1}) AS menu
+2019-04-01 11:49:40.824 WIB [440] ERROR:  missing data type declaration at or near "=" at character 134
+2019-04-01 11:49:40.824 WIB [440] STATEMENT:  CREATE OR REPLACE FUNCTION "sec"."generate_menu_user"("p_user_id" TEXT)
+	  RETURNS TABLE("parent" json) AS $BODY$
+	DECLARE 
+		p_role_id = INTEGER;
+	BEGIN 
+	RETURN QUERY
+	
+			p_role_id := SELECT user_role FROM sec.userid WHERE user_id = p_user_id;
+		
+			SELECT row_to_json(t) FROM 
+			(
+			SELECT name, url, icon, sec.generate_child(menu_prt_id,p_role_id) AS children
+			FROM sec.menu_parent 
+			WHERE menu_prt_sts = 1
+			ORDER BY menu_prt_urut
+			) t;
+			
+	END
+	$BODY$
+	  LANGUAGE plpgsql VOLATILE
+2019-04-01 11:49:50.258 WIB [440] ERROR:  syntax error at or near ":" at character 134
+2019-04-01 11:49:50.258 WIB [440] CONTEXT:  invalid type name ": INTEGER"
+2019-04-01 11:49:50.258 WIB [440] STATEMENT:  CREATE OR REPLACE FUNCTION "sec"."generate_menu_user"("p_user_id" TEXT)
+	  RETURNS TABLE("parent" json) AS $BODY$
+	DECLARE 
+		p_role_id : INTEGER;
+	BEGIN 
+	RETURN QUERY
+	
+			p_role_id := SELECT user_role FROM sec.userid WHERE user_id = p_user_id;
+		
+			SELECT row_to_json(t) FROM 
+			(
+			SELECT name, url, icon, sec.generate_child(menu_prt_id,p_role_id) AS children
+			FROM sec.menu_parent 
+			WHERE menu_prt_sts = 1
+			ORDER BY menu_prt_urut
+			) t;
+			
+	END
+	$BODY$
+	  LANGUAGE plpgsql VOLATILE
+2019-04-01 11:50:34.855 WIB [440] ERROR:  syntax error at or near "p_role_id" at character 166
+2019-04-01 11:50:34.855 WIB [440] STATEMENT:  CREATE OR REPLACE FUNCTION "sec"."generate_menu_user"("p_user_id" TEXT)
+	  RETURNS TABLE("parent" json) AS $BODY$
+	DECLARE 
+		p_role_id INTEGER;
+	BEGIN 
+	RETURN QUERY
+	
+			p_role_id := SELECT user_role FROM sec.userid WHERE user_id = p_user_id;
+		
+			SELECT row_to_json(t) FROM 
+			(
+			SELECT name, url, icon, sec.generate_child(menu_prt_id,p_role_id) AS children
+			FROM sec.menu_parent 
+			WHERE menu_prt_sts = 1
+			ORDER BY menu_prt_urut
+			) t;
+			
+	END
+	$BODY$
+	  LANGUAGE plpgsql VOLATILE
+2019-04-01 11:50:36.941 WIB [440] ERROR:  syntax error at or near "p_role_id" at character 166
+2019-04-01 11:50:36.941 WIB [440] STATEMENT:  CREATE OR REPLACE FUNCTION "sec"."generate_menu_user"("p_user_id" TEXT)
+	  RETURNS TABLE("parent" json) AS $BODY$
+	DECLARE 
+		p_role_id INTEGER;
+	BEGIN 
+	RETURN QUERY
+	
+			p_role_id := SELECT user_role FROM sec.userid WHERE user_id = p_user_id;
+		
+			SELECT row_to_json(t) FROM 
+			(
+			SELECT name, url, icon, sec.generate_child(menu_prt_id,p_role_id) AS children
+			FROM sec.menu_parent 
+			WHERE menu_prt_sts = 1
+			ORDER BY menu_prt_urut
+			) t;
+			
+	END
+	$BODY$
+	  LANGUAGE plpgsql VOLATILE
+2019-04-01 11:51:16.997 WIB [440] ERROR:  syntax error at or near "p_role_id" at character 165
+2019-04-01 11:51:16.997 WIB [440] STATEMENT:  CREATE OR REPLACE FUNCTION "sec"."generate_menu_user"("p_user_id" TEXT)
+	  RETURNS TABLE("parent" json) AS $BODY$
+	DECLARE 
+		p_role_id INTEGER;
+	BEGIN 
+	RETURN QUERY
+			p_role_id := user_role FROM sec.userid WHERE user_id = p_user_id;
+			SELECT row_to_json(t) FROM 
+			(
+			SELECT name, url, icon, sec.generate_child(menu_prt_id,p_role_id) AS children
+			FROM sec.menu_parent 
+			WHERE menu_prt_sts = 1
+			ORDER BY menu_prt_urut
+			) t;
+			
+	END
+	$BODY$
+	  LANGUAGE plpgsql VOLATILE
+2019-04-01 11:51:58.138 WIB [440] ERROR:  syntax error at or near "p_role_id" at character 165
+2019-04-01 11:51:58.138 WIB [440] STATEMENT:  CREATE OR REPLACE FUNCTION "sec"."generate_menu_user"("p_user_id" TEXT)
+	  RETURNS TABLE("parent" json) AS $BODY$
+	DECLARE 
+		p_role_id INTEGER;
+	BEGIN 
+	RETURN QUERY
+			p_role_id := user_role FROM sec.userid WHERE user_id = p_user_id;
+			SELECT row_to_json(t) FROM 
+			(
+			SELECT name, url, icon, sec.generate_child(menu_prt_id,p_role_id) AS children
+			FROM sec.menu_parent 
+			WHERE menu_prt_sts = 1
+			ORDER BY menu_prt_urut
+			) t;
+			
+	END
+	$BODY$
+	  LANGUAGE plpgsql VOLATILE
+2019-04-01 11:51:58.836 WIB [440] ERROR:  syntax error at or near "p_role_id" at character 165
+2019-04-01 11:51:58.836 WIB [440] STATEMENT:  CREATE OR REPLACE FUNCTION "sec"."generate_menu_user"("p_user_id" TEXT)
+	  RETURNS TABLE("parent" json) AS $BODY$
+	DECLARE 
+		p_role_id INTEGER;
+	BEGIN 
+	RETURN QUERY
+			p_role_id := user_role FROM sec.userid WHERE user_id = p_user_id;
+			SELECT row_to_json(t) FROM 
+			(
+			SELECT name, url, icon, sec.generate_child(menu_prt_id,p_role_id) AS children
+			FROM sec.menu_parent 
+			WHERE menu_prt_sts = 1
+			ORDER BY menu_prt_urut
+			) t;
+			
+	END
+	$BODY$
+	  LANGUAGE plpgsql VOLATILE
+2019-04-01 11:51:59.021 WIB [440] ERROR:  syntax error at or near "p_role_id" at character 165
+2019-04-01 11:51:59.021 WIB [440] STATEMENT:  CREATE OR REPLACE FUNCTION "sec"."generate_menu_user"("p_user_id" TEXT)
+	  RETURNS TABLE("parent" json) AS $BODY$
+	DECLARE 
+		p_role_id INTEGER;
+	BEGIN 
+	RETURN QUERY
+			p_role_id := user_role FROM sec.userid WHERE user_id = p_user_id;
+			SELECT row_to_json(t) FROM 
+			(
+			SELECT name, url, icon, sec.generate_child(menu_prt_id,p_role_id) AS children
+			FROM sec.menu_parent 
+			WHERE menu_prt_sts = 1
+			ORDER BY menu_prt_urut
+			) t;
+			
+	END
+	$BODY$
+	  LANGUAGE plpgsql VOLATILE
+2019-04-01 11:51:59.450 WIB [440] ERROR:  syntax error at or near "p_role_id" at character 165
+2019-04-01 11:51:59.450 WIB [440] STATEMENT:  CREATE OR REPLACE FUNCTION "sec"."generate_menu_user"("p_user_id" TEXT)
+	  RETURNS TABLE("parent" json) AS $BODY$
+	DECLARE 
+		p_role_id INTEGER;
+	BEGIN 
+	RETURN QUERY
+			p_role_id := user_role FROM sec.userid WHERE user_id = p_user_id;
+			SELECT row_to_json(t) FROM 
+			(
+			SELECT name, url, icon, sec.generate_child(menu_prt_id,p_role_id) AS children
+			FROM sec.menu_parent 
+			WHERE menu_prt_sts = 1
+			ORDER BY menu_prt_urut
+			) t;
+			
+	END
+	$BODY$
+	  LANGUAGE plpgsql VOLATILE
+2019-04-01 11:51:59.609 WIB [440] ERROR:  syntax error at or near "p_role_id" at character 165
+2019-04-01 11:51:59.609 WIB [440] STATEMENT:  CREATE OR REPLACE FUNCTION "sec"."generate_menu_user"("p_user_id" TEXT)
+	  RETURNS TABLE("parent" json) AS $BODY$
+	DECLARE 
+		p_role_id INTEGER;
+	BEGIN 
+	RETURN QUERY
+			p_role_id := user_role FROM sec.userid WHERE user_id = p_user_id;
+			SELECT row_to_json(t) FROM 
+			(
+			SELECT name, url, icon, sec.generate_child(menu_prt_id,p_role_id) AS children
+			FROM sec.menu_parent 
+			WHERE menu_prt_sts = 1
+			ORDER BY menu_prt_urut
+			) t;
+			
+	END
+	$BODY$
+	  LANGUAGE plpgsql VOLATILE

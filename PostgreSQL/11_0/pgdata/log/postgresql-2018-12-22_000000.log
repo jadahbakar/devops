@@ -1,0 +1,972 @@
+2018-12-26 19:50:40.710 WIB [26] FATAL:  password authentication failed for user "triyanto"
+2018-12-26 19:50:40.710 WIB [26] DETAIL:  Password does not match for user "triyanto".
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2018-12-26 19:51:28.515 WIB [29] FATAL:  password authentication failed for user "postgres"
+2018-12-26 19:51:28.515 WIB [29] DETAIL:  Password does not match for user "postgres".
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2018-12-26 19:58:31.040 WIB [46] WARNING:  database "planning" does not exist
+2018-12-26 19:58:31.092 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:31.092 WIB [46] STATEMENT:  ALTER SCHEMA log OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:31.094 WIB [46] ERROR:  schema "mst" already exists
+2018-12-26 19:58:31.094 WIB [46] STATEMENT:  CREATE SCHEMA mst;
+	
+	
+	
+2018-12-26 19:58:31.098 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:31.098 WIB [46] STATEMENT:  ALTER SCHEMA mst OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:31.104 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:31.104 WIB [46] STATEMENT:  ALTER SCHEMA sec OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:31.109 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:31.109 WIB [46] STATEMENT:  ALTER SCHEMA test OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:31.114 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:31.114 WIB [46] STATEMENT:  ALTER SCHEMA trx OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:31.434 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:31.434 WIB [46] STATEMENT:  ALTER FUNCTION mst.bulan(p_bulan text) OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:31.441 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:31.441 WIB [46] STATEMENT:  ALTER FUNCTION mst.divisi() OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:31.447 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:31.447 WIB [46] STATEMENT:  ALTER FUNCTION mst.jabatan_per_unitkerja(p_unit_kerja text, p_jabatan_id text) OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:31.456 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:31.456 WIB [46] STATEMENT:  ALTER FUNCTION mst.pegawai_per_divisi(p_unit_kerja text) OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:31.462 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:31.462 WIB [46] STATEMENT:  ALTER FUNCTION mst.pegawai_per_unitkerja(p_unit_kerja text, p_jabatan_id text) OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:31.474 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:31.474 WIB [46] STATEMENT:  ALTER FUNCTION sec.generate_child(p_menu_prt_id integer, p_role integer) OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:31.479 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:31.479 WIB [46] STATEMENT:  ALTER FUNCTION sec.generate_child_ori(p_menu_prt_id integer) OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:31.484 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:31.484 WIB [46] STATEMENT:  ALTER FUNCTION sec.generate_menu() OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:31.489 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:31.489 WIB [46] STATEMENT:  ALTER FUNCTION sec.generate_parent(p_role_id integer) OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:31.495 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:31.495 WIB [46] STATEMENT:  ALTER FUNCTION sec.generate_parent_ori() OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:31.501 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:31.501 WIB [46] STATEMENT:  ALTER FUNCTION sec.generate_role_child(p_menu_prt_id integer) OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:31.510 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:31.510 WIB [46] STATEMENT:  ALTER FUNCTION sec.generate_role_child2(p_menu_prt_id integer) OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:31.515 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:31.515 WIB [46] STATEMENT:  ALTER FUNCTION sec.generate_role_parent() OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:31.521 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:31.521 WIB [46] STATEMENT:  ALTER FUNCTION sec.generate_role_parent2() OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:31.527 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:31.527 WIB [46] STATEMENT:  ALTER FUNCTION sec.get_dummy() OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:31.533 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:31.533 WIB [46] STATEMENT:  ALTER FUNCTION sec.get_fld_dsc(p_field text) OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:31.541 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:31.541 WIB [46] STATEMENT:  ALTER FUNCTION sec.role_menu_w(p_role_menu_id text, p_role_menu_cld text, p_role_menu_auth text) OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:31.552 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:31.552 WIB [46] STATEMENT:  ALTER FUNCTION sec.role_menu_wu(p_action text, p_role_menu_id integer, p_role_menu_side text, p_role_menu_tree text, p_role_menu_auth text) OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:31.557 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:31.557 WIB [46] STATEMENT:  ALTER FUNCTION sec.roles_wud(p_action text, p_role_id integer, p_role_status integer, p_role_name text) OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:31.561 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:31.561 WIB [46] STATEMENT:  ALTER FUNCTION sec.test(p_menu text) OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:31.567 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:31.567 WIB [46] STATEMENT:  ALTER FUNCTION sec.trg_crypt_users_pass() OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:31.572 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:31.572 WIB [46] STATEMENT:  ALTER FUNCTION sec.unpack(anyarray) OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:31.578 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:31.578 WIB [46] STATEMENT:  ALTER FUNCTION sec.users_login(p_username text, p_userpass text) OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:31.582 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:31.582 WIB [46] STATEMENT:  ALTER FUNCTION sec.users_login_2(p_username text, p_userpass text) OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:31.586 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:31.586 WIB [46] STATEMENT:  ALTER FUNCTION sec."users_login_ORI"(p_username text, p_userpass text) OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:31.591 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:31.591 WIB [46] STATEMENT:  ALTER FUNCTION sec.users_wud(p_action text, p_userid integer, p_username text, p_userpass text, p_userfullname text, p_useremail text, p_userrole text) OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:31.695 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:31.695 WIB [46] STATEMENT:  ALTER TABLE log.logging OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:31.736 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:31.736 WIB [46] STATEMENT:  ALTER TABLE mst.bsc OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:31.788 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:31.788 WIB [46] STATEMENT:  ALTER TABLE mst.coreplan OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:31.833 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:31.833 WIB [46] STATEMENT:  ALTER TABLE mst.detail_kompetensi OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:31.871 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:31.871 WIB [46] STATEMENT:  ALTER TABLE mst.edukasi OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:31.900 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:31.900 WIB [46] STATEMENT:  ALTER TABLE mst.golongan OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:31.943 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:31.943 WIB [46] STATEMENT:  ALTER TABLE mst.hubkerja OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:32.029 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:32.029 WIB [46] STATEMENT:  ALTER TABLE mst.jabatan OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:32.085 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:32.085 WIB [46] STATEMENT:  ALTER TABLE mst.jabatan_unit_kerja OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:32.126 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:32.126 WIB [46] STATEMENT:  ALTER TABLE mst.jabatan_unit_kerja_copy1 OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:32.176 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:32.176 WIB [46] STATEMENT:  ALTER TABLE mst.jenis_kompetensi OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:32.277 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:32.277 WIB [46] STATEMENT:  ALTER TABLE mst.kategori_proker OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:32.361 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:32.361 WIB [46] STATEMENT:  ALTER TABLE mst.kud OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:32.421 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:32.421 WIB [46] STATEMENT:  ALTER TABLE mst.lokasikerja OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:32.475 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:32.475 WIB [46] STATEMENT:  ALTER TABLE mst.misi OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:32.529 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:32.529 WIB [46] STATEMENT:  ALTER TABLE mst.pegawai OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:32.585 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:32.585 WIB [46] STATEMENT:  ALTER TABLE mst.pegawai_copy1 OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:32.622 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:32.622 WIB [46] STATEMENT:  ALTER TABLE mst.posbiaya OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:32.681 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:32.681 WIB [46] STATEMENT:  ALTER TABLE mst.rkf OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:32.785 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:32.785 WIB [46] STATEMENT:  ALTER TABLE mst.rkf_jenis OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:32.828 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:32.828 WIB [46] STATEMENT:  ALTER TABLE mst.rkf_rkf_id_seq OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:32.863 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:32.863 WIB [46] STATEMENT:  ALTER TABLE mst.satuan OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:32.886 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:32.886 WIB [46] STATEMENT:  ALTER TABLE mst.seq_rkf OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:32.917 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:32.917 WIB [46] STATEMENT:  ALTER TABLE mst.skala_proker OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:32.952 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:32.952 WIB [46] STATEMENT:  ALTER TABLE mst.sop OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:32.987 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:32.987 WIB [46] STATEMENT:  ALTER TABLE mst.status_proker OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:33.029 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:33.029 WIB [46] STATEMENT:  ALTER TABLE mst.tindak_lanjut OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:33.065 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:33.065 WIB [46] STATEMENT:  ALTER TABLE mst.tingkat OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:33.115 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:33.115 WIB [46] STATEMENT:  ALTER TABLE mst.unit_kerja OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:33.145 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:33.145 WIB [46] STATEMENT:  ALTER TABLE mst.unitkerja OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:33.184 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:33.184 WIB [46] STATEMENT:  ALTER TABLE mst.visi OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:33.215 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:33.215 WIB [46] STATEMENT:  ALTER TABLE sec.dummyku OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:33.266 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:33.266 WIB [46] STATEMENT:  ALTER TABLE sec.menu_child OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:33.327 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:33.327 WIB [46] STATEMENT:  ALTER TABLE sec.menu_parent OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:33.366 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:33.366 WIB [46] STATEMENT:  ALTER TABLE sec.role_menu OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:33.418 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:33.418 WIB [46] STATEMENT:  ALTER TABLE sec.roles OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:33.447 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:33.447 WIB [46] STATEMENT:  ALTER TABLE sec.roles_role_id_seq OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:33.486 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:33.486 WIB [46] STATEMENT:  ALTER TABLE sec.users OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:33.519 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:33.519 WIB [46] STATEMENT:  ALTER TABLE sec.users_userid_seq OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:33.563 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:33.563 WIB [46] STATEMENT:  ALTER TABLE sec.users_copy1 OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:33.602 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:33.602 WIB [46] STATEMENT:  ALTER TABLE sec.xresult OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:33.624 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:33.624 WIB [46] STATEMENT:  ALTER TABLE test.json_table OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:33.647 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:33.647 WIB [46] STATEMENT:  ALTER TABLE test.role_menu OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:33.674 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:33.674 WIB [46] STATEMENT:  ALTER TABLE trx.identitas_jabatan OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:33.715 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:33.715 WIB [46] STATEMENT:  ALTER TABLE trx.identitas_jabatan_atasan OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:33.742 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:33.742 WIB [46] STATEMENT:  ALTER TABLE trx.identitas_jabatan_bawahan OWNER TO bjtg;
+	
+	
+2018-12-26 19:58:33.768 WIB [46] ERROR:  role "bjtg" does not exist
+2018-12-26 19:58:33.768 WIB [46] STATEMENT:  ALTER TABLE trx.identitas_jabatan_hari OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:45.231 WIB [50] WARNING:  database "planning" does not exist
+2018-12-26 19:59:45.270 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:45.270 WIB [50] STATEMENT:  ALTER SCHEMA log OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:45.279 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:45.279 WIB [50] STATEMENT:  ALTER SCHEMA mst OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:45.284 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:45.284 WIB [50] STATEMENT:  ALTER SCHEMA sec OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:45.292 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:45.292 WIB [50] STATEMENT:  ALTER SCHEMA test OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:45.299 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:45.299 WIB [50] STATEMENT:  ALTER SCHEMA trx OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:45.523 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:45.523 WIB [50] STATEMENT:  ALTER FUNCTION mst.bulan(p_bulan text) OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:45.529 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:45.529 WIB [50] STATEMENT:  ALTER FUNCTION mst.divisi() OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:45.536 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:45.536 WIB [50] STATEMENT:  ALTER FUNCTION mst.jabatan_per_unitkerja(p_unit_kerja text, p_jabatan_id text) OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:45.545 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:45.545 WIB [50] STATEMENT:  ALTER FUNCTION mst.pegawai_per_divisi(p_unit_kerja text) OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:45.551 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:45.551 WIB [50] STATEMENT:  ALTER FUNCTION mst.pegawai_per_unitkerja(p_unit_kerja text, p_jabatan_id text) OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:45.557 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:45.557 WIB [50] STATEMENT:  ALTER FUNCTION sec.generate_child(p_menu_prt_id integer, p_role integer) OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:45.564 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:45.564 WIB [50] STATEMENT:  ALTER FUNCTION sec.generate_child_ori(p_menu_prt_id integer) OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:45.570 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:45.570 WIB [50] STATEMENT:  ALTER FUNCTION sec.generate_menu() OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:45.576 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:45.576 WIB [50] STATEMENT:  ALTER FUNCTION sec.generate_parent(p_role_id integer) OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:45.582 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:45.582 WIB [50] STATEMENT:  ALTER FUNCTION sec.generate_parent_ori() OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:45.587 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:45.587 WIB [50] STATEMENT:  ALTER FUNCTION sec.generate_role_child(p_menu_prt_id integer) OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:45.597 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:45.597 WIB [50] STATEMENT:  ALTER FUNCTION sec.generate_role_child2(p_menu_prt_id integer) OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:45.602 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:45.602 WIB [50] STATEMENT:  ALTER FUNCTION sec.generate_role_parent() OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:45.607 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:45.607 WIB [50] STATEMENT:  ALTER FUNCTION sec.generate_role_parent2() OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:45.617 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:45.617 WIB [50] STATEMENT:  ALTER FUNCTION sec.get_dummy() OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:45.623 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:45.623 WIB [50] STATEMENT:  ALTER FUNCTION sec.get_fld_dsc(p_field text) OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:45.630 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:45.630 WIB [50] STATEMENT:  ALTER FUNCTION sec.role_menu_w(p_role_menu_id text, p_role_menu_cld text, p_role_menu_auth text) OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:45.638 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:45.638 WIB [50] STATEMENT:  ALTER FUNCTION sec.role_menu_wu(p_action text, p_role_menu_id integer, p_role_menu_side text, p_role_menu_tree text, p_role_menu_auth text) OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:45.642 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:45.642 WIB [50] STATEMENT:  ALTER FUNCTION sec.roles_wud(p_action text, p_role_id integer, p_role_status integer, p_role_name text) OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:45.648 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:45.648 WIB [50] STATEMENT:  ALTER FUNCTION sec.test(p_menu text) OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:45.653 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:45.653 WIB [50] STATEMENT:  ALTER FUNCTION sec.trg_crypt_users_pass() OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:45.658 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:45.658 WIB [50] STATEMENT:  ALTER FUNCTION sec.unpack(anyarray) OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:45.662 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:45.662 WIB [50] STATEMENT:  ALTER FUNCTION sec.users_login(p_username text, p_userpass text) OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:45.667 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:45.667 WIB [50] STATEMENT:  ALTER FUNCTION sec.users_login_2(p_username text, p_userpass text) OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:45.672 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:45.672 WIB [50] STATEMENT:  ALTER FUNCTION sec."users_login_ORI"(p_username text, p_userpass text) OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:45.676 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:45.676 WIB [50] STATEMENT:  ALTER FUNCTION sec.users_wud(p_action text, p_userid integer, p_username text, p_userpass text, p_userfullname text, p_useremail text, p_userrole text) OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:45.813 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:45.813 WIB [50] STATEMENT:  ALTER TABLE log.logging OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:45.855 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:45.855 WIB [50] STATEMENT:  ALTER TABLE mst.bsc OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:45.891 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:45.891 WIB [50] STATEMENT:  ALTER TABLE mst.coreplan OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:45.929 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:45.929 WIB [50] STATEMENT:  ALTER TABLE mst.detail_kompetensi OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:45.970 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:45.970 WIB [50] STATEMENT:  ALTER TABLE mst.edukasi OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:46.021 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:46.021 WIB [50] STATEMENT:  ALTER TABLE mst.golongan OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:46.081 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:46.081 WIB [50] STATEMENT:  ALTER TABLE mst.hubkerja OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:46.165 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:46.165 WIB [50] STATEMENT:  ALTER TABLE mst.jabatan OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:46.241 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:46.241 WIB [50] STATEMENT:  ALTER TABLE mst.jabatan_unit_kerja OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:46.290 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:46.290 WIB [50] STATEMENT:  ALTER TABLE mst.jabatan_unit_kerja_copy1 OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:46.355 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:46.355 WIB [50] STATEMENT:  ALTER TABLE mst.jenis_kompetensi OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:46.418 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:46.418 WIB [50] STATEMENT:  ALTER TABLE mst.kategori_proker OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:46.489 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:46.489 WIB [50] STATEMENT:  ALTER TABLE mst.kud OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:46.519 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:46.519 WIB [50] STATEMENT:  ALTER TABLE mst.lokasikerja OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:46.554 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:46.554 WIB [50] STATEMENT:  ALTER TABLE mst.misi OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:46.592 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:46.592 WIB [50] STATEMENT:  ALTER TABLE mst.pegawai OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:46.630 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:46.630 WIB [50] STATEMENT:  ALTER TABLE mst.pegawai_copy1 OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:46.660 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:46.660 WIB [50] STATEMENT:  ALTER TABLE mst.posbiaya OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:46.736 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:46.736 WIB [50] STATEMENT:  ALTER TABLE mst.rkf OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:46.858 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:46.858 WIB [50] STATEMENT:  ALTER TABLE mst.rkf_jenis OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:46.894 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:46.894 WIB [50] STATEMENT:  ALTER TABLE mst.rkf_rkf_id_seq OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:46.922 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:46.922 WIB [50] STATEMENT:  ALTER TABLE mst.satuan OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:46.942 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:46.942 WIB [50] STATEMENT:  ALTER TABLE mst.seq_rkf OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:46.973 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:46.973 WIB [50] STATEMENT:  ALTER TABLE mst.skala_proker OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:47.016 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:47.016 WIB [50] STATEMENT:  ALTER TABLE mst.sop OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:47.052 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:47.052 WIB [50] STATEMENT:  ALTER TABLE mst.status_proker OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:47.087 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:47.087 WIB [50] STATEMENT:  ALTER TABLE mst.tindak_lanjut OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:47.119 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:47.119 WIB [50] STATEMENT:  ALTER TABLE mst.tingkat OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:47.154 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:47.154 WIB [50] STATEMENT:  ALTER TABLE mst.unit_kerja OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:47.178 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:47.178 WIB [50] STATEMENT:  ALTER TABLE mst.unitkerja OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:47.218 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:47.218 WIB [50] STATEMENT:  ALTER TABLE mst.visi OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:47.233 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:47.233 WIB [50] STATEMENT:  ALTER TABLE sec.dummyku OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:47.273 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:47.273 WIB [50] STATEMENT:  ALTER TABLE sec.menu_child OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:47.316 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:47.316 WIB [50] STATEMENT:  ALTER TABLE sec.menu_parent OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:47.345 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:47.345 WIB [50] STATEMENT:  ALTER TABLE sec.role_menu OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:47.380 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:47.380 WIB [50] STATEMENT:  ALTER TABLE sec.roles OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:47.399 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:47.399 WIB [50] STATEMENT:  ALTER TABLE sec.roles_role_id_seq OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:47.426 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:47.426 WIB [50] STATEMENT:  ALTER TABLE sec.users OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:47.455 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:47.455 WIB [50] STATEMENT:  ALTER TABLE sec.users_userid_seq OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:47.515 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:47.515 WIB [50] STATEMENT:  ALTER TABLE sec.users_copy1 OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:47.563 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:47.563 WIB [50] STATEMENT:  ALTER TABLE sec.xresult OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:47.602 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:47.602 WIB [50] STATEMENT:  ALTER TABLE test.json_table OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:47.641 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:47.641 WIB [50] STATEMENT:  ALTER TABLE test.role_menu OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:47.695 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:47.695 WIB [50] STATEMENT:  ALTER TABLE trx.identitas_jabatan OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:47.765 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:47.765 WIB [50] STATEMENT:  ALTER TABLE trx.identitas_jabatan_atasan OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:47.810 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:47.810 WIB [50] STATEMENT:  ALTER TABLE trx.identitas_jabatan_bawahan OWNER TO bjtg;
+	
+	
+2018-12-26 19:59:47.866 WIB [50] ERROR:  role "bjtg" does not exist
+2018-12-26 19:59:47.866 WIB [50] STATEMENT:  ALTER TABLE trx.identitas_jabatan_hari OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:05.703 WIB [54] WARNING:  database "planning" does not exist
+2018-12-26 20:01:05.733 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:05.733 WIB [54] STATEMENT:  ALTER SCHEMA log OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:05.737 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:05.737 WIB [54] STATEMENT:  ALTER SCHEMA mst OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:05.741 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:05.741 WIB [54] STATEMENT:  ALTER SCHEMA sec OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:05.746 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:05.746 WIB [54] STATEMENT:  ALTER SCHEMA test OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:05.750 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:05.750 WIB [54] STATEMENT:  ALTER SCHEMA trx OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:05.766 WIB [54] ERROR:  must be owner of extension plpgsql
+2018-12-26 20:01:05.766 WIB [54] STATEMENT:  COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
+	
+	
+	
+2018-12-26 20:01:05.831 WIB [54] ERROR:  permission denied to create extension "pgcrypto"
+2018-12-26 20:01:05.831 WIB [54] HINT:  Must be superuser to create this extension.
+2018-12-26 20:01:05.831 WIB [54] STATEMENT:  CREATE EXTENSION IF NOT EXISTS pgcrypto WITH SCHEMA public;
+	
+	
+	
+2018-12-26 20:01:05.834 WIB [54] ERROR:  extension "pgcrypto" does not exist
+2018-12-26 20:01:05.834 WIB [54] STATEMENT:  COMMENT ON EXTENSION pgcrypto IS 'cryptographic functions';
+	
+	
+	
+2018-12-26 20:01:05.883 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:05.883 WIB [54] STATEMENT:  ALTER FUNCTION mst.bulan(p_bulan text) OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:05.891 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:05.891 WIB [54] STATEMENT:  ALTER FUNCTION mst.divisi() OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:05.898 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:05.898 WIB [54] STATEMENT:  ALTER FUNCTION mst.jabatan_per_unitkerja(p_unit_kerja text, p_jabatan_id text) OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:05.908 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:05.908 WIB [54] STATEMENT:  ALTER FUNCTION mst.pegawai_per_divisi(p_unit_kerja text) OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:05.915 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:05.915 WIB [54] STATEMENT:  ALTER FUNCTION mst.pegawai_per_unitkerja(p_unit_kerja text, p_jabatan_id text) OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:05.924 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:05.924 WIB [54] STATEMENT:  ALTER FUNCTION sec.generate_child(p_menu_prt_id integer, p_role integer) OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:05.931 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:05.931 WIB [54] STATEMENT:  ALTER FUNCTION sec.generate_child_ori(p_menu_prt_id integer) OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:05.935 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:05.935 WIB [54] STATEMENT:  ALTER FUNCTION sec.generate_menu() OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:05.943 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:05.943 WIB [54] STATEMENT:  ALTER FUNCTION sec.generate_parent(p_role_id integer) OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:05.946 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:05.946 WIB [54] STATEMENT:  ALTER FUNCTION sec.generate_parent_ori() OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:05.950 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:05.950 WIB [54] STATEMENT:  ALTER FUNCTION sec.generate_role_child(p_menu_prt_id integer) OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:05.956 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:05.956 WIB [54] STATEMENT:  ALTER FUNCTION sec.generate_role_child2(p_menu_prt_id integer) OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:05.961 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:05.961 WIB [54] STATEMENT:  ALTER FUNCTION sec.generate_role_parent() OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:05.967 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:05.967 WIB [54] STATEMENT:  ALTER FUNCTION sec.generate_role_parent2() OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:05.977 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:05.977 WIB [54] STATEMENT:  ALTER FUNCTION sec.get_dummy() OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:05.984 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:05.984 WIB [54] STATEMENT:  ALTER FUNCTION sec.get_fld_dsc(p_field text) OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:05.990 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:05.990 WIB [54] STATEMENT:  ALTER FUNCTION sec.role_menu_w(p_role_menu_id text, p_role_menu_cld text, p_role_menu_auth text) OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:05.993 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:05.993 WIB [54] STATEMENT:  ALTER FUNCTION sec.role_menu_wu(p_action text, p_role_menu_id integer, p_role_menu_side text, p_role_menu_tree text, p_role_menu_auth text) OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:06.001 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:06.001 WIB [54] STATEMENT:  ALTER FUNCTION sec.roles_wud(p_action text, p_role_id integer, p_role_status integer, p_role_name text) OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:06.007 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:06.007 WIB [54] STATEMENT:  ALTER FUNCTION sec.test(p_menu text) OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:06.012 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:06.012 WIB [54] STATEMENT:  ALTER FUNCTION sec.trg_crypt_users_pass() OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:06.017 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:06.017 WIB [54] STATEMENT:  ALTER FUNCTION sec.unpack(anyarray) OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:06.022 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:06.022 WIB [54] STATEMENT:  ALTER FUNCTION sec.users_login(p_username text, p_userpass text) OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:06.026 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:06.026 WIB [54] STATEMENT:  ALTER FUNCTION sec.users_login_2(p_username text, p_userpass text) OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:06.030 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:06.030 WIB [54] STATEMENT:  ALTER FUNCTION sec."users_login_ORI"(p_username text, p_userpass text) OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:06.036 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:06.036 WIB [54] STATEMENT:  ALTER FUNCTION sec.users_wud(p_action text, p_userid integer, p_username text, p_userpass text, p_userfullname text, p_useremail text, p_userrole text) OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:06.161 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:06.161 WIB [54] STATEMENT:  ALTER TABLE log.logging OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:06.225 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:06.225 WIB [54] STATEMENT:  ALTER TABLE mst.bsc OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:06.279 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:06.279 WIB [54] STATEMENT:  ALTER TABLE mst.coreplan OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:06.330 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:06.330 WIB [54] STATEMENT:  ALTER TABLE mst.detail_kompetensi OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:06.387 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:06.387 WIB [54] STATEMENT:  ALTER TABLE mst.edukasi OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:06.436 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:06.436 WIB [54] STATEMENT:  ALTER TABLE mst.golongan OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:06.475 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:06.475 WIB [54] STATEMENT:  ALTER TABLE mst.hubkerja OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:06.533 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:06.533 WIB [54] STATEMENT:  ALTER TABLE mst.jabatan OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:06.580 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:06.580 WIB [54] STATEMENT:  ALTER TABLE mst.jabatan_unit_kerja OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:06.619 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:06.619 WIB [54] STATEMENT:  ALTER TABLE mst.jabatan_unit_kerja_copy1 OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:06.657 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:06.657 WIB [54] STATEMENT:  ALTER TABLE mst.jenis_kompetensi OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:06.693 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:06.693 WIB [54] STATEMENT:  ALTER TABLE mst.kategori_proker OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:06.741 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:06.741 WIB [54] STATEMENT:  ALTER TABLE mst.kud OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:06.773 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:06.773 WIB [54] STATEMENT:  ALTER TABLE mst.lokasikerja OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:06.811 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:06.811 WIB [54] STATEMENT:  ALTER TABLE mst.misi OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:06.847 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:06.847 WIB [54] STATEMENT:  ALTER TABLE mst.pegawai OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:06.882 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:06.882 WIB [54] STATEMENT:  ALTER TABLE mst.pegawai_copy1 OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:06.910 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:06.910 WIB [54] STATEMENT:  ALTER TABLE mst.posbiaya OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:06.962 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:06.962 WIB [54] STATEMENT:  ALTER TABLE mst.rkf OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:07.088 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:07.088 WIB [54] STATEMENT:  ALTER TABLE mst.rkf_jenis OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:07.155 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:07.155 WIB [54] STATEMENT:  ALTER TABLE mst.rkf_rkf_id_seq OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:07.201 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:07.201 WIB [54] STATEMENT:  ALTER TABLE mst.satuan OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:07.229 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:07.229 WIB [54] STATEMENT:  ALTER TABLE mst.seq_rkf OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:07.274 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:07.274 WIB [54] STATEMENT:  ALTER TABLE mst.skala_proker OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:07.328 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:07.328 WIB [54] STATEMENT:  ALTER TABLE mst.sop OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:07.375 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:07.375 WIB [54] STATEMENT:  ALTER TABLE mst.status_proker OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:07.418 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:07.418 WIB [54] STATEMENT:  ALTER TABLE mst.tindak_lanjut OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:07.462 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:07.462 WIB [54] STATEMENT:  ALTER TABLE mst.tingkat OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:07.500 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:07.500 WIB [54] STATEMENT:  ALTER TABLE mst.unit_kerja OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:07.525 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:07.525 WIB [54] STATEMENT:  ALTER TABLE mst.unitkerja OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:07.567 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:07.567 WIB [54] STATEMENT:  ALTER TABLE mst.visi OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:07.581 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:07.581 WIB [54] STATEMENT:  ALTER TABLE sec.dummyku OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:07.623 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:07.623 WIB [54] STATEMENT:  ALTER TABLE sec.menu_child OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:07.666 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:07.666 WIB [54] STATEMENT:  ALTER TABLE sec.menu_parent OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:07.691 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:07.691 WIB [54] STATEMENT:  ALTER TABLE sec.role_menu OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:07.726 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:07.726 WIB [54] STATEMENT:  ALTER TABLE sec.roles OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:07.747 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:07.747 WIB [54] STATEMENT:  ALTER TABLE sec.roles_role_id_seq OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:07.773 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:07.773 WIB [54] STATEMENT:  ALTER TABLE sec.users OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:07.801 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:07.801 WIB [54] STATEMENT:  ALTER TABLE sec.users_userid_seq OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:07.840 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:07.840 WIB [54] STATEMENT:  ALTER TABLE sec.users_copy1 OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:07.882 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:07.882 WIB [54] STATEMENT:  ALTER TABLE sec.xresult OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:07.912 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:07.912 WIB [54] STATEMENT:  ALTER TABLE test.json_table OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:07.938 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:07.938 WIB [54] STATEMENT:  ALTER TABLE test.role_menu OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:07.962 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:07.962 WIB [54] STATEMENT:  ALTER TABLE trx.identitas_jabatan OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:08.007 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:08.007 WIB [54] STATEMENT:  ALTER TABLE trx.identitas_jabatan_atasan OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:08.046 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:08.046 WIB [54] STATEMENT:  ALTER TABLE trx.identitas_jabatan_bawahan OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:08.088 WIB [54] ERROR:  role "bjtg" does not exist
+2018-12-26 20:01:08.088 WIB [54] STATEMENT:  ALTER TABLE trx.identitas_jabatan_hari OWNER TO bjtg;
+	
+	
+2018-12-26 20:01:40.021 WIB [55] FATAL:  password authentication failed for user "triyanto"
+2018-12-26 20:01:40.021 WIB [55] DETAIL:  Password does not match for user "triyanto".
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2018-12-26 20:09:39.971 WIB [24] LOG:  stats_timestamp 2018-12-26 20:09:39.980526+07 is later than collector's time 2018-12-26 20:09:39.971707+07 for database 33629
+2018-12-26 22:06:03.249 WIB [24] LOG:  stats_timestamp 2018-12-26 22:06:03.259596+07 is later than collector's time 2018-12-26 22:06:03.249766+07 for database 33629
+2018-12-26 22:41:01.273 WIB [24] LOG:  stats_timestamp 2018-12-26 22:41:01.276764+07 is later than collector's time 2018-12-26 22:41:01.273121+07 for database 0

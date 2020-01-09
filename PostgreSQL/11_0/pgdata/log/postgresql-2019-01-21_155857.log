@@ -1,0 +1,11 @@
+2019-01-21 15:58:57.196 WIB [19] LOG:  database system was interrupted; last known up at 2019-01-21 14:16:14 WIB
+2019-01-21 15:59:07.924 WIB [19] LOG:  database system was not properly shut down; automatic recovery in progress
+2019-01-21 15:59:08.080 WIB [19] LOG:  redo starts at 0/41FCFB0
+2019-01-21 15:59:08.081 WIB [19] LOG:  invalid record length at 0/41FCFE8: wanted 24, got 0
+2019-01-21 15:59:08.081 WIB [19] LOG:  redo done at 0/41FCFB0
+2019-01-21 15:59:08.518 WIB [1] LOG:  database system is ready to accept connections
+2019-01-22 06:36:11.385 WIB [36] ERROR:  must be owner of extension pgcrypto
+2019-01-22 06:36:11.385 WIB [36] STATEMENT:  COMMENT ON EXTENSION pgcrypto IS 'cryptographic functions';
+	
+	
+	

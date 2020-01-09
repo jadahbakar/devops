@@ -1,0 +1,65 @@
+2019-05-09 08:10:17.368 WIB [24] LOG:  stats_timestamp 2019-05-09 08:10:17.36889+07 is later than collector's time 2019-05-09 08:10:17.36811+07 for database 0
+2019-05-09 09:59:47.628 WIB [1439] ERROR:  syntax error at or near ":=" at character 642
+2019-05-09 09:59:47.628 WIB [1439] STATEMENT:  CREATE OR REPLACE FUNCTION mst.registrasi_to_user_customer(p_regid TEXT, p_referal TEXT)
+	  RETURNS text AS $BODY$DECLARE 
+		 status text = 'fail'; 
+	BEGIN
+	IF NOT EXISTS (SELECT customer_id FROM mst.customer WHERE customer_id = p_regid) THEN
+		INSERT INTO mst.customer (customer_id, customer_referal_customer_id, customer_pribadi, customer_alamat, customer_alamat_ktp) 
+			SELECT reg_id, p_referal, reg_pribadi, reg_alamat, reg_alamat_ktp FROM mst.registrasi WHERE reg_id = p_regid;
+		
+		INSERT INTO sec.userid (user_id, user_nama, user_pass, user_email, user_role) 
+			SELECT reg_id, reg_nama, reg_password, reg_email, 4 FROM mst.registrasi
+		status:= 'pass'
+	END IF;
+	
+	RETURN status;
+	END
+	$BODY$
+	  LANGUAGE plpgsql VOLATILE
+	  COST 100
+2019-05-09 09:59:57.304 WIB [1439] ERROR:  syntax error at or near "=" at character 643
+2019-05-09 09:59:57.304 WIB [1439] STATEMENT:  CREATE OR REPLACE FUNCTION mst.registrasi_to_user_customer(p_regid TEXT, p_referal TEXT)
+	  RETURNS text AS $BODY$DECLARE 
+		 status text = 'fail'; 
+	BEGIN
+	IF NOT EXISTS (SELECT customer_id FROM mst.customer WHERE customer_id = p_regid) THEN
+		INSERT INTO mst.customer (customer_id, customer_referal_customer_id, customer_pribadi, customer_alamat, customer_alamat_ktp) 
+			SELECT reg_id, p_referal, reg_pribadi, reg_alamat, reg_alamat_ktp FROM mst.registrasi WHERE reg_id = p_regid;
+		
+		INSERT INTO sec.userid (user_id, user_nama, user_pass, user_email, user_role) 
+			SELECT reg_id, reg_nama, reg_password, reg_email, 4 FROM mst.registrasi
+		status = 'pass'
+	END IF;
+	
+	RETURN status;
+	END
+	$BODY$
+	  LANGUAGE plpgsql VOLATILE
+	  COST 100
+2019-05-09 10:00:06.622 WIB [1439] ERROR:  syntax error at or near "END" at character 653
+2019-05-09 10:00:06.622 WIB [1439] STATEMENT:  CREATE OR REPLACE FUNCTION mst.registrasi_to_user_customer(p_regid TEXT, p_referal TEXT)
+	  RETURNS text AS $BODY$DECLARE 
+		 status text = 'fail'; 
+	BEGIN
+	IF NOT EXISTS (SELECT customer_id FROM mst.customer WHERE customer_id = p_regid) THEN
+		INSERT INTO mst.customer (customer_id, customer_referal_customer_id, customer_pribadi, customer_alamat, customer_alamat_ktp) 
+			SELECT reg_id, p_referal, reg_pribadi, reg_alamat, reg_alamat_ktp FROM mst.registrasi WHERE reg_id = p_regid;
+		
+		INSERT INTO sec.userid (user_id, user_nama, user_pass, user_email, user_role) 
+			SELECT reg_id, reg_nama, reg_password, reg_email, 4 FROM mst.registrasi;
+		status = 'pass'
+	END IF;
+	
+	RETURN status;
+	END
+	$BODY$
+	  LANGUAGE plpgsql VOLATILE
+	  COST 100
+2019-05-09 10:34:42.510 WIB [1439] ERROR:  function json_array_elements(jsonb) does not exist at character 161
+2019-05-09 10:34:42.510 WIB [1439] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2019-05-09 10:34:42.510 WIB [1439] STATEMENT:  -- {"rt": "05", "rw": "06", "kota": 3374, "alamat": "SEMARANG", "kodePOS": "50192", "propinsi": 33, "kecamatan": "3374080", "kelurahan": "3374080006"}
+	
+	SELECT 
+	json_array_elements(reg_pribadi)  FROM mst.registrasi
+2019-05-09 22:08:32.263 WIB [24] LOG:  stats_timestamp 2019-05-09 22:08:32.274069+07 is later than collector's time 2019-05-09 22:08:32.2633+07 for database 81921

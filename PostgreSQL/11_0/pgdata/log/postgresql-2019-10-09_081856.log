@@ -1,0 +1,150 @@
+2019-10-09 08:18:56.487 WIB [19] LOG:  database system was interrupted; last known up at 2019-10-08 16:30:01 WIB
+2019-10-09 08:19:15.785 WIB [19] LOG:  database system was not properly shut down; automatic recovery in progress
+2019-10-09 08:19:16.075 WIB [19] LOG:  redo starts at 0/FE51258
+2019-10-09 08:19:16.076 WIB [19] LOG:  invalid record length at 0/FE51290: wanted 24, got 0
+2019-10-09 08:19:16.076 WIB [19] LOG:  redo done at 0/FE51258
+2019-10-09 08:19:16.948 WIB [1] LOG:  database system is ready to accept connections
+2019-10-09 11:07:17.605 WIB [26] ERROR:  invalid input syntax for type json at character 47
+2019-10-09 11:07:17.605 WIB [26] DETAIL:  The input string ended unexpectedly.
+2019-10-09 11:07:17.605 WIB [26] CONTEXT:  JSON data, line 1: 
+2019-10-09 11:07:17.605 WIB [26] STATEMENT:  UPDATE "mst"."registrasi" SET "reg_approve" = '' WHERE "reg_id" = 'dedysty811230'
+2019-10-09 11:07:19.654 WIB [26] ERROR:  invalid input syntax for type json at character 47
+2019-10-09 11:07:19.654 WIB [26] DETAIL:  The input string ended unexpectedly.
+2019-10-09 11:07:19.654 WIB [26] CONTEXT:  JSON data, line 1: 
+2019-10-09 11:07:19.654 WIB [26] STATEMENT:  UPDATE "mst"."registrasi" SET "reg_approve" = '' WHERE "reg_id" = 'dedysty811230'
+2019-10-09 11:07:22.860 WIB [26] ERROR:  invalid input syntax for type json at character 47
+2019-10-09 11:07:22.860 WIB [26] DETAIL:  The input string ended unexpectedly.
+2019-10-09 11:07:22.860 WIB [26] CONTEXT:  JSON data, line 1: 
+2019-10-09 11:07:22.860 WIB [26] STATEMENT:  UPDATE "mst"."registrasi" SET "reg_approve" = '' WHERE "reg_id" = 'dedysty811230'
+2019-10-09 11:07:26.159 WIB [26] ERROR:  invalid input syntax for type json at character 47
+2019-10-09 11:07:26.159 WIB [26] DETAIL:  The input string ended unexpectedly.
+2019-10-09 11:07:26.159 WIB [26] CONTEXT:  JSON data, line 1: 
+2019-10-09 11:07:26.159 WIB [26] STATEMENT:  UPDATE "mst"."registrasi" SET "reg_approve" = '' WHERE "reg_id" = 'dedysty811230'
+2019-10-09 11:07:58.572 WIB [26] ERROR:  unterminated quoted string at or near "';" at character 45
+2019-10-09 11:07:58.572 WIB [26] STATEMENT:  update mst.registrasi set reg_approve = null';
+2019-10-09 11:08:34.132 WIB [61] ERROR:  invalid input syntax for type json at character 8
+2019-10-09 11:08:34.132 WIB [61] DETAIL:  Token """ is invalid.
+2019-10-09 11:08:34.132 WIB [61] QUERY:  SELECT '{"userid": "'||p_approve||'","dateApprove":'||now()::text||'}'
+2019-10-09 11:08:34.132 WIB [61] CONTEXT:  JSON data, line 1: {"userid": "
+	PL/pgSQL function mst.registrasi_to_user_customer(text,text,jsonb) line 6 at assignment
+2019-10-09 11:08:34.132 WIB [61] STATEMENT:  SELECT mst.registrasi_to_user_customer('dedysty811230', 'dedystyawan@gmail.com', '{"userId":"dedy3012","dateApprove":"2019-10-9 11:8:33"}')
+2019-10-09 11:09:10.154 WIB [62] ERROR:  invalid input syntax for type json at character 8
+2019-10-09 11:09:10.154 WIB [62] DETAIL:  Token """ is invalid.
+2019-10-09 11:09:10.154 WIB [62] QUERY:  SELECT '{"userid": "'||p_approve||'","dateApprove":'||now()::text||'}'
+2019-10-09 11:09:10.154 WIB [62] CONTEXT:  JSON data, line 1: {"userid": "
+	PL/pgSQL function mst.registrasi_to_user_customer(text,text,jsonb) line 6 at assignment
+2019-10-09 11:09:10.154 WIB [62] STATEMENT:  SELECT mst.registrasi_to_user_customer('dedysty811230', 'dedy.styawan@gmail.com', '{"userId":"dedy3012","dateApprove":"2019-10-9 11:9:10"}')
+2019-10-09 11:10:17.924 WIB [65] ERROR:  invalid input syntax for type json at character 83
+2019-10-09 11:10:17.924 WIB [65] DETAIL:  Token "dedy3012" is invalid.
+2019-10-09 11:10:17.924 WIB [65] CONTEXT:  JSON data, line 1: dedy3012
+2019-10-09 11:10:17.924 WIB [65] STATEMENT:  SELECT mst.registrasi_to_user_customer('dedysty811230', 'dedy.styawan@gmail.com', 'dedy3012')
+2019-10-09 11:10:45.384 WIB [66] ERROR:  invalid input syntax for type json at character 83
+2019-10-09 11:10:45.384 WIB [66] DETAIL:  Token "dedy3012" is invalid.
+2019-10-09 11:10:45.384 WIB [66] CONTEXT:  JSON data, line 1: dedy3012
+2019-10-09 11:10:45.384 WIB [66] STATEMENT:  SELECT mst.registrasi_to_user_customer('dedysty811230', 'dedy.styawan@gmail.com', 'dedy3012')
+2019-10-09 11:12:42.554 WIB [69] ERROR:  invalid input syntax for type json
+2019-10-09 11:12:42.554 WIB [69] DETAIL:  Expected "," or "}", but found "-10".
+2019-10-09 11:12:42.554 WIB [69] CONTEXT:  JSON data, line 1: {"userid": "dedy3012","dateApprove":2019-10...
+	SQL statement "UPDATE mst.registrasi set reg_approve = aproval::jsonb WHERE reg_id = p_regid"
+	PL/pgSQL function mst.registrasi_to_user_customer(text,text,text) line 9 at SQL statement
+2019-10-09 11:12:42.554 WIB [69] STATEMENT:  SELECT mst.registrasi_to_user_customer('dedysty811230', 'dedy.styawan@gmail.com', 'dedy3012')
+2019-10-09 11:16:46.103 WIB [74] ERROR:  invalid input syntax for type json
+2019-10-09 11:16:46.103 WIB [74] DETAIL:  Expected "," or "}", but found "-10".
+2019-10-09 11:16:46.103 WIB [74] CONTEXT:  JSON data, line 1: {"userid": "dedy3012","dateApprove":2019-10...
+	SQL statement "UPDATE mst.registrasi set reg_approve = aproval::jsonb WHERE reg_id = p_regid"
+	PL/pgSQL function mst.registrasi_to_user_customer(text,text,text) line 9 at SQL statement
+2019-10-09 11:16:46.103 WIB [74] STATEMENT:  SELECT mst.registrasi_to_user_customer('dedysty811230', 'dedy.styawan@gmail.com', 'dedy3012')
+2019-10-09 11:26:49.506 WIB [26] ERROR:  invalid input syntax for type json at character 68
+2019-10-09 11:26:49.506 WIB [26] DETAIL:  Expected JSON value, but found "}".
+2019-10-09 11:26:49.506 WIB [26] QUERY:  SELECT '{"userid": "'||p_approve||'","dateApprove":'||now()::text||'}'::jsonb
+2019-10-09 11:26:49.506 WIB [26] CONTEXT:  JSON data, line 1: }
+	PL/pgSQL function registrasi_to_user_customer(text,text,text) line 6 at assignment
+2019-10-09 11:26:49.506 WIB [26] STATEMENT:  select mst.registrasi_to_user_customer('dedy2012', 'dedy.styawan@gmail.com', 'dedy3012')
+2019-10-09 11:27:18.929 WIB [26] ERROR:  invalid input syntax for type json at character 68
+2019-10-09 11:27:18.929 WIB [26] DETAIL:  Expected JSON value, but found "}".
+2019-10-09 11:27:18.929 WIB [26] QUERY:  SELECT '{"userid": "'||p_approve||'","dateApprove":'||now()::text||'}'::jsonb
+2019-10-09 11:27:18.929 WIB [26] CONTEXT:  JSON data, line 1: }
+	PL/pgSQL function registrasi_to_user_customer(text,text,text) line 6 at assignment
+2019-10-09 11:27:18.929 WIB [26] STATEMENT:  select mst.registrasi_to_user_customer('dedy2012', 'dedy.styawan@gmail.com', 'dedy3012')
+2019-10-09 11:28:36.293 WIB [26] ERROR:  invalid input syntax for type json at character 68
+2019-10-09 11:28:36.293 WIB [26] DETAIL:  Expected JSON value, but found "}".
+2019-10-09 11:28:36.293 WIB [26] QUERY:  SELECT '{"userid": "'||p_approve||'","dateApprove":'||now()::text||'}'::jsonb
+2019-10-09 11:28:36.293 WIB [26] CONTEXT:  JSON data, line 1: }
+	PL/pgSQL function registrasi_to_user_customer(text,text,text) line 6 at assignment
+2019-10-09 11:28:36.293 WIB [26] STATEMENT:  select mst.registrasi_to_user_customer('dedy2012', 'dedy.styawan@gmail.com', 'dedy3012')
+2019-10-09 11:29:17.958 WIB [26] ERROR:  invalid input syntax for type json
+2019-10-09 11:29:17.958 WIB [26] DETAIL:  Expected "," or "}", but found "-10".
+2019-10-09 11:29:17.958 WIB [26] CONTEXT:  JSON data, line 1: {"userid": "dedy3012","dateApprove":2019-10...
+	SQL statement "UPDATE mst.registrasi set reg_approve = aproval::jsonb WHERE reg_id = p_regid"
+	PL/pgSQL function registrasi_to_user_customer(text,text,text) line 10 at SQL statement
+2019-10-09 11:29:17.958 WIB [26] STATEMENT:  select mst.registrasi_to_user_customer('dedy2012', 'dedy.styawan@gmail.com', 'dedy3012')
+2019-10-09 11:32:46.431 WIB [92] ERROR:  invalid input syntax for type json
+2019-10-09 11:32:46.431 WIB [92] DETAIL:  Token ""2019-10-09 11:32:46.425603+07}" is invalid.
+2019-10-09 11:32:46.431 WIB [92] CONTEXT:  JSON data, line 1: ...12","dateApprove":"2019-10-09 11:32:46.425603+07}
+	SQL statement "UPDATE mst.registrasi set reg_approve = aproval::jsonb WHERE reg_id = p_regid"
+	PL/pgSQL function mst.registrasi_to_user_customer(text,text,text) line 10 at SQL statement
+2019-10-09 11:32:46.431 WIB [92] STATEMENT:  SELECT mst.registrasi_to_user_customer('dedysty811230', 'dedy.styawan@gmail.com', 'dedy3012')
+2019-10-09 11:32:53.967 WIB [26] ERROR:  invalid input syntax for type json
+2019-10-09 11:32:53.967 WIB [26] DETAIL:  Token ""2019-10-09 11:32:53.964195+07}" is invalid.
+2019-10-09 11:32:53.967 WIB [26] CONTEXT:  JSON data, line 1: ...12","dateApprove":"2019-10-09 11:32:53.964195+07}
+	SQL statement "UPDATE mst.registrasi set reg_approve = aproval::jsonb WHERE reg_id = p_regid"
+	PL/pgSQL function registrasi_to_user_customer(text,text,text) line 10 at SQL statement
+2019-10-09 11:32:53.967 WIB [26] STATEMENT:  select mst.registrasi_to_user_customer('dedy2012', 'dedy.styawan@gmail.com', 'dedy3012')
+2019-10-09 11:39:49.525 WIB [102] ERROR:  invalid input syntax for type json
+2019-10-09 11:39:49.525 WIB [102] DETAIL:  Token "dedy3012" is invalid.
+2019-10-09 11:39:49.525 WIB [102] CONTEXT:  JSON data, line 1: dedy3012
+	SQL statement "UPDATE mst.registrasi set reg_approve = p_approve::jsonb WHERE reg_id = p_regid"
+	PL/pgSQL function mst.registrasi_to_user_customer(text,text,text) line 9 at SQL statement
+2019-10-09 11:39:49.525 WIB [102] STATEMENT:  SELECT mst.registrasi_to_user_customer('dedysty811230', 'dedy.styawan@gmail.com', 'dedy3012')
+2019-10-09 11:40:16.614 WIB [104] ERROR:  invalid input syntax for type json
+2019-10-09 11:40:16.614 WIB [104] DETAIL:  Token "dedy3012" is invalid.
+2019-10-09 11:40:16.614 WIB [104] CONTEXT:  JSON data, line 1: dedy3012
+	SQL statement "UPDATE mst.registrasi set reg_approve = p_approve::json WHERE reg_id = p_regid"
+	PL/pgSQL function mst.registrasi_to_user_customer(text,text,text) line 9 at SQL statement
+2019-10-09 11:40:16.614 WIB [104] STATEMENT:  SELECT mst.registrasi_to_user_customer('dedysty811230', 'dedy.styawan@gmail.com', 'dedy3012')
+2019-10-09 11:43:53.882 WIB [108] ERROR:  invalid input syntax for type json
+2019-10-09 11:43:53.882 WIB [108] DETAIL:  Token "dedy3012" is invalid.
+2019-10-09 11:43:53.882 WIB [108] CONTEXT:  JSON data, line 1: dedy3012
+	SQL statement "UPDATE mst.registrasi set reg_approve = p_approve::json WHERE reg_id = p_regid"
+	PL/pgSQL function mst.registrasi_to_user_customer(text,text,text) line 9 at SQL statement
+2019-10-09 11:43:53.882 WIB [108] STATEMENT:  SELECT mst.registrasi_to_user_customer('dedysty811230', 'dedy.styawan@gmail.com', 'dedy3012')
+2019-10-09 11:44:05.410 WIB [26] ERROR:  syntax error at or near "pdate" at character 1
+2019-10-09 11:44:05.410 WIB [26] STATEMENT:  pdate mst.registrasi set reg_approve = null
+2019-10-09 11:44:15.701 WIB [110] ERROR:  invalid input syntax for type json
+2019-10-09 11:44:15.701 WIB [110] DETAIL:  Token "dedy3012" is invalid.
+2019-10-09 11:44:15.701 WIB [110] CONTEXT:  JSON data, line 1: dedy3012
+	SQL statement "UPDATE mst.registrasi set reg_approve = p_approve::jsonb WHERE reg_id = p_regid"
+	PL/pgSQL function mst.registrasi_to_user_customer(text,text,text) line 9 at SQL statement
+2019-10-09 11:44:15.701 WIB [110] STATEMENT:  SELECT mst.registrasi_to_user_customer('dedysty811230', 'dedy.styawan@gmail.com', 'dedy3012')
+2019-10-09 11:44:32.321 WIB [111] ERROR:  invalid input syntax for type json
+2019-10-09 11:44:32.321 WIB [111] DETAIL:  Token "dedy3012" is invalid.
+2019-10-09 11:44:32.321 WIB [111] CONTEXT:  JSON data, line 1: dedy3012
+	SQL statement "UPDATE mst.registrasi set reg_approve = p_approve::jsonb WHERE reg_id = p_regid"
+	PL/pgSQL function mst.registrasi_to_user_customer(text,text,text) line 9 at SQL statement
+2019-10-09 11:44:32.321 WIB [111] STATEMENT:  SELECT mst.registrasi_to_user_customer('dedysty811230', 'dedy.styawan@gmail.com', 'dedy3012')
+2019-10-09 11:44:40.798 WIB [26] ERROR:  invalid input syntax for type json
+2019-10-09 11:44:40.798 WIB [26] DETAIL:  Token "dedy3012" is invalid.
+2019-10-09 11:44:40.798 WIB [26] CONTEXT:  JSON data, line 1: dedy3012
+	SQL statement "UPDATE mst.registrasi set reg_approve = p_approve::jsonb WHERE reg_id = p_regid"
+	PL/pgSQL function registrasi_to_user_customer(text,text,text) line 9 at SQL statement
+2019-10-09 11:44:40.798 WIB [26] STATEMENT:  select mst.registrasi_to_user_customer('dedy2012', 'dedy.styawan@gmail.com', 'dedy3012')
+2019-10-09 11:48:15.973 WIB [116] ERROR:  invalid input syntax for type json
+2019-10-09 11:48:15.973 WIB [116] DETAIL:  Token "dedy3012" is invalid.
+2019-10-09 11:48:15.973 WIB [116] CONTEXT:  JSON data, line 1: dedy3012
+	SQL statement "UPDATE mst.registrasi set reg_approve = p_approve::jsonb WHERE reg_id = p_regid"
+	PL/pgSQL function mst.registrasi_to_user_customer(text,text,text) line 9 at SQL statement
+2019-10-09 11:48:15.973 WIB [116] STATEMENT:  SELECT mst.registrasi_to_user_customer('dedysty811230', 'dedy.styawan@gmail.com', 'dedy3012')
+2019-10-09 11:48:44.319 WIB [26] ERROR:  invalid input syntax for type json
+2019-10-09 11:48:44.319 WIB [26] DETAIL:  Token "dedy3012" is invalid.
+2019-10-09 11:48:44.319 WIB [26] CONTEXT:  JSON data, line 1: dedy3012
+	SQL statement "UPDATE mst.registrasi set reg_approve = p_approve::jsonb WHERE reg_id = p_regid"
+	PL/pgSQL function registrasi_to_user_customer(text,text,text) line 9 at SQL statement
+2019-10-09 11:48:44.319 WIB [26] STATEMENT:  select mst.registrasi_to_user_customer('dedy2012', 'dedy.styawan@gmail.com', 'dedy3012')
+2019-10-09 11:50:18.303 WIB [26] ERROR:  invalid input syntax for type json
+2019-10-09 11:50:18.303 WIB [26] DETAIL:  Token "dedy3012" is invalid.
+2019-10-09 11:50:18.303 WIB [26] CONTEXT:  JSON data, line 1: dedy3012
+	SQL statement "UPDATE mst.registrasi set reg_approve = p_approve::json WHERE reg_id = p_regid"
+	PL/pgSQL function registrasi_to_user_customer(text,text,text) line 9 at SQL statement
+2019-10-09 11:50:18.303 WIB [26] STATEMENT:  select mst.registrasi_to_user_customer('dedy2012', 'dedy.styawan@gmail.com', 'dedy3012')
+2019-10-09 15:34:54.234 WIB [24] LOG:  stats_timestamp 2019-10-09 15:34:54.245886+07 is later than collector's time 2019-10-09 15:34:54.234117+07 for database 0
+2019-10-09 16:21:29.575 WIB [24] LOG:  stats_timestamp 2019-10-09 16:21:29.592183+07 is later than collector's time 2019-10-09 16:21:29.575436+07 for database 0

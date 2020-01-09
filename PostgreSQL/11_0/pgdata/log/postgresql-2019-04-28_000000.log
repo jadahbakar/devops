@@ -1,0 +1,4 @@
+2019-04-28 02:24:58.209 WIB [26] LOG:  stats_timestamp 2019-04-28 02:24:58.210833+07 is later than collector's time 2019-04-28 02:24:58.209603+07 for database 106581
+2019-04-29 11:11:01.868 WIB [1396] FATAL:  password authentication failed for user "teknotama"
+2019-04-29 11:11:01.868 WIB [1396] DETAIL:  Password does not match for user "teknotama".
+	Connection matched pg_hba.conf line 95: "host all all all md5"

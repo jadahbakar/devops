@@ -1,0 +1,39 @@
+2019-08-26 13:50:12.656 WIB [19] LOG:  database system was interrupted; last known up at 2019-08-26 13:46:12 WIB
+2019-08-26 13:50:33.265 WIB [19] LOG:  database system was not properly shut down; automatic recovery in progress
+2019-08-26 13:50:33.579 WIB [19] LOG:  redo starts at 0/CD0D998
+2019-08-26 13:50:33.580 WIB [19] LOG:  invalid record length at 0/CD0DA78: wanted 24, got 0
+2019-08-26 13:50:33.580 WIB [19] LOG:  redo done at 0/CD0DA40
+2019-08-26 13:50:34.448 WIB [1] LOG:  database system is ready to accept connections
+2019-08-26 13:51:53.822 WIB [26] ERROR:  must be owner of database testdb
+2019-08-26 13:51:53.822 WIB [26] STATEMENT:  DROP DATABASE "testdb"
+2019-08-26 13:52:43.165 WIB [33] FATAL:  password authentication failed for user "test*123"
+2019-08-26 13:52:43.165 WIB [33] DETAIL:  Role "test*123" does not exist.
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-08-26 13:52:50.499 WIB [34] FATAL:  password authentication failed for user "test"
+2019-08-26 13:52:50.499 WIB [34] DETAIL:  Password does not match for user "test".
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-08-26 13:52:58.058 WIB [35] FATAL:  password authentication failed for user "test"
+2019-08-26 13:52:58.058 WIB [35] DETAIL:  Password does not match for user "test".
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-08-26 13:54:38.398 WIB [43] FATAL:  database "eplanning" does not exist
+2019-08-26 14:00:26.866 WIB [57] FATAL:  database "eplanning" does not exist
+2019-08-26 14:00:49.177 WIB [58] FATAL:  password authentication failed for user "postgres"
+2019-08-26 14:00:49.177 WIB [58] DETAIL:  Password does not match for user "postgres".
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-08-26 14:41:09.905 WIB [317] FATAL:  password authentication failed for user "teknotama"
+2019-08-26 14:41:09.905 WIB [317] DETAIL:  Password does not match for user "teknotama".
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-08-26 14:41:11.176 WIB [318] FATAL:  password authentication failed for user "teknotama"
+2019-08-26 14:41:11.176 WIB [318] DETAIL:  Password does not match for user "teknotama".
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-08-26 14:41:17.185 WIB [319] FATAL:  password authentication failed for user "teknotama"
+2019-08-26 14:41:17.185 WIB [319] DETAIL:  Password does not match for user "teknotama".
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-08-26 14:41:20.665 WIB [321] FATAL:  password authentication failed for user "teknotama"
+2019-08-26 14:41:20.665 WIB [321] DETAIL:  Password does not match for user "teknotama".
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-08-26 14:41:29.712 WIB [323] FATAL:  password authentication failed for user "teknotama"
+2019-08-26 14:41:29.712 WIB [323] DETAIL:  Password does not match for user "teknotama".
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-08-26 15:28:22.388 WIB [24] LOG:  stats_timestamp 2019-08-26 15:28:22.396706+07 is later than collector's time 2019-08-26 15:28:22.388421+07 for database 13088
+2019-08-26 15:53:38.013 WIB [24] LOG:  stats_timestamp 2019-08-26 15:53:38.018283+07 is later than collector's time 2019-08-26 15:53:38.013347+07 for database 13088

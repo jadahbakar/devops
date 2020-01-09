@@ -1,0 +1,16 @@
+2019-02-24 08:42:13.672 WIB [1851] ERROR:  relation "table_users" does not exist at character 13
+2019-02-24 08:42:13.672 WIB [1851] STATEMENT:  INSERT INTO table_users(username,hash,salt)
+	    values($1, $2, $3) RETURNING id
+2019-02-24 08:46:09.117 WIB [1864] ERROR:  relation "table_users" does not exist at character 13
+2019-02-24 08:46:09.117 WIB [1864] STATEMENT:  INSERT INTO table_users(username,hash,salt)
+	    values($1, $2, $3) RETURNING id
+2019-02-24 08:47:44.436 WIB [1870] ERROR:  relation "table_users" does not exist at character 13
+2019-02-24 08:47:44.436 WIB [1870] STATEMENT:  INSERT INTO table_users(username,hash,salt)
+	    values($1, $2, $3) RETURNING id
+2019-02-24 20:02:24.099 WIB [26] LOG:  stats_timestamp 2019-02-24 20:02:24.101562+07 is later than collector's time 2019-02-24 20:02:24.094721+07 for database 0
+2019-02-24 21:46:48.498 WIB [26] LOG:  stats_timestamp 2019-02-24 21:46:48.50994+07 is later than collector's time 2019-02-24 21:46:48.498786+07 for database 0
+2019-02-24 23:42:21.483 WIB [26] LOG:  stats_timestamp 2019-02-24 23:42:21.48799+07 is later than collector's time 2019-02-24 23:42:21.483263+07 for database 0
+2019-02-24 23:59:27.885 WIB [3397] ERROR:  function userid_login(unknown, unknown) does not exist at character 8
+2019-02-24 23:59:27.885 WIB [3397] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2019-02-24 23:59:27.885 WIB [3397] STATEMENT:  select userid_login('dedy3012','a');
+	

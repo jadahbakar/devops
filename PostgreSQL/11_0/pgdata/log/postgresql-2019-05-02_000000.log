@@ -1,0 +1,16 @@
+2019-05-02 11:36:45.746 WIB [24] LOG:  stats_timestamp 2019-05-02 11:36:45.755985+07 is later than collector's time 2019-05-02 11:36:45.746636+07 for database 0
+2019-05-02 14:46:05.203 WIB [1656] ERROR:  syntax error at or near "INNER" at character 65
+2019-05-02 14:46:05.203 WIB [1656] STATEMENT:  SELECT user_id, user_nama, user_sts, user_email, roles_name     INNER JOIN sec.roles ON user_role = roles_status     FROM sec.userid
+2019-05-02 14:46:35.905 WIB [1657] ERROR:  syntax error at or near "INNER" at character 65
+2019-05-02 14:46:35.905 WIB [1657] STATEMENT:  SELECT user_id, user_nama, user_sts, user_email, roles_name     INNER JOIN sec.roles ON user_role = roles_status     FROM sec.userid
+2019-05-02 14:47:17.415 WIB [1659] ERROR:  syntax error at or near "INNER" at character 65
+2019-05-02 14:47:17.415 WIB [1659] STATEMENT:  SELECT user_id, user_nama, user_sts, user_email, roles_name     INNER JOIN sec.roles ON user_role = roles_id     FROM sec.userid
+2019-05-02 14:47:58.923 WIB [1144] ERROR:  syntax error at or near "INNER" at character 66
+2019-05-02 14:47:58.923 WIB [1144] STATEMENT:  SELECT user_id, user_nama, user_sts, user_email, roles_name 
+	    INNER JOIN sec.roles ON user_role = roles_id 
+	    FROM sec.userid
+2019-05-02 14:48:22.928 WIB [1661] ERROR:  syntax error at or near "INNER" at character 65
+2019-05-02 14:48:22.928 WIB [1661] STATEMENT:  SELECT user_id, user_nama, user_sts, user_email, roles_name     INNER JOIN sec.roles ON user_role = roles_id     FROM sec.userid
+2019-05-03 06:51:38.861 WIB [1858] FATAL:  password authentication failed for user "teknotama"
+2019-05-03 06:51:38.861 WIB [1858] DETAIL:  Password does not match for user "teknotama".
+	Connection matched pg_hba.conf line 95: "host all all all md5"

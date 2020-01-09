@@ -1,0 +1,9 @@
+2019-03-03 17:46:47.873 WIB [19] LOG:  database system was interrupted; last known up at 2019-02-26 08:20:00 WIB
+2019-03-03 17:47:06.031 WIB [19] LOG:  database system was not properly shut down; automatic recovery in progress
+2019-03-03 17:47:06.277 WIB [19] LOG:  redo starts at 0/5BC4CE0
+2019-03-03 17:47:06.278 WIB [19] LOG:  invalid record length at 0/5BC4D18: wanted 24, got 0
+2019-03-03 17:47:06.278 WIB [19] LOG:  redo done at 0/5BC4CE0
+2019-03-03 17:47:06.822 WIB [1] LOG:  database system is ready to accept connections
+2019-03-03 19:39:07.015 WIB [28] FATAL:  password authentication failed for user "triyanto"
+2019-03-03 19:39:07.015 WIB [28] DETAIL:  Password does not match for user "triyanto".
+	Connection matched pg_hba.conf line 95: "host all all all md5"

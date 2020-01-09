@@ -1,0 +1,13 @@
+2019-11-13 19:10:52.046 WIB [19] LOG:  database system was interrupted; last known up at 2019-11-13 18:21:06 WIB
+2019-11-13 19:11:10.075 WIB [19] LOG:  database system was not properly shut down; automatic recovery in progress
+2019-11-13 19:11:10.290 WIB [19] LOG:  redo starts at 0/14EEBB08
+2019-11-13 19:11:10.291 WIB [19] LOG:  invalid record length at 0/14EEBB40: wanted 24, got 0
+2019-11-13 19:11:10.291 WIB [19] LOG:  redo done at 0/14EEBB08
+2019-11-13 19:11:10.841 WIB [1] LOG:  database system is ready to accept connections
+2019-11-13 20:17:49.448 WIB [164] ERROR:  column "dedy3012" does not exist at character 25
+2019-11-13 20:17:49.448 WIB [164] STATEMENT:  SELECT sec.userid_login(dedy3012, a)
+2019-11-13 20:18:30.797 WIB [169] ERROR:  column "dedy3012" does not exist at character 25
+2019-11-13 20:18:30.797 WIB [169] STATEMENT:  SELECT sec.userid_login(dedy3012, a)
+2019-11-13 20:18:44.342 WIB [171] ERROR:  column "dedy3012" does not exist at character 25
+2019-11-13 20:18:44.342 WIB [171] STATEMENT:  SELECT sec.userid_login(dedy3012, a)
+2019-11-14 11:17:45.470 WIB [24] LOG:  stats_timestamp 2019-11-14 11:17:45.476095+07 is later than collector's time 2019-11-14 11:17:45.470431+07 for database 0

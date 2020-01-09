@@ -1,0 +1,162 @@
+2019-11-12 14:24:24.652 WIB [745] ERROR:  function mst.support_fungsi_lain(integer) does not exist at character 8
+2019-11-12 14:24:24.652 WIB [745] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2019-11-12 14:24:24.652 WIB [745] STATEMENT:  SELECT mst.support_fungsi_lain (2) AS rkf_id_new
+2019-11-12 14:26:28.420 WIB [745] ERROR:  column "p_user_from" does not exist at character 402
+2019-11-12 14:26:28.420 WIB [745] HINT:  Perhaps you meant to reference the column "rkf_support.rkf_user_from" or the column "rkf.rkf_user_from".
+2019-11-12 14:26:28.420 WIB [745] QUERY:  INSERT INTO mst.rkf (
+	      rkf_user, rkf_user_from, rkf_tahun, rkf_jenis_id, 
+	      rkf_visi, rkf_misi, rkf_coreplan, rkf_kud, rkf_proker, 
+	      rkf_status_proker, rkf_skala_proker, rkf_kat_proker, rkf_bsc, 
+	      rkf_tlaudit, rkf_konsultan, rkf_tujuan_proker, rkf_indikator, 
+	      rkf_targetfin, rkf_jadwal, rkf_anggaran, rkf_transformasi_bpd, 
+	      rkf_rakb, rkf_isu_strategis)
+	SELECT rkf_user, p_user_from, rkf_tahun, rkf_jenis_id, 
+	      rkf_visi, rkf_misi, rkf_coreplan, rkf_kud, rkf_proker, 
+	      rkf_status_proker, rkf_skala_proker, rkf_kat_proker, rkf_bsc, 
+	      rkf_tlaudit, rkf_konsultan, rkf_tujuan_proker, rkf_indikator, 
+	      rkf_targetfin, rkf_jadwal, rkf_anggaran, rkf_transformasi_bpd, 
+	      rkf_rakb, rkf_isu_strategis 
+	FROM tmp.rkf_support WHERE rkf_id = p_rkf_id_support
+	RETURNING rkf_id
+2019-11-12 14:26:28.420 WIB [745] CONTEXT:  PL/pgSQL function support_fungsi_lain(integer) line 11 at SQL statement
+2019-11-12 14:26:28.420 WIB [745] STATEMENT:  SELECT mst.support_fungsi_lain (2) AS rkf_id_new
+2019-11-12 14:27:01.375 WIB [745] ERROR:  column "p_divisi_to" does not exist at character 223
+2019-11-12 14:27:01.375 WIB [745] QUERY:  UPDATE mst.rkf SET rkf_fungsilain = (
+	  SELECT  rkf_fungsilain #- array[ (position- 1)::text] new_value
+	  FROM mst.rkf, jsonb_array_elements(rkf_fungsilain) with ordinality arr(elem, position)
+	  WHERE elem->>'unitKerja' = p_divisi_to
+	  AND rkf_id = p_rkf_id_support)
+	WHERE rkf_id = p_rkf_id_support
+2019-11-12 14:27:01.375 WIB [745] CONTEXT:  PL/pgSQL function support_fungsi_lain(integer) line 28 at SQL statement
+2019-11-12 14:27:01.375 WIB [745] STATEMENT:  SELECT mst.support_fungsi_lain (2) AS rkf_id_new
+2019-11-12 20:42:08.028 WIB [1394] ERROR:  syntax error at or near ")" at character 864
+2019-11-12 20:42:08.028 WIB [1394] STATEMENT:  CREATE OR REPLACE FUNCTION "mst"."_navicat_temp_stored_proc"("p_rkf_id_support" int4)
+	  RETURNS "pg_catalog"."text" AS $BODY$
+	declare
+	      dari  RECORD;
+	      tujuan RECORD;
+	      rkf_id_baru INTEGER;
+	      xsts text = 'fail';
+	begin
+	SELECT rkf_id, rkf_user_from INTO dari FROM mst.rkf WHERE rkf_id = p_rkf_id_support;
+	SELECT rkf_user_from INTO tujuan FROM tmp.rkf_support WHERE rkf_id = p_rkf_id_support;
+	
+	INSERT INTO mst.rkf (
+	      rkf_user, rkf_user_from, rkf_tahun, rkf_jenis_id, 
+	      rkf_visi, rkf_misi, rkf_coreplan, rkf_kud, rkf_proker, 
+	      rkf_status_proker, rkf_skala_proker, rkf_kat_proker, rkf_bsc, 
+	      rkf_tlaudit, rkf_konsultan, rkf_tujuan_proker, rkf_indikator, 
+	      rkf_targetfin, rkf_jadwal, rkf_anggaran, rkf_transformasi_bpd, 
+	      rkf_rakb, rkf_isu_strategis, 
+				rkf_unit_pelaksana, rkf_targetfin, rkf_anggaran, rkf_quick_win, 
+				)
+	SELECT rkf_user, rkf_user_from, rkf_tahun, rkf_jenis_id, 
+	      rkf_visi, rkf_misi, rkf_coreplan, rkf_kud, rkf_proker, 
+	      rkf_status_proker, rkf_skala_proker, rkf_kat_proker, rkf_bsc, 
+	      rkf_tlaudit, rkf_konsultan, rkf_tujuan_proker, rkf_indikator, 
+	      rkf_targetfin, rkf_jadwal, rkf_anggaran, rkf_transformasi_bpd, 
+	      rkf_rakb, rkf_isu_strategis,
+				rkf_unit_pelaksana, rkf_targetfin, rkf_anggaran, rkf_quick_win
+	FROM tmp.rkf_support WHERE rkf_id = p_rkf_id_support
+	RETURNING rkf_id INTO rkf_id_baru;
+	
+	-- menghilangkan 
+	UPDATE mst.rkf SET rkf_fungsilain = (
+	  SELECT  rkf_fungsilain #- array[ (position- 1)::text] new_value
+	  FROM mst.rkf, jsonb_array_elements(rkf_fungsilain) with ordinality arr(elem, position)
+	  WHERE elem->>'unitKerja' = tujuan.rkf_user_from
+	  AND rkf_id = p_rkf_id_support)
+	WHERE rkf_id = p_rkf_id_support;
+	
+	-- delete temp
+	DELETE FROM tmp.rkf_support WHERE rkf_id = p_rkf_id_support;
+	
+	
+	INSERT INTO mst.rkf_map (rkf_map_divisi_from, rkf_map_divisi_to, rkf_map_id_from, rkf_map_id_to) 
+	      VALUES (dari.rkf_user_from, tujuan.rkf_user_from, p_rkf_id_support, rkf_id_baru);
+	      xsts = 'pass';
+	RETURN rkf_id_baru;
+	
+	
+	END
+	$BODY$
+	  LANGUAGE plpgsql VOLATILE
+	  COST 100
+2019-11-12 20:50:39.772 WIB [1434] ERROR:  column "rkf_targetfin" specified more than once at character 409
+2019-11-12 20:50:39.772 WIB [1434] QUERY:  INSERT INTO mst.rkf (
+	      rkf_user, rkf_user_from, rkf_tahun, rkf_jenis_id, 
+	      rkf_visi, rkf_misi, rkf_coreplan, rkf_kud, rkf_proker, 
+	      rkf_status_proker, rkf_skala_proker, rkf_kat_proker, rkf_bsc, 
+	      rkf_tlaudit, rkf_konsultan, rkf_tujuan_proker, rkf_indikator, 
+	      rkf_targetfin, rkf_jadwal, rkf_anggaran, rkf_transformasi_bpd, 
+	      rkf_rakb, rkf_isu_strategis, 
+				rkf_unit_pelaksana, rkf_targetfin, rkf_anggaran, rkf_quick_win
+				)
+	SELECT rkf_user, rkf_user_from, rkf_tahun, rkf_jenis_id, 
+	      rkf_visi, rkf_misi, rkf_coreplan, rkf_kud, rkf_proker, 
+	      rkf_status_proker, rkf_skala_proker, rkf_kat_proker, rkf_bsc, 
+	      rkf_tlaudit, rkf_konsultan, rkf_tujuan_proker, rkf_indikator, 
+	      rkf_targetfin, rkf_jadwal, rkf_anggaran, rkf_transformasi_bpd, 
+	      rkf_rakb, rkf_isu_strategis,
+				rkf_unit_pelaksana, rkf_targetfin, rkf_anggaran, rkf_quick_win
+	FROM tmp.rkf_support WHERE rkf_id = p_rkf_id_support
+	RETURNING rkf_id
+2019-11-12 20:50:39.772 WIB [1434] CONTEXT:  PL/pgSQL function mst.support_fungsi_lain(integer) line 11 at SQL statement
+2019-11-12 20:50:39.772 WIB [1434] STATEMENT:  SELECT mst.support_fungsi_lain ('75') AS rkf_id_new
+2019-11-12 20:56:44.406 WIB [1394] ERROR:  syntax error at or near "INTO" at character 941
+2019-11-12 20:56:44.406 WIB [1394] STATEMENT:  INSERT INTO mst.rkf (
+	      rkf_user, rkf_user_from, rkf_tahun, rkf_jenis_id, 
+	      rkf_visi, rkf_misi, rkf_coreplan, rkf_kud, rkf_proker, 
+	      rkf_status_proker, rkf_skala_proker, rkf_kat_proker, rkf_bsc, 
+	      rkf_tlaudit, rkf_konsultan, rkf_tujuan_proker, rkf_indikator, 
+	      rkf_targetfin, rkf_jadwal, rkf_anggaran, rkf_transformasi_bpd, 
+	      rkf_rakb, rkf_isu_strategis, 
+				rkf_unit_pelaksana, rkf_targetfin, rkf_anggaran, rkf_quick_win
+				)
+	SELECT rkf_user, rkf_user_from, rkf_tahun, rkf_jenis_id, 
+	      rkf_visi, rkf_misi, rkf_coreplan, rkf_kud, rkf_proker, 
+	      rkf_status_proker, rkf_skala_proker, rkf_kat_proker, rkf_bsc, 
+	      rkf_tlaudit, rkf_konsultan, rkf_tujuan_proker, rkf_indikator, 
+	      rkf_targetfin, rkf_jadwal, rkf_anggaran, rkf_transformasi_bpd, 
+	      rkf_rakb, rkf_isu_strategis,
+				rkf_unit_pelaksana, rkf_targetfin, rkf_anggaran, rkf_quick_win
+	FROM tmp.rkf_support WHERE rkf_id = 2
+	RETURNING rkf_id INTO rkf_id_baru
+2019-11-12 20:57:12.989 WIB [1394] ERROR:  column "rkf_targetfin" specified more than once at character 409
+2019-11-12 20:57:12.989 WIB [1394] STATEMENT:  INSERT INTO mst.rkf (
+	      rkf_user, rkf_user_from, rkf_tahun, rkf_jenis_id, 
+	      rkf_visi, rkf_misi, rkf_coreplan, rkf_kud, rkf_proker, 
+	      rkf_status_proker, rkf_skala_proker, rkf_kat_proker, rkf_bsc, 
+	      rkf_tlaudit, rkf_konsultan, rkf_tujuan_proker, rkf_indikator, 
+	      rkf_targetfin, rkf_jadwal, rkf_anggaran, rkf_transformasi_bpd, 
+	      rkf_rakb, rkf_isu_strategis, 
+				rkf_unit_pelaksana, rkf_targetfin, rkf_anggaran, rkf_quick_win
+				)
+	SELECT rkf_user, rkf_user_from, rkf_tahun, rkf_jenis_id, 
+	      rkf_visi, rkf_misi, rkf_coreplan, rkf_kud, rkf_proker, 
+	      rkf_status_proker, rkf_skala_proker, rkf_kat_proker, rkf_bsc, 
+	      rkf_tlaudit, rkf_konsultan, rkf_tujuan_proker, rkf_indikator, 
+	      rkf_targetfin, rkf_jadwal, rkf_anggaran, rkf_transformasi_bpd, 
+	      rkf_rakb, rkf_isu_strategis,
+				rkf_unit_pelaksana, rkf_targetfin, rkf_anggaran, rkf_quick_win
+	FROM tmp.rkf_support WHERE rkf_id = 2
+	RETURNING rkf_id
+2019-11-12 20:57:43.320 WIB [1394] ERROR:  column "rkf_anggaran" specified more than once at character 409
+2019-11-12 20:57:43.320 WIB [1394] STATEMENT:  INSERT INTO mst.rkf (
+	      rkf_user, rkf_user_from, rkf_tahun, rkf_jenis_id, 
+	      rkf_visi, rkf_misi, rkf_coreplan, rkf_kud, rkf_proker, 
+	      rkf_status_proker, rkf_skala_proker, rkf_kat_proker, rkf_bsc, 
+	      rkf_tlaudit, rkf_konsultan, rkf_tujuan_proker, rkf_indikator, 
+	      rkf_targetfin, rkf_jadwal, rkf_anggaran, rkf_transformasi_bpd, 
+	      rkf_rakb, rkf_isu_strategis, 
+				rkf_unit_pelaksana, rkf_anggaran, rkf_quick_win
+				)
+	SELECT rkf_user, rkf_user_from, rkf_tahun, rkf_jenis_id, 
+	      rkf_visi, rkf_misi, rkf_coreplan, rkf_kud, rkf_proker, 
+	      rkf_status_proker, rkf_skala_proker, rkf_kat_proker, rkf_bsc, 
+	      rkf_tlaudit, rkf_konsultan, rkf_tujuan_proker, rkf_indikator, 
+	      rkf_targetfin, rkf_jadwal, rkf_anggaran, rkf_transformasi_bpd, 
+	      rkf_rakb, rkf_isu_strategis,
+				rkf_unit_pelaksana, rkf_anggaran, rkf_quick_win
+	FROM tmp.rkf_support WHERE rkf_id = 2
+	RETURNING rkf_id

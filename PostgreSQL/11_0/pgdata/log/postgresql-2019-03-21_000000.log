@@ -1,0 +1,262 @@
+2019-03-21 08:17:06.082 WIB [920] ERROR:  syntax error at or near "END" at character 575
+2019-03-21 08:17:06.082 WIB [920] STATEMENT:  CREATE OR REPLACE FUNCTION trx.activity(p_action text, p_status INTEGER, p_user_id text, p_jenis TEXT)
+	    RETURNS text
+	    LANGUAGE 'plpgsql'
+	AS $BODY$
+	DECLARE 
+		 xsts text = 'fail'; 
+	BEGIN 
+	
+	CASE 
+		WHEN p_action = 'i' THEN
+		BEGIN
+			IF NOT EXISTS ( 
+				SELECT user_act_sts FROM trx.activity WHERE user_act_sts = p_user_nama AND user_act_userid = p_user_id AND user_act_time = now()
+			) THEN 
+				INSERT INTO trx.activity(user_act_sts, user_act_userid, user_act_time, user_act_jenis) 
+				VALUES (0, p_user_id, now(), p_jenis); 
+				xsts = 'ok';
+			ELSE 
+				xsts = 'reqfound'
+			END IF;
+		END;
+	
+	END CASE;
+	RETURN xsts;
+	END
+	$BODY$;
+2019-03-21 08:27:52.163 WIB [1367] ERROR:  case not found
+2019-03-21 08:27:52.163 WIB [1367] HINT:  CASE statement is missing ELSE part.
+2019-03-21 08:27:52.163 WIB [1367] CONTEXT:  PL/pgSQL function trx.activity(text,integer,text,text) line 6 at CASE
+2019-03-21 08:27:52.163 WIB [1367] STATEMENT:  SELECT trx.activity(null, null, null, null )
+2019-03-21 08:32:03.701 WIB [920] ERROR:  relation "activity_jenis" does not exist at character 15
+2019-03-21 08:32:03.701 WIB [920] STATEMENT:  SELECT * from activity_jenis;
+	
+2019-03-21 08:39:23.756 WIB [1438] ERROR:  column "p_user_nama" does not exist at character 85
+2019-03-21 08:39:23.756 WIB [1438] QUERY:  SELECT NOT EXISTS ( 
+					SELECT user_act_sts FROM trx.activity WHERE user_act_sts = p_user_nama AND user_act_userid = p_user_id AND user_act_time = now()
+				)
+2019-03-21 08:39:23.756 WIB [1438] CONTEXT:  PL/pgSQL function trx.activity_wud(text,integer,text,text) line 12 at IF
+2019-03-21 08:39:23.756 WIB [1438] STATEMENT:  SELECT trx.activity_wud('i', '0', 'dedy3012', '1')
+2019-03-21 08:40:09.821 WIB [920] ERROR:  function trx.activity(text, integer, text, text) does not exist
+2019-03-21 08:40:09.821 WIB [920] STATEMENT:  DROP FUNCTION trx.activity(p_action text, p_status INTEGER, p_user_id text, p_jenis TEXT);
+	
+	
+	CREATE OR REPLACE FUNCTION trx.activity_wud(p_action text, p_status INTEGER, p_user_id text, p_jenis TEXT)
+	    RETURNS text
+	    LANGUAGE 'plpgsql'
+	AS $BODY$
+	DECLARE 
+		 xsts text = 'fail'; 
+	BEGIN 
+	
+	CASE 
+		WHEN p_action = 'i' THEN
+		BEGIN
+		   IF NOT EXISTS (SELECT user_id FROM sec.userid WHERE user_id = p_user_id) THEN 
+			   xsts = 'usernotfound';
+		   ELSE
+				IF NOT EXISTS ( 
+					SELECT user_act_sts FROM trx.activity WHERE user_act_sts = p_status AND user_act_userid = p_user_id AND user_act_time = now()
+				) THEN 
+					INSERT INTO trx.activity(user_act_sts, user_act_userid, user_act_time, user_act_jenis) 
+					VALUES (p_status, p_user_id, now(), p_jenis); 
+					xsts = 'ok';
+				ELSE 
+					xsts = 'reqfound';
+				END IF;
+			END IF;
+		END;
+	END CASE;
+	RETURN xsts;
+	END
+	$BODY$;
+	
+	UPDATE mst.activity_jenis set jenis_act_sts = 1;
+	
+	SELECT * from mst.activity_jenis;
+	
+2019-03-21 08:40:35.609 WIB [920] ERROR:  relation "mst.activity" does not exist at character 15
+2019-03-21 08:40:35.609 WIB [920] STATEMENT:  select * from mst.activity;
+	
+	
+2019-03-21 11:10:18.856 WIB [920] ERROR:  syntax error at or near "{" at character 149
+2019-03-21 11:10:18.856 WIB [920] STATEMENT:  INSERT INTO mst.menu_parent (menu_prt_id, menu_prt_urut, menu_prt_sts, name, url, icon) 
+	VALUES 
+	(1,1,1,'Dashbaord','/dashboard','icon-speedometer',{});
+2019-03-21 11:10:34.887 WIB [920] ERROR:  relation "mst.menu_parent" does not exist at character 13
+2019-03-21 11:10:34.887 WIB [920] STATEMENT:  INSERT INTO mst.menu_parent (menu_prt_id, menu_prt_urut, menu_prt_sts, name, url, icon) 
+	VALUES 
+	(1,1,1,'Dashbaord','/dashboard','icon-speedometer','{}');
+2019-03-21 11:10:49.040 WIB [920] ERROR:  INSERT has more expressions than target columns at character 149
+2019-03-21 11:10:49.040 WIB [920] STATEMENT:  INSERT INTO sec.menu_parent (menu_prt_id, menu_prt_urut, menu_prt_sts, name, url, icon) 
+	VALUES 
+	(1,1,1,'Dashbaord','/dashboard','icon-speedometer','{}');
+2019-03-21 11:10:55.130 WIB [920] ERROR:  syntax error at or near "{" at character 149
+2019-03-21 11:10:55.130 WIB [920] STATEMENT:  INSERT INTO sec.menu_parent (menu_prt_id, menu_prt_urut, menu_prt_sts, name, url, icon) 
+	VALUES 
+	(1,1,1,'Dashbaord','/dashboard','icon-speedometer',{});
+2019-03-21 11:12:50.541 WIB [920] ERROR:  INSERT has more expressions than target columns at character 149
+2019-03-21 11:12:50.541 WIB [920] STATEMENT:  INSERT INTO sec.menu_parent (menu_prt_id, menu_prt_urut, menu_prt_sts, name, url, icon) 
+	VALUES 
+	(1,1,1,'Dashbaord','/dashboard','icon-speedometer','{"badge": {"variant": "","text": ""}}');
+2019-03-21 11:19:55.877 WIB [920] ERROR:  duplicate key value violates unique constraint "menu_parent_pkey"
+2019-03-21 11:19:55.877 WIB [920] DETAIL:  Key (menu_prt_id)=(1) already exists.
+2019-03-21 11:19:55.877 WIB [920] STATEMENT:  
+	
+	INSERT INTO sec.menu_parent (menu_prt_id, menu_prt_urut, menu_prt_sts, name, url, icon, badge) 
+	VALUES 
+	(1,1,1,'Dashbaord','/dashboard','icon-speedometer', '{"badge": {"variant": "","text": ""}}'),
+	(2,2,1,'Management User','/base','icon-user', '{"badge": {"variant": "","text": ""}}'),
+	(3,3,1,'Transaksi','/editors','icon-note', '{"badge": {"variant": "","text": ""}}');
+	
+2019-03-21 11:48:35.526 WIB [920] ERROR:  syntax error at or near "4" at character 398
+2019-03-21 11:48:35.526 WIB [920] STATEMENT:  
+	DELETE FROM sec.menu_parent ;
+	
+	INSERT INTO sec.menu_parent (menu_prt_id, menu_prt_urut, menu_prt_sts, name, url, icon, badge) 
+	VALUES 
+	(1,1,1,'Dashbaord','/dashboard','icon-speedometer', '{"badge": {"variant": "","text": ""}}'),
+	(2,2,1,'Master','/base','icon-puzzle', '{"badge": {"variant": "","text": ""}}'),
+	(3,3,1,'Transaksi','/editors','icon-note', '{"badge": {"variant": "","text": ""}}');
+	(4,4,1,'Complain','/pages','icon-star', '{"badge": {"variant": "","text": ""}}');
+	(5,5,1,'Report','/charts','icon-pie-chart', '{"badge": {"variant": "","text": ""}}');
+	
+	DELETE FROM sec.menu_child;
+	
+	INSERT INTO sec.menu_child VALUES 
+	(2,1,1,1,'Management User','/base/breadcrumbs','icon-puzzle','{"badge": {"variant": "","text": ""}}'),
+	(2,2,2,1,'Tree','/base/carousels','icon-puzzle','{"badge": {"variant": "","text": ""}}'),
+	(3,1,1,1,'Verifikasi','/buttons/brand-buttons','icon-cursor','{"badge": {"variant": "","text": ""}}'),
+	(3,2,2,1,'Property','/buttons/brand-buttons','icon-cursor','{"badge": {"variant": "","text": ""}}'),
+	(3,3,3,1,'Cash In','/buttons/brand-buttons','icon-cursor','{"badge": {"variant": "","text": ""}}'),
+	(3,4,4,1,'Cash Out','/buttons/brand-buttons','icon-cursor','{"badge": {"variant": "","text": ""}}'),
+	(3,5,5,1,'Kewajiban','/buttons/brand-buttons','icon-cursor','{"badge": {"variant": "","text": ""}}'),
+	(3,6,6,6,'Fee','/buttons/brand-buttons','icon-cursor','{"badge": {"variant": "","text": ""}}'),
+	
+	(4,1,1,1,'Complain','/plugins/spinners','icon-directions','{"badge": {"variant": "","text": ""}}'),
+	
+	
+	(5,1,1,1,'Customer ID','/tables/tables','icon-layers','{"badge": {"variant": "","text": ""}}'),
+	(5,2,2,1,'Cash In','/tables/tables','icon-layers','{"badge": {"variant": "","text": ""}}'),
+	(5,3,3,1,'Cash Out','/tables/tables','icon-layers','{"badge": {"variant": "","text": ""}}'),
+	(5,4,4,1,'Kewajiban','/tables/tables','icon-layers','{"badge": {"variant": "","text": ""}}'),
+	(5,5,5,1,'Fee','/tables/tables','icon-layers','{"badge": {"variant": "","text": ""}}');
+	
+	
+	
+	
+2019-03-21 11:48:47.096 WIB [920] ERROR:  syntax error at or near "4" at character 398
+2019-03-21 11:48:47.096 WIB [920] STATEMENT:  
+	DELETE FROM sec.menu_parent ;
+	
+	INSERT INTO sec.menu_parent (menu_prt_id, menu_prt_urut, menu_prt_sts, name, url, icon, badge) 
+	VALUES 
+	(1,1,1,'Dashbaord','/dashboard','icon-speedometer', '{"badge": {"variant": "","text": ""}}'),
+	(2,2,1,'Master','/base','icon-puzzle', '{"badge": {"variant": "","text": ""}}'),
+	(3,3,1,'Transaksi','/editors','icon-note', '{"badge": {"variant": "","text": ""}}');
+	(4,4,1,'Complain','/pages','icon-star', '{"badge": {"variant": "","text": ""}}'),
+	(5,5,1,'Report','/charts','icon-pie-chart', '{"badge": {"variant": "","text": ""}}');
+	
+	DELETE FROM sec.menu_child;
+	
+	INSERT INTO sec.menu_child VALUES 
+	(2,1,1,1,'Management User','/base/breadcrumbs','icon-puzzle','{"badge": {"variant": "","text": ""}}'),
+	(2,2,2,1,'Tree','/base/carousels','icon-puzzle','{"badge": {"variant": "","text": ""}}'),
+	(3,1,1,1,'Verifikasi','/buttons/brand-buttons','icon-cursor','{"badge": {"variant": "","text": ""}}'),
+	(3,2,2,1,'Property','/buttons/brand-buttons','icon-cursor','{"badge": {"variant": "","text": ""}}'),
+	(3,3,3,1,'Cash In','/buttons/brand-buttons','icon-cursor','{"badge": {"variant": "","text": ""}}'),
+	(3,4,4,1,'Cash Out','/buttons/brand-buttons','icon-cursor','{"badge": {"variant": "","text": ""}}'),
+	(3,5,5,1,'Kewajiban','/buttons/brand-buttons','icon-cursor','{"badge": {"variant": "","text": ""}}'),
+	(3,6,6,6,'Fee','/buttons/brand-buttons','icon-cursor','{"badge": {"variant": "","text": ""}}'),
+	(4,1,1,1,'Complain','/plugins/spinners','icon-directions','{"badge": {"variant": "","text": ""}}'),
+	
+	(5,1,1,1,'Customer ID','/tables/tables','icon-layers','{"badge": {"variant": "","text": ""}}'),
+	(5,2,2,1,'Cash In','/tables/tables','icon-layers','{"badge": {"variant": "","text": ""}}'),
+	(5,3,3,1,'Cash Out','/tables/tables','icon-layers','{"badge": {"variant": "","text": ""}}'),
+	(5,4,4,1,'Kewajiban','/tables/tables','icon-layers','{"badge": {"variant": "","text": ""}}'),
+	(5,5,5,1,'Fee','/tables/tables','icon-layers','{"badge": {"variant": "","text": ""}}');
+	
+	
+	
+	
+2019-03-21 12:28:42.654 WIB [24] LOG:  stats_timestamp 2019-03-21 12:28:42.659474+07 is later than collector's time 2019-03-21 12:28:42.65429+07 for database 0
+2019-03-21 15:16:14.469 WIB [920] ERROR:  relation "sec.role_menu" does not exist at character 103
+2019-03-21 15:16:14.469 WIB [920] QUERY:  SELECT  json_agg(row_to_json(t))  FROM 
+			(
+			SELECT name, url, icon
+			FROM sec.menu_child INNER JOIN sec.role_menu ON menu_cld_id	= role_menu_cld
+			WHERE 
+			menu_cld_prt = p_menu_prt_id AND 
+			role_menu_id = p_role AND 
+			menu_cld_sts = 1
+			ORDER BY menu_cld_urut
+			) t
+2019-03-21 15:16:14.469 WIB [920] CONTEXT:  PL/pgSQL function sec.generate_child(integer,integer) line 3 at RETURN QUERY
+	PL/pgSQL function sec.generate_parent(integer) line 2 at RETURN QUERY
+2019-03-21 15:16:14.469 WIB [920] STATEMENT:  SELECT sec.generate_parent(1) AS menu;
+	
+2019-03-21 15:20:56.855 WIB [920] ERROR:  syntax error at end of input at character 731
+2019-03-21 15:20:56.855 WIB [920] STATEMENT:  
+	
+	INSERT INTO sec.roles_menu VALUES 
+	(1,1,'{"delete": 1, "insert": 1, "update": 1}'),
+	(2,2,'{"delete": 1, "insert": 1, "update": 1}'),
+	(3,3,'{"delete": 1, "insert": 1, "update": 1}'),
+	(3,4,'{"delete": 1, "insert": 1, "update": 1}'),
+	(3,5,'{"delete": 1, "insert": 1, "update": 1}'),
+	(3,6,'{"delete": 1, "insert": 1, "update": 1}'),
+	(3,7,'{"delete": 1, "insert": 1, "update": 1}'),
+	(3,8,'{"delete": 1, "insert": 1, "update": 1}'),
+	(4,9,'{"delete": 1, "insert": 1, "update": 1}'),
+	
+	(5,10,'{"delete": 1, "insert": 1, "update": 1}'),
+	(5,11,'{"delete": 1, "insert": 1, "update": 1}'),
+	(5,12,'{"delete": 1, "insert": 1, "update": 1}'),
+	(5,13,'{"delete": 1, "insert": 1, "update": 1}'),
+	(5,14,'{"delete": 1, "insert": 1, "update": 1}'),
+	
+	
+2019-03-21 15:21:21.302 WIB [920] ERROR:  syntax error at end of input at character 729
+2019-03-21 15:21:21.302 WIB [920] STATEMENT:  
+	
+	INSERT INTO sec.roles_menu VALUES 
+	(1,1,'{"delete": 1, "insert": 1, "update": 1}'),
+	(2,2,'{"delete": 1, "insert": 1, "update": 1}'),
+	(3,3,'{"delete": 1, "insert": 1, "update": 1}'),
+	(3,4,'{"delete": 1, "insert": 1, "update": 1}'),
+	(3,5,'{"delete": 1, "insert": 1, "update": 1}'),
+	(3,6,'{"delete": 1, "insert": 1, "update": 1}'),
+	(3,7,'{"delete": 1, "insert": 1, "update": 1}'),
+	(3,8,'{"delete": 1, "insert": 1, "update": 1}'),
+	(4,9,'{"delete": 1, "insert": 1, "update": 1}'),
+	(5,10,'{"delete": 1, "insert": 1, "update": 1}'),
+	(5,11,'{"delete": 1, "insert": 1, "update": 1}'),
+	(5,12,'{"delete": 1, "insert": 1, "update": 1}'),
+	(5,13,'{"delete": 1, "insert": 1, "update": 1}'),
+	(5,14,'{"delete": 1, "insert": 1, "update": 1}'),
+	
+2019-03-21 15:21:30.151 WIB [920] ERROR:  relation "sec.role_menu" does not exist at character 103
+2019-03-21 15:21:30.151 WIB [920] QUERY:  SELECT  json_agg(row_to_json(t))  FROM 
+			(
+			SELECT name, url, icon
+			FROM sec.menu_child INNER JOIN sec.role_menu ON menu_cld_id	= role_menu_cld
+			WHERE 
+			menu_cld_prt = p_menu_prt_id AND 
+			role_menu_id = p_role AND 
+			menu_cld_sts = 1
+			ORDER BY menu_cld_urut
+			) t
+2019-03-21 15:21:30.151 WIB [920] CONTEXT:  PL/pgSQL function sec.generate_child(integer,integer) line 3 at RETURN QUERY
+	PL/pgSQL function sec.generate_parent(integer) line 2 at RETURN QUERY
+2019-03-21 15:21:30.151 WIB [920] STATEMENT:  
+	SELECT sec.generate_parent(1) AS menu;
+	
+2019-03-21 15:23:41.697 WIB [920] ERROR:  cross-database references are not implemented: "sec.roles.menu" at character 14
+2019-03-21 15:23:41.697 WIB [920] STATEMENT:  
+	DELETE FROM sec.roles.menu;
+2019-03-21 15:24:01.018 WIB [920] ERROR:  syntax error at or near "*" at character 9
+2019-03-21 15:24:01.018 WIB [920] STATEMENT:  
+	DELETE * FROM sec.roles_menu;
+	
+2019-03-21 21:16:20.512 WIB [24] LOG:  stats_timestamp 2019-03-21 21:16:20.516898+07 is later than collector's time 2019-03-21 21:16:20.512304+07 for database 0

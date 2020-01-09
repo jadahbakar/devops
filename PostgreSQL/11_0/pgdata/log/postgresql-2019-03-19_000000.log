@@ -1,0 +1,76 @@
+2019-03-19 14:13:05.996 WIB [24] LOG:  stats_timestamp 2019-03-19 14:13:05.997954+07 is later than collector's time 2019-03-19 14:13:05.995928+07 for database 81921
+2019-03-19 16:23:19.751 WIB [6296] ERROR:  syntax error at or near "'3'" at character 457
+2019-03-19 16:23:19.751 WIB [6296] STATEMENT:  
+	CREATE TABLE mst.activity_status (
+		act_sts_kode INTEGER PRIMARY KEY,
+		act_sts_nama TEXT NOT NULL
+	);
+	
+	INSERT INTO mst.activity_status VALUES 
+	(0,'NEW'),
+	(1,'ON PROGRESS'), 
+	(2,'SOLVED'), 
+	(3,'HOLD');
+	
+	
+	CREATE TABLE mst.activity_jenis(
+		jenis_act_kode TEXT PRIMARY KEY,
+		jenis_act_sts INTEGER DEFAULT 0,
+		jenis_act_nama TEXT
+	);
+	
+	INSERT INTO mst.activity_jenis (jenis_act_kode, jenis_act_nama) VALUES 
+	('1','REQ RESET PASSWORD'),
+	('2','REQ REGISTRATION');
+	('3','REQ RESET PASSWORD');
+	
+	
+	
+	CREATE TABLE trx.activity(
+		user_act_sts INTEGER,
+		user_act_userid TEXT,
+		user_act_time TIMESTAMP WITHOUT TIMEZONE,
+		user_act_jenis TEXT,
+		user_act_solved_time TIMESTAMP WITHOUT TIMEZONE,
+		user_act_solved_userid TEXT
+	);
+	
+	
+2019-03-19 16:23:30.530 WIB [6296] ERROR:  syntax error at or near "TIMEZONE" at character 593
+2019-03-19 16:23:30.530 WIB [6296] STATEMENT:  
+	CREATE TABLE mst.activity_status (
+		act_sts_kode INTEGER PRIMARY KEY,
+		act_sts_nama TEXT NOT NULL
+	);
+	
+	INSERT INTO mst.activity_status VALUES 
+	(0,'NEW'),
+	(1,'ON PROGRESS'), 
+	(2,'SOLVED'), 
+	(3,'HOLD');
+	
+	
+	CREATE TABLE mst.activity_jenis(
+		jenis_act_kode TEXT PRIMARY KEY,
+		jenis_act_sts INTEGER DEFAULT 0,
+		jenis_act_nama TEXT
+	);
+	
+	INSERT INTO mst.activity_jenis (jenis_act_kode, jenis_act_nama) VALUES 
+	('1','REQ RESET PASSWORD'),
+	('2','REQ REGISTRATION'),
+	('3','REQ RESET PASSWORD');
+	
+	
+	
+	CREATE TABLE trx.activity(
+		user_act_sts INTEGER,
+		user_act_userid TEXT,
+		user_act_time TIMESTAMP WITHOUT TIMEZONE,
+		user_act_jenis TEXT,
+		user_act_solved_time TIMESTAMP WITHOUT TIMEZONE,
+		user_act_solved_userid TEXT
+	);
+	
+	
+2019-03-19 17:50:21.122 WIB [24] LOG:  stats_timestamp 2019-03-19 17:50:21.123271+07 is later than collector's time 2019-03-19 17:50:21.122627+07 for database 0

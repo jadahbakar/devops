@@ -1,0 +1,1 @@
+2019-03-03 09:25:24.120 WIB [24] LOG:  stats_timestamp 2019-03-03 09:25:24.122326+07 is later than collector's time 2019-03-03 09:25:24.118181+07 for database 81921

@@ -1,0 +1,22 @@
+2019-12-15 11:57:51.440 UTC [113] FATAL:  password authentication failed for user "postgres"
+2019-12-15 11:57:51.440 UTC [113] DETAIL:  Password does not match for user "postgres".
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-12-15 11:57:54.122 UTC [114] FATAL:  password authentication failed for user "postgres"
+2019-12-15 11:57:54.122 UTC [114] DETAIL:  Password does not match for user "postgres".
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-12-15 11:58:00.637 UTC [115] FATAL:  password authentication failed for user "postgres"
+2019-12-15 11:58:00.637 UTC [115] DETAIL:  Password does not match for user "postgres".
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-12-15 11:58:08.686 UTC [116] FATAL:  password authentication failed for user "postgres"
+2019-12-15 11:58:08.686 UTC [116] DETAIL:  Password does not match for user "postgres".
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-12-15 11:58:35.468 UTC [118] FATAL:  password authentication failed for user "postgres"
+2019-12-15 11:58:35.468 UTC [118] DETAIL:  Password does not match for user "postgres".
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-12-15 11:59:52.673 UTC [126] FATAL:  database "mampir" does not exist
+2019-12-15 12:18:51.619 UTC [211] ERROR:  function mst.propinsi_get() does not exist at character 8
+2019-12-15 12:18:51.619 UTC [211] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2019-12-15 12:18:51.619 UTC [211] STATEMENT:  SELECT mst.propinsi_get()
+2019-12-15 12:21:57.826 UTC [227] FATAL:  password authentication failed for user "postgres"
+2019-12-15 12:21:57.826 UTC [227] DETAIL:  Password does not match for user "postgres".
+	Connection matched pg_hba.conf line 95: "host all all all md5"

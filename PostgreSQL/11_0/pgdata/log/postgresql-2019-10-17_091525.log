@@ -1,0 +1,24 @@
+2019-10-17 09:15:25.484 WIB [19] LOG:  database system was interrupted; last known up at 2019-10-17 06:09:07 WIB
+2019-10-17 09:15:26.525 WIB [20] FATAL:  the database system is starting up
+2019-10-17 09:15:26.526 WIB [23] FATAL:  the database system is starting up
+2019-10-17 09:15:26.527 WIB [21] FATAL:  the database system is starting up
+2019-10-17 09:15:26.534 WIB [22] FATAL:  the database system is starting up
+2019-10-17 09:15:26.535 WIB [25] FATAL:  the database system is starting up
+2019-10-17 09:15:26.539 WIB [24] FATAL:  the database system is starting up
+2019-10-17 09:15:26.753 WIB [26] FATAL:  the database system is starting up
+2019-10-17 09:15:26.797 WIB [27] FATAL:  the database system is starting up
+2019-10-17 09:15:26.852 WIB [28] FATAL:  the database system is starting up
+2019-10-17 09:15:26.875 WIB [30] FATAL:  the database system is starting up
+2019-10-17 09:15:26.876 WIB [29] FATAL:  the database system is starting up
+2019-10-17 09:15:26.880 WIB [31] FATAL:  the database system is starting up
+2019-10-17 09:15:26.920 WIB [32] FATAL:  the database system is starting up
+2019-10-17 09:15:26.948 WIB [33] FATAL:  the database system is starting up
+2019-10-17 09:15:26.966 WIB [35] FATAL:  the database system is starting up
+2019-10-17 09:15:26.967 WIB [34] FATAL:  the database system is starting up
+2019-10-17 09:15:45.433 WIB [19] LOG:  database system was not properly shut down; automatic recovery in progress
+2019-10-17 09:15:45.693 WIB [19] LOG:  redo starts at 0/FF12E80
+2019-10-17 09:15:45.693 WIB [19] LOG:  invalid record length at 0/FF12EB8: wanted 24, got 0
+2019-10-17 09:15:45.693 WIB [19] LOG:  redo done at 0/FF12E80
+2019-10-17 09:15:46.224 WIB [1] LOG:  database system is ready to accept connections
+2019-10-17 15:44:36.070 WIB [593] ERROR:  permission denied for schema mst at character 15
+2019-10-17 15:44:36.070 WIB [593] STATEMENT:  SELECT * FROM "mst"."kecamatan" LIMIT 1000 OFFSET 0

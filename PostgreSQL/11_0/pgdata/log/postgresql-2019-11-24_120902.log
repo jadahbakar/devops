@@ -1,0 +1,179 @@
+2019-11-24 12:09:02.826 WIB [19] LOG:  database system was interrupted; last known up at 2019-11-23 07:13:26 WIB
+2019-11-24 12:09:15.569 WIB [19] LOG:  database system was not properly shut down; automatic recovery in progress
+2019-11-24 12:09:15.752 WIB [19] LOG:  redo starts at 0/14F7BF28
+2019-11-24 12:09:15.753 WIB [19] LOG:  invalid record length at 0/14F7C020: wanted 24, got 0
+2019-11-24 12:09:15.753 WIB [19] LOG:  redo done at 0/14F7BFD0
+2019-11-24 12:09:16.224 WIB [1] LOG:  database system is ready to accept connections
+2019-11-24 16:01:26.938 WIB [55] ERROR:  duplicate key value violates unique constraint "userid_pkey"
+2019-11-24 16:01:26.938 WIB [55] DETAIL:  Key (user_id)=(dedysty811230) already exists.
+2019-11-24 16:01:26.938 WIB [55] CONTEXT:  SQL statement "INSERT INTO sec.userid (user_id, user_nama, user_pass, user_email, user_role) 
+			SELECT reg_id, reg_nama, reg_password, reg_email, 4 FROM mst.registrasi"
+	PL/pgSQL function mst.registrasi_to_user_customer(text,text,text) line 13 at SQL statement
+2019-11-24 16:01:26.938 WIB [55] STATEMENT:  SELECT mst.registrasi_to_user_customer('AdityaF070907', 'dedy.styawan@gmail.com', null) AS status
+2019-11-24 16:01:28.698 WIB [55] ERROR:  duplicate key value violates unique constraint "userid_pkey"
+2019-11-24 16:01:28.698 WIB [55] DETAIL:  Key (user_id)=(dedysty811230) already exists.
+2019-11-24 16:01:28.698 WIB [55] CONTEXT:  SQL statement "INSERT INTO sec.userid (user_id, user_nama, user_pass, user_email, user_role) 
+			SELECT reg_id, reg_nama, reg_password, reg_email, 4 FROM mst.registrasi"
+	PL/pgSQL function mst.registrasi_to_user_customer(text,text,text) line 13 at SQL statement
+2019-11-24 16:01:28.698 WIB [55] STATEMENT:  SELECT mst.registrasi_to_user_customer('AdityaF070907', 'dedy.styawan@gmail.com', null) AS status
+2019-11-24 16:01:40.653 WIB [56] ERROR:  duplicate key value violates unique constraint "userid_pkey"
+2019-11-24 16:01:40.653 WIB [56] DETAIL:  Key (user_id)=(dedysty811230) already exists.
+2019-11-24 16:01:40.653 WIB [56] CONTEXT:  SQL statement "INSERT INTO sec.userid (user_id, user_nama, user_pass, user_email, user_role) 
+			SELECT reg_id, reg_nama, reg_password, reg_email, 4 FROM mst.registrasi"
+	PL/pgSQL function mst.registrasi_to_user_customer(text,text,text) line 13 at SQL statement
+2019-11-24 16:01:40.653 WIB [56] STATEMENT:  SELECT mst.registrasi_to_user_customer('AdityaF070907', 'dedy@styawan.com', null) AS status
+2019-11-24 16:03:15.981 WIB [58] ERROR:  duplicate key value violates unique constraint "userid_pkey"
+2019-11-24 16:03:15.981 WIB [58] DETAIL:  Key (user_id)=(dedysty811230) already exists.
+2019-11-24 16:03:15.981 WIB [58] CONTEXT:  SQL statement "INSERT INTO sec.userid (user_id, user_nama, user_pass, user_email, user_role) 
+			SELECT reg_id, reg_nama, reg_password, reg_email, 4 FROM mst.registrasi"
+	PL/pgSQL function mst.registrasi_to_user_customer(text,text,text) line 13 at SQL statement
+2019-11-24 16:03:15.981 WIB [58] STATEMENT:  SELECT mst.registrasi_to_user_customer('AdityaF070907', 'dedy@styawan.gom', null) AS status
+2019-11-24 16:03:17.940 WIB [58] ERROR:  duplicate key value violates unique constraint "userid_pkey"
+2019-11-24 16:03:17.940 WIB [58] DETAIL:  Key (user_id)=(dedysty811230) already exists.
+2019-11-24 16:03:17.940 WIB [58] CONTEXT:  SQL statement "INSERT INTO sec.userid (user_id, user_nama, user_pass, user_email, user_role) 
+			SELECT reg_id, reg_nama, reg_password, reg_email, 4 FROM mst.registrasi"
+	PL/pgSQL function mst.registrasi_to_user_customer(text,text,text) line 13 at SQL statement
+2019-11-24 16:03:17.940 WIB [58] STATEMENT:  SELECT mst.registrasi_to_user_customer('AdityaF070907', 'dedy@styawan.gom', null) AS status
+2019-11-24 16:06:30.237 WIB [63] ERROR:  duplicate key value violates unique constraint "userid_pkey"
+2019-11-24 16:06:30.237 WIB [63] DETAIL:  Key (user_id)=(dedysty811230) already exists.
+2019-11-24 16:06:30.237 WIB [63] CONTEXT:  SQL statement "INSERT INTO sec.userid (user_id, user_nama, user_pass, user_email, user_role) 
+			SELECT reg_id, reg_nama, reg_password, reg_email, 4 FROM mst.registrasi"
+	PL/pgSQL function mst.registrasi_to_user_customer(text,text,text) line 13 at SQL statement
+2019-11-24 16:06:30.237 WIB [63] STATEMENT:  SELECT mst.registrasi_to_user_customer('AdityaF070907', 'dedy@styawan.com', null) AS status
+2019-11-24 16:09:29.012 WIB [47] ERROR:  duplicate key value violates unique constraint "userid_pkey"
+2019-11-24 16:09:29.012 WIB [47] DETAIL:  Key (user_id)=(dedysty811230) already exists.
+2019-11-24 16:09:29.012 WIB [47] CONTEXT:  SQL statement "INSERT INTO sec.userid (user_id, user_nama, user_pass, user_email, user_role) 
+			SELECT reg_id, reg_nama, reg_password, reg_email, 4 FROM mst.registrasi"
+	PL/pgSQL function registrasi_to_user_customer(text,text,text) line 13 at SQL statement
+2019-11-24 16:09:29.012 WIB [47] STATEMENT:  SELECT mst.registrasi_to_user_customer('AdityaF070907', 'dedy@styawan.com', 'dedy3012') AS status
+2019-11-24 16:21:42.315 WIB [80] ERROR:  duplicate key value violates unique constraint "userid_pkey"
+2019-11-24 16:21:42.315 WIB [80] DETAIL:  Key (user_id)=(dedysty811230) already exists.
+2019-11-24 16:21:42.315 WIB [80] CONTEXT:  SQL statement "INSERT INTO sec.userid (user_id, user_nama, user_pass, user_email, user_role) 
+			SELECT reg_id, reg_nama, reg_password, reg_email, 4 FROM mst.registrasi"
+	PL/pgSQL function mst.registrasi_to_user_customer(text,text,text) line 13 at SQL statement
+2019-11-24 16:21:42.315 WIB [80] STATEMENT:  
+	
+	SELECT mst.registrasi_to_user_customer('AdityaF070907', 'dedy@styawan.com', 'dedy3012') AS status;
+	
+2019-11-24 16:22:49.797 WIB [80] ERROR:  duplicate key value violates unique constraint "userid_pkey"
+2019-11-24 16:22:49.797 WIB [80] DETAIL:  Key (user_id)=(dedysty811230) already exists.
+2019-11-24 16:22:49.797 WIB [80] CONTEXT:  SQL statement "INSERT INTO sec.userid (user_id, user_nama, user_pass, user_email, user_role) 
+			SELECT reg_id, reg_nama, reg_password, reg_email, 4 FROM mst.registrasi"
+	PL/pgSQL function mst.registrasi_to_user_customer(text,text,text) line 13 at SQL statement
+2019-11-24 16:22:49.797 WIB [80] STATEMENT:  
+	
+	SELECT mst.registrasi_to_user_customer('AdityaF070907', 'dedy@styawan.com', 'dedy3012') AS status;
+	
+2019-11-24 16:24:51.918 WIB [48] ERROR:  syntax error at or near "END" at character 972
+2019-11-24 16:24:51.918 WIB [48] STATEMENT:  CREATE OR REPLACE FUNCTION "mst"."_navicat_temp_stored_proc"("p_regid" text, "p_referal" text, "p_approve" text)
+	  RETURNS "pg_catalog"."text" AS $BODY$
+		DECLARE 
+		 status text = 'error'; 
+		 aproval text;
+	BEGIN
+	aproval = '{"userid": "'||p_approve||'","dateApprove":"'||now()::text||'"}';
+	UPDATE mst.registrasi set reg_approve = aproval::jsonb WHERE reg_id = p_regid;
+	
+	IF NOT EXISTS (SELECT customer_id FROM mst.customer WHERE customer_id = p_regid) THEN
+		INSERT INTO mst.customer (customer_id, customer_referal_customer_id, customer_pribadi, customer_alamat, customer_alamat_ktp) 
+			SELECT reg_id, p_referal, reg_pribadi, reg_alamat, reg_alamat_ktp FROM mst.registrasi WHERE reg_id = p_regid;
+		status = 'success';
+	
+		IF NOT EXISTS (SELECT user_id FROM sec.userid WHERE user_id = p_regid) THEN
+			INSERT INTO sec.userid (user_id, user_nama, user_pass, user_email, user_role) 
+				SELECT reg_id, reg_nama, reg_password, reg_email, 4 FROM mst.registrasi;
+			status = 'success'
+		END IF;
+	END IF;
+	
+	RETURN status;
+	END
+	$BODY$
+	  LANGUAGE plpgsql VOLATILE
+	  COST 100
+2019-11-24 16:25:06.546 WIB [47] ERROR:  duplicate key value violates unique constraint "userid_pkey"
+2019-11-24 16:25:06.546 WIB [47] DETAIL:  Key (user_id)=(dedysty811230) already exists.
+2019-11-24 16:25:06.546 WIB [47] CONTEXT:  SQL statement "INSERT INTO sec.userid (user_id, user_nama, user_pass, user_email, user_role) 
+				SELECT reg_id, reg_nama, reg_password, reg_email, 4 FROM mst.registrasi"
+	PL/pgSQL function registrasi_to_user_customer(text,text,text) line 15 at SQL statement
+2019-11-24 16:25:06.546 WIB [47] STATEMENT:  SELECT mst.registrasi_to_user_customer('AdityaF070907', 'dedy@styawan.com', 'dedy3012') AS status
+2019-11-24 16:25:07.682 WIB [47] ERROR:  duplicate key value violates unique constraint "userid_pkey"
+2019-11-24 16:25:07.682 WIB [47] DETAIL:  Key (user_id)=(dedysty811230) already exists.
+2019-11-24 16:25:07.682 WIB [47] CONTEXT:  SQL statement "INSERT INTO sec.userid (user_id, user_nama, user_pass, user_email, user_role) 
+				SELECT reg_id, reg_nama, reg_password, reg_email, 4 FROM mst.registrasi"
+	PL/pgSQL function registrasi_to_user_customer(text,text,text) line 15 at SQL statement
+2019-11-24 16:25:07.682 WIB [47] STATEMENT:  SELECT mst.registrasi_to_user_customer('AdityaF070907', 'dedy@styawan.com', 'dedy3012') AS status
+2019-11-24 16:25:08.233 WIB [47] ERROR:  duplicate key value violates unique constraint "userid_pkey"
+2019-11-24 16:25:08.233 WIB [47] DETAIL:  Key (user_id)=(dedysty811230) already exists.
+2019-11-24 16:25:08.233 WIB [47] CONTEXT:  SQL statement "INSERT INTO sec.userid (user_id, user_nama, user_pass, user_email, user_role) 
+				SELECT reg_id, reg_nama, reg_password, reg_email, 4 FROM mst.registrasi"
+	PL/pgSQL function registrasi_to_user_customer(text,text,text) line 15 at SQL statement
+2019-11-24 16:25:08.233 WIB [47] STATEMENT:  SELECT mst.registrasi_to_user_customer('AdityaF070907', 'dedy@styawan.com', 'dedy3012') AS status
+2019-11-24 16:25:08.488 WIB [47] ERROR:  duplicate key value violates unique constraint "userid_pkey"
+2019-11-24 16:25:08.488 WIB [47] DETAIL:  Key (user_id)=(dedysty811230) already exists.
+2019-11-24 16:25:08.488 WIB [47] CONTEXT:  SQL statement "INSERT INTO sec.userid (user_id, user_nama, user_pass, user_email, user_role) 
+				SELECT reg_id, reg_nama, reg_password, reg_email, 4 FROM mst.registrasi"
+	PL/pgSQL function registrasi_to_user_customer(text,text,text) line 15 at SQL statement
+2019-11-24 16:25:08.488 WIB [47] STATEMENT:  SELECT mst.registrasi_to_user_customer('AdityaF070907', 'dedy@styawan.com', 'dedy3012') AS status
+2019-11-24 16:28:59.114 WIB [48] ERROR:  syntax error at or near "ELSE" at character 1023
+2019-11-24 16:28:59.114 WIB [48] STATEMENT:  CREATE OR REPLACE FUNCTION "mst"."_navicat_temp_stored_proc"("p_regid" text, "p_referal" text, "p_approve" text)
+	  RETURNS "pg_catalog"."text" AS $BODY$
+		DECLARE 
+		 status text = 'error'; 
+		 aproval text;
+	BEGIN
+	aproval = '{"userid": "'||p_approve||'","dateApprove":"'||now()::text||'"}';
+	UPDATE mst.registrasi set reg_approve = aproval::jsonb WHERE reg_id = p_regid;
+	
+	IF NOT EXISTS (SELECT customer_id FROM mst.customer WHERE customer_id = p_regid) THEN
+		INSERT INTO mst.customer (customer_id, customer_referal_customer_id, customer_pribadi, customer_alamat, customer_alamat_ktp) 
+			SELECT reg_id, p_referal, reg_pribadi, reg_alamat, reg_alamat_ktp FROM mst.registrasi WHERE reg_id = p_regid;
+		status = 'success';
+	
+		IF NOT EXISTS (SELECT user_id FROM sec.userid WHERE user_id = p_regid) THEN
+			BEGIN
+			INSERT INTO sec.userid (user_id, user_nama, user_pass, user_email, user_role) 
+				SELECT reg_id, reg_nama, reg_password, reg_email, 4 FROM mst.registrasi;
+			EXCEPTION
+				WHEN unique_violation THEN status = 'duplicate'
+			ELSE 
+				status = 'success';
+			END; 
+		END IF;
+	END IF;
+	
+	RETURN status;
+	END
+	$BODY$
+	  LANGUAGE plpgsql VOLATILE
+	  COST 100
+2019-11-24 16:51:31.206 WIB [48] ERROR:  missing expression at or near ";" at character 968
+2019-11-24 16:51:31.206 WIB [48] STATEMENT:  CREATE OR REPLACE FUNCTION "mst"."_navicat_temp_stored_proc"("p_regid" text, "p_referal" text, "p_approve" text)
+	  RETURNS "pg_catalog"."text" AS $BODY$
+		DECLARE 
+		 status text = 'error'; 
+		 aproval text;
+	BEGIN
+	aproval = '{"userid": "'||p_approve||'","dateApprove":"'||now()::text||'"}';
+	UPDATE mst.registrasi set reg_approve = aproval::jsonb WHERE reg_id = p_regid;
+	
+	IF NOT EXISTS (SELECT customer_id FROM mst.customer WHERE customer_id = p_regid) THEN
+		INSERT INTO mst.customer (customer_id, customer_referal_customer_id, customer_pribadi, customer_alamat, customer_alamat_ktp) 
+			SELECT reg_id, p_referal, reg_pribadi, reg_alamat, reg_alamat_ktp FROM mst.registrasi WHERE reg_id = p_regid;
+		status = 'success';
+	
+		IF NOT EXISTS (SELECT user_id FROM sec.userid WHERE user_id = p_regid) THEN
+			BEGIN
+			INSERT INTO sec.userid (user_id, user_nama, user_pass, user_email, user_role) 
+				SELECT reg_id, reg_nama, reg_password, reg_email, 4 FROM mst.registrasi;
+				 RETURN;
+			 EXCEPTION WHEN unique_violation THEN status = 'error - duplicate - UserId';
+			END; 
+		END IF;
+	END IF;
+	
+	RETURN status;
+	END
+	$BODY$
+	  LANGUAGE plpgsql VOLATILE
+	  COST 100

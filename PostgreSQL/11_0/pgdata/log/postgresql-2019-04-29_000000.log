@@ -1,0 +1,91 @@
+2019-04-29 11:11:10.547 WIB [1397] FATAL:  password authentication failed for user "teknotama"
+2019-04-29 11:11:10.547 WIB [1397] DETAIL:  Password does not match for user "teknotama".
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-04-29 11:19:27.022 WIB [1359] ERROR:  syntax error at or near ")" at character 213
+2019-04-29 11:19:27.022 WIB [1359] STATEMENT:  SELECT user_id, user_nama, user_sts, user_email, user_role
+				FROM sec.userid 
+				WHERE
+					user_id = 'dedy3012' AND  
+					user_pass = crypt('a', '$2a$07$xuLvLkOPRAy01LHdvWo0AulZwNfPyKOyOiC5F9UFohMU3rOW5Tona')
+			) t
+2019-04-29 11:29:36.873 WIB [1445] ERROR:  invalid input syntax for integer: "a" at character 119
+2019-04-29 11:29:36.873 WIB [1445] STATEMENT:  INSERT INTO sec.userid(user_id, user_nama, user_pass, user_role, user_email)   VALUES ('dedy3012', 'Dedy', 'Styawan', 'a', '1')
+2019-04-29 11:30:19.170 WIB [1447] ERROR:  invalid input syntax for integer: "a" at character 119
+2019-04-29 11:30:19.170 WIB [1447] STATEMENT:  INSERT INTO sec.userid(user_id, user_nama, user_pass, user_role, user_email)   VALUES ('dedy3012', 'Dedy', 'Styawan', 'a', '1')
+2019-04-29 11:31:34.444 WIB [1451] ERROR:  invalid input syntax for integer: "a" at character 119
+2019-04-29 11:31:34.444 WIB [1451] STATEMENT:  INSERT INTO sec.userid(user_id, user_nama, user_pass, user_role, user_email)   VALUES ('dedy3012', 'Dedy', 'Styawan', 'a', '1')
+2019-04-29 11:32:06.549 WIB [1453] ERROR:  invalid input syntax for integer: "a" at character 119
+2019-04-29 11:32:06.549 WIB [1453] STATEMENT:  INSERT INTO sec.userid(user_id, user_nama, user_pass, user_role, user_email)   VALUES ('dedy3012', 'Dedy', 'Styawan', 'a', '1')
+2019-04-29 11:32:40.946 WIB [1455] ERROR:  invalid input syntax for integer: "a" at character 119
+2019-04-29 11:32:40.946 WIB [1455] STATEMENT:  INSERT INTO sec.userid(user_id, user_nama, user_pass, user_role, user_email)   VALUES ('dedy3012', 'Dedy', 'Styawan', 'a', '1')
+2019-04-29 11:33:18.733 WIB [1458] ERROR:  invalid input syntax for integer: "a" at character 119
+2019-04-29 11:33:18.733 WIB [1458] STATEMENT:  INSERT INTO sec.userid(user_id, user_nama, user_pass, user_role, user_email)   VALUES ('dedy3012', 'Dedy', 'Styawan', 'a', '1')
+2019-04-29 11:57:23.397 WIB [26] LOG:  stats_timestamp 2019-04-29 11:57:23.402309+07 is later than collector's time 2019-04-29 11:57:23.395282+07 for database 106581
+2019-04-29 12:30:51.496 WIB [26] LOG:  stats_timestamp 2019-04-29 12:30:51.498449+07 is later than collector's time 2019-04-29 12:30:51.496302+07 for database 106581
+2019-04-29 12:48:20.520 WIB [26] LOG:  stats_timestamp 2019-04-29 12:48:20.526153+07 is later than collector's time 2019-04-29 12:48:20.520606+07 for database 106581
+2019-04-29 13:10:19.259 WIB [26] LOG:  stats_timestamp 2019-04-29 13:10:19.264426+07 is later than collector's time 2019-04-29 13:10:19.259463+07 for database 106581
+2019-04-29 14:06:16.566 WIB [1773] ERROR:  function sec.userid_wud(unknown, unknown, unknown, unknown, unknown, unknown) does not exist at character 8
+2019-04-29 14:06:16.566 WIB [1773] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2019-04-29 14:06:16.566 WIB [1773] STATEMENT:  SELECT sec.userid_wud('i', 'dedy3012', 'Dedy Styawan', 'a', 'dedy.styawan@gmail.com', '1')
+2019-04-29 14:48:56.866 WIB [1859] ERROR:  function sec.userid_wud(unknown, unknown, unknown, unknown, unknown, unknown) does not exist at character 8
+2019-04-29 14:48:56.866 WIB [1859] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2019-04-29 14:48:56.866 WIB [1859] STATEMENT:  SELECT sec.userid_wud('i', 'dedy3012', 'Dedy Styawan', 'a', 'dedy.styawan@gmail.com', '1')
+2019-04-29 14:51:29.141 WIB [1865] ERROR:  function sec.userid_wud(unknown, unknown, unknown, unknown, unknown, integer) does not exist at character 8
+2019-04-29 14:51:29.141 WIB [1865] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2019-04-29 14:51:29.141 WIB [1865] STATEMENT:  SELECT sec.userid_wud('i', 'dedy3012', 'Dedy Styawan', 'a', 'dedy.styawan@gmail.com', 1)
+2019-04-29 14:51:53.276 WIB [1867] ERROR:  function sec.userid_wud(unknown, unknown, unknown, unknown, unknown, integer) does not exist at character 8
+2019-04-29 14:51:53.276 WIB [1867] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2019-04-29 14:51:53.276 WIB [1867] STATEMENT:  SELECT sec.userid_wud('i', 'dedy3012', 'Dedy Styawan', 'a', 'dedy.styawan@gmail.com', 1)
+2019-04-29 14:52:04.463 WIB [1868] ERROR:  function sec.userid_wud(unknown, unknown, unknown, unknown, unknown, integer) does not exist at character 8
+2019-04-29 14:52:04.463 WIB [1868] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2019-04-29 14:52:04.463 WIB [1868] STATEMENT:  SELECT sec.userid_wud('i', 'dedy3012', 'Dedy Styawan', 'a', 'dedy.styawan@gmail.com', 1) INTO x
+2019-04-29 14:53:12.328 WIB [1872] ERROR:  function sec.userid_wud(unknown, unknown, unknown, unknown, unknown, integer, integer) does not exist at character 8
+2019-04-29 14:53:12.328 WIB [1872] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2019-04-29 14:53:12.328 WIB [1872] STATEMENT:  SELECT sec.userid_wud('i', 'dedy3012', 'Dedy Styawan', 'a', 'dedy.styawan@gmail.com', 1, 1 ) INTO x
+2019-04-29 14:54:46.650 WIB [1401] ERROR:  cannot drop function sec.trg_crypt_users_pass() because other objects depend on it
+2019-04-29 14:54:46.650 WIB [1401] DETAIL:  trigger trigger_userid_password on table sec.userid depends on function sec.trg_crypt_users_pass()
+2019-04-29 14:54:46.650 WIB [1401] HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2019-04-29 14:54:46.650 WIB [1401] STATEMENT:  
+	DROP FUNCTION sec.trg_crypt_users_pass();
+	
+2019-04-29 14:55:29.524 WIB [1878] ERROR:  relation "x" already exists
+2019-04-29 14:55:29.524 WIB [1878] STATEMENT:  SELECT sec.userid_wud('i', 'dedy3012', 'Dedy Styawan', 'a', 'dedy.styawan@gmail.com', '1', 1 ) INTO x
+2019-04-29 14:55:42.598 WIB [1880] ERROR:  relation "x" already exists
+2019-04-29 14:55:42.598 WIB [1880] STATEMENT:  SELECT sec.userid_wud('i', 'dedy3012', 'Dedy Styawan', 'a', 'dedy.styawan@gmail.com', '1', 1 ) INTO x
+2019-04-29 16:34:05.411 WIB [1401] LOG:  stats collector's time 2019-04-29 16:35:48.094813+07 is later than backend local time 2019-04-29 16:34:05.411087+07
+2019-04-29 16:34:05.411 WIB [1401] STATEMENT:  /*pga4dash*/
+	SELECT 'session_stats' AS chart_name, row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT count(*) FROM pg_stat_activity WHERE datname = (SELECT datname FROM pg_database WHERE oid = 106581)) AS "Total",
+	   (SELECT count(*) FROM pg_stat_activity WHERE state = 'active' AND datname = (SELECT datname FROM pg_database WHERE oid = 106581))  AS "Active",
+	   (SELECT count(*) FROM pg_stat_activity WHERE state = 'idle' AND datname = (SELECT datname FROM pg_database WHERE oid = 106581))  AS "Idle"
+	) t
+	UNION ALL
+	SELECT 'tps_stats' AS chart_name, row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT sum(xact_commit) + sum(xact_rollback) FROM pg_stat_database WHERE datname = (SELECT datname FROM pg_database WHERE oid = 106581)) AS "Transactions",
+	   (SELECT sum(xact_commit) FROM pg_stat_database WHERE datname = (SELECT datname FROM pg_database WHERE oid = 106581)) AS "Commits",
+	   (SELECT sum(xact_rollback) FROM pg_stat_database WHERE datname = (SELECT datname FROM pg_database WHERE oid = 106581)) AS "Rollbacks"
+	) t
+	UNION ALL
+	SELECT 'ti_stats' AS chart_name, row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT sum(tup_inserted) FROM pg_stat_database WHERE datname = (SELECT datname FROM pg_database WHERE oid = 106581)) AS "Inserts",
+	   (SELECT sum(tup_updated) FROM pg_stat_database WHERE datname = (SELECT datname FROM pg_database WHERE oid = 106581)) AS "Updates",
+	   (SELECT sum(tup_deleted) FROM pg_stat_database WHERE datname = (SELECT datname FROM pg_database WHERE oid = 106581)) AS "Deletes"
+	) t
+	UNION ALL
+	SELECT 'to_stats' AS chart_name, row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT sum(tup_fetched) FROM pg_stat_database WHERE datname = (SELECT datname FROM pg_database WHERE oid = 106581)) AS "Fetched",
+	   (SELECT sum(tup_returned) FROM pg_stat_database WHERE datname = (SELECT datname FROM pg_database WHERE oid = 106581)) AS "Returned"
+	) t
+	UNION ALL
+	SELECT 'bio_stats' AS chart_name, row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT sum(blks_read) FROM pg_stat_database WHERE datname = (SELECT datname FROM pg_database WHERE oid = 106581)) AS "Reads",
+	   (SELECT sum(blks_hit) FROM pg_stat_database WHERE datname = (SELECT datname FROM pg_database WHERE oid = 106581)) AS "Hits"
+	) t
+	
+2019-04-29 16:34:05.411 WIB [26] LOG:  stats_timestamp 2019-04-29 16:35:48.094813+07 is later than collector's time 2019-04-29 16:34:05.411339+07 for database 106581
+2019-04-30 08:20:23.525 WIB [26] LOG:  stats_timestamp 2019-04-30 08:20:23.526558+07 is later than collector's time 2019-04-30 08:20:23.52572+07 for database 106581

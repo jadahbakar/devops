@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  redis_cache:
+    container_name: redis504
+    image: redis:5.0.4-alpine
+    restart: always
+    ports:
+      - 6379:6379

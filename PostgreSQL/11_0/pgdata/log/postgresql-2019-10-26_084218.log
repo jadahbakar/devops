@@ -1,0 +1,114 @@
+2019-10-26 08:42:18.257 WIB [19] LOG:  database system was interrupted; last known up at 2019-10-24 17:19:14 WIB
+2019-10-26 08:42:35.756 WIB [19] LOG:  database system was not properly shut down; automatic recovery in progress
+2019-10-26 08:42:35.963 WIB [19] LOG:  redo starts at 0/FFA6B40
+2019-10-26 08:42:35.964 WIB [19] LOG:  invalid record length at 0/FFA6B78: wanted 24, got 0
+2019-10-26 08:42:35.964 WIB [19] LOG:  redo done at 0/FFA6B40
+2019-10-26 08:42:36.463 WIB [1] LOG:  database system is ready to accept connections
+2019-10-26 14:49:41.542 WIB [40] ERROR:  permission denied to create extension "intarray"
+2019-10-26 14:49:41.542 WIB [40] HINT:  Must be superuser to create this extension.
+2019-10-26 14:49:41.542 WIB [40] STATEMENT:  CREATE EXTENSION IF NOT EXISTS intarray WITH SCHEMA public;
+	
+	
+	
+2019-10-26 14:49:41.545 WIB [40] ERROR:  extension "intarray" does not exist
+2019-10-26 14:49:41.545 WIB [40] STATEMENT:  COMMENT ON EXTENSION intarray IS 'functions, operators, and index support for 1-D arrays of integers';
+	
+	
+	
+2019-10-26 14:49:41.560 WIB [40] ERROR:  must be owner of extension pgcrypto
+2019-10-26 14:49:41.560 WIB [40] STATEMENT:  COMMENT ON EXTENSION pgcrypto IS 'cryptographic functions';
+	
+	
+	
+2019-10-26 14:49:41.563 WIB [40] ERROR:  permission denied to create extension "tablefunc"
+2019-10-26 14:49:41.563 WIB [40] HINT:  Must be superuser to create this extension.
+2019-10-26 14:49:41.563 WIB [40] STATEMENT:  CREATE EXTENSION IF NOT EXISTS tablefunc WITH SCHEMA public;
+	
+	
+	
+2019-10-26 14:49:41.566 WIB [40] ERROR:  extension "tablefunc" does not exist
+2019-10-26 14:49:41.566 WIB [40] STATEMENT:  COMMENT ON EXTENSION tablefunc IS 'functions that manipulate whole tables, including crosstab';
+	
+	
+	
+2019-10-26 14:51:22.365 WIB [27] ERROR:  database "planning" is being accessed by other users
+2019-10-26 14:51:22.365 WIB [27] DETAIL:  There is 1 other session using the database.
+2019-10-26 14:51:22.365 WIB [27] STATEMENT:  DROP DATABASE planning;
+	
+2019-10-26 14:52:59.977 WIB [56] ERROR:  extension "ltree" already exists
+2019-10-26 14:52:59.977 WIB [56] STATEMENT:  CREATE EXTENSION ltree;
+2019-10-26 14:53:04.446 WIB [56] ERROR:  extension "tablefunc" already exists
+2019-10-26 14:53:04.446 WIB [56] STATEMENT:  
+	CREATE EXTENSION tablefunc;
+	
+2019-10-26 14:53:23.240 WIB [60] ERROR:  permission denied to create extension "intarray"
+2019-10-26 14:53:23.240 WIB [60] HINT:  Must be superuser to create this extension.
+2019-10-26 14:53:23.240 WIB [60] STATEMENT:  CREATE EXTENSION IF NOT EXISTS intarray WITH SCHEMA public;
+	
+	
+	
+2019-10-26 14:53:23.246 WIB [60] ERROR:  extension "intarray" does not exist
+2019-10-26 14:53:23.246 WIB [60] STATEMENT:  COMMENT ON EXTENSION intarray IS 'functions, operators, and index support for 1-D arrays of integers';
+	
+	
+	
+2019-10-26 14:53:23.251 WIB [60] ERROR:  must be owner of extension pgcrypto
+2019-10-26 14:53:23.251 WIB [60] STATEMENT:  COMMENT ON EXTENSION pgcrypto IS 'cryptographic functions';
+	
+	
+	
+2019-10-26 14:53:23.255 WIB [60] ERROR:  must be owner of extension tablefunc
+2019-10-26 14:53:23.255 WIB [60] STATEMENT:  COMMENT ON EXTENSION tablefunc IS 'functions that manipulate whole tables, including crosstab';
+	
+	
+	
+2019-10-26 16:44:03.624 WIB [254] ERROR:  type "intger" does not exist at character 42
+2019-10-26 16:44:03.624 WIB [254] STATEMENT:  CREATE TABLE mst.barang(
+	barang_kelompok	INTGER NOT NULL,
+	barang_id	SERIAL PRIMARY KEY,
+	barang_nama	TEXT,
+	barang_harga	BIGINT
+	)
+2019-10-26 16:44:27.632 WIB [254] ERROR:  syntax error at or near ")" at character 105
+2019-10-26 16:44:27.632 WIB [254] STATEMENT:  CREATE TABLE mst.kepemilikan_aset(
+	kepemilikan_aset_id		SERIAL PRIMARY KEY,
+	kepemilikan_aset_nama	TEXT,
+	)
+2019-10-26 16:44:40.131 WIB [254] ERROR:  relation "barang" already exists
+2019-10-26 16:44:40.131 WIB [254] STATEMENT:  CREATE TABLE mst.barang(
+	barang_kelompok	INTEGER NOT NULL,
+	barang_id	SERIAL PRIMARY KEY,
+	barang_nama	TEXT,
+	barang_harga	BIGINT
+	)
+2019-10-26 16:44:56.778 WIB [254] ERROR:  syntax error at or near ")" at character 309
+2019-10-26 16:44:56.778 WIB [254] STATEMENT:  CREATE TABLE mst.bangun_renovasi(
+	bangun_renovasi_id	serial PRIMARY KEY,
+	bangun_renovasi_jenis	INTEGER,
+	bangun_renovasi_uraian 	TEXT,
+	bangun_renovasi_status	INTEGER,
+	bangun_renovasi_kepemilikan_aset	INTEGER,
+	bangun_renovasi_alamat	TEXT,
+	bangun_renovasi_anggaran BIGINT,
+	bangun_renovasi_jadwal_bulan	INTEGER,
+	)
+2019-10-26 18:05:07.242 WIB [310] ERROR:  syntax error at or near "FROM" at character 19
+2019-10-26 18:05:07.242 WIB [310] STATEMENT:  SELECT barang_id, FROM mst.barang ORDER BY barang_id
+2019-10-26 18:11:55.405 WIB [340] ERROR:  syntax error at or near "$" at character 79
+2019-10-26 18:11:55.405 WIB [340] STATEMENT:  SELECT barang_id, barang_nama, barang_harga FROM mst.barang WHERE barang_id = ${kelompok} ORDER BY barang_id
+2019-10-26 18:12:03.038 WIB [340] ERROR:  syntax error at or near "$" at character 79
+2019-10-26 18:12:03.038 WIB [340] STATEMENT:  SELECT barang_id, barang_nama, barang_harga FROM mst.barang WHERE barang_id = ${kelompok} ORDER BY barang_id
+2019-10-26 18:12:41.965 WIB [344] ERROR:  syntax error at or near "$" at character 85
+2019-10-26 18:12:41.965 WIB [344] STATEMENT:  SELECT barang_id, barang_nama, barang_harga FROM mst.barang WHERE barang_kelompok = ${kelompok} ORDER BY barang_id
+2019-10-26 18:13:27.387 WIB [348] ERROR:  syntax error at or near "$" at character 85
+2019-10-26 18:13:27.387 WIB [348] STATEMENT:  SELECT barang_id, barang_nama, barang_harga FROM mst.barang WHERE barang_kelompok = ${kelompok} ORDER BY barang_id
+2019-10-26 18:32:19.994 WIB [431] ERROR:  relation "mst.kepemilikan_aset_nama" does not exist at character 56
+2019-10-26 18:32:19.994 WIB [431] STATEMENT:  SELECT kepemilikan_aset_id, kepemilikan_aset_nama FROM mst.kepemilikan_aset_nama ORDER BY kepemilikan_aset_id
+2019-10-26 19:02:55.601 WIB [559] ERROR:  column "rkbu_barang_kelompok" of relation "barang" does not exist at character 24
+2019-10-26 19:02:55.601 WIB [559] STATEMENT:  INSERT INTO mst.barang(rkbu_barang_kelompok, rkbu_barang_kode, rkbu_barang_nama, rkbu_status, rkbu_jumlah, rkbu_estimasi_harga, rkbu_tahun, rkbu_jadwal_bulan)     VALUES ('1','asdfasdfas','100000','100000','100000','100000','100000','100000')
+2019-10-26 19:04:15.824 WIB [566] ERROR:  invalid input syntax for integer: "asdfasdfas" at character 174
+2019-10-26 19:04:15.824 WIB [566] STATEMENT:  INSERT INTO mst.rkbu(rkbu_barang_kelompok, rkbu_barang_kode, rkbu_barang_nama, rkbu_status, rkbu_jumlah, rkbu_estimasi_harga, rkbu_tahun, rkbu_jadwal_bulan)     VALUES ('1','asdfasdfas','100000','100000','100000','100000','100000','100000')
+2019-10-26 19:06:57.460 WIB [577] ERROR:  invalid input syntax for integer: "asdfasdfas" at character 174
+2019-10-26 19:06:57.460 WIB [577] STATEMENT:  INSERT INTO mst.rkbu(rkbu_barang_kelompok, rkbu_barang_kode, rkbu_barang_nama, rkbu_status, rkbu_jumlah, rkbu_estimasi_harga, rkbu_tahun, rkbu_jadwal_bulan)     VALUES ('1','asdfasdfas','100000','100000','100000','100000','100000','100000')
+2019-10-26 19:07:56.432 WIB [582] ERROR:  INSERT has more expressions than target columns at character 237
+2019-10-26 19:07:56.432 WIB [582] STATEMENT:  INSERT INTO mst.rkbu(rkbu_barang_kelompok, rkbu_barang_kode, rkbu_barang_nama, rkbu_status, rkbu_jumlah, rkbu_estimasi_harga, rkbu_tahun, rkbu_jadwal_bulan)     VALUES ('1',null,'asdfasdfas','100000','100000','100000','100000','100000','100000')

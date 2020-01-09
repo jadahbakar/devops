@@ -1,0 +1,3 @@
+2019-02-12 23:04:02.606 WIB [26] FATAL:  password authentication failed for user "postgres"
+2019-02-12 23:04:02.606 WIB [26] DETAIL:  Password does not match for user "postgres".
+	Connection matched pg_hba.conf line 95: "host all all all md5"

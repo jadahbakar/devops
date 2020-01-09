@@ -1,0 +1,19 @@
+2019-10-22 00:14:02.163 WIB [25] LOG:  stats_timestamp 2019-10-22 00:14:03.124553+07 is later than collector's time 2019-10-22 00:14:02.163326+07 for database 0
+2019-10-22 00:20:11.804 WIB [728] ERROR:  duplicate key value violates unique constraint "userid_pkey"
+2019-10-22 00:20:11.804 WIB [728] DETAIL:  Key (user_id)=(dedysty811230) already exists.
+2019-10-22 00:20:11.804 WIB [728] CONTEXT:  SQL statement "INSERT INTO sec.userid (user_id, user_nama, user_pass, user_email, user_role) 
+			SELECT reg_id, reg_nama, reg_password, reg_email, 4 FROM mst.registrasi"
+	PL/pgSQL function mst.registrasi_to_user_customer(text,text,text) line 13 at SQL statement
+2019-10-22 00:20:11.804 WIB [728] STATEMENT:  SELECT mst.registrasi_to_user_customer('Anindit140419', 'dedy.styawan@gmail.com', 'dedy3012') AS status
+2019-10-22 00:20:14.358 WIB [728] ERROR:  duplicate key value violates unique constraint "userid_pkey"
+2019-10-22 00:20:14.358 WIB [728] DETAIL:  Key (user_id)=(dedysty811230) already exists.
+2019-10-22 00:20:14.358 WIB [728] CONTEXT:  SQL statement "INSERT INTO sec.userid (user_id, user_nama, user_pass, user_email, user_role) 
+			SELECT reg_id, reg_nama, reg_password, reg_email, 4 FROM mst.registrasi"
+	PL/pgSQL function mst.registrasi_to_user_customer(text,text,text) line 13 at SQL statement
+2019-10-22 00:20:14.358 WIB [728] STATEMENT:  SELECT mst.registrasi_to_user_customer('Anindit140419', 'dedy.styawan@gmail.com', 'dedy3012') AS status
+2019-10-22 00:21:18.340 WIB [729] ERROR:  duplicate key value violates unique constraint "userid_pkey"
+2019-10-22 00:21:18.340 WIB [729] DETAIL:  Key (user_id)=(dedysty811230) already exists.
+2019-10-22 00:21:18.340 WIB [729] CONTEXT:  SQL statement "INSERT INTO sec.userid (user_id, user_nama, user_pass, user_email, user_role) 
+			SELECT reg_id, reg_nama, reg_password, reg_email, 4 FROM mst.registrasi"
+	PL/pgSQL function mst.registrasi_to_user_customer(text,text,text) line 13 at SQL statement
+2019-10-22 00:21:18.340 WIB [729] STATEMENT:  SELECT mst.registrasi_to_user_customer('Anindit140419', '', 'dedy3012') AS status

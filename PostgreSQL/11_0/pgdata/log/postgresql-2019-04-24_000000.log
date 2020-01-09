@@ -1,0 +1,18 @@
+2019-04-24 11:19:17.154 WIB [30] FATAL:  password authentication failed for user "postgres"
+2019-04-24 11:19:17.154 WIB [30] DETAIL:  Password does not match for user "postgres".
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-04-24 11:19:24.479 WIB [31] FATAL:  password authentication failed for user "postgres"
+2019-04-24 11:19:24.479 WIB [31] DETAIL:  Password does not match for user "postgres".
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-04-24 11:19:30.731 WIB [32] FATAL:  password authentication failed for user "postgres"
+2019-04-24 11:19:30.731 WIB [32] DETAIL:  Password does not match for user "postgres".
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-04-24 11:27:57.924 WIB [24] LOG:  stats_timestamp 2019-04-24 11:27:57.925943+07 is later than collector's time 2019-04-24 11:27:57.922597+07 for database 106581
+2019-04-24 11:44:26.967 WIB [24] LOG:  stats_timestamp 2019-04-24 11:44:26.971713+07 is later than collector's time 2019-04-24 11:44:26.967371+07 for database 33629
+2019-04-24 12:06:55.691 WIB [24] LOG:  stats_timestamp 2019-04-24 12:06:55.702631+07 is later than collector's time 2019-04-24 12:06:55.69154+07 for database 106581
+2019-04-24 12:43:23.623 WIB [24] LOG:  stats_timestamp 2019-04-24 12:43:23.628807+07 is later than collector's time 2019-04-24 12:43:23.623808+07 for database 106581
+2019-04-24 13:28:21.044 WIB [24] LOG:  stats_timestamp 2019-04-24 13:28:21.056436+07 is later than collector's time 2019-04-24 13:28:21.04413+07 for database 81921
+2019-04-24 14:06:49.588 WIB [24] LOG:  stats_timestamp 2019-04-24 14:06:49.597109+07 is later than collector's time 2019-04-24 14:06:49.588563+07 for database 106581
+2019-04-24 15:21:15.395 WIB [24] LOG:  stats_timestamp 2019-04-24 15:21:15.400821+07 is later than collector's time 2019-04-24 15:21:15.395777+07 for database 155648
+2019-04-24 15:51:43.669 WIB [24] LOG:  stats_timestamp 2019-04-24 15:51:43.678808+07 is later than collector's time 2019-04-24 15:51:43.669774+07 for database 106581
+2019-04-25 18:57:44.225 WIB [24] LOG:  stats_timestamp 2019-04-25 18:57:44.225314+07 is later than collector's time 2019-04-25 18:57:44.224654+07 for database 0

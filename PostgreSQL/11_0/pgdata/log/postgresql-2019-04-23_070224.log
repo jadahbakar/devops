@@ -1,0 +1,9 @@
+2019-04-23 07:02:24.835 WIB [19] LOG:  database system was interrupted; last known up at 2019-04-22 13:43:27 WIB
+2019-04-23 07:02:42.924 WIB [19] LOG:  database system was not properly shut down; automatic recovery in progress
+2019-04-23 07:02:43.168 WIB [19] LOG:  redo starts at 0/A77B0B8
+2019-04-23 07:02:43.170 WIB [19] LOG:  invalid record length at 0/A77B198: wanted 24, got 0
+2019-04-23 07:02:43.170 WIB [19] LOG:  redo done at 0/A77B160
+2019-04-23 07:02:43.926 WIB [1] LOG:  database system is ready to accept connections
+2019-04-24 11:19:11.232 WIB [29] FATAL:  password authentication failed for user "postgres"
+2019-04-24 11:19:11.232 WIB [29] DETAIL:  Password does not match for user "postgres".
+	Connection matched pg_hba.conf line 95: "host all all all md5"

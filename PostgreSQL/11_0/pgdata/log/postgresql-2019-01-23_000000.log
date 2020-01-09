@@ -1,0 +1,28 @@
+2019-01-23 05:36:10.275 WIB [124] ERROR:  syntax error at or near "(" at character 27
+2019-01-23 05:36:10.275 WIB [124] STATEMENT:  select rkf_user_from count(*) from tmp.rkf
+	where rkf_user is null
+2019-01-23 05:36:16.317 WIB [124] ERROR:  column "rkf.rkf_user_from" must appear in the GROUP BY clause or be used in an aggregate function at character 8
+2019-01-23 05:36:16.317 WIB [124] STATEMENT:  select rkf_user_from, count(*) from tmp.rkf
+	where rkf_user is null
+2019-01-23 05:36:30.657 WIB [124] ERROR:  syntax error at or near "gruup" at character 68
+2019-01-23 05:36:30.657 WIB [124] STATEMENT:  select rkf_user_from, count(*) from tmp.rkf
+	where rkf_user is null
+	gruup by rkf_user_from
+2019-01-23 05:38:23.717 WIB [124] ERROR:  syntax error at or near "fom" at character 10
+2019-01-23 05:38:23.717 WIB [124] STATEMENT:  select * fom sec.users;
+	
+2019-01-23 07:56:57.734 WIB [24] LOG:  stats_timestamp 2019-01-23 07:56:57.74619+07 is later than collector's time 2019-01-23 07:56:57.734586+07 for database 57743
+2019-01-23 07:57:27.714 WIB [24] LOG:  stats_timestamp 2019-01-23 07:57:27.723768+07 is later than collector's time 2019-01-23 07:57:27.714385+07 for database 57743
+2019-01-23 10:05:13.487 WIB [28] LOG:  stats collector's time 2019-01-23 10:08:11.750554+07 is later than backend local time 2019-01-23 10:05:13.487856+07
+2019-01-23 10:05:13.487 WIB [28] STATEMENT:  /*pga4dash*/
+	SELECT
+	   (SELECT sum(xact_commit) + sum(xact_rollback) FROM pg_stat_database WHERE datname = (SELECT datname FROM pg_database WHERE oid = 57743)) AS "Transactions",
+	   (SELECT sum(xact_commit) FROM pg_stat_database WHERE datname = (SELECT datname FROM pg_database WHERE oid = 57743)) AS "Commits",
+	   (SELECT sum(xact_rollback) FROM pg_stat_database WHERE datname = (SELECT datname FROM pg_database WHERE oid = 57743)) AS "Rollbacks"
+2019-01-23 10:05:13.488 WIB [24] LOG:  stats_timestamp 2019-01-23 10:08:11.750554+07 is later than collector's time 2019-01-23 10:05:13.488024+07 for database 57743
+2019-01-23 10:05:13.579 WIB [28] LOG:  stats collector's time 2019-01-23 10:08:11.750554+07 is later than backend local time 2019-01-23 10:05:13.579454+07
+2019-01-23 10:05:13.579 WIB [28] STATEMENT:  /*pga4dash*/
+	SELECT
+	   (SELECT sum(tup_inserted) FROM pg_stat_database WHERE datname = (SELECT datname FROM pg_database WHERE oid = 57743)) AS "Inserts",
+	   (SELECT sum(tup_updated) FROM pg_stat_database WHERE datname = (SELECT datname FROM pg_database WHERE oid = 57743)) AS "Updates",
+	   (SELECT sum(tup_deleted) FROM pg_stat_database WHERE datname = (SELECT datname FROM pg_database WHERE oid = 57743)) AS "Deletes"

@@ -1,0 +1,4 @@
+2019-11-14 11:20:34.429 WIB [698] ERROR:  relation "sec.pegawai" does not exist at character 152
+2019-11-14 11:20:34.429 WIB [698] STATEMENT:  SELECT pegawai_id, pegawai_nama, jabatan_id,     jabatan_nama, unit_kerja_id, unit_kerja_nama,     jenjang_jabatan_id, subdiv_id, subdiv_nama     FROM sec.pegawai WHERE pegawai_id = 2866
+2019-11-14 11:21:19.186 WIB [702] ERROR:  relation "sec.pegawai" does not exist at character 152
+2019-11-14 11:21:19.186 WIB [702] STATEMENT:  SELECT pegawai_id, pegawai_nama, jabatan_id,     jabatan_nama, unit_kerja_id, unit_kerja_nama,     jenjang_jabatan_id, subdiv_id, subdiv_nama     FROM sec.pegawai WHERE pegawai_id = 2866

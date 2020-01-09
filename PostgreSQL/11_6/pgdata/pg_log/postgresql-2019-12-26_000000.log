@@ -1,0 +1,3 @@
+2019-12-27 01:45:11.090 UTC [33] FATAL:  password authentication failed for user "teknotama"
+2019-12-27 01:45:11.090 UTC [33] DETAIL:  Password does not match for user "teknotama".
+	Connection matched pg_hba.conf line 95: "host all all all md5"

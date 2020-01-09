@@ -1,0 +1,6 @@
+2019-01-15 16:30:14.409 WIB [19] LOG:  database system was interrupted; last known up at 2019-01-15 14:35:57 WIB
+2019-01-15 16:30:23.788 WIB [19] LOG:  database system was not properly shut down; automatic recovery in progress
+2019-01-15 16:30:23.944 WIB [19] LOG:  redo starts at 0/3A0C508
+2019-01-15 16:30:23.944 WIB [19] LOG:  invalid record length at 0/3A0C540: wanted 24, got 0
+2019-01-15 16:30:23.945 WIB [19] LOG:  redo done at 0/3A0C508
+2019-01-15 16:30:24.376 WIB [1] LOG:  database system is ready to accept connections

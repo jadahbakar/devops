@@ -1,0 +1,29 @@
+2019-11-07 16:15:31.380 WIB [45] FATAL:  database "eplanning" does not exist
+2019-11-07 16:15:36.023 WIB [46] FATAL:  database "eplanning" does not exist
+2019-11-07 16:15:42.251 WIB [47] FATAL:  database "eplanning" does not exist
+2019-11-07 16:15:44.792 WIB [48] FATAL:  password authentication failed for user "postgres"
+2019-11-07 16:15:44.792 WIB [48] DETAIL:  Password does not match for user "postgres".
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-11-07 16:15:59.119 WIB [50] FATAL:  database "eplanning" does not exist
+2019-11-07 16:48:08.036 WIB [123] ERROR:  invalid input syntax for integer: "001PPB" at character 533
+2019-11-07 16:48:08.036 WIB [123] STATEMENT:  SELECT rkf_id, rkf_sts, bsc_nama, rkf_proker, skala_proker_nama, kat_proker_nama,       rkf_jadwal,       rkf_unit_pelaksana, rkf_transformasi_bpd, rkf_rakb, rkf_isu_strategis       FROM mst.rkf r       INNER JOIN mst.rkf_jenis j ON r.rkf_jenis_id = j.rkf_jenis_id       INNER JOIN mst.skala_proker ON rkf_skala_proker = skala_proker_id       INNER JOIN mst.kategori_proker ON rkf_kat_proker = kat_proker_id       INNER JOIN mst.bsc ON rkf_bsc = bsc_id       WHERE rkf_user_from = 'support' AND rkf_tahun = '2' AND r.rkf_jenis_id = '001PPB' ORDER BY rkf_id
+2019-11-07 16:49:14.357 WIB [127] ERROR:  invalid input syntax for integer: "001PPB" at character 533
+2019-11-07 16:49:14.357 WIB [127] STATEMENT:  SELECT rkf_id, rkf_sts, bsc_nama, rkf_proker, skala_proker_nama, kat_proker_nama,       rkf_jadwal,       rkf_unit_pelaksana, rkf_transformasi_bpd, rkf_rakb, rkf_isu_strategis       FROM mst.rkf r       INNER JOIN mst.rkf_jenis j ON r.rkf_jenis_id = j.rkf_jenis_id       INNER JOIN mst.skala_proker ON rkf_skala_proker = skala_proker_id       INNER JOIN mst.kategori_proker ON rkf_kat_proker = kat_proker_id       INNER JOIN mst.bsc ON rkf_bsc = bsc_id       WHERE rkf_user_from = 'support' AND rkf_tahun = '2' AND r.rkf_jenis_id = '001PPB' ORDER BY rkf_id
+2019-11-07 16:49:36.075 WIB [129] ERROR:  invalid input syntax for integer: "001PPB" at character 533
+2019-11-07 16:49:36.075 WIB [129] STATEMENT:  SELECT rkf_id, rkf_sts, bsc_nama, rkf_proker, skala_proker_nama, kat_proker_nama,       rkf_jadwal,       rkf_unit_pelaksana, rkf_transformasi_bpd, rkf_rakb, rkf_isu_strategis       FROM mst.rkf r       INNER JOIN mst.rkf_jenis j ON r.rkf_jenis_id = j.rkf_jenis_id       INNER JOIN mst.skala_proker ON rkf_skala_proker = skala_proker_id       INNER JOIN mst.kategori_proker ON rkf_kat_proker = kat_proker_id       INNER JOIN mst.bsc ON rkf_bsc = bsc_id       WHERE rkf_user_from = 'support' AND rkf_tahun = '2' AND r.rkf_jenis_id = '001PPB' ORDER BY rkf_id
+2019-11-07 16:49:42.048 WIB [129] ERROR:  invalid input syntax for integer: "001PPB" at character 533
+2019-11-07 16:49:42.048 WIB [129] STATEMENT:  SELECT rkf_id, rkf_sts, bsc_nama, rkf_proker, skala_proker_nama, kat_proker_nama,       rkf_jadwal,       rkf_unit_pelaksana, rkf_transformasi_bpd, rkf_rakb, rkf_isu_strategis       FROM mst.rkf r       INNER JOIN mst.rkf_jenis j ON r.rkf_jenis_id = j.rkf_jenis_id       INNER JOIN mst.skala_proker ON rkf_skala_proker = skala_proker_id       INNER JOIN mst.kategori_proker ON rkf_kat_proker = kat_proker_id       INNER JOIN mst.bsc ON rkf_bsc = bsc_id       WHERE rkf_user_from = 'support' AND rkf_tahun = '2' AND r.rkf_jenis_id = '001PPB' ORDER BY rkf_id
+2019-11-07 16:53:48.065 WIB [143] ERROR:  syntax error at end of input at character 46
+2019-11-07 16:53:48.065 WIB [143] STATEMENT:  SELECT mst.support_fungsi_lain ('2', '001PPB'
+2019-11-07 16:54:07.090 WIB [145] ERROR:  syntax error at end of input at character 46
+2019-11-07 16:54:07.090 WIB [145] STATEMENT:  SELECT mst.support_fungsi_lain ('2', '001PPB'
+2019-11-07 16:55:00.245 WIB [148] ERROR:  syntax error at or near "INTO" at character 47
+2019-11-07 16:55:00.245 WIB [148] STATEMENT:  SELECT mst.support_fungsi_lain ('2', '001PPB' INTO rkf_new
+2019-11-07 16:57:15.664 WIB [69] ERROR:  relation "rkf_new" already exists
+2019-11-07 16:57:15.664 WIB [69] STATEMENT:  SELECT mst.support_fungsi_lain (2, '001TSI') INTO rkf_new
+2019-11-07 17:10:49.016 WIB [69] ERROR:  function rkf_id(integer, integer) does not exist at character 29
+2019-11-07 17:10:49.016 WIB [69] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2019-11-07 17:10:49.016 WIB [69] STATEMENT:  SELECT * from mst.rkf WHERE rkf_id (2, 580)
+2019-11-08 08:46:57.979 WIB [325] ERROR:  syntax error at or near "where" at character 55
+2019-11-08 08:46:57.979 WIB [325] STATEMENT:  select rkf_fungsilain from mst.rkf where rkf_id = 169
+	where rkf_fungsilain @> ('[{"unitKerja":"'||('001PPB')||'"}]')

@@ -1,0 +1,5 @@
+2019-05-07 09:14:27.118 WIB [24] LOG:  stats_timestamp 2019-05-07 09:14:27.126314+07 is later than collector's time 2019-05-07 09:14:27.118615+07 for database 106581
+2019-05-07 09:15:27.083 WIB [24] LOG:  stats_timestamp 2019-05-07 09:15:27.087613+07 is later than collector's time 2019-05-07 09:15:27.083616+07 for database 0
+2019-05-08 08:32:02.817 WIB [1112] ERROR:  column "dedysty301281" does not exist at character 55
+2019-05-08 08:32:02.817 WIB [1112] STATEMENT:  SELECT reg_pribadi FROM mst.registrasi WHERE reg_id = "dedysty301281"
+	

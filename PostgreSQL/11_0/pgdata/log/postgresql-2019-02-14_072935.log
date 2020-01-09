@@ -1,0 +1,25 @@
+2019-02-14 07:29:35.017 WIB [19] LOG:  database system was interrupted; last known up at 2019-02-13 21:10:20 WIB
+2019-02-14 07:30:03.997 WIB [19] LOG:  database system was not properly shut down; automatic recovery in progress
+2019-02-14 07:30:04.267 WIB [19] LOG:  redo starts at 0/5AE59E8
+2019-02-14 07:30:04.268 WIB [19] LOG:  invalid record length at 0/5AE5A20: wanted 24, got 0
+2019-02-14 07:30:04.268 WIB [19] LOG:  redo done at 0/5AE59E8
+2019-02-14 07:30:05.077 WIB [1] LOG:  database system is ready to accept connections
+2019-02-14 09:13:14.864 WIB [31] ERROR:  gen_salt: Incorrect number of rounds
+2019-02-14 09:13:14.864 WIB [31] STATEMENT:  select crypt('eplanning', gen_salt('bf',50));
+2019-02-14 09:14:34.406 WIB [31] ERROR:  function sha1(unknown) does not exist at character 71
+2019-02-14 09:14:34.406 WIB [31] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2019-02-14 09:14:34.406 WIB [31] STATEMENT:  select crypt('teknotama_asastarealty_com', gen_salt('bf',7));
+	
+	select sha1('teknotama_asastarealty_com');
+														
+														
+												
+2019-02-14 09:22:05.183 WIB [44] FATAL:  password authentication failed for user "bjtg"
+2019-02-14 09:22:05.183 WIB [44] DETAIL:  Password does not match for user "bjtg".
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-02-14 09:44:10.054 WIB [24] LOG:  stats_timestamp 2019-02-14 09:44:10.059822+07 is later than collector's time 2019-02-14 09:44:10.054526+07 for database 81921
+2019-02-14 11:06:06.201 WIB [24] LOG:  stats_timestamp 2019-02-14 11:06:06.20225+07 is later than collector's time 2019-02-14 11:06:06.201197+07 for database 81921
+2019-02-14 12:59:59.503 WIB [24] LOG:  stats_timestamp 2019-02-14 12:59:59.509581+07 is later than collector's time 2019-02-14 12:59:59.503183+07 for database 81921
+2019-02-14 15:57:48.893 WIB [24] LOG:  stats_timestamp 2019-02-14 15:57:48.89454+07 is later than collector's time 2019-02-14 15:57:48.893806+07 for database 81921
+2019-02-14 16:14:17.900 WIB [24] LOG:  stats_timestamp 2019-02-14 16:14:17.903237+07 is later than collector's time 2019-02-14 16:14:17.900836+07 for database 81921
+2019-02-15 07:46:56.086 WIB [24] LOG:  stats_timestamp 2019-02-15 07:46:56.089866+07 is later than collector's time 2019-02-15 07:46:56.086145+07 for database 57743

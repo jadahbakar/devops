@@ -1,0 +1,7 @@
+2019-12-05 04:54:40.819 UTC [47] LOG:  database system was shut down at 2019-12-05 04:54:35 UTC
+2019-12-05 04:54:40.864 UTC [45] LOG:  database system is ready to accept connections
+2019-12-05 04:54:40.972 UTC [45] LOG:  received fast shutdown request
+2019-12-05 04:54:40.976 UTC [45] LOG:  aborting any active transactions
+2019-12-05 04:54:40.985 UTC [45] LOG:  background worker "logical replication launcher" (PID 53) exited with exit code 1
+2019-12-05 04:54:40.986 UTC [48] LOG:  shutting down
+2019-12-05 04:54:41.048 UTC [45] LOG:  database system is shut down

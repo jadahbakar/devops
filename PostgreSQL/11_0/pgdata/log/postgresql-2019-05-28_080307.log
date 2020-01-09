@@ -1,0 +1,16 @@
+2019-05-28 08:03:07.574 WIB [19] LOG:  database system was interrupted; last known up at 2019-05-27 19:51:49 WIB
+2019-05-28 08:03:27.830 WIB [19] LOG:  database system was not properly shut down; automatic recovery in progress
+2019-05-28 08:03:28.088 WIB [19] LOG:  redo starts at 0/A8A0D68
+2019-05-28 08:03:28.089 WIB [19] LOG:  invalid record length at 0/A8A0DA0: wanted 24, got 0
+2019-05-28 08:03:28.090 WIB [19] LOG:  redo done at 0/A8A0D68
+2019-05-28 08:03:28.817 WIB [1] LOG:  database system is ready to accept connections
+2019-05-28 22:17:57.740 WIB [26] FATAL:  password authentication failed for user "teknotama"
+2019-05-28 22:17:57.740 WIB [26] DETAIL:  Password does not match for user "teknotama".
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-05-28 22:18:16.538 WIB [27] FATAL:  password authentication failed for user "teknotama"
+2019-05-28 22:18:16.538 WIB [27] DETAIL:  Password does not match for user "teknotama".
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-05-28 22:18:51.479 WIB [28] FATAL:  password authentication failed for user "teknotama"
+2019-05-28 22:18:51.479 WIB [28] DETAIL:  Password does not match for user "teknotama".
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-05-28 23:57:31.987 WIB [24] LOG:  stats_timestamp 2019-05-28 23:57:31.989781+07 is later than collector's time 2019-05-28 23:57:31.987409+07 for database 81921

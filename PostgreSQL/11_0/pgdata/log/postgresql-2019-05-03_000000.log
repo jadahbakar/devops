@@ -1,0 +1,100 @@
+2019-05-03 06:51:41.631 WIB [1859] FATAL:  password authentication failed for user "teknotama"
+2019-05-03 06:51:41.631 WIB [1859] DETAIL:  Password does not match for user "teknotama".
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-05-03 06:52:41.702 WIB [1145] ERROR:  invalid input syntax for type json at character 47
+2019-05-03 06:52:41.702 WIB [1145] DETAIL:  The input string ended unexpectedly.
+2019-05-03 06:52:41.702 WIB [1145] CONTEXT:  JSON data, line 1: 
+2019-05-03 06:52:41.702 WIB [1145] STATEMENT:  UPDATE "mst"."registrasi" SET "reg_approve" = '' WHERE "reg_id" = 'dedysty811230'
+2019-05-03 06:52:44.055 WIB [1145] ERROR:  invalid input syntax for type json at character 47
+2019-05-03 06:52:44.055 WIB [1145] DETAIL:  The input string ended unexpectedly.
+2019-05-03 06:52:44.055 WIB [1145] CONTEXT:  JSON data, line 1: 
+2019-05-03 06:52:44.055 WIB [1145] STATEMENT:  UPDATE "mst"."registrasi" SET "reg_approve" = '' WHERE "reg_id" = 'dedysty811230'
+2019-05-03 06:52:47.218 WIB [1145] ERROR:  invalid input syntax for type json at character 47
+2019-05-03 06:52:47.218 WIB [1145] DETAIL:  The input string ended unexpectedly.
+2019-05-03 06:52:47.218 WIB [1145] CONTEXT:  JSON data, line 1: 
+2019-05-03 06:52:47.218 WIB [1145] STATEMENT:  UPDATE "mst"."registrasi" SET "reg_approve" = '' WHERE "reg_id" = 'dedysty811230'
+2019-05-03 06:53:09.297 WIB [1144] ERROR:  column "req_approve" of relation "registrasi" does not exist at character 27
+2019-05-03 06:53:09.297 WIB [1144] STATEMENT:  update mst.registrasi set req_approve = null
+2019-05-03 07:06:35.709 WIB [1862] LOG:  stats collector's time 2019-05-03 07:12:02.613672+07 is later than backend local time 2019-05-03 07:06:35.709085+07
+2019-05-03 07:06:35.709 WIB [1862] STATEMENT:  /*pga4dash*/
+	SELECT 'session_stats' AS chart_name, row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT count(*) FROM pg_stat_activity WHERE datname = (SELECT datname FROM pg_database WHERE oid = 106581)) AS "Total",
+	   (SELECT count(*) FROM pg_stat_activity WHERE state = 'active' AND datname = (SELECT datname FROM pg_database WHERE oid = 106581))  AS "Active",
+	   (SELECT count(*) FROM pg_stat_activity WHERE state = 'idle' AND datname = (SELECT datname FROM pg_database WHERE oid = 106581))  AS "Idle"
+	) t
+	UNION ALL
+	SELECT 'tps_stats' AS chart_name, row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT sum(xact_commit) + sum(xact_rollback) FROM pg_stat_database WHERE datname = (SELECT datname FROM pg_database WHERE oid = 106581)) AS "Transactions",
+	   (SELECT sum(xact_commit) FROM pg_stat_database WHERE datname = (SELECT datname FROM pg_database WHERE oid = 106581)) AS "Commits",
+	   (SELECT sum(xact_rollback) FROM pg_stat_database WHERE datname = (SELECT datname FROM pg_database WHERE oid = 106581)) AS "Rollbacks"
+	) t
+	UNION ALL
+	SELECT 'ti_stats' AS chart_name, row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT sum(tup_inserted) FROM pg_stat_database WHERE datname = (SELECT datname FROM pg_database WHERE oid = 106581)) AS "Inserts",
+	   (SELECT sum(tup_updated) FROM pg_stat_database WHERE datname = (SELECT datname FROM pg_database WHERE oid = 106581)) AS "Updates",
+	   (SELECT sum(tup_deleted) FROM pg_stat_database WHERE datname = (SELECT datname FROM pg_database WHERE oid = 106581)) AS "Deletes"
+	) t
+	UNION ALL
+	SELECT 'to_stats' AS chart_name, row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT sum(tup_fetched) FROM pg_stat_database WHERE datname = (SELECT datname FROM pg_database WHERE oid = 106581)) AS "Fetched",
+	   (SELECT sum(tup_returned) FROM pg_stat_database WHERE datname = (SELECT datname FROM pg_database WHERE oid = 106581)) AS "Returned"
+	) t
+	UNION ALL
+	SELECT 'bio_stats' AS chart_name, row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT sum(blks_read) FROM pg_stat_database WHERE datname = (SELECT datname FROM pg_database WHERE oid = 106581)) AS "Reads",
+	   (SELECT sum(blks_hit) FROM pg_stat_database WHERE datname = (SELECT datname FROM pg_database WHERE oid = 106581)) AS "Hits"
+	) t
+	
+2019-05-03 07:06:35.709 WIB [24] LOG:  stats_timestamp 2019-05-03 07:12:02.613672+07 is later than collector's time 2019-05-03 07:06:35.709361+07 for database 106581
+2019-05-03 07:15:47.595 WIB [1144] ERROR:  column "p_role" does not exist at character 153
+2019-05-03 07:15:47.595 WIB [1144] STATEMENT:  SELECT name, url, icon
+			FROM sec.menu_child INNER JOIN sec.roles_menu ON menu_cld_id = role_menu_cld
+			WHERE 
+			menu_cld_prt = 2 AND 
+			role_menu_id = p_role AND 
+			menu_cld_sts = 1
+			ORDER BY menu_cld_urut
+2019-05-03 07:17:20.367 WIB [1883] ERROR:  column "reg_ktp" does not exist at character 26
+2019-05-03 07:17:20.367 WIB [1883] HINT:  Perhaps you meant to reference the column "registrasi.reg_id" or the column "registrasi.reg_date".
+2019-05-03 07:17:20.367 WIB [1883] STATEMENT:  SELECT reg_id, reg_nama, reg_ktp, reg_email, reg_date, reg_approve, reg_pribadi, reg_alamat, reg_alamat_ktp        FROM mst.registrasi
+2019-05-03 07:18:12.289 WIB [1885] ERROR:  column "reg_ktp" does not exist at character 26
+2019-05-03 07:18:12.289 WIB [1885] HINT:  Perhaps you meant to reference the column "registrasi.reg_id" or the column "registrasi.reg_date".
+2019-05-03 07:18:12.289 WIB [1885] STATEMENT:  SELECT reg_id, reg_nama, reg_ktp, reg_email, reg_date, reg_approve, reg_pribadi, reg_alamat, reg_alamat_ktp        FROM mst.registrasi
+2019-05-03 07:18:22.014 WIB [1885] ERROR:  column "reg_ktp" does not exist at character 26
+2019-05-03 07:18:22.014 WIB [1885] HINT:  Perhaps you meant to reference the column "registrasi.reg_id" or the column "registrasi.reg_date".
+2019-05-03 07:18:22.014 WIB [1885] STATEMENT:  SELECT reg_id, reg_nama, reg_ktp, reg_email, reg_date, reg_approve, reg_pribadi, reg_alamat, reg_alamat_ktp        FROM mst.registrasi
+2019-05-03 07:18:32.151 WIB [1885] ERROR:  column "reg_ktp" does not exist at character 26
+2019-05-03 07:18:32.151 WIB [1885] HINT:  Perhaps you meant to reference the column "registrasi.reg_id" or the column "registrasi.reg_date".
+2019-05-03 07:18:32.151 WIB [1885] STATEMENT:  SELECT reg_id, reg_nama, reg_ktp, reg_email, reg_date, reg_approve, reg_pribadi, reg_alamat, reg_alamat_ktp        FROM mst.registrasi
+2019-05-03 07:18:55.442 WIB [1888] ERROR:  column "reg_ktp" does not exist at character 26
+2019-05-03 07:18:55.442 WIB [1888] HINT:  Perhaps you meant to reference the column "registrasi.reg_id" or the column "registrasi.reg_date".
+2019-05-03 07:18:55.442 WIB [1888] STATEMENT:  SELECT reg_id, reg_nama, reg_ktp, reg_email, reg_date, reg_approve, reg_pribadi, reg_alamat, reg_alamat_ktp        FROM mst.registrasi
+2019-05-03 07:19:03.579 WIB [1888] ERROR:  column "reg_ktp" does not exist at character 26
+2019-05-03 07:19:03.579 WIB [1888] HINT:  Perhaps you meant to reference the column "registrasi.reg_id" or the column "registrasi.reg_date".
+2019-05-03 07:19:03.579 WIB [1888] STATEMENT:  SELECT reg_id, reg_nama, reg_ktp, reg_email, reg_date, reg_approve, reg_pribadi, reg_alamat, reg_alamat_ktp        FROM mst.registrasi
+2019-05-03 07:19:06.745 WIB [1888] ERROR:  column "reg_ktp" does not exist at character 26
+2019-05-03 07:19:06.745 WIB [1888] HINT:  Perhaps you meant to reference the column "registrasi.reg_id" or the column "registrasi.reg_date".
+2019-05-03 07:19:06.745 WIB [1888] STATEMENT:  SELECT reg_id, reg_nama, reg_ktp, reg_email, reg_date, reg_approve, reg_pribadi, reg_alamat, reg_alamat_ktp        FROM mst.registrasi
+2019-05-03 07:19:19.167 WIB [1890] ERROR:  column "reg_ktp" does not exist at character 26
+2019-05-03 07:19:19.167 WIB [1890] HINT:  Perhaps you meant to reference the column "registrasi.reg_id" or the column "registrasi.reg_date".
+2019-05-03 07:19:19.167 WIB [1890] STATEMENT:  SELECT reg_id, reg_nama, reg_ktp, reg_email, reg_date, reg_approve, reg_pribadi, reg_alamat, reg_alamat_ktp        FROM mst.registrasi
+2019-05-03 07:19:57.375 WIB [1144] ERROR:  syntax error at or near "\" at character 110
+2019-05-03 07:19:57.375 WIB [1144] STATEMENT:  SELECT reg_id, reg_nama, reg_ktp, reg_email, reg_date, reg_approve, reg_pribadi, reg_alamat, reg_alamat_ktp  \
+	      FROM mst.registrasi
+2019-05-03 07:20:02.923 WIB [1144] ERROR:  column "reg_ktp" does not exist at character 26
+2019-05-03 07:20:02.923 WIB [1144] HINT:  Perhaps you meant to reference the column "registrasi.reg_id" or the column "registrasi.reg_date".
+2019-05-03 07:20:02.923 WIB [1144] STATEMENT:  SELECT reg_id, reg_nama, reg_ktp, reg_email, reg_date, reg_approve, reg_pribadi, reg_alamat, reg_alamat_ktp  
+	      FROM mst.registrasi
+2019-05-03 07:24:54.610 WIB [1904] ERROR:  function to_char(unknown, date) does not exist at character 37
+2019-05-03 07:24:54.610 WIB [1904] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2019-05-03 07:24:54.610 WIB [1904] STATEMENT:  SELECT reg_id, reg_nama, reg_email, to_char('DD/MM/YYYY',reg_date), reg_approve, reg_pribadi, reg_alamat, reg_alamat_ktp        FROM mst.registrasi
+2019-05-03 07:25:20.503 WIB [1906] ERROR:  function to_char(unknown, date) does not exist at character 37
+2019-05-03 07:25:20.503 WIB [1906] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2019-05-03 07:25:20.503 WIB [1906] STATEMENT:  SELECT reg_id, reg_nama, reg_email, to_char('DD/MM/YYYY',reg_date) AS reg_date, reg_approve, reg_pribadi, reg_alamat, reg_alamat_ktp        FROM mst.registrasi
+2019-05-03 08:48:10.897 WIB [24] LOG:  stats_timestamp 2019-05-03 08:48:10.90583+07 is later than collector's time 2019-05-03 08:48:10.897402+07 for database 106581
+2019-05-03 09:17:39.204 WIB [24] LOG:  stats_timestamp 2019-05-03 09:17:39.211285+07 is later than collector's time 2019-05-03 09:17:39.204315+07 for database 106581

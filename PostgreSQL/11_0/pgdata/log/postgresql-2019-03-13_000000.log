@@ -1,0 +1,452 @@
+2019-03-13 11:20:37.230 WIB [25] LOG:  stats_timestamp 2019-03-13 11:20:37.237087+07 is later than collector's time 2019-03-13 11:20:37.23043+07 for database 81921
+2019-03-13 12:57:01.449 WIB [25] LOG:  stats_timestamp 2019-03-13 12:57:01.454813+07 is later than collector's time 2019-03-13 12:57:01.449004+07 for database 81921
+2019-03-13 14:29:07.975 WIB [1224] ERROR:  syntax error at or near ")" at character 90
+2019-03-13 14:29:07.975 WIB [1224] STATEMENT:  CREATE TABLE mst.propinsi (
+		propinsi_id	TEXT PRIMARY KEY,
+		propinsi_nama	TEXT NOT NULL,
+	);
+	
+	
+2019-03-13 15:27:58.672 WIB [1224] ERROR:  syntax error at or near "CREATE" at character 26
+2019-03-13 15:27:58.672 WIB [1224] STATEMENT:  
+	DROP TABLE mst.propinsi
+	CREATE TABLE mst.propinsi (
+		propinsi_id	TEXT PRIMARY KEY,
+		propinsi_nama	TEXT NOT NULL,
+		propinsi_ibu_kota TEXT NOT NULL
+	);
+	
+	
+2019-03-13 15:30:41.268 WIB [1224] ERROR:  syntax error at or near "CREATE" at character 26
+2019-03-13 15:30:41.268 WIB [1224] STATEMENT:  
+	DROP TABLE mst.propinsi
+	CREATE TABLE mst.propinsi (
+		propinsi_id	TEXT PRIMARY KEY,
+		propinsi_nama	TEXT NOT NULL,
+		propinsi_ibu_kota TEXT NOT NULL
+	);
+	
+	
+2019-03-13 15:59:36.842 WIB [1235] ERROR:  syntax error at or near "`" at character 70
+2019-03-13 15:59:36.842 WIB [1235] STATEMENT:  --
+	-- Table structure for table `provinces`
+	--
+	
+	DROP TABLE IF EXISTS `provinces`
+2019-03-13 16:00:06.464 WIB [1235] ERROR:  syntax error at or near "`" at character 70
+2019-03-13 16:00:06.464 WIB [1235] STATEMENT:  --
+	-- Table structure for table `provinces`
+	--
+	
+	DROP TABLE IF EXISTS `provinces`
+2019-03-13 16:05:05.151 WIB [1237] ERROR:  syntax error at or near "DROP" at character 118
+2019-03-13 16:05:05.151 WIB [1237] STATEMENT:  CREATE TABLE IF NOT EXISTS provinces (
+	  id char(2) NOT NULL,
+	  name varchar(255) NOT NULL,
+	  PRIMARY KEY (id)
+	) 
+	
+	
+	
+	DROP TABLE IF EXISTS regencies
+2019-03-13 16:05:31.196 WIB [1237] ERROR:  syntax error at or near "CREATE" at character 121
+2019-03-13 16:05:31.196 WIB [1237] STATEMENT:  CREATE TABLE IF NOT EXISTS provinces (
+	  id char(2) NOT NULL,
+	  name varchar(255) NOT NULL,
+	  PRIMARY KEY (id)
+	) 
+	
+	
+	
+	
+	
+	
+	CREATE TABLE IF NOT EXISTS regencies (
+	  id char(4) NOT NULL,
+	  province_id char(2) NOT NULL,
+	  name varchar(255) NOT NULL,
+	  PRIMARY KEY (id),
+	  KEY regencies_province_id_index (province_id),
+	  CONSTRAINT regencies_province_id_foreign FOREIGN KEY (province_id) REFERENCES provinces (id)
+	) 
+	
+	
+	--
+	-- Table structure for table districts
+	--
+	
+	
+	CREATE TABLE IF NOT EXISTS districts (
+	  id char(7) NOT NULL,
+	  regency_id char(4) NOT NULL,
+	  name varchar(255) NOT NULL,
+	  PRIMARY KEY (id),
+	  KEY districts_id_index (regency_id),
+	  CONSTRAINT districts_regency_id_foreign FOREIGN KEY (regency_id) REFERENCES regencies (id)
+	) 
+	
+	
+	--
+	-- Table structure for table villages
+	--
+	
+	
+	CREATE TABLE IF NOT EXISTS villages (
+	  id char(10) NOT NULL,
+	  district_id char(7) NOT NULL,
+	  name varchar(255) NOT NULL,
+	  PRIMARY KEY (id),
+	  KEY villages_district_id_index (district_id),
+	  CONSTRAINT villages_district_id_foreign FOREIGN KEY (district_id) REFERENCES districts (id)
+	) 
+	
+	
+	--
+	-- Dumping data for table provinces
+	--
+	
+	
+	
+	INSERT INTO provinces VALUES
+	  ('11', 'ACEH'),
+	  ('12', 'SUMATERA UTARA'),
+	  ('13', 'SUMATERA BARAT'),
+	  ('14', 'RIAU'),
+	  ('15', 'JAMBI'),
+	  ('16', 'SUMATERA SELATAN'),
+	  ('17', 'BENGKULU'),
+	  ('18', 'LAMPUNG'),
+	  ('19', 'KEPULAUAN BANGKA BELITUNG'),
+	  ('21', 'KEPULAUAN RIAU'),
+	  ('31', 'DKI JAKARTA'),
+	  ('32', 'JAWA BARAT'),
+	  ('33', 'JAWA TENGAH'),
+	  ('34', 'DI YOGYAKARTA'),
+	  ('35', 'JAWA TIMUR'),
+	  ('36', 'BANTEN'),
+	  ('51', 'BALI'),
+	  ('52', 'NUSA TENGGARA BARAT'),
+	  ('53', 'NUSA TENGGARA TIMUR'),
+	  ('61', 'KALIMANTAN BARAT'),
+	  ('62', 'KALIMANTAN TENGAH'),
+	  ('63', 'KALIMANTAN SELATAN'),
+	  ('64', 'KALIMANTAN TIMUR'),
+	  ('65', 'KALIMANTAN UTARA'),
+	  ('71', 'SULAWESI UTARA'),
+	  ('72', 'SULAWESI TENGAH'),
+	  ('73', 'SULAWESI SELATAN'),
+	  ('74', 'SULAWESI TENGGARA'),
+	  ('75', 'GORONTALO'),
+	  ('76', 'SULAWESI BARAT'),
+	  ('81', 'MALUKU'),
+	  ('82', 'MALUKU UTARA'),
+	  ('91', 'PAPUA BARAT'),
+	  ('94', 'PAPUA')
+2019-03-13 16:06:14.665 WIB [1237] ERROR:  syntax error at or near "CREATE" at character 107
+2019-03-13 16:06:14.665 WIB [1237] STATEMENT:  CREATE TABLE provinces (
+	  id char(2) NOT NULL,
+	  name varchar(255) NOT NULL,
+	  PRIMARY KEY (id)
+	) 
+	
+	
+	
+	
+	
+	
+	CREATE TABLE regencies (
+	  id char(4) NOT NULL,
+	  province_id char(2) NOT NULL,
+	  name varchar(255) NOT NULL,
+	  PRIMARY KEY (id),
+	  KEY regencies_province_id_index (province_id),
+	  CONSTRAINT regencies_province_id_foreign FOREIGN KEY (province_id) REFERENCES provinces (id)
+	) 
+	
+	
+	--
+	-- Table structure for table districts
+	--
+	
+	
+	CREATE TABLE districts (
+	  id char(7) NOT NULL,
+	  regency_id char(4) NOT NULL,
+	  name varchar(255) NOT NULL,
+	  PRIMARY KEY (id),
+	  KEY districts_id_index (regency_id),
+	  CONSTRAINT districts_regency_id_foreign FOREIGN KEY (regency_id) REFERENCES regencies (id)
+	) 
+	
+	
+	--
+	-- Table structure for table villages
+	--
+	
+	
+	CREATE TABLE  villages (
+	  id char(10) NOT NULL,
+	  district_id char(7) NOT NULL,
+	  name varchar(255) NOT NULL,
+	  PRIMARY KEY (id),
+	  KEY villages_district_id_index (district_id),
+	  CONSTRAINT villages_district_id_foreign FOREIGN KEY (district_id) REFERENCES districts (id)
+	) 
+	
+	
+	--
+	-- Dumping data for table provinces
+	--
+	
+	
+	
+	INSERT INTO provinces VALUES
+	  ('11', 'ACEH'),
+	  ('12', 'SUMATERA UTARA'),
+	  ('13', 'SUMATERA BARAT'),
+	  ('14', 'RIAU'),
+	  ('15', 'JAMBI'),
+	  ('16', 'SUMATERA SELATAN'),
+	  ('17', 'BENGKULU'),
+	  ('18', 'LAMPUNG'),
+	  ('19', 'KEPULAUAN BANGKA BELITUNG'),
+	  ('21', 'KEPULAUAN RIAU'),
+	  ('31', 'DKI JAKARTA'),
+	  ('32', 'JAWA BARAT'),
+	  ('33', 'JAWA TENGAH'),
+	  ('34', 'DI YOGYAKARTA'),
+	  ('35', 'JAWA TIMUR'),
+	  ('36', 'BANTEN'),
+	  ('51', 'BALI'),
+	  ('52', 'NUSA TENGGARA BARAT'),
+	  ('53', 'NUSA TENGGARA TIMUR'),
+	  ('61', 'KALIMANTAN BARAT'),
+	  ('62', 'KALIMANTAN TENGAH'),
+	  ('63', 'KALIMANTAN SELATAN'),
+	  ('64', 'KALIMANTAN TIMUR'),
+	  ('65', 'KALIMANTAN UTARA'),
+	  ('71', 'SULAWESI UTARA'),
+	  ('72', 'SULAWESI TENGAH'),
+	  ('73', 'SULAWESI SELATAN'),
+	  ('74', 'SULAWESI TENGGARA'),
+	  ('75', 'GORONTALO'),
+	  ('76', 'SULAWESI BARAT'),
+	  ('81', 'MALUKU'),
+	  ('82', 'MALUKU UTARA'),
+	  ('91', 'PAPUA BARAT'),
+	  ('94', 'PAPUA')
+2019-03-13 16:07:17.123 WIB [1237] ERROR:  type "regencies_province_id_index" does not exist at character 137
+2019-03-13 16:07:17.123 WIB [1237] STATEMENT:  CREATE TABLE regencies (
+	  id char(4) NOT NULL,
+	  province_id char(2) NOT NULL,
+	  name varchar(255) NOT NULL,
+	  PRIMARY KEY (id),
+	  KEY regencies_province_id_index (province_id),
+	  CONSTRAINT regencies_province_id_foreign FOREIGN KEY (province_id) REFERENCES provinces (id)
+	)
+2019-03-13 16:08:19.364 WIB [1237] ERROR:  relation "provinces" already exists
+2019-03-13 16:08:19.364 WIB [1237] STATEMENT:  CREATE TABLE provinces (
+	  id char(2) NOT NULL,
+	  name varchar(255) NOT NULL,
+	  PRIMARY KEY (id)
+	)
+2019-03-13 16:08:33.320 WIB [1237] ERROR:  syntax error at or near ")" at character 133
+2019-03-13 16:08:33.320 WIB [1237] STATEMENT:  CREATE TABLE regencies (
+	  id char(4) NOT NULL,
+	  province_id char(2) NOT NULL,
+	  name varchar(255) NOT NULL,
+	  PRIMARY KEY (id),
+	 
+	)
+2019-03-13 16:09:27.446 WIB [1237] ERROR:  syntax error at or near "regencies" at character 56
+2019-03-13 16:09:27.446 WIB [1237] STATEMENT:  --
+	-- Dumping data for table regencies
+	--
+	
+	LOCK TABLES regencies WRITE
+2019-03-13 16:10:02.962 WIB [1237] ERROR:  relation "provinces" already exists
+2019-03-13 16:10:02.962 WIB [1237] STATEMENT:  CREATE TABLE provinces (
+	  id char(2) NOT NULL,
+	  name varchar(255) NOT NULL,
+	  PRIMARY KEY (id)
+	)
+2019-03-13 16:10:56.946 WIB [1238] ERROR:  syntax error at or near "districts" at character 56
+2019-03-13 16:10:56.946 WIB [1238] STATEMENT:  --
+	-- Dumping data for table districts
+	--
+	
+	LOCK TABLES districts WRITE
+2019-03-13 16:12:55.294 WIB [1238] ERROR:  table "vilages" does not exist
+2019-03-13 16:12:55.294 WIB [1238] STATEMENT:  drop table vilages
+2019-03-13 16:13:30.731 WIB [1238] ERROR:  syntax error at or near "U" at character 370
+2019-03-13 16:13:30.731 WIB [1238] STATEMENT:  INSERT INTO districts VALUES
+	  ('1214061', '1214', 'SUSUA'),
+	  ('1214062', '1214', 'MAZO'),
+	  ('1214063', '1214', 'UMBUNASI'),
+	  ('1214064', '1214', 'IDANOTAE'),
+	  ('1214065', '1214', 'ULUIDANOTAE'),
+	  ('1214066', '1214', 'BORONADU'),
+	  ('1214070', '1214', 'LOLOMATUA'),
+	  ('1214071', '1214', 'ULUNOYO'),
+	  ('1214072', '1214', 'HURUNA'),
+	  ('1214080', '1214', 'LOLOWA\'U'),
+	  ('1214081', '1214', 'HILIMEGAI'),
+	  ('1214082', '1214', 'OOU'),
+	  ('1214083', '1214', 'ONOHAZUMBA'),
+	  ('1214084', '1214', 'HILISALAWAAHE'),
+	  ('1215010', '1215', 'PAKKAT'),
+	  ('1215020', '1215', 'ONAN GANJANG'),
+	  ('1215030', '1215', 'SIJAMA POLANG'),
+	  ('1215040', '1215', 'DOLOK SANGGUL'),
+	  ('1215050', '1215', 'LINTONG NIHUTA'),
+	  ('1215060', '1215', 'PARANGINAN'),
+	  ('1215070', '1215', 'BAKTI RAJA'),
+	  ('1215080', '1215', 'POLLUNG'),
+	  ('1215090', '1215', 'PARLILITAN'),
+	  ('1215100', '1215', 'TARA BINTANG'),
+	  ('1216010', '1216', 'SALAK'),
+	  ('1216011', '1216', 'SITELLU TALI URANG JEHE'),
+	  ('1216012', '1216', 'PAGINDAR'),
+	  ('1216013', '1216', 'SITELLU TALI URANG JULU'),
+	  ('1216014', '1216', 'PERGETTENG-GETTENG SENGKUT'),
+	  ('1216020', '1216', 'KERAJAAN'),
+	  ('1216021', '1216', 'TINADA'),
+	  ('1216022', '1216', 'SIEMPAT RUBE'),
+	  ('1217010', '1217', 'SIANJUR MULA MULA'),
+	  ('1217020', '1217', 'HARIAN'),
+	  ('1217030', '1217', 'SITIO-TIO'),
+	  ('1217040', '1217', 'ONAN RUNGGU'),
+	  ('1217050', '1217', 'NAINGGOLAN'),
+	  ('1217060', '1217', 'PALIPI'),
+	  ('1217070', '1217', 'RONGGUR NIHUTA'),
+	  ('1217080', '1217', 'PANGURURAN'),
+	  ('1217090', '1217', 'SIMANINDO'),
+	  ('1218010', '1218', 'KOTARIH'),
+	  ('1218011', '1218', 'SILINDA'),
+	  ('1218012', '1218', 'BINTANG BAYU'),
+	  ('1218020', '1218', 'DOLOK MASIHUL'),
+	  ('1218021', '1218', 'SERBAJADI'),
+	  ('1218030', '1218', 'SIPISPIS'),
+	  ('1218040', '1218', 'DOLOK MERAWAN'),
+	  ('1218050', '1218', 'TEBINGTINGGI'),
+	  ('1218051', '1218', 'TEBING SYAHBANDAR')
+2019-03-13 17:16:41.890 WIB [1379] FATAL:  password authentication failed for user "teknotama"
+2019-03-13 17:16:41.890 WIB [1379] DETAIL:  Password does not match for user "teknotama".
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-03-13 17:18:46.525 WIB [1383] ERROR:  relation "tmp.province" does not exist at character 74
+2019-03-13 17:18:46.525 WIB [1383] STATEMENT:  INSERT INTO mst.propinsi (propinsi_id,propinsi_nama) SELECT id,name FROM tmp.province;
+	
+2019-03-13 17:19:09.353 WIB [1383] ERROR:  duplicate key value violates unique constraint "propinsi_pkey"
+2019-03-13 17:19:09.353 WIB [1383] DETAIL:  Key (propinsi_id)=(11) already exists.
+2019-03-13 17:19:09.353 WIB [1383] STATEMENT:  
+	INSERT INTO mst.propinsi (propinsi_id,propinsi_nama) SELECT id,name FROM tmp.provinces;
+	
+	
+2019-03-13 17:24:52.692 WIB [1383] ERROR:  syntax error at or near "." at character 18
+2019-03-13 17:24:52.692 WIB [1383] STATEMENT:  
+	CREATE INDEX mst.kota_propinsi ON mst.kota(kota_propinsi);
+2019-03-13 19:11:09.603 WIB [1383] ERROR:  duplicate key value violates unique constraint "kota_pkey"
+2019-03-13 19:11:09.603 WIB [1383] DETAIL:  Key (kota_id)=(1101) already exists.
+2019-03-13 19:11:09.603 WIB [1383] STATEMENT:  
+	INSERT INTO mst.kota (kota_propinsi, kota_id, kota_nama ) SELECT province_id, id, name FROM tmp.regencies;
+	
+2019-03-13 19:12:28.438 WIB [1383] ERROR:  syntax error at or near "." at character 18
+2019-03-13 19:12:28.438 WIB [1383] STATEMENT:  
+	CREATE INDEX mst.kota_propinsi ON mst.kota(kota_propinsi);
+2019-03-13 19:16:29.830 WIB [1383] ERROR:  relation "mst.kecamatan" does not exist
+2019-03-13 19:16:29.830 WIB [1383] STATEMENT:  
+	CREATE INDEX kecamatan_kota_idx ON mst.kecamatan(kecamatan_kota);
+	
+2019-03-13 19:20:26.610 WIB [1383] ERROR:  relation "tmp.vilages" does not exist at character 320
+2019-03-13 19:20:26.610 WIB [1383] STATEMENT:  
+	
+	CREATE TABLE mst.kelurahan (
+		kelurahan_kecamatan TEXT NOT NULL,
+		kelurahan_id TEXT PRIMARY KEY,
+		kelurahan_nama TEXT NOT NULL
+	);
+	
+	CREATE INDEX kelurahan_kecamatan_idx ON mst.kecamatan(kecamatan_kota);
+	
+	
+	INSERT INTO mst.kelurahan (kelurahan_kecamatan, kelurahan_id, kelurahan_nama ) SELECT district_id, id, name FROM tmp.vilages;
+	
+	
+2019-03-13 19:20:41.323 WIB [1383] ERROR:  duplicate key value violates unique constraint "kelurahan_pkey"
+2019-03-13 19:20:41.323 WIB [1383] DETAIL:  Key (kelurahan_id)=(9107182005) already exists.
+2019-03-13 19:20:41.323 WIB [1383] STATEMENT:  
+	CREATE TABLE mst.kelurahan (
+		kelurahan_kecamatan TEXT NOT NULL,
+		kelurahan_id TEXT PRIMARY KEY,
+		kelurahan_nama TEXT NOT NULL
+	);
+	
+	CREATE INDEX kelurahan_kecamatan_idx ON mst.kecamatan(kecamatan_kota);
+	
+	
+	INSERT INTO mst.kelurahan (kelurahan_kecamatan, kelurahan_id, kelurahan_nama ) SELECT district_id, id, name FROM tmp.villages;
+	
+2019-03-13 19:20:54.231 WIB [1383] ERROR:  table "kelurahan" does not exist
+2019-03-13 19:20:54.231 WIB [1383] STATEMENT:  DROP TABLE mst.kelurahan;
+	
+2019-03-13 19:21:09.488 WIB [1383] ERROR:  duplicate key value violates unique constraint "kelurahan_pkey"
+2019-03-13 19:21:09.488 WIB [1383] DETAIL:  Key (kelurahan_id)=(9107182005) already exists.
+2019-03-13 19:21:09.488 WIB [1383] STATEMENT:  
+	INSERT INTO mst.kelurahan (kelurahan_kecamatan, kelurahan_id, kelurahan_nama ) SELECT district_id, id, name FROM tmp.villages;
+	
+	
+	
+2019-03-13 19:30:34.378 WIB [1383] ERROR:  relation "kelurahan_kecamatan_idx" already exists
+2019-03-13 19:30:34.378 WIB [1383] STATEMENT:  
+	DROP TABLE mst.kelurahan;
+	
+	CREATE TABLE mst.kelurahan (
+		kelurahan_kecamatan TEXT NOT NULL,
+		kelurahan_id TEXT PRIMARY KEY,
+		kelurahan_nama TEXT NOT NULL
+	);
+	
+	CREATE INDEX kelurahan_kecamatan_idx ON mst.kecamatan(kecamatan_kota);
+	
+	
+	INSERT INTO mst.kelurahan (kelurahan_kecamatan, kelurahan_id, kelurahan_nama ) SELECT district_id, id, name FROM tmp.villages;
+	
+2019-03-13 19:31:01.744 WIB [1383] ERROR:  relation "kelurahan_kecamatan_idx" already exists
+2019-03-13 19:31:01.744 WIB [1383] STATEMENT:  
+	DROP TABLE mst.kelurahan;
+	
+	CREATE TABLE mst.kelurahan (
+		kelurahan_kecamatan TEXT NOT NULL,
+		kelurahan_id TEXT PRIMARY KEY,
+		kelurahan_nama TEXT NOT NULL
+	);
+	
+	CREATE INDEX kelurahan_kecamatan_idx ON mst.kelurahan(kelurahan_kecamatan);
+	
+	
+	INSERT INTO mst.kelurahan (kelurahan_kecamatan, kelurahan_id, kelurahan_nama ) SELECT district_id, id, name FROM tmp.villages;
+	
+2019-03-13 19:31:15.424 WIB [1383] ERROR:  index "kelurahan_kecamatan_idx" does not exist
+2019-03-13 19:31:15.424 WIB [1383] STATEMENT:  DROP INDEX kelurahan_kecamatan_idx ;
+	
+2019-03-13 19:31:34.442 WIB [1383] ERROR:  relation "kelurahan_kecamatan_idx" already exists
+2019-03-13 19:31:34.442 WIB [1383] STATEMENT:  
+	
+	CREATE INDEX kelurahan_kecamatan_idx ON mst.kelurahan(kelurahan_kecamatan);
+	
+2019-03-13 19:43:32.872 WIB [1522] ERROR:  function mst.propinsi_get() does not exist at character 15
+2019-03-13 19:43:32.872 WIB [1522] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2019-03-13 19:43:32.872 WIB [1522] STATEMENT:  SELECT * from mst.propinsi_get();
+	
+2019-03-13 19:43:49.567 WIB [1522] ERROR:  function mst.propinsi_get() does not exist at character 9
+2019-03-13 19:43:49.567 WIB [1522] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2019-03-13 19:43:49.567 WIB [1522] STATEMENT:  
+	SELECT mst.propinsi_get();
+	
+2019-03-13 19:56:01.027 WIB [1414] ERROR:  column "kelurahan_id" does not exist at character 54
+2019-03-13 19:56:01.027 WIB [1414] QUERY:  SELECT  json_agg(row_to_json(t))  FROM 
+			(
+			SELECT kelurahan_id, kelurahan_nama FROM mst.kecamatan WHERE kelurahan_kecamatan = p_kecamatan ORDER BY kelurahan_id
+			) t
+2019-03-13 19:56:01.027 WIB [1414] CONTEXT:  PL/pgSQL function mst.kelurahan_get(text) line 2 at RETURN QUERY
+2019-03-13 19:56:01.027 WIB [1414] STATEMENT:  select mst.kelurahan_get('3374080')

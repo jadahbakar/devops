@@ -1,0 +1,4 @@
+2019-07-11 13:53:25.728 WIB [26] ERROR:  syntax error at or near "\" at character 141
+2019-07-11 13:53:25.728 WIB [26] STATEMENT:  SELECT CASE WHEN rkf_sts = 0 THEN 'DRAFT' WHEN rkf_sts = 1 THEN 'APPROVED' WHEN rkf_sts = 2 THEN 'REVIEW' END as status, Count(*) as jumlah \
+	    FROM mst.rkf WHERE rkf_user_from = '001PPB' AND rkf_tahun = '2019' AND rkf_jenis_id = 2 \
+	    GROUP BY rkf_sts

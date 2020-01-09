@@ -1,0 +1,60 @@
+2019-10-21 12:40:02.358 WIB [20] LOG:  database system was interrupted; last known up at 2019-10-18 10:50:32 WIB
+2019-10-21 12:40:33.761 WIB [20] LOG:  database system was not properly shut down; automatic recovery in progress
+2019-10-21 12:40:34.154 WIB [20] LOG:  redo starts at 0/FF2E088
+2019-10-21 12:40:34.155 WIB [20] LOG:  invalid record length at 0/FF2E168: wanted 24, got 0
+2019-10-21 12:40:34.155 WIB [20] LOG:  redo done at 0/FF2E130
+2019-10-21 12:40:35.079 WIB [1] LOG:  database system is ready to accept connections
+2019-10-21 16:12:50.387 WIB [130] ERROR:  duplicate key value violates unique constraint "registrasi_pkey"
+2019-10-21 16:12:50.387 WIB [130] DETAIL:  Key (reg_id)=(Anindit140419) already exists.
+2019-10-21 16:12:50.387 WIB [130] STATEMENT:  INSERT INTO mst.registrasi(reg_id, reg_nama, reg_pribadi, reg_alamat, reg_alamat_ktp, reg_email, reg_password)                         VALUES ( 'Anindit140419', 'ANINDITYA QAMEELA SAUQIYA', '{"tempatLahir":"SEMARANG","tanggalLahir":"2014-04-19","nik":"3374033012810001","kk":"3374033012810001","hp":"08121557997","pekerjaan":"WIRAUSAHA","agama":"1","statusNikah":"1"}', '{"alamat":"SEMARANG TIMUR","propinsi":"33","kota":"3374","kecamatan":"3374080","kelurahan":"3374080006","rt":"05","rw":"03","kodePOS":"50195"}', '{"alamatKTP":"SEMARANG TIMUR","propinsiKTP":"33","kotaKTP":"3374","kecamatanKTP":"3374080","kelurahanKTP":"3374080006","rtKTP":"08","rwKTP":"09","kodePOSKTP":"50198"}', 'dedy@gmail.com', '386cb07234c24f703cb86b67a93303b8cf732273583e7c4b5f1e82a3d3d586a5D5HJmlaMUlu/P5qa6R9n7w==')
+2019-10-21 23:37:50.292 WIB [676] ERROR:  duplicate key value violates unique constraint "registrasi_pkey"
+2019-10-21 23:37:50.292 WIB [676] DETAIL:  Key (reg_id)=(Anindit140419) already exists.
+2019-10-21 23:37:50.292 WIB [676] STATEMENT:  INSERT INTO mst.registrasi(reg_id, reg_nama, reg_pribadi, reg_alamat, reg_alamat_ktp, reg_email, reg_password)                         VALUES ( 'Anindit140419', 'ANINDITYA QAMEELA SAUQIYA', '{"tempatLahir":"SEMARANG","tanggalLahir":"2014-04-19","nik":"3374033012810001","kk":"3374033012810001","hp":"08121557997","pekerjaan":"WIRAUSAHA","agama":"1","statusNikah":"1"}', '{"alamat":"SEMARANG TIMUR","propinsi":"33","kota":"3374","kecamatan":"3374080","kelurahan":"3374080006","rt":"05","rw":"03","kodePOS":"50195"}', '{"alamatKTP":"SEMARANG TIMUR","propinsiKTP":"33","kotaKTP":"3374","kecamatanKTP":"3374080","kelurahanKTP":"3374080006","rtKTP":"08","rwKTP":"09","kodePOSKTP":"50198"}', 'dedy@gmail.com', '2cb98ef0403ecc8350265f963ae5214269a749e92ae921eec0ff73e79c34fa92xgBNJpXyI4/YrKc3n2bLAw==')
+2019-10-21 23:41:57.866 WIB [685] ERROR:  duplicate key value violates unique constraint "userid_pkey"
+2019-10-21 23:41:57.866 WIB [685] DETAIL:  Key (user_id)=(dedysty811230) already exists.
+2019-10-21 23:41:57.866 WIB [685] CONTEXT:  SQL statement "INSERT INTO sec.userid (user_id, user_nama, user_pass, user_email, user_role) 
+			SELECT reg_id, reg_nama, reg_password, reg_email, 4 FROM mst.registrasi"
+	PL/pgSQL function mst.registrasi_to_user_customer(text,text,text) line 13 at SQL statement
+2019-10-21 23:41:57.866 WIB [685] STATEMENT:  SELECT mst.registrasi_to_user_customer('Anindit140419', '', 'dedy3012') AS status
+2019-10-21 23:41:59.282 WIB [685] ERROR:  duplicate key value violates unique constraint "userid_pkey"
+2019-10-21 23:41:59.282 WIB [685] DETAIL:  Key (user_id)=(dedysty811230) already exists.
+2019-10-21 23:41:59.282 WIB [685] CONTEXT:  SQL statement "INSERT INTO sec.userid (user_id, user_nama, user_pass, user_email, user_role) 
+			SELECT reg_id, reg_nama, reg_password, reg_email, 4 FROM mst.registrasi"
+	PL/pgSQL function mst.registrasi_to_user_customer(text,text,text) line 13 at SQL statement
+2019-10-21 23:41:59.282 WIB [685] STATEMENT:  SELECT mst.registrasi_to_user_customer('Anindit140419', '', 'dedy3012') AS status
+2019-10-21 23:41:59.548 WIB [685] ERROR:  duplicate key value violates unique constraint "userid_pkey"
+2019-10-21 23:41:59.548 WIB [685] DETAIL:  Key (user_id)=(dedysty811230) already exists.
+2019-10-21 23:41:59.548 WIB [685] CONTEXT:  SQL statement "INSERT INTO sec.userid (user_id, user_nama, user_pass, user_email, user_role) 
+			SELECT reg_id, reg_nama, reg_password, reg_email, 4 FROM mst.registrasi"
+	PL/pgSQL function mst.registrasi_to_user_customer(text,text,text) line 13 at SQL statement
+2019-10-21 23:41:59.548 WIB [685] STATEMENT:  SELECT mst.registrasi_to_user_customer('Anindit140419', '', 'dedy3012') AS status
+2019-10-21 23:41:59.705 WIB [685] ERROR:  duplicate key value violates unique constraint "userid_pkey"
+2019-10-21 23:41:59.705 WIB [685] DETAIL:  Key (user_id)=(dedysty811230) already exists.
+2019-10-21 23:41:59.705 WIB [685] CONTEXT:  SQL statement "INSERT INTO sec.userid (user_id, user_nama, user_pass, user_email, user_role) 
+			SELECT reg_id, reg_nama, reg_password, reg_email, 4 FROM mst.registrasi"
+	PL/pgSQL function mst.registrasi_to_user_customer(text,text,text) line 13 at SQL statement
+2019-10-21 23:41:59.705 WIB [685] STATEMENT:  SELECT mst.registrasi_to_user_customer('Anindit140419', '', 'dedy3012') AS status
+2019-10-21 23:41:59.897 WIB [685] ERROR:  duplicate key value violates unique constraint "userid_pkey"
+2019-10-21 23:41:59.897 WIB [685] DETAIL:  Key (user_id)=(dedysty811230) already exists.
+2019-10-21 23:41:59.897 WIB [685] CONTEXT:  SQL statement "INSERT INTO sec.userid (user_id, user_nama, user_pass, user_email, user_role) 
+			SELECT reg_id, reg_nama, reg_password, reg_email, 4 FROM mst.registrasi"
+	PL/pgSQL function mst.registrasi_to_user_customer(text,text,text) line 13 at SQL statement
+2019-10-21 23:41:59.897 WIB [685] STATEMENT:  SELECT mst.registrasi_to_user_customer('Anindit140419', '', 'dedy3012') AS status
+2019-10-21 23:42:00.083 WIB [685] ERROR:  duplicate key value violates unique constraint "userid_pkey"
+2019-10-21 23:42:00.083 WIB [685] DETAIL:  Key (user_id)=(dedysty811230) already exists.
+2019-10-21 23:42:00.083 WIB [685] CONTEXT:  SQL statement "INSERT INTO sec.userid (user_id, user_nama, user_pass, user_email, user_role) 
+			SELECT reg_id, reg_nama, reg_password, reg_email, 4 FROM mst.registrasi"
+	PL/pgSQL function mst.registrasi_to_user_customer(text,text,text) line 13 at SQL statement
+2019-10-21 23:42:00.083 WIB [685] STATEMENT:  SELECT mst.registrasi_to_user_customer('Anindit140419', '', 'dedy3012') AS status
+2019-10-21 23:42:43.270 WIB [687] ERROR:  duplicate key value violates unique constraint "userid_pkey"
+2019-10-21 23:42:43.270 WIB [687] DETAIL:  Key (user_id)=(dedysty811230) already exists.
+2019-10-21 23:42:43.270 WIB [687] CONTEXT:  SQL statement "INSERT INTO sec.userid (user_id, user_nama, user_pass, user_email, user_role) 
+			SELECT reg_id, reg_nama, reg_password, reg_email, 4 FROM mst.registrasi"
+	PL/pgSQL function mst.registrasi_to_user_customer(text,text,text) line 13 at SQL statement
+2019-10-21 23:42:43.270 WIB [687] STATEMENT:  SELECT mst.registrasi_to_user_customer('Anindit140419', '', 'dedy3012') AS status
+2019-10-21 23:44:43.371 WIB [690] ERROR:  duplicate key value violates unique constraint "userid_pkey"
+2019-10-21 23:44:43.371 WIB [690] DETAIL:  Key (user_id)=(dedysty811230) already exists.
+2019-10-21 23:44:43.371 WIB [690] CONTEXT:  SQL statement "INSERT INTO sec.userid (user_id, user_nama, user_pass, user_email, user_role) 
+			SELECT reg_id, reg_nama, reg_password, reg_email, 4 FROM mst.registrasi"
+	PL/pgSQL function mst.registrasi_to_user_customer(text,text,text) line 13 at SQL statement
+2019-10-21 23:44:43.371 WIB [690] STATEMENT:  SELECT mst.registrasi_to_user_customer('Anindit140419', '', 'dedy3012') AS status

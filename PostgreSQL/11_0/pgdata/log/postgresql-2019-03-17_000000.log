@@ -1,0 +1,7 @@
+2019-03-17 16:53:02.138 WIB [24] LOG:  stats_timestamp 2019-03-17 16:53:02.14408+07 is later than collector's time 2019-03-17 16:53:02.137867+07 for database 81921
+2019-03-17 23:30:07.068 WIB [4214] ERROR:  column "kelurahan_kecataman" does not exist at character 37
+2019-03-17 23:30:07.068 WIB [4214] HINT:  Perhaps you meant to reference the column "kelurahan.kelurahan_kecamatan".
+2019-03-17 23:30:07.068 WIB [4214] STATEMENT:  
+	
+	select * from mst.kelurahan where kelurahan_kecataman = '3374080';
+	

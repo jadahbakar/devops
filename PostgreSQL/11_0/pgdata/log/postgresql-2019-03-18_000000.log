@@ -1,0 +1,5 @@
+2019-03-18 08:58:35.238 WIB [4214] ERROR:  relation "mst.rkf" does not exist at character 15
+2019-03-18 08:58:35.238 WIB [4214] STATEMENT:  Select * from mst.rkf;
+	
+2019-03-18 22:39:37.193 WIB [24] LOG:  stats_timestamp 2019-03-18 22:39:37.201896+07 is later than collector's time 2019-03-18 22:39:37.193106+07 for database 0
+2019-03-18 22:44:06.935 WIB [24] LOG:  stats_timestamp 2019-03-18 22:44:06.937626+07 is later than collector's time 2019-03-18 22:44:06.93542+07 for database 0

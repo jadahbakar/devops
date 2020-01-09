@@ -1,0 +1,7 @@
+2019-09-11 02:43:18.015 WIB [19] LOG:  database system was interrupted; last known up at 2019-09-09 19:47:26 WIB
+2019-09-11 02:43:37.194 WIB [19] LOG:  database system was not properly shut down; automatic recovery in progress
+2019-09-11 02:43:37.367 WIB [19] LOG:  redo starts at 0/FD89FC0
+2019-09-11 02:43:37.368 WIB [19] LOG:  invalid record length at 0/FD8A0B8: wanted 24, got 0
+2019-09-11 02:43:37.368 WIB [19] LOG:  redo done at 0/FD8A080
+2019-09-11 02:43:37.840 WIB [1] LOG:  database system is ready to accept connections
+2019-09-11 03:48:40.286 WIB [24] LOG:  stats_timestamp 2019-09-11 03:48:40.290421+07 is later than collector's time 2019-09-11 03:48:40.286013+07 for database 0

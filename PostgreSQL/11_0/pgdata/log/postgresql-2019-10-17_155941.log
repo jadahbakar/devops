@@ -1,0 +1,58 @@
+2019-10-17 15:59:41.369 WIB [19] LOG:  database system was interrupted; last known up at 2019-10-17 15:49:39 WIB
+2019-10-17 15:59:45.959 WIB [20] FATAL:  the database system is starting up
+2019-10-17 15:59:45.966 WIB [21] FATAL:  the database system is starting up
+2019-10-17 15:59:46.002 WIB [23] FATAL:  the database system is starting up
+2019-10-17 15:59:46.006 WIB [22] FATAL:  the database system is starting up
+2019-10-17 15:59:46.010 WIB [24] FATAL:  the database system is starting up
+2019-10-17 15:59:46.019 WIB [25] FATAL:  the database system is starting up
+2019-10-17 15:59:46.322 WIB [26] FATAL:  the database system is starting up
+2019-10-17 15:59:46.337 WIB [27] FATAL:  the database system is starting up
+2019-10-17 15:59:46.358 WIB [29] FATAL:  the database system is starting up
+2019-10-17 15:59:46.360 WIB [28] FATAL:  the database system is starting up
+2019-10-17 15:59:46.363 WIB [30] FATAL:  the database system is starting up
+2019-10-17 15:59:46.366 WIB [31] FATAL:  the database system is starting up
+2019-10-17 15:59:46.486 WIB [32] FATAL:  the database system is starting up
+2019-10-17 15:59:46.502 WIB [33] FATAL:  the database system is starting up
+2019-10-17 15:59:55.381 WIB [35] FATAL:  the database system is starting up
+2019-10-17 15:59:55.383 WIB [36] FATAL:  the database system is starting up
+2019-10-17 15:59:55.384 WIB [37] FATAL:  the database system is starting up
+2019-10-17 15:59:55.385 WIB [34] FATAL:  the database system is starting up
+2019-10-17 15:59:55.407 WIB [38] FATAL:  the database system is starting up
+2019-10-17 15:59:55.425 WIB [39] FATAL:  the database system is starting up
+2019-10-17 15:59:55.560 WIB [40] FATAL:  the database system is starting up
+2019-10-17 15:59:55.606 WIB [42] FATAL:  the database system is starting up
+2019-10-17 15:59:55.632 WIB [41] FATAL:  the database system is starting up
+2019-10-17 15:59:55.632 WIB [43] FATAL:  the database system is starting up
+2019-10-17 15:59:55.699 WIB [45] FATAL:  the database system is starting up
+2019-10-17 15:59:55.706 WIB [44] FATAL:  the database system is starting up
+2019-10-17 15:59:55.737 WIB [46] FATAL:  the database system is starting up
+2019-10-17 15:59:55.769 WIB [47] FATAL:  the database system is starting up
+2019-10-17 16:00:05.362 WIB [19] LOG:  database system was not properly shut down; automatic recovery in progress
+2019-10-17 16:00:05.702 WIB [19] LOG:  redo starts at 0/FF14ED8
+2019-10-17 16:00:05.704 WIB [19] LOG:  invalid record length at 0/FF14FB8: wanted 24, got 0
+2019-10-17 16:00:05.704 WIB [19] LOG:  redo done at 0/FF14F80
+2019-10-17 16:00:06.451 WIB [1] LOG:  database system is ready to accept connections
+2019-10-17 16:09:19.805 WIB [107] ERROR:  duplicate key value violates unique constraint "registrasi_pkey"
+2019-10-17 16:09:19.805 WIB [107] DETAIL:  Key (reg_id)=(Anindit140419) already exists.
+2019-10-17 16:09:19.805 WIB [107] STATEMENT:  INSERT INTO mst.registrasi(reg_id, reg_nama, reg_pribadi, reg_alamat, reg_alamat_ktp, reg_email, reg_password)                         VALUES ( 'Anindit140419', 'ANINDITYA QAMEELA SAUQIYA', '{"tempatLahir":"SEMARANG","tanggalLahir":"2014-04-19","nik":"3374033012810001","kk":"3374033012810001","hp":"08121557997","pekerjaan":"WIRAUSAHA","agama":"1","statusNikah":"1"}', '{"alamat":"SEMARANG TIMUR","propinsi":"33","kota":"3374","kecamatan":"3374080","kelurahan":"3374080006","rt":"05","rw":"03","kodePOS":"50195"}', '{"alamatKTP":"SEMARANG TIMUR","propinsiKTP":"33","kotaKTP":"3374","kecamatanKTP":"3374080","kelurahanKTP":"3374080006","rtKTP":"08","rwKTP":"09","kodePOSKTP":"50198"}', 'dedy@gmail.com', 'd30cd9724085f4f1908fc00940deee5939505b7947ad7245aed3f743a2ec9e81NM/UH25jboGKjJglDsyLiQ==')
+2019-10-17 16:13:25.149 WIB [138] ERROR:  duplicate key value violates unique constraint "registrasi_pkey"
+2019-10-17 16:13:25.149 WIB [138] DETAIL:  Key (reg_id)=(Anindit140419) already exists.
+2019-10-17 16:13:25.149 WIB [138] STATEMENT:  INSERT INTO mst.registrasi(reg_id, reg_nama, reg_pribadi, reg_alamat, reg_alamat_ktp, reg_email, reg_password)                         VALUES ( 'Anindit140419', 'ANINDITYA QAMEELA SAUQIYA', '{"tempatLahir":"SEMARANG","tanggalLahir":"2014-04-19","nik":"3374033012810001","kk":"3374033012810001","hp":"08121557997","pekerjaan":"WIRAUSAHA","agama":"1","statusNikah":"1"}', '{"alamat":"SEMARANG TIMUR","propinsi":"33","kota":"3374","kecamatan":"3374080","kelurahan":"3374080006","rt":"05","rw":"03","kodePOS":"50195"}', '{"alamatKTP":"SEMARANG TIMUR","propinsiKTP":"33","kotaKTP":"3374","kecamatanKTP":"3374080","kelurahanKTP":"3374080006","rtKTP":"08","rwKTP":"09","kodePOSKTP":"50198"}', 'dedy@gmail.com', '98889418504ff8c5b31f8ce2b2cb9290673d1d2f4fda2cacafdd5c17394c063d5xZ7WHloJCTBO10VbaqArQ==')
+2019-10-17 16:18:20.027 WIB [144] ERROR:  duplicate key value violates unique constraint "registrasi_pkey"
+2019-10-17 16:18:20.027 WIB [144] DETAIL:  Key (reg_id)=(Anindit140419) already exists.
+2019-10-17 16:18:20.027 WIB [144] STATEMENT:  INSERT INTO mst.registrasi(reg_id, reg_nama, reg_pribadi, reg_alamat, reg_alamat_ktp, reg_email, reg_password)                         VALUES ( 'Anindit140419', 'ANINDITYA QAMEELA SAUQIYA', '{"tempatLahir":"SEMARANG","tanggalLahir":"2014-04-19","nik":"3374033012810001","kk":"3374033012810001","hp":"08121557997","pekerjaan":"WIRAUSAHA","agama":"1","statusNikah":"1"}', '{"alamat":"SEMARANG TIMUR","propinsi":"33","kota":"3374","kecamatan":"3374080","kelurahan":"3374080006","rt":"05","rw":"03","kodePOS":"50195"}', '{"alamatKTP":"SEMARANG TIMUR","propinsiKTP":"33","kotaKTP":"3374","kecamatanKTP":"3374080","kelurahanKTP":"3374080006","rtKTP":"08","rwKTP":"09","kodePOSKTP":"50198"}', 'dedy@gmail.com', '697229faccbe74f6354d69f9bbf4dfe7601274622e90195e583ddbe4cf92038dFN3381OMOsyIPiNnmb52HA==')
+2019-10-17 16:29:26.710 WIB [167] ERROR:  duplicate key value violates unique constraint "registrasi_pkey"
+2019-10-17 16:29:26.710 WIB [167] DETAIL:  Key (reg_id)=(Anindit140419) already exists.
+2019-10-17 16:29:26.710 WIB [167] STATEMENT:  INSERT INTO mst.registrasi(reg_id, reg_nama, reg_pribadi, reg_alamat, reg_alamat_ktp, reg_email, reg_password)                         VALUES ( 'Anindit140419', 'ANINDITYA QAMEELA SAUQIYA', '{"tempatLahir":"SEMARANG","tanggalLahir":"2014-04-19","nik":"3374033012810001","kk":"3374033012810001","hp":"08121557997","pekerjaan":"WIRAUSAHA","agama":"1","statusNikah":"1"}', '{"alamat":"SEMARANG TIMUR","propinsi":"33","kota":"3374","kecamatan":"3374080","kelurahan":"3374080006","rt":"05","rw":"03","kodePOS":"50195"}', '{"alamatKTP":"SEMARANG TIMUR","propinsiKTP":"33","kotaKTP":"3374","kecamatanKTP":"3374080","kelurahanKTP":"3374080006","rtKTP":"08","rwKTP":"09","kodePOSKTP":"50198"}', 'dedy@gmail.com', '69b560c993db99b7bb69554e658e8505314654505527579ccbaec21b94c65a4eHaUprvAerma/PrCI1G7lSA==')
+2019-10-17 16:35:00.485 WIB [180] ERROR:  duplicate key value violates unique constraint "registrasi_pkey"
+2019-10-17 16:35:00.485 WIB [180] DETAIL:  Key (reg_id)=(Anindit140419) already exists.
+2019-10-17 16:35:00.485 WIB [180] STATEMENT:  INSERT INTO mst.registrasi(reg_id, reg_nama, reg_pribadi, reg_alamat, reg_alamat_ktp, reg_email, reg_password)                         VALUES ( 'Anindit140419', 'ANINDITYA QAMEELA SAUQIYA', '{"tempatLahir":"SEMARANG","tanggalLahir":"2014-04-19","nik":"3374033012810001","kk":"3374033012810001","hp":"08121557997","pekerjaan":"WIRAUSAHA","agama":"1","statusNikah":"1"}', '{"alamat":"SEMARANG TIMUR","propinsi":"33","kota":"3374","kecamatan":"3374080","kelurahan":"3374080006","rt":"05","rw":"03","kodePOS":"50195"}', '{"alamatKTP":"SEMARANG TIMUR","propinsiKTP":"33","kotaKTP":"3374","kecamatanKTP":"3374080","kelurahanKTP":"3374080006","rtKTP":"08","rwKTP":"09","kodePOSKTP":"50198"}', 'dedy@gmail.com', '64a976a1c8c9a79ed339b349405c9dad57bc3007396ebede3b53e25cabf76f6emdJugnG1+BgakNEmVH6wlQ==')
+2019-10-17 16:37:15.939 WIB [188] ERROR:  duplicate key value violates unique constraint "registrasi_pkey"
+2019-10-17 16:37:15.939 WIB [188] DETAIL:  Key (reg_id)=(Anindit140419) already exists.
+2019-10-17 16:37:15.939 WIB [188] STATEMENT:  INSERT INTO mst.registrasi(reg_id, reg_nama, reg_pribadi, reg_alamat, reg_alamat_ktp, reg_email, reg_password)                         VALUES ( 'Anindit140419', 'ANINDITYA QAMEELA SAUQIYA', '{"tempatLahir":"SEMARANG","tanggalLahir":"2014-04-19","nik":"3374033012810001","kk":"3374033012810001","hp":"08121557997","pekerjaan":"WIRAUSAHA","agama":"1","statusNikah":"1"}', '{"alamat":"SEMARANG TIMUR","propinsi":"33","kota":"3374","kecamatan":"3374080","kelurahan":"3374080006","rt":"05","rw":"03","kodePOS":"50195"}', '{"alamatKTP":"SEMARANG TIMUR","propinsiKTP":"33","kotaKTP":"3374","kecamatanKTP":"3374080","kelurahanKTP":"3374080006","rtKTP":"08","rwKTP":"09","kodePOSKTP":"50198"}', 'dedy@gmail.com', 'b300078830e7deb84f1d645d5201c17aa6f333234d4444c4ab1d46b5411090dcf0hWWjWvdwRXbjxFQR53ng==')
+2019-10-17 20:57:39.294 WIB [261] ERROR:  duplicate key value violates unique constraint "registrasi_pkey"
+2019-10-17 20:57:39.294 WIB [261] DETAIL:  Key (reg_id)=(Anindit140419) already exists.
+2019-10-17 20:57:39.294 WIB [261] STATEMENT:  INSERT INTO mst.registrasi(reg_id, reg_nama, reg_pribadi, reg_alamat, reg_alamat_ktp, reg_email, reg_password)                         VALUES ( 'Anindit140419', 'ANINDITYA QAMEELA SAUQIYA', '{"tempatLahir":"SEMARANG","tanggalLahir":"2014-04-19","nik":"3374033012810001","kk":"3374033012810001","hp":"08121557997","pekerjaan":"WIRAUSAHA","agama":"1","statusNikah":"1"}', '{"alamat":"SEMARANG TIMUR","propinsi":"33","kota":"3374","kecamatan":"3374080","kelurahan":"3374080006","rt":"05","rw":"03","kodePOS":"50195"}', '{"alamatKTP":"SEMARANG TIMUR","propinsiKTP":"33","kotaKTP":"3374","kecamatanKTP":"3374080","kelurahanKTP":"3374080006","rtKTP":"08","rwKTP":"09","kodePOSKTP":"50198"}', 'dedy@gmail.com', 'c99bbb769cc85e04c4fb89a066682d7a499a2aa34d29091e631edf266163c2d7IXiGGv/SgA1Ywms22dFQ5g==')
+2019-10-17 20:57:48.092 WIB [260] ERROR:  duplicate key value violates unique constraint "registrasi_pkey"
+2019-10-17 20:57:48.092 WIB [260] DETAIL:  Key (reg_id)=(Anindit140419) already exists.
+2019-10-17 20:57:48.092 WIB [260] STATEMENT:  INSERT INTO mst.registrasi(reg_id, reg_nama, reg_pribadi, reg_alamat, reg_alamat_ktp, reg_email, reg_password)                         VALUES ( 'Anindit140419', 'ANINDITYA QAMEELA SAUQIYA', '{"tempatLahir":"SEMARANG","tanggalLahir":"2014-04-19","nik":"3374033012810001","kk":"3374033012810001","hp":"08121557997","pekerjaan":"WIRAUSAHA","agama":"1","statusNikah":"1"}', '{"alamat":"SEMARANG TIMUR","propinsi":"33","kota":"3374","kecamatan":"3374080","kelurahan":"3374080006","rt":"05","rw":"03","kodePOS":"50195"}', '{"alamatKTP":"SEMARANG TIMUR","propinsiKTP":"33","kotaKTP":"3374","kecamatanKTP":"3374080","kelurahanKTP":"3374080006","rtKTP":"08","rwKTP":"09","kodePOSKTP":"50198"}', 'dedy@gmail.com', '54bdc910555cd4f82c3efd18d18897e43c625e20d192595b65cfa3202b8f4f76Rcps/gZeI9yzcZpSTciYZQ==')

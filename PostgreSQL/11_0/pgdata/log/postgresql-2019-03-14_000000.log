@@ -1,0 +1,63 @@
+2019-03-14 00:16:37.662 WIB [24] LOG:  stats_timestamp 2019-03-14 00:16:37.666556+07 is later than collector's time 2019-03-14 00:16:37.661213+07 for database 0
+2019-03-14 10:49:56.138 WIB [419] ERROR:  column "marital_nama" does not exist at character 20
+2019-03-14 10:49:56.138 WIB [419] HINT:  Perhaps you meant to reference the column "marital.marital_name".
+2019-03-14 10:49:56.138 WIB [419] STATEMENT:  SELECT marital_id, marital_nama FROM mst.marital
+2019-03-14 10:51:06.867 WIB [423] ERROR:  column "marital_nama" does not exist at character 20
+2019-03-14 10:51:06.867 WIB [423] HINT:  Perhaps you meant to reference the column "marital.marital_name".
+2019-03-14 10:51:06.867 WIB [423] STATEMENT:  SELECT marital_id, marital_nama FROM mst.marital
+2019-03-14 10:51:33.222 WIB [426] ERROR:  column "marital_nama" does not exist at character 20
+2019-03-14 10:51:33.222 WIB [426] HINT:  Perhaps you meant to reference the column "marital.marital_name".
+2019-03-14 10:51:33.222 WIB [426] STATEMENT:  SELECT marital_id, marital_nama FROM mst.marital;
+2019-03-14 10:52:03.653 WIB [426] ERROR:  syntax error at or near "marital_nama" at character 1
+2019-03-14 10:52:03.653 WIB [426] STATEMENT:  marital_nama
+2019-03-14 11:37:41.719 WIB [24] LOG:  stats_timestamp 2019-03-14 11:37:41.72522+07 is later than collector's time 2019-03-14 11:37:41.716374+07 for database 0
+2019-03-14 11:52:12.279 WIB [426] ERROR:  syntax error at or near "," at character 166
+2019-03-14 11:52:12.279 WIB [426] STATEMENT:  
+	
+	CREATE TABLE mst.registrasi(
+		reg_id TEXT PRIMARY KEY,
+		reg_nama TEXT,
+		reg_pribadi JSONB,
+		reg_alamat JSONB,
+		reg_alamat_ktp JSONB,
+		reg_email TEXT,
+		reg_password,
+		reg_date DATE DEFAULT NOW,
+		reg_approve JSONB
+	);
+2019-03-14 11:52:19.762 WIB [426] ERROR:  column "now" does not exist
+2019-03-14 11:52:19.762 WIB [426] STATEMENT:  
+	
+	CREATE TABLE mst.registrasi(
+		reg_id TEXT PRIMARY KEY,
+		reg_nama TEXT,
+		reg_pribadi JSONB,
+		reg_alamat JSONB,
+		reg_alamat_ktp JSONB,
+		reg_email TEXT,
+		reg_password TEXT,
+		reg_date DATE DEFAULT NOW,
+		reg_approve JSONB
+	);
+2019-03-14 15:34:48.192 WIB [1012] ERROR:  invalid input syntax for type json at character 143
+2019-03-14 15:34:48.192 WIB [1012] DETAIL:  Token "xxx" is invalid.
+2019-03-14 15:34:48.192 WIB [1012] CONTEXT:  JSON data, line 1: xxx
+2019-03-14 15:34:48.192 WIB [1012] STATEMENT:  INSERT INTO mst.registrasi(reg_id, reg_nama, reg_pribadi, reg_alamat, reg_alamat_ktp, reg_email, reg_password)          VALUES ( '1', 'dedy', 'xxx', null, null, 'dedy@dedy.id', 'adfasdf')
+2019-03-14 15:43:02.238 WIB [1033] ERROR:  invalid input syntax for type json at character 151
+2019-03-14 15:43:02.238 WIB [1033] DETAIL:  Token "xxx" is invalid.
+2019-03-14 15:43:02.238 WIB [1033] CONTEXT:  JSON data, line 1: xxx
+2019-03-14 15:43:02.238 WIB [1033] STATEMENT:  INSERT INTO mst.registrasi(reg_id, reg_nama, reg_pribadi, reg_alamat, reg_alamat_ktp, reg_email, reg_password)          VALUES ( '1', 'dedy styawan', 'xxx', null, null, 'dedy@dedy.id', 'asdf')
+2019-03-14 15:44:50.112 WIB [1040] ERROR:  invalid input syntax for type json at character 151
+2019-03-14 15:44:50.112 WIB [1040] DETAIL:  Token "xxx" is invalid.
+2019-03-14 15:44:50.112 WIB [1040] CONTEXT:  JSON data, line 1: xxx
+2019-03-14 15:44:50.112 WIB [1040] STATEMENT:  INSERT INTO mst.registrasi(reg_id, reg_nama, reg_pribadi, reg_alamat, reg_alamat_ktp, reg_email, reg_password)          VALUES ( '1', 'dedy styawan', 'xxx', null, null, 'dedy@yahoo.com', 'asdfas')
+2019-03-14 15:48:24.815 WIB [1048] ERROR:  invalid input syntax for type json at character 151
+2019-03-14 15:48:24.815 WIB [1048] DETAIL:  Token "xxx" is invalid.
+2019-03-14 15:48:24.815 WIB [1048] CONTEXT:  JSON data, line 1: xxx
+2019-03-14 15:48:24.815 WIB [1048] STATEMENT:  INSERT INTO mst.registrasi(reg_id, reg_nama, reg_pribadi, reg_alamat, reg_alamat_ktp, reg_email, reg_password)          VALUES ( '1', 'dedy styawan', 'xxx', null, null, 'dedy@yahoo.com', 'asdfas')
+2019-03-14 16:06:11.542 WIB [1096] ERROR:  duplicate key value violates unique constraint "registrasi_pkey"
+2019-03-14 16:06:11.542 WIB [1096] DETAIL:  Key (reg_id)=(1) already exists.
+2019-03-14 16:06:11.542 WIB [1096] STATEMENT:  INSERT INTO mst.registrasi(reg_id, reg_nama, reg_pribadi, reg_alamat, reg_alamat_ktp, reg_email, reg_password)          VALUES ( '1', 'dialah', '{"tempatLahir":"SEMARANG","tanggalLahir":"1981-12-30","nik":"33 74 03 301281 0000","kk":"3374033012810000","noHP":"081 21557997____","pekerjaan":"STAFF","agama":"ISLAM","statusNikah":1}', '{"alamat":"SEMARANG","propinsi":"JAWA TENGAH","kota":"JAWA TENGAH","kecamatan":"JAWA TENGAH","kelurahan":"JAWA TENGAH","rt":"02","rw":"03","kodePOS":"501291"}', '{"alamatKTP":"JAWA TENGAH","propinsiKTP":"JAWA TENGAH","kotaKTP":"JAWA TENGAH","kecamatanKTP":"JAWA TENGAH","kelurahanKTP":"JAWA TENGAH","rtKTP":"02","rwKTP":"03","kodePOSKTP":"50129"}', 'styawan@dedy.id', 'asdf')
+2019-03-14 16:29:48.199 WIB [1159] ERROR:  duplicate key value violates unique constraint "registrasi_pkey"
+2019-03-14 16:29:48.199 WIB [1159] DETAIL:  Key (reg_id)=(1) already exists.
+2019-03-14 16:29:48.199 WIB [1159] STATEMENT:  INSERT INTO mst.registrasi(reg_id, reg_nama, reg_pribadi, reg_alamat, reg_alamat_ktp, reg_email, reg_password)          VALUES ( '1', 'dedy styawan', '{"tempatLahir":"SEMARANG","tanggalLahir":"1981-12-30","nik":"33 74 03 301281 0000","kk":"3374033012810000","noHP":"081 21557997","pekerjaan":"SEMARANG","agama":"ISLAM","statusNikah":1}', '{"alamat":"SEMARANG","propinsi":"SEMARANG","kota":"SEMARANG","kecamatan":"SEMARANG","kelurahan":"SEMARANG","rt":"02","rw":"01","kodePOS":"50125"}', '{"alamatKTP":"SEMARANG","propinsiKTP":"SEMARANG","kotaKTP":"SEMARANG","kecamatanKTP":"SEMARANG","kelurahanKTP":"SEMARANG","rtKTP":"02","rwKTP":"03","kodePOSKTP":"50192"}', 'dedy@asdfasdf.com', 'asdfasdf')

@@ -1,0 +1,15 @@
+2019-08-26 06:35:56.724 WIB [19] LOG:  database system was interrupted; last known up at 2019-08-24 13:01:20 WIB
+2019-08-26 06:36:23.779 WIB [19] LOG:  database system was not properly shut down; automatic recovery in progress
+2019-08-26 06:36:24.214 WIB [19] LOG:  redo starts at 0/CB5EC58
+2019-08-26 06:36:24.214 WIB [19] LOG:  invalid record length at 0/CB5ED38: wanted 24, got 0
+2019-08-26 06:36:24.214 WIB [19] LOG:  redo done at 0/CB5ED00
+2019-08-26 06:36:25.223 WIB [1] LOG:  database system is ready to accept connections
+2019-08-26 13:30:44.535 WIB [24] LOG:  stats_timestamp 2019-08-26 13:30:44.544438+07 is later than collector's time 2019-08-26 13:30:44.53586+07 for database 57743
+2019-08-26 13:46:48.888 WIB [77] ERROR:  must be owner of database eplanning
+2019-08-26 13:46:48.888 WIB [77] STATEMENT:  DROP DATABASE "eplanning"
+2019-08-26 13:47:13.545 WIB [80] ERROR:  database "eplanning" is being accessed by other users
+2019-08-26 13:47:13.545 WIB [80] DETAIL:  There are 2 other sessions using the database.
+2019-08-26 13:47:13.545 WIB [80] STATEMENT:  DROP DATABASE "eplanning"
+2019-08-26 13:47:37.880 WIB [84] ERROR:  database "eplanning" is being accessed by other users
+2019-08-26 13:47:37.880 WIB [84] DETAIL:  There is 1 other session using the database.
+2019-08-26 13:47:37.880 WIB [84] STATEMENT:  DROP DATABASE "eplanning"

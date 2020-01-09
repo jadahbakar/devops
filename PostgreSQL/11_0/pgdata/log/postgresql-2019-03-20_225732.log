@@ -1,0 +1,11 @@
+2019-03-20 22:57:32.337 WIB [19] LOG:  database system was interrupted; last known up at 2019-03-20 22:49:25 WIB
+2019-03-20 22:58:05.719 WIB [19] LOG:  database system was not properly shut down; automatic recovery in progress
+2019-03-20 22:58:06.106 WIB [19] LOG:  redo starts at 0/9E86D88
+2019-03-20 22:58:08.768 WIB [19] LOG:  invalid record length at 0/9F33018: wanted 24, got 0
+2019-03-20 22:58:08.768 WIB [19] LOG:  redo done at 0/9F32FE0
+2019-03-20 22:58:08.768 WIB [19] LOG:  last completed transaction was at log time 2019-03-20 22:48:31.650458+07
+2019-03-20 22:58:10.161 WIB [1] LOG:  database system is ready to accept connections
+2019-03-20 23:05:55.240 WIB [31] ERROR:  database "eplanning_190121" is being accessed by other users
+2019-03-20 23:05:55.240 WIB [31] DETAIL:  There is 1 other session using the database.
+2019-03-20 23:05:55.240 WIB [31] STATEMENT:  DROP DATABASE eplanning_190121;
+	

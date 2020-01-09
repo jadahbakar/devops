@@ -1,0 +1,10 @@
+2018-12-04 21:55:20.163 WIB [19] LOG:  database system was interrupted; last known up at 2018-12-04 20:07:54 WIB
+2018-12-04 21:55:25.512 WIB [19] LOG:  database system was not properly shut down; automatic recovery in progress
+2018-12-04 21:55:25.578 WIB [19] LOG:  redo starts at 0/1656878
+2018-12-04 21:55:25.578 WIB [19] LOG:  invalid record length at 0/16568B0: wanted 24, got 0
+2018-12-04 21:55:25.578 WIB [19] LOG:  redo done at 0/1656878
+2018-12-04 21:55:25.744 WIB [1] LOG:  database system is ready to accept connections
+2018-12-04 21:56:20.157 WIB [1] LOG:  received smart shutdown request
+2018-12-04 21:56:20.171 WIB [1] LOG:  background worker "logical replication launcher" (PID 25) exited with exit code 1
+2018-12-04 21:56:20.171 WIB [20] LOG:  shutting down
+2018-12-04 21:56:20.239 WIB [1] LOG:  database system is shut down

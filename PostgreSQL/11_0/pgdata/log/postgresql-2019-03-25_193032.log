@@ -1,0 +1,8 @@
+2019-03-25 19:30:32.185 WIB [19] LOG:  database system was interrupted; last known up at 2019-03-25 18:31:40 WIB
+2019-03-25 19:30:53.725 WIB [19] LOG:  database system was not properly shut down; automatic recovery in progress
+2019-03-25 19:30:53.932 WIB [19] LOG:  redo starts at 0/A748E88
+2019-03-25 19:30:53.933 WIB [19] LOG:  invalid record length at 0/A748EC0: wanted 24, got 0
+2019-03-25 19:30:53.933 WIB [19] LOG:  redo done at 0/A748E88
+2019-03-25 19:30:54.653 WIB [1] LOG:  database system is ready to accept connections
+2019-03-25 23:53:05.150 WIB [269] ERROR:  column "json" does not exist at character 26
+2019-03-25 23:53:05.150 WIB [269] STATEMENT:  select sec.generate_menu(json)

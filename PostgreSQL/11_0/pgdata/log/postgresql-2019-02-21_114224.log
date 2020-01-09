@@ -1,0 +1,15 @@
+2019-02-21 11:42:24.678 WIB [21] LOG:  database system was interrupted; last known up at 2019-02-20 07:23:00 WIB
+2019-02-21 11:42:42.062 WIB [21] LOG:  database system was not properly shut down; automatic recovery in progress
+2019-02-21 11:42:42.292 WIB [21] LOG:  redo starts at 0/5B6ADD8
+2019-02-21 11:42:42.293 WIB [21] LOG:  invalid record length at 0/5B6AE10: wanted 24, got 0
+2019-02-21 11:42:42.293 WIB [21] LOG:  redo done at 0/5B6ADD8
+2019-02-21 11:42:42.991 WIB [1] LOG:  database system is ready to accept connections
+2019-02-21 17:46:43.945 WIB [144] ERROR:  syntax error at end of input at character 230
+2019-02-21 17:46:43.945 WIB [144] STATEMENT:  INSERT INTO sec.userid(user_id, user_nama, user_pass, userrole)   VALUES ('dedy3012', 'Dedy', 'b2f4bd201b20ea1b15eae0e3a4807bd882aa85b1b6ae222881df109b8b48f7dc06ae476fdc7d4e22f8b90a0911767adcc5f2c6a4031ffa77c18c3ba969b93aea', 'a'
+2019-02-21 17:46:53.865 WIB [146] ERROR:  column "userrole" of relation "userid" does not exist at character 55
+2019-02-21 17:46:53.865 WIB [146] STATEMENT:  INSERT INTO sec.userid(user_id, user_nama, user_pass, userrole)   VALUES ('dedy3012', 'Dedy', 'b2f4bd201b20ea1b15eae0e3a4807bd882aa85b1b6ae222881df109b8b48f7dc06ae476fdc7d4e22f8b90a0911767adcc5f2c6a4031ffa77c18c3ba969b93aea', 'a')
+2019-02-21 17:47:21.533 WIB [148] ERROR:  invalid input syntax for integer: "a" at character 228
+2019-02-21 17:47:21.533 WIB [148] STATEMENT:  INSERT INTO sec.userid(user_id, user_nama, user_pass, user_role)   VALUES ('dedy3012', 'Dedy', 'b2f4bd201b20ea1b15eae0e3a4807bd882aa85b1b6ae222881df109b8b48f7dc06ae476fdc7d4e22f8b90a0911767adcc5f2c6a4031ffa77c18c3ba969b93aea', 'a')
+2019-02-21 17:48:19.093 WIB [150] ERROR:  invalid input syntax for integer: "a" at character 228
+2019-02-21 17:48:19.093 WIB [150] STATEMENT:  INSERT INTO sec.userid(user_id, user_nama, user_pass, user_role)   VALUES ('dedy3012', 'Dedy', 'b2f4bd201b20ea1b15eae0e3a4807bd882aa85b1b6ae222881df109b8b48f7dc06ae476fdc7d4e22f8b90a0911767adcc5f2c6a4031ffa77c18c3ba969b93aea', 'a')
+2019-02-21 20:21:20.986 WIB [26] LOG:  stats_timestamp 2019-02-21 20:21:20.993724+07 is later than collector's time 2019-02-21 20:21:20.98613+07 for database 81921

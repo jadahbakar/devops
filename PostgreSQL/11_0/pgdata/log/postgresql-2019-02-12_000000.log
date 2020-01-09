@@ -1,0 +1,600 @@
+2019-02-12 23:04:05.686 WIB [27] FATAL:  password authentication failed for user "postgres"
+2019-02-12 23:04:05.686 WIB [27] DETAIL:  Password does not match for user "postgres".
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-02-12 23:10:11.274 WIB [70] ERROR:  permission denied to create extension "ltree"
+2019-02-12 23:10:11.274 WIB [70] HINT:  Must be superuser to create this extension.
+2019-02-12 23:10:11.274 WIB [70] STATEMENT:  create extension ltree;
+	create extension pgcrypto;
+	
+2019-02-12 23:11:28.468 WIB [70] ERROR:  syntax error at or near "menu_child_id" at character 377
+2019-02-12 23:11:28.468 WIB [70] STATEMENT:  
+	
+	create schema sec;
+	
+	CREATE TABLE sec.role(
+	role_id INTEGER PRIMARY KEY,
+	role_sts INTEGER DEFAULT 1,
+	role_nama TEXT
+	);
+	
+	
+	CREATE TABLE sec.menu_parent(
+	menu_parent_id	INTEGER PRIMARY KEY,
+	menu_parent_urut INTEGER,
+	menu_parent_sts  INTEGER DEFAULT 1,
+	menu_parent_name	TEXT,
+	menu_parent_url	TEXT,
+	menu_parent_icon	TEXT
+	);
+	
+	CREATE TABLE sec.menu_child(
+	menu_child_parent INTEGER
+	menu_child_id	INTEGER
+	menu_child_urut INTEGER,
+	menu_child_sts  INTEGER DEFAULT 1,
+	menu_child_name	TEXT,
+	menu_child_url	TEXT,
+	menu_child_icon	TEXT
+	);
+	
+	
+	
+	
+	CREATE TABLE sec.userid (
+	userid	TEXT,
+	user_nama	TEXT,
+	user_pass	TEXT,
+	user_sts	INTEGER DEFAULT 1,
+	user_email	TEXT
+	user_role	INTEGER,
+	);
+	
+2019-02-12 23:11:50.592 WIB [70] ERROR:  syntax error at or near "user_role" at character 647
+2019-02-12 23:11:50.592 WIB [70] STATEMENT:  
+	
+	create schema sec;
+	
+	CREATE TABLE sec.role(
+	role_id INTEGER PRIMARY KEY,
+	role_sts INTEGER DEFAULT 1,
+	role_nama TEXT
+	);
+	
+	
+	CREATE TABLE sec.menu_parent(
+	menu_parent_id	INTEGER PRIMARY KEY,
+	menu_parent_urut INTEGER,
+	menu_parent_sts  INTEGER DEFAULT 1,
+	menu_parent_name	TEXT,
+	menu_parent_url	TEXT,
+	menu_parent_icon	TEXT
+	);
+	
+	CREATE TABLE sec.menu_child(
+	menu_child_parent INTEGER,
+	menu_child_id	INTEGER,
+	menu_child_urut INTEGER,
+	menu_child_sts  INTEGER DEFAULT 1,
+	menu_child_name	TEXT,
+	menu_child_url	TEXT,
+	menu_child_icon	TEXT
+	);
+	
+	
+	
+	
+	CREATE TABLE sec.userid (
+	userid	TEXT,
+	user_nama	TEXT,
+	user_pass	TEXT,
+	user_sts	INTEGER DEFAULT 1,
+	user_email	TEXT
+	user_role	INTEGER,
+	);
+	
+2019-02-12 23:12:04.241 WIB [70] ERROR:  syntax error at or near ")" at character 667
+2019-02-12 23:12:04.241 WIB [70] STATEMENT:  
+	
+	create schema sec;
+	
+	CREATE TABLE sec.role(
+	role_id INTEGER PRIMARY KEY,
+	role_sts INTEGER DEFAULT 1,
+	role_nama TEXT
+	);
+	
+	
+	CREATE TABLE sec.menu_parent(
+	menu_parent_id	INTEGER PRIMARY KEY,
+	menu_parent_urut INTEGER,
+	menu_parent_sts  INTEGER DEFAULT 1,
+	menu_parent_name	TEXT,
+	menu_parent_url	TEXT,
+	menu_parent_icon	TEXT
+	);
+	
+	CREATE TABLE sec.menu_child(
+	menu_child_parent INTEGER,
+	menu_child_id	INTEGER,
+	menu_child_urut INTEGER,
+	menu_child_sts  INTEGER DEFAULT 1,
+	menu_child_name	TEXT,
+	menu_child_url	TEXT,
+	menu_child_icon	TEXT
+	);
+	
+	
+	
+	
+	CREATE TABLE sec.userid (
+	userid	TEXT,
+	user_nama	TEXT,
+	user_pass	TEXT,
+	user_sts	INTEGER DEFAULT 1,
+	user_email	TEXT,
+	user_role	INTEGER,
+	);
+	
+2019-02-12 23:12:26.304 WIB [70] ERROR:  syntax error at or near ")" at character 97
+2019-02-12 23:12:26.304 WIB [70] STATEMENT:  
+	create schema mst;
+	
+	create table mst.bank
+	(
+	bank_id TEXT PRIMARY KEY,
+	bank_nama TEXT NOT NULL,
+	);
+	
+	create table mst.agama(
+	agama_id INTEGER PRIMARY KEY,
+	agama_nama TEXT NOT NULL
+	);
+	
+	insert into mst.agama values 
+		(1,'ISLAM'), (2,'KATOLIK'), (3,'KRISTEN'), (4,'HINDU'), (5,'BUDHA');  
+	
+	create table mst.marital(
+	marital_id INTEGER PRIMARY KEY,
+	marital_name TEXT NOT NULL
+	);
+	
+	insert into mst.marital values 
+		(1,'SINGLE'), (2,'NIKAH'), (3,'DUDA'), (4,'JANDA');  
+	
+	
+	create table mst.kerabat(
+	kerabat_id INTEGER
+	kerabat_nama TEXT NOT NULL
+	);
+	
+	insert into mst.kerabat values 
+		(1,'SUAMI'), (2,'ISTRI'), (3,'SAUDARA'), (4,'IBU'), (4,'BAPAK'), (4,'TEMAN');  
+	
+	
+	create table mst.type_bayar(
+	type_bayar_id INTEGER PRIMARY KEY,
+	type_bayar_nama TEXT NOT NULL
+	);
+	
+	insert into mst.type_bayar values 
+	(1,'Transfer'),
+	(2,'EDC'),
+	(3,'Cash');
+	
+	create table mst.jenis_transaksi(
+	jenis_transaksi_id TEXT PRIMARY KEY,
+	jenis_transaksi_nama TEXT NOT NULL
+	);
+	
+	insert into mst.jenis_transaksi values 
+	('lc','Lunas Cash'),
+	('ld','Pelunasan DP'),
+	('kc','Pencairan KPR');
+	('fe','Fee Marketing');
+2019-02-12 23:12:35.594 WIB [70] ERROR:  syntax error at or near ")" at character 97
+2019-02-12 23:12:35.594 WIB [70] STATEMENT:  
+	create schema mst;
+	
+	create table mst.bank
+	(
+	bank_id TEXT PRIMARY KEY,
+	bank_nama TEXT NOT NULL,
+	);
+	
+	create table mst.agama(
+	agama_id INTEGER PRIMARY KEY,
+	agama_nama TEXT NOT NULL
+	);
+	
+	insert into mst.agama values 
+		(1,'ISLAM'), (2,'KATOLIK'), (3,'KRISTEN'), (4,'HINDU'), (5,'BUDHA');  
+	
+	create table mst.marital(
+	marital_id INTEGER PRIMARY KEY,
+	marital_name TEXT NOT NULL
+	);
+	
+	insert into mst.marital values 
+		(1,'SINGLE'), (2,'NIKAH'), (3,'DUDA'), (4,'JANDA');  
+	
+	
+	create table mst.kerabat(
+	kerabat_id INTEGER
+	kerabat_nama TEXT NOT NULL
+	);
+	
+	insert into mst.kerabat values 
+		(1,'SUAMI'), (2,'ISTRI'), (3,'SAUDARA'), (4,'IBU'), (4,'BAPAK'), (4,'TEMAN');  
+	
+	
+	create table mst.type_bayar(
+	type_bayar_id INTEGER PRIMARY KEY,
+	type_bayar_nama TEXT NOT NULL
+	);
+	
+	insert into mst.type_bayar values 
+	(1,'Transfer'),
+	(2,'EDC'),
+	(3,'Cash');
+	
+	create table mst.jenis_transaksi(
+	jenis_transaksi_id TEXT PRIMARY KEY,
+	jenis_transaksi_nama TEXT NOT NULL
+	);
+	
+	insert into mst.jenis_transaksi values 
+	('lc','Lunas Cash'),
+	('ld','Pelunasan DP'),
+	('kc','Pencairan KPR'),
+	('fe','Fee Marketing');
+2019-02-12 23:12:44.829 WIB [70] ERROR:  syntax error at or near "kerabat_nama" at character 509
+2019-02-12 23:12:44.829 WIB [70] STATEMENT:  
+	create schema mst;
+	
+	create table mst.bank
+	(
+	bank_id TEXT PRIMARY KEY,
+	bank_nama TEXT NOT NULL
+	);
+	
+	create table mst.agama(
+	agama_id INTEGER PRIMARY KEY,
+	agama_nama TEXT NOT NULL
+	);
+	
+	insert into mst.agama values 
+		(1,'ISLAM'), (2,'KATOLIK'), (3,'KRISTEN'), (4,'HINDU'), (5,'BUDHA');  
+	
+	create table mst.marital(
+	marital_id INTEGER PRIMARY KEY,
+	marital_name TEXT NOT NULL
+	);
+	
+	insert into mst.marital values 
+		(1,'SINGLE'), (2,'NIKAH'), (3,'DUDA'), (4,'JANDA');  
+	
+	
+	create table mst.kerabat(
+	kerabat_id INTEGER
+	kerabat_nama TEXT NOT NULL
+	);
+	
+	insert into mst.kerabat values 
+		(1,'SUAMI'), (2,'ISTRI'), (3,'SAUDARA'), (4,'IBU'), (4,'BAPAK'), (4,'TEMAN');  
+	
+	
+	create table mst.type_bayar(
+	type_bayar_id INTEGER PRIMARY KEY,
+	type_bayar_nama TEXT NOT NULL
+	);
+	
+	insert into mst.type_bayar values 
+	(1,'Transfer'),
+	(2,'EDC'),
+	(3,'Cash');
+	
+	create table mst.jenis_transaksi(
+	jenis_transaksi_id TEXT PRIMARY KEY,
+	jenis_transaksi_nama TEXT NOT NULL
+	);
+	
+	insert into mst.jenis_transaksi values 
+	('lc','Lunas Cash'),
+	('ld','Pelunasan DP'),
+	('kc','Pencairan KPR'),
+	('fe','Fee Marketing');
+2019-02-12 23:13:22.036 WIB [70] ERROR:  syntax error at or near "TEXT" at character 230
+2019-02-12 23:13:22.036 WIB [70] STATEMENT:  
+	
+	create table mst.customer(
+	customer_id TEXT  PRIMARY KEY,
+	customer_tempat_lahir TEXT,
+	customer_tgl_lahir DATE,
+	customer_agama INTEGER,
+	customer_hp TEXT,
+	customer_job TEXT,
+	customer_marital INTEGER,
+	customer_referal_customer id TEXT,
+	customer_referal_property_id TEXT,
+	customer_nik TEXT,
+	customer_kk TEXT,
+	customer_bank JSONB,
+	customer_alamat JSONB,
+	customer_alamat_ktp JSONB,
+	customer_kerabat JSONB
+	
+	);
+2019-02-12 23:14:50.377 WIB [70] ERROR:  type "biginteger" does not exist at character 119
+2019-02-12 23:14:50.377 WIB [70] STATEMENT:  
+	
+	CREATE TABLE mst.property(
+	property_id TEXT PRIMARY KEY,
+	property_alamat JSONB,
+	property_luas JSONB,
+	property_harga BIGINTEGER DEFAULT 0
+	);
+	
+2019-02-12 23:17:00.570 WIB [70] ERROR:  syntax error at or near ")" at character 222
+2019-02-12 23:17:00.570 WIB [70] STATEMENT:  
+	
+	CREATE TABLE  mst.complain_status(
+	complain_status_id INTEGER PRIMARY KEY,
+	complain_status_nama TEXT NOT NULL
+	);
+	
+	CREATE TABLE  mst.complain_type(
+	complain_type_id INTEGER PRIMARY KEY,
+	complain_type_nama TEXT NOT NULL,
+	);
+	
+	insert into mst.complain_status values 
+	(0,'Open'),
+	(1,'Closed');
+	
+	insert into mst.complain_type values 
+	(1,'Pembayaran Belum di Verifikasi'),
+	(2,'Fee Belum diterima'),
+	(3,'Kesalahan Damstta Entry'),
+	(4,'Lainnya');
+	
+	
+	CREATE TABLE trx.complain(
+	complain_id    TEXT,
+	complain_status INTEGER DEFAULT 0,
+	complain_type  INTEGER,
+	complain_tgl   TIMESTAMP,
+	complain_customer TEXT,
+	complain_portofolio TEXT,
+	complain_uraian TEXT
+	);
+2019-02-12 23:17:05.733 WIB [70] ERROR:  schema "trx" does not exist at character 455
+2019-02-12 23:17:05.733 WIB [70] STATEMENT:  
+	
+	CREATE TABLE  mst.complain_status(
+	complain_status_id INTEGER PRIMARY KEY,
+	complain_status_nama TEXT NOT NULL
+	);
+	
+	CREATE TABLE  mst.complain_type(
+	complain_type_id INTEGER PRIMARY KEY,
+	complain_type_nama TEXT NOT NULL
+	);
+	
+	insert into mst.complain_status values 
+	(0,'Open'),
+	(1,'Closed');
+	
+	insert into mst.complain_type values 
+	(1,'Pembayaran Belum di Verifikasi'),
+	(2,'Fee Belum diterima'),
+	(3,'Kesalahan Damstta Entry'),
+	(4,'Lainnya');
+	
+	
+	CREATE TABLE trx.complain(
+	complain_id    TEXT,
+	complain_status INTEGER DEFAULT 0,
+	complain_type  INTEGER,
+	complain_tgl   TIMESTAMP,
+	complain_customer TEXT,
+	complain_portofolio TEXT,
+	complain_uraian TEXT
+	);
+2019-02-12 23:17:49.238 WIB [70] ERROR:  syntax error at or near "transaksi_property_id" at character 317
+2019-02-12 23:17:49.238 WIB [70] STATEMENT:  
+	CREATE TABLE trx.relation(
+	relation_customer TEXT PRIMARY KEY,
+	relation_property JSONB
+	);
+	
+	CREATE INDEX relation_property_idx on trx.relation using gist (relation_property);
+	
+	CREATE TABLE trx.tree(
+	tree_property_id TEXT,
+	tree_path LTREE
+	);
+	
+	CREATE TABLE trx.transaksi(
+	transaksi_id TEXT,
+	transaksi_customer_id TEXT
+	transaksi_property_id TEXT,
+	transaksi_jenis TEXT,
+	transaksi_nominal BIGINT,
+	transaksi_type_bayar INTEGER,
+	transaksi_bank TEXT,
+	transaksi_rekening TEXT,
+	transaksi_bukti BYTEA
+	);
+	
+	
+2019-02-12 23:20:30.367 WIB [70] ERROR:  syntax error at or near "transaksi_property_id" at character 555
+2019-02-12 23:20:30.367 WIB [70] STATEMENT:  
+	
+	CREATE SCHEMA trx;
+	
+	CREATE TABLE trx.complain(
+	complain_id    TEXT,
+	complain_status INTEGER DEFAULT 0,
+	complain_type  INTEGER,
+	complain_tgl   TIMESTAMP,
+	complain_customer_id TEXT,
+	complain_property_id TEXT,
+	complain_uraian TEXT
+	);
+	
+	
+	CREATE TABLE trx.relation(
+	relation_customer_id TEXT PRIMARY KEY,
+	relation_property JSONB
+	);
+	
+	CREATE INDEX relation_property_idx on trx.relation using gist (relation_property);
+	
+	CREATE TABLE trx.tree(
+	tree_property_id TEXT,
+	tree_path LTREE
+	);
+	
+	
+	CREATE TABLE trx.transaksi(
+	transaksi_id TEXT,
+	transaksi_customer_id TEXT
+	transaksi_property_id TEXT,
+	transaksi_jenis TEXT,
+	transaksi_nominal BIGINT,
+	transaksi_type_bayar INTEGER,
+	transaksi_bank TEXT,
+	transaksi_rekening TEXT,
+	transaksi_bukti BYTEA
+	);
+	
+	
+2019-02-12 23:20:41.918 WIB [70] ERROR:  schema "trx" already exists
+2019-02-12 23:20:41.918 WIB [70] STATEMENT:  
+	
+	CREATE SCHEMA trx;
+	
+	CREATE TABLE trx.complain(
+	complain_id    TEXT,
+	complain_status INTEGER DEFAULT 0,
+	complain_type  INTEGER,
+	complain_tgl   TIMESTAMP,
+	complain_customer_id TEXT,
+	complain_property_id TEXT,
+	complain_uraian TEXT
+	);
+	
+	
+	CREATE TABLE trx.relation(
+	relation_customer_id TEXT PRIMARY KEY,
+	relation_property JSONB
+	);
+	
+	CREATE INDEX relation_property_idx on trx.relation using gist (relation_property);
+	
+	CREATE TABLE trx.tree(
+	tree_property_id TEXT,
+	tree_path LTREE
+	);
+	
+	
+	CREATE TABLE trx.transaksi(
+	transaksi_id TEXT,
+	transaksi_customer_id TEXT,
+	transaksi_property_id TEXT,
+	transaksi_jenis TEXT,
+	transaksi_nominal BIGINT,
+	transaksi_type_bayar INTEGER,
+	transaksi_bank TEXT,
+	transaksi_rekening TEXT,
+	transaksi_bukti BYTEA
+	);
+	
+	
+2019-02-12 23:20:46.386 WIB [70] ERROR:  schema "trx" already exists
+2019-02-12 23:20:46.386 WIB [70] STATEMENT:  
+	CREATE SCHEMA trx;
+	
+2019-02-12 23:20:53.300 WIB [70] ERROR:  relation "complain" already exists
+2019-02-12 23:20:53.300 WIB [70] STATEMENT:  
+	CREATE TABLE trx.complain(
+	complain_id    TEXT,
+	complain_status INTEGER DEFAULT 0,
+	complain_type  INTEGER,
+	complain_tgl   TIMESTAMP,
+	complain_customer_id TEXT,
+	complain_property_id TEXT,
+	complain_uraian TEXT
+	);
+	
+2019-02-12 23:21:22.937 WIB [70] ERROR:  table "relation" does not exist
+2019-02-12 23:21:22.937 WIB [70] STATEMENT:  DROP TABLE trx.relation;
+	
+2019-02-12 23:21:35.680 WIB [70] ERROR:  data type jsonb has no default operator class for access method "gist"
+2019-02-12 23:21:35.680 WIB [70] HINT:  You must specify an operator class for the index or define a default operator class for the data type.
+2019-02-12 23:21:35.680 WIB [70] STATEMENT:  
+	CREATE TABLE trx.relation(
+	relation_customer_id TEXT PRIMARY KEY,
+	relation_property JSONB
+	);
+	
+	CREATE INDEX relation_property_idx on trx.relation using gist (relation_property);
+	
+	CREATE TABLE trx.tree(
+	tree_property_id TEXT,
+	tree_path LTREE
+	);
+	
+	
+	CREATE TABLE trx.transaksi(
+	transaksi_id TEXT,
+	transaksi_customer_id TEXT,
+	transaksi_property_id TEXT,
+	transaksi_jenis TEXT,
+	transaksi_nominal BIGINT,
+	transaksi_type_bayar INTEGER,
+	transaksi_bank TEXT,
+	transaksi_rekening TEXT,
+	transaksi_bukti BYTEA
+	);
+	
+2019-02-12 23:22:19.194 WIB [70] ERROR:  relation "tree" already exists
+2019-02-12 23:22:19.194 WIB [70] STATEMENT:  
+	CREATE TABLE trx.tree(
+	tree_property_id TEXT,
+	tree_path LTREE
+	);
+	
+	CREATE INDEX tree_path_idx on trx.tree using gist (tree_path);
+	
+	
+	
+	CREATE TABLE trx.transaksi(
+	transaksi_id TEXT,
+	transaksi_customer_id TEXT,
+	transaksi_property_id TEXT,
+	transaksi_jenis TEXT,
+	transaksi_nominal BIGINT,
+	transaksi_type_bayar INTEGER,
+	transaksi_bank TEXT,
+	transaksi_rekening TEXT,
+	transaksi_bukti BYTEA
+	);
+	
+2019-02-12 23:22:41.237 WIB [70] ERROR:  relation "transaksi" already exists
+2019-02-12 23:22:41.237 WIB [70] STATEMENT:  
+	
+	CREATE TABLE trx.transaksi(
+	transaksi_id TEXT,
+	transaksi_customer_id TEXT,
+	transaksi_property_id TEXT,
+	transaksi_jenis TEXT,
+	transaksi_nominal BIGINT,
+	transaksi_type_bayar INTEGER,
+	transaksi_bank TEXT,
+	transaksi_rekening TEXT,
+	transaksi_bukti BYTEA
+	);
+	
+2019-02-12 23:33:30.610 WIB [24] LOG:  stats_timestamp 2019-02-12 23:33:30.61258+07 is later than collector's time 2019-02-12 23:33:30.610402+07 for database 33629
+2019-02-12 23:34:30.559 WIB [24] LOG:  stats_timestamp 2019-02-12 23:34:30.565625+07 is later than collector's time 2019-02-12 23:34:30.559229+07 for database 0

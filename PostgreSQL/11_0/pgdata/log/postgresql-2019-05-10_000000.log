@@ -1,0 +1,3 @@
+2019-05-10 03:29:46.612 WIB [24] LOG:  stats_timestamp 2019-05-10 03:29:46.618825+07 is later than collector's time 2019-05-10 03:29:46.612212+07 for database 81921
+2019-05-10 13:50:41.532 WIB [24] LOG:  stats_timestamp 2019-05-10 13:50:41.54618+07 is later than collector's time 2019-05-10 13:50:41.532626+07 for database 0
+2019-05-13 13:25:50.918 WIB [24] LOG:  stats_timestamp 2019-05-13 13:25:50.921735+07 is later than collector's time 2019-05-13 13:25:50.912076+07 for database 0

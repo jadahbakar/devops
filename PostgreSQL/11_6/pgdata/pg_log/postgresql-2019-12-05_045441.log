@@ -1,0 +1,87 @@
+2019-12-05 04:54:41.277 UTC [56] LOG:  database system was shut down at 2019-12-05 04:54:41 UTC
+2019-12-05 04:54:41.325 UTC [1] LOG:  database system is ready to accept connections
+2019-12-05 04:54:41.379 UTC [63] FATAL:  password authentication failed for user "teknotama"
+2019-12-05 04:54:41.379 UTC [63] DETAIL:  Role "teknotama" does not exist.
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-12-05 04:54:42.382 UTC [64] FATAL:  password authentication failed for user "teknotama"
+2019-12-05 04:54:42.382 UTC [64] DETAIL:  Role "teknotama" does not exist.
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-12-05 04:54:43.381 UTC [65] FATAL:  password authentication failed for user "teknotama"
+2019-12-05 04:54:43.381 UTC [65] DETAIL:  Role "teknotama" does not exist.
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-12-05 04:54:44.394 UTC [66] FATAL:  password authentication failed for user "teknotama"
+2019-12-05 04:54:44.394 UTC [66] DETAIL:  Role "teknotama" does not exist.
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-12-05 04:54:45.392 UTC [67] FATAL:  password authentication failed for user "teknotama"
+2019-12-05 04:54:45.392 UTC [67] DETAIL:  Role "teknotama" does not exist.
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-12-05 04:54:46.398 UTC [68] FATAL:  password authentication failed for user "teknotama"
+2019-12-05 04:54:46.398 UTC [68] DETAIL:  Role "teknotama" does not exist.
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-12-05 04:54:47.399 UTC [69] FATAL:  password authentication failed for user "teknotama"
+2019-12-05 04:54:47.399 UTC [69] DETAIL:  Role "teknotama" does not exist.
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-12-05 04:54:48.402 UTC [70] FATAL:  password authentication failed for user "teknotama"
+2019-12-05 04:54:48.402 UTC [70] DETAIL:  Role "teknotama" does not exist.
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-12-05 04:54:49.408 UTC [71] FATAL:  password authentication failed for user "teknotama"
+2019-12-05 04:54:49.408 UTC [71] DETAIL:  Role "teknotama" does not exist.
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-12-05 04:54:50.411 UTC [72] FATAL:  password authentication failed for user "teknotama"
+2019-12-05 04:54:50.411 UTC [72] DETAIL:  Role "teknotama" does not exist.
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-12-05 04:54:51.420 UTC [73] FATAL:  password authentication failed for user "teknotama"
+2019-12-05 04:54:51.420 UTC [73] DETAIL:  Role "teknotama" does not exist.
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-12-05 04:54:52.425 UTC [74] FATAL:  password authentication failed for user "teknotama"
+2019-12-05 04:54:52.425 UTC [74] DETAIL:  Role "teknotama" does not exist.
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-12-05 04:54:53.434 UTC [75] FATAL:  password authentication failed for user "teknotama"
+2019-12-05 04:54:53.434 UTC [75] DETAIL:  Role "teknotama" does not exist.
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-12-05 04:54:54.431 UTC [76] FATAL:  password authentication failed for user "teknotama"
+2019-12-05 04:54:54.431 UTC [76] DETAIL:  Role "teknotama" does not exist.
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-12-05 04:54:55.433 UTC [77] FATAL:  password authentication failed for user "teknotama"
+2019-12-05 04:54:55.433 UTC [77] DETAIL:  Role "teknotama" does not exist.
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-12-05 04:54:56.445 UTC [78] FATAL:  password authentication failed for user "teknotama"
+2019-12-05 04:54:56.445 UTC [78] DETAIL:  Role "teknotama" does not exist.
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-12-05 04:54:57.447 UTC [79] FATAL:  password authentication failed for user "teknotama"
+2019-12-05 04:54:57.447 UTC [79] DETAIL:  Role "teknotama" does not exist.
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-12-05 04:54:58.449 UTC [80] FATAL:  password authentication failed for user "teknotama"
+2019-12-05 04:54:58.449 UTC [80] DETAIL:  Role "teknotama" does not exist.
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-12-05 04:54:59.459 UTC [81] FATAL:  password authentication failed for user "teknotama"
+2019-12-05 04:54:59.459 UTC [81] DETAIL:  Role "teknotama" does not exist.
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-12-05 04:55:00.458 UTC [82] FATAL:  password authentication failed for user "teknotama"
+2019-12-05 04:55:00.458 UTC [82] DETAIL:  Role "teknotama" does not exist.
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-12-05 04:55:01.476 UTC [83] FATAL:  password authentication failed for user "teknotama"
+2019-12-05 04:55:01.476 UTC [83] DETAIL:  Role "teknotama" does not exist.
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-12-05 04:55:02.476 UTC [84] FATAL:  password authentication failed for user "teknotama"
+2019-12-05 04:55:02.476 UTC [84] DETAIL:  Role "teknotama" does not exist.
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-12-05 04:55:03.461 UTC [85] FATAL:  password authentication failed for user "teknotama"
+2019-12-05 04:55:03.461 UTC [85] DETAIL:  Role "teknotama" does not exist.
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-12-05 04:55:04.484 UTC [86] FATAL:  password authentication failed for user "teknotama"
+2019-12-05 04:55:04.484 UTC [86] DETAIL:  Role "teknotama" does not exist.
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-12-05 04:55:05.462 UTC [87] FATAL:  password authentication failed for user "teknotama"
+2019-12-05 04:55:05.462 UTC [87] DETAIL:  Role "teknotama" does not exist.
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-12-05 04:55:07.026 UTC [89] FATAL:  password authentication failed for user "teknotama"
+2019-12-05 04:55:07.026 UTC [89] DETAIL:  Role "teknotama" does not exist.
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-12-05 04:56:47.119 UTC [94] ERROR:  extension "pgcrypto" already exists
+2019-12-05 04:56:47.119 UTC [94] STATEMENT:  CREATE EXTENSION pgcrypto;
+2019-12-05 07:52:35.713 UTC [438] ERROR:  canceling statement due to user request
+2019-12-05 07:52:35.713 UTC [438] CONTEXT:  PL/pgSQL function mst.keluarahan_get_detail(text) line 4 at assignment
+2019-12-05 07:52:35.713 UTC [438] STATEMENT:  SELECT "mst"."keluarahan_get_detail"('337403');
+2019-12-05 14:14:26.413 UTC [61] LOG:  stats_timestamp 2019-12-05 21:14:26.419753+07 is later than collector's time 2019-12-05 21:14:26.413489+07 for database 13067
+2019-12-05 14:14:56.397 UTC [61] LOG:  stats_timestamp 2019-12-05 21:14:56.406239+07 is later than collector's time 2019-12-05 21:14:56.397323+07 for database 16385

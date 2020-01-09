@@ -1,0 +1,523 @@
+2019-05-08 08:33:05.493 WIB [1112] ERROR:  syntax error at or near "WHERE" at character 1
+2019-05-08 08:33:05.493 WIB [1112] STATEMENT:  WHERE reg_id = 'dedysty301281';
+2019-05-08 08:33:18.647 WIB [1112] ERROR:  syntax error at or near "reg_pribadi" at character 1
+2019-05-08 08:33:18.647 WIB [1112] STATEMENT:  reg_pribadi
+2019-05-08 09:56:18.464 WIB [1373] ERROR:  function json_eacth(jsonb) does not exist at character 49
+2019-05-08 09:56:18.464 WIB [1373] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2019-05-08 09:56:18.464 WIB [1373] STATEMENT:  
+	SELECT 
+	reg_id,
+	reg_nama,
+	reg_email,
+	reg_date,
+	json_eacth(reg_pribadi)
+	reg_alamat,
+	reg_alamat_ktp
+	FROM mst.registrasi;
+2019-05-08 09:56:29.965 WIB [1373] ERROR:  function json_each(jsonb) does not exist at character 49
+2019-05-08 09:56:29.965 WIB [1373] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2019-05-08 09:56:29.965 WIB [1373] STATEMENT:  
+	SELECT 
+	reg_id,
+	reg_nama,
+	reg_email,
+	reg_date,
+	json_each(reg_pribadi)
+	reg_alamat,
+	reg_alamat_ktp
+	FROM mst.registrasi;
+	
+	
+2019-05-08 09:56:36.387 WIB [1373] ERROR:  function json_each(jsonb) does not exist at character 49
+2019-05-08 09:56:36.387 WIB [1373] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2019-05-08 09:56:36.387 WIB [1373] STATEMENT:  
+	SELECT 
+	reg_id,
+	reg_nama,
+	reg_email,
+	reg_date,
+	json_each(reg_pribadi),
+	reg_alamat,
+	reg_alamat_ktp
+	FROM mst.registrasi;
+	
+2019-05-08 09:57:04.372 WIB [1373] ERROR:  function json_each(jsonb) does not exist at character 11
+2019-05-08 09:57:04.372 WIB [1373] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2019-05-08 09:57:04.372 WIB [1373] STATEMENT:  
+	
+	SELECT 
+	json_each(reg_pribadi) FROM mst.registrasi;
+	
+	
+2019-05-08 09:58:23.977 WIB [1373] ERROR:  function returning record called in context that cannot accept type record
+2019-05-08 09:58:23.977 WIB [1373] HINT:  Try calling the function in the FROM clause using a column definition list.
+2019-05-08 09:58:23.977 WIB [1373] STATEMENT:  
+	
+	SELECT 
+	jsonb_to_record(reg_pribadi) FROM mst.registrasi;
+	
+2019-05-08 09:59:05.665 WIB [1373] ERROR:  syntax error at or near "(" at character 43
+2019-05-08 09:59:05.665 WIB [1373] STATEMENT:  
+	SELECT 
+	jsonb_to_record(reg_pribadi) as x(b text, d text) FROM mst.registrasi;
+	
+2019-05-08 10:00:03.813 WIB [1373] ERROR:  cannot extract elements from an object
+2019-05-08 10:00:03.813 WIB [1373] STATEMENT:  
+	SELECT 
+	jsonb_array_elements_text(reg_pribadi)  FROM mst.registrasi;
+	
+2019-05-08 10:10:07.165 WIB [24] LOG:  stats_timestamp 2019-05-08 10:10:07.167107+07 is later than collector's time 2019-05-08 10:10:07.158061+07 for database 106581
+2019-05-08 10:14:13.485 WIB [1439] ERROR:  cannot extract elements from an object
+2019-05-08 10:14:13.485 WIB [1439] STATEMENT:  SELECT 
+	jsonb_array_elements_text(reg_pribadi)  FROM mst.registrasi
+2019-05-08 10:14:25.957 WIB [1439] ERROR:  function json_array_elements(jsonb) does not exist at character 9
+2019-05-08 10:14:25.957 WIB [1439] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2019-05-08 10:14:25.957 WIB [1439] STATEMENT:  SELECT 
+	json_array_elements(reg_pribadi)  FROM mst.registrasi
+2019-05-08 10:14:50.805 WIB [1439] ERROR:  function jsonb_populate_recordset(jsonb) does not exist at character 9
+2019-05-08 10:14:50.805 WIB [1439] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2019-05-08 10:14:50.805 WIB [1439] STATEMENT:  SELECT 
+	jsonb_populate_recordset(reg_pribadi)  FROM mst.registrasi
+2019-05-08 10:16:15.607 WIB [1439] ERROR:  function json_populate_recordset(jsonb) does not exist at character 9
+2019-05-08 10:16:15.607 WIB [1439] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2019-05-08 10:16:15.607 WIB [1439] STATEMENT:  SELECT 
+	json_populate_recordset(reg_pribadi)  FROM mst.registrasi
+2019-05-08 10:16:16.336 WIB [1439] ERROR:  function json_populate_recordset(jsonb) does not exist at character 9
+2019-05-08 10:16:16.336 WIB [1439] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2019-05-08 10:16:16.336 WIB [1439] STATEMENT:  SELECT 
+	json_populate_recordset(reg_pribadi)  FROM mst.registrasi
+2019-05-08 10:16:16.508 WIB [1439] ERROR:  function json_populate_recordset(jsonb) does not exist at character 9
+2019-05-08 10:16:16.508 WIB [1439] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2019-05-08 10:16:16.508 WIB [1439] STATEMENT:  SELECT 
+	json_populate_recordset(reg_pribadi)  FROM mst.registrasi
+2019-05-08 10:16:16.652 WIB [1439] ERROR:  function json_populate_recordset(jsonb) does not exist at character 9
+2019-05-08 10:16:16.652 WIB [1439] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2019-05-08 10:16:16.652 WIB [1439] STATEMENT:  SELECT 
+	json_populate_recordset(reg_pribadi)  FROM mst.registrasi
+2019-05-08 10:16:16.797 WIB [1439] ERROR:  function json_populate_recordset(jsonb) does not exist at character 9
+2019-05-08 10:16:16.797 WIB [1439] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2019-05-08 10:16:16.797 WIB [1439] STATEMENT:  SELECT 
+	json_populate_recordset(reg_pribadi)  FROM mst.registrasi
+2019-05-08 10:16:16.956 WIB [1439] ERROR:  function json_populate_recordset(jsonb) does not exist at character 9
+2019-05-08 10:16:16.956 WIB [1439] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2019-05-08 10:16:16.956 WIB [1439] STATEMENT:  SELECT 
+	json_populate_recordset(reg_pribadi)  FROM mst.registrasi
+2019-05-08 10:16:17.110 WIB [1439] ERROR:  function json_populate_recordset(jsonb) does not exist at character 9
+2019-05-08 10:16:17.110 WIB [1439] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2019-05-08 10:16:17.110 WIB [1439] STATEMENT:  SELECT 
+	json_populate_recordset(reg_pribadi)  FROM mst.registrasi
+2019-05-08 10:16:27.945 WIB [1439] ERROR:  function json_array_elements(jsonb) does not exist at character 9
+2019-05-08 10:16:27.945 WIB [1439] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2019-05-08 10:16:27.945 WIB [1439] STATEMENT:  SELECT 
+	json_array_elements(reg_pribadi)  FROM mst.registrasi
+2019-05-08 10:16:28.556 WIB [1439] ERROR:  function json_array_elements(jsonb) does not exist at character 9
+2019-05-08 10:16:28.556 WIB [1439] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2019-05-08 10:16:28.556 WIB [1439] STATEMENT:  SELECT 
+	json_array_elements(reg_pribadi)  FROM mst.registrasi
+2019-05-08 10:16:28.723 WIB [1439] ERROR:  function json_array_elements(jsonb) does not exist at character 9
+2019-05-08 10:16:28.723 WIB [1439] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2019-05-08 10:16:28.723 WIB [1439] STATEMENT:  SELECT 
+	json_array_elements(reg_pribadi)  FROM mst.registrasi
+2019-05-08 10:16:28.860 WIB [1439] ERROR:  function json_array_elements(jsonb) does not exist at character 9
+2019-05-08 10:16:28.860 WIB [1439] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2019-05-08 10:16:28.860 WIB [1439] STATEMENT:  SELECT 
+	json_array_elements(reg_pribadi)  FROM mst.registrasi
+2019-05-08 10:16:28.994 WIB [1439] ERROR:  function json_array_elements(jsonb) does not exist at character 9
+2019-05-08 10:16:28.994 WIB [1439] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2019-05-08 10:16:28.994 WIB [1439] STATEMENT:  SELECT 
+	json_array_elements(reg_pribadi)  FROM mst.registrasi
+2019-05-08 10:18:42.089 WIB [1439] ERROR:  syntax error at or near "," at character 139
+2019-05-08 10:18:42.089 WIB [1439] STATEMENT:  select * from json_to_recordset(reg_pribadi) as x("kk" text, "nik" text, "noHP" text, "agama" text, "pekerjaan" text, "statusNikah" text, , "tempatLahir" text, , "tanggalLahir" text)
+2019-05-08 10:18:51.382 WIB [1439] ERROR:  column "reg_pribadi" does not exist at character 33
+2019-05-08 10:18:51.382 WIB [1439] STATEMENT:  select * from json_to_recordset(reg_pribadi) as x("kk" text, "nik" text, "noHP" text, "agama" text, "pekerjaan" text, "statusNikah" text, "tempatLahir" text,  "tanggalLahir" text)
+2019-05-08 10:19:00.707 WIB [1439] ERROR:  column "reg_pribadi" does not exist at character 33
+2019-05-08 10:19:00.707 WIB [1439] STATEMENT:  select * from json_to_recordset(reg_pribadi) as x("kk" text, "nik" text, "noHP" text, "agama" text, "pekerjaan" text, "statusNikah" text, "tempatLahir" text,  "tanggalLahir" text)
+2019-05-08 10:19:45.883 WIB [1439] ERROR:  syntax error at or near "text" at character 66
+2019-05-08 10:19:45.883 WIB [1439] STATEMENT:  select json_to_recordset(reg_pribadi) from mst.registrasi
+	x("kk" text, "nik" text, "noHP" text, "agama" text, "pekerjaan" text, "statusNikah" text, 
+	"tempatLahir" text,  "tanggalLahir" text)
+2019-05-08 10:19:47.311 WIB [1439] ERROR:  syntax error at or near "text" at character 66
+2019-05-08 10:19:47.311 WIB [1439] STATEMENT:  select json_to_recordset(reg_pribadi) from mst.registrasi
+	x("kk" text, "nik" text, "noHP" text, "agama" text, "pekerjaan" text, "statusNikah" text, 
+	"tempatLahir" text,  "tanggalLahir" text)
+2019-05-08 10:19:47.498 WIB [1439] ERROR:  syntax error at or near "text" at character 66
+2019-05-08 10:19:47.498 WIB [1439] STATEMENT:  select json_to_recordset(reg_pribadi) from mst.registrasi
+	x("kk" text, "nik" text, "noHP" text, "agama" text, "pekerjaan" text, "statusNikah" text, 
+	"tempatLahir" text,  "tanggalLahir" text)
+2019-05-08 10:19:47.968 WIB [1439] ERROR:  syntax error at or near "text" at character 66
+2019-05-08 10:19:47.968 WIB [1439] STATEMENT:  select json_to_recordset(reg_pribadi) from mst.registrasi
+	x("kk" text, "nik" text, "noHP" text, "agama" text, "pekerjaan" text, "statusNikah" text, 
+	"tempatLahir" text,  "tanggalLahir" text)
+2019-05-08 10:19:48.119 WIB [1439] ERROR:  syntax error at or near "text" at character 66
+2019-05-08 10:19:48.119 WIB [1439] STATEMENT:  select json_to_recordset(reg_pribadi) from mst.registrasi
+	x("kk" text, "nik" text, "noHP" text, "agama" text, "pekerjaan" text, "statusNikah" text, 
+	"tempatLahir" text,  "tanggalLahir" text)
+2019-05-08 10:19:48.271 WIB [1439] ERROR:  syntax error at or near "text" at character 66
+2019-05-08 10:19:48.271 WIB [1439] STATEMENT:  select json_to_recordset(reg_pribadi) from mst.registrasi
+	x("kk" text, "nik" text, "noHP" text, "agama" text, "pekerjaan" text, "statusNikah" text, 
+	"tempatLahir" text,  "tanggalLahir" text)
+2019-05-08 10:19:48.793 WIB [1439] ERROR:  syntax error at or near "text" at character 66
+2019-05-08 10:19:48.793 WIB [1439] STATEMENT:  select json_to_recordset(reg_pribadi) from mst.registrasi
+	x("kk" text, "nik" text, "noHP" text, "agama" text, "pekerjaan" text, "statusNikah" text, 
+	"tempatLahir" text,  "tanggalLahir" text)
+2019-05-08 10:19:48.954 WIB [1439] ERROR:  syntax error at or near "text" at character 66
+2019-05-08 10:19:48.954 WIB [1439] STATEMENT:  select json_to_recordset(reg_pribadi) from mst.registrasi
+	x("kk" text, "nik" text, "noHP" text, "agama" text, "pekerjaan" text, "statusNikah" text, 
+	"tempatLahir" text,  "tanggalLahir" text)
+2019-05-08 10:19:49.100 WIB [1439] ERROR:  syntax error at or near "text" at character 66
+2019-05-08 10:19:49.100 WIB [1439] STATEMENT:  select json_to_recordset(reg_pribadi) from mst.registrasi
+	x("kk" text, "nik" text, "noHP" text, "agama" text, "pekerjaan" text, "statusNikah" text, 
+	"tempatLahir" text,  "tanggalLahir" text)
+2019-05-08 10:20:21.879 WIB [1439] ERROR:  syntax error at or near "text" at character 66
+2019-05-08 10:20:21.879 WIB [1439] STATEMENT:  select json_to_recordset(reg_pribadi) from mst.registrasi
+	x("kk" text, "nik" text, "noHP" text, "agama" integer, "pekerjaan" text, "statusNikah" text, 
+	"tempatLahir" text,  "tanggalLahir" text)
+2019-05-08 10:20:48.904 WIB [1439] ERROR:  syntax error at or near "text" at character 67
+2019-05-08 10:20:48.904 WIB [1439] STATEMENT:  select json_to_recordset(reg_pribadi) from mst.registrasi
+	x ("kk" text, "nik" text, "noHP" text, "agama" integer, "pekerjaan" text, "statusNikah" text, 
+	"tempatLahir" text,  "tanggalLahir" text)
+2019-05-08 10:20:49.561 WIB [1439] ERROR:  syntax error at or near "text" at character 67
+2019-05-08 10:20:49.561 WIB [1439] STATEMENT:  select json_to_recordset(reg_pribadi) from mst.registrasi
+	x ("kk" text, "nik" text, "noHP" text, "agama" integer, "pekerjaan" text, "statusNikah" text, 
+	"tempatLahir" text,  "tanggalLahir" text)
+2019-05-08 10:20:49.723 WIB [1439] ERROR:  syntax error at or near "text" at character 67
+2019-05-08 10:20:49.723 WIB [1439] STATEMENT:  select json_to_recordset(reg_pribadi) from mst.registrasi
+	x ("kk" text, "nik" text, "noHP" text, "agama" integer, "pekerjaan" text, "statusNikah" text, 
+	"tempatLahir" text,  "tanggalLahir" text)
+2019-05-08 10:20:49.861 WIB [1439] ERROR:  syntax error at or near "text" at character 67
+2019-05-08 10:20:49.861 WIB [1439] STATEMENT:  select json_to_recordset(reg_pribadi) from mst.registrasi
+	x ("kk" text, "nik" text, "noHP" text, "agama" integer, "pekerjaan" text, "statusNikah" text, 
+	"tempatLahir" text,  "tanggalLahir" text)
+2019-05-08 10:20:49.987 WIB [1439] ERROR:  syntax error at or near "text" at character 67
+2019-05-08 10:20:49.987 WIB [1439] STATEMENT:  select json_to_recordset(reg_pribadi) from mst.registrasi
+	x ("kk" text, "nik" text, "noHP" text, "agama" integer, "pekerjaan" text, "statusNikah" text, 
+	"tempatLahir" text,  "tanggalLahir" text)
+2019-05-08 10:35:11.054 WIB [1439] ERROR:  operator does not exist: agama = integer at character 948
+2019-05-08 10:35:11.054 WIB [1439] HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+2019-05-08 10:35:11.054 WIB [1439] STATEMENT:  SELECT 
+	reg_id,
+	reg_nama,
+	reg_email,
+	reg_date,
+	(reg_pribadi ->> 'kk' ) AS kk,
+	(reg_pribadi ->> 'nik' ) AS nik,
+	(reg_pribadi ->> 'noHP' ) AS noHP,
+	(reg_pribadi ->> 'agama' )::int AS agama,
+	agama_nama,
+	
+	(reg_pribadi ->> 'pekerjaan' ) AS pekerjaan,
+	(reg_alamat ->> 'rt') AS rt,
+	(reg_alamat ->> 'rw') AS rw,
+	(reg_alamat ->> 'kota') AS kota,
+	(reg_alamat ->> 'alamat') AS alamat,
+	(reg_alamat ->> 'kodePOS') AS kodepos,
+	(reg_alamat ->> 'propinsi') AS propinsi,
+	(reg_alamat ->> 'kecamatan') AS kecamatan,
+	(reg_alamat ->> 'kelurahan') AS kelurahan,
+	(reg_alamat_ktp ->> 'rt') AS rt_ktp,
+	(reg_alamat_ktp ->> 'rw') AS rw_ktp,
+	(reg_alamat_ktp ->> 'kota') AS kota_ktp,
+	(reg_alamat_ktp ->> 'alamat') AS alamat_ktp,
+	(reg_alamat_ktp ->> 'kodePOS') AS kodepos_ktp,
+	(reg_alamat_ktp ->> 'propinsi') AS propinsi_ktp,
+	(reg_alamat_ktp ->> 'kecamatan') AS kecamatan_ktp,
+	(reg_alamat_ktp ->> 'kelurahan') AS kelurahan_ktp
+	FROM mst.registrasi
+	INNER JOIN mst.agama ON agama = agama_id
+2019-05-08 10:43:56.284 WIB [1439] ERROR:  syntax error at or near "RETURN" at character 236
+2019-05-08 10:43:56.284 WIB [1439] STATEMENT:  CREATE OR REPLACE FUNCTION "mst"."propinsi_get_detail"("p_propinsi" text)
+	  RETURNS "pg_catalog"."text" AS $BODY$DECLARE 
+		 propinsinama text = ''; 
+	BEGIN
+		propinsinama := propinsi_nama FROM mst.propinsi WHERE propinsi_id = p_propinsi
+	RETURN propinsinama;
+	END
+	$BODY$
+	  LANGUAGE plpgsql VOLATILE
+	  COST 100
+2019-05-08 10:45:48.920 WIB [1439] ERROR:  syntax error at or near "(" at character 524
+2019-05-08 10:45:48.920 WIB [1439] STATEMENT:  SELECT 
+	reg_id,
+	reg_nama,
+	reg_email,
+	reg_date,
+	(reg_pribadi ->> 'kk' ) AS kk,
+	(reg_pribadi ->> 'nik' ) AS nik,
+	(reg_pribadi ->> 'noHP' ) AS noHP,
+	(reg_pribadi ->> 'agama' )::int AS agama,
+	agama_nama,
+	(reg_pribadi ->> 'pekerjaan' ) AS pekerjaan,
+	(reg_alamat ->> 'rt') AS rt,
+	(reg_alamat ->> 'rw') AS rw,
+	(reg_alamat ->> 'kota') AS kota,
+	(reg_alamat ->> 'alamat') AS alamat,
+	(reg_alamat ->> 'kodePOS') AS kodepos,
+	(reg_alamat ->> 'propinsi') AS propinsi,
+	mst.propinsi_get_detail((reg_alamat ->> 'propinsi')) AS propinsi_nama
+	(reg_alamat ->> 'kecamatan') AS kecamatan,
+	(reg_alamat ->> 'kelurahan') AS kelurahan,
+	
+	(reg_alamat_ktp ->> 'rt') AS rt_ktp,
+	(reg_alamat_ktp ->> 'rw') AS rw_ktp,
+	(reg_alamat_ktp ->> 'kota') AS kota_ktp,
+	(reg_alamat_ktp ->> 'alamat') AS alamat_ktp,
+	(reg_alamat_ktp ->> 'kodePOS') AS kodepos_ktp,
+	(reg_alamat_ktp ->> 'propinsi') AS propinsi_ktp,
+	(reg_alamat_ktp ->> 'kecamatan') AS kecamatan_ktp,
+	(reg_alamat_ktp ->> 'kelurahan') AS kelurahan_ktp
+	FROM mst.registrasi
+	INNER JOIN mst.agama ON (reg_pribadi ->> 'agama' )::int = agama_id
+2019-05-08 10:47:17.464 WIB [1439] ERROR:  operator does not exist: integer = text at character 49
+2019-05-08 10:47:17.464 WIB [1439] HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+2019-05-08 10:47:17.464 WIB [1439] QUERY:  SELECT agama_nama FROM mst.agama WHERE agama_id = p_agama
+2019-05-08 10:47:17.464 WIB [1439] CONTEXT:  PL/pgSQL function agama_get_detail(text) line 4 at assignment
+2019-05-08 10:47:17.464 WIB [1439] STATEMENT:  select mst.agama_get_detail('1')
+2019-05-08 10:48:15.716 WIB [1439] ERROR:  function mst.agama(text) does not exist at character 189
+2019-05-08 10:48:15.716 WIB [1439] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2019-05-08 10:48:15.716 WIB [1439] STATEMENT:  SELECT 
+	reg_id,
+	reg_nama,
+	reg_email,
+	reg_date,
+	(reg_pribadi ->> 'kk' ) AS kk,
+	(reg_pribadi ->> 'nik' ) AS nik,
+	(reg_pribadi ->> 'noHP' ) AS noHP,
+	(reg_pribadi ->> 'agama' )::int AS agama,
+	mst.agama(reg_pribadi ->> 'agama' ) AS agama_nama,
+	(reg_pribadi ->> 'pekerjaan' ) AS pekerjaan,
+	(reg_alamat ->> 'rt') AS rt,
+	(reg_alamat ->> 'rw') AS rw,
+	(reg_alamat ->> 'kota') AS kota,
+	(reg_alamat ->> 'alamat') AS alamat,
+	(reg_alamat ->> 'kodePOS') AS kodepos,
+	(reg_alamat ->> 'propinsi') AS propinsi,
+	mst.propinsi_get_detail((reg_alamat ->> 'propinsi')) AS propinsi_nama,
+	(reg_alamat ->> 'kecamatan') AS kecamatan,
+	(reg_alamat ->> 'kelurahan') AS kelurahan,
+	
+	(reg_alamat_ktp ->> 'rt') AS rt_ktp,
+	(reg_alamat_ktp ->> 'rw') AS rw_ktp,
+	(reg_alamat_ktp ->> 'kota') AS kota_ktp,
+	(reg_alamat_ktp ->> 'alamat') AS alamat_ktp,
+	(reg_alamat_ktp ->> 'kodePOS') AS kodepos_ktp,
+	(reg_alamat_ktp ->> 'propinsi') AS propinsi_ktp,
+	(reg_alamat_ktp ->> 'kecamatan') AS kecamatan_ktp,
+	(reg_alamat_ktp ->> 'kelurahan') AS kelurahan_ktp
+	FROM mst.registrasi
+2019-05-08 10:51:54.962 WIB [1439] ERROR:  operator does not exist: text = integer at character 61
+2019-05-08 10:51:54.962 WIB [1439] HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+2019-05-08 10:51:54.962 WIB [1439] QUERY:  SELECT kecamatan_nama FROM mst.kecamatan WHERE kecamatan_id = p_kecamatan::integer
+2019-05-08 10:51:54.962 WIB [1439] CONTEXT:  PL/pgSQL function kecamatan_get_detail(text) line 4 at assignment
+2019-05-08 10:51:54.962 WIB [1439] STATEMENT:  select mst.kecamatan_get_detail('3374080')
+2019-05-08 10:57:20.699 WIB [1439] ERROR:  relation "mst.keluarahan" does not exist at character 29
+2019-05-08 10:57:20.699 WIB [1439] QUERY:  SELECT keluarahan_nama FROM mst.keluarahan WHERE keluarahan_id = p_keluarahan
+2019-05-08 10:57:20.699 WIB [1439] CONTEXT:  PL/pgSQL function keluarahan_get_detail(text) line 4 at assignment
+2019-05-08 10:57:20.699 WIB [1439] STATEMENT:  select mst.keluarahan_get_detail('3374080006')
+2019-05-08 10:59:20.744 WIB [1439] ERROR:  syntax error at or near "(" at character 767
+2019-05-08 10:59:20.744 WIB [1439] STATEMENT:  SELECT 
+	reg_id,
+	reg_nama,
+	reg_email,
+	reg_date,
+	(reg_pribadi ->> 'kk' ) AS kk,
+	(reg_pribadi ->> 'nik' ) AS nik,
+	(reg_pribadi ->> 'noHP' ) AS noHP,
+	(reg_pribadi ->> 'agama' )::int AS agama,
+	mst.agama_get_detail(reg_pribadi ->> 'agama' ) AS agama_nama,
+	(reg_pribadi ->> 'pekerjaan' ) AS pekerjaan,
+	(reg_alamat ->> 'rt') AS rt,
+	(reg_alamat ->> 'rw') AS rw,
+	(reg_alamat ->> 'kota') AS kota,
+	(reg_alamat ->> 'alamat') AS alamat,
+	(reg_alamat ->> 'kodePOS') AS kodepos,
+	(reg_alamat ->> 'propinsi') AS propinsi,
+	mst.propinsi_get_detail((reg_alamat ->> 'propinsi')) AS propinsi_nama,
+	(reg_alamat ->> 'kota') AS kota,
+	mst.kota_get_detail((reg_alamat ->> 'kota')) as kota_nama,
+	(reg_alamat ->> 'kecamatan') AS kecamatan,
+	mst.keca
+	(reg_alamat ->> 'kelurahan') AS kelurahan,
+	mst.
+	(reg_alamat_ktp ->> 'rt') AS rt_ktp,
+	(reg_alamat_ktp ->> 'rw') AS rw_ktp,
+	(reg_alamat_ktp ->> 'kota') AS kota_ktp,
+	(reg_alamat_ktp ->> 'alamat') AS alamat_ktp,
+	(reg_alamat_ktp ->> 'kodePOS') AS kodepos_ktp,
+	(reg_alamat_ktp ->> 'propinsi') AS propinsi_ktp,
+	(reg_alamat_ktp ->> 'kecamatan') AS kecamatan_ktp,
+	(reg_alamat_ktp ->> 'kelurahan') AS kelurahan_ktp
+	FROM mst.registrasi
+2019-05-08 11:01:11.706 WIB [1439] ERROR:  relation "mst.keluarahan" does not exist at character 29
+2019-05-08 11:01:11.706 WIB [1439] QUERY:  SELECT keluarahan_nama FROM mst.keluarahan WHERE keluarahan_id = p_keluarahan
+2019-05-08 11:01:11.706 WIB [1439] CONTEXT:  PL/pgSQL function keluarahan_get_detail(text) line 4 at assignment
+2019-05-08 11:01:11.706 WIB [1439] STATEMENT:  SELECT 
+	reg_id,
+	reg_nama,
+	reg_email,
+	reg_date,
+	(reg_pribadi ->> 'kk' ) AS kk,
+	(reg_pribadi ->> 'nik' ) AS nik,
+	(reg_pribadi ->> 'noHP' ) AS noHP,
+	(reg_pribadi ->> 'agama' )::int AS agama,
+	mst.agama_get_detail(reg_pribadi ->> 'agama' ) AS agama_nama,
+	(reg_pribadi ->> 'pekerjaan' ) AS pekerjaan,
+	(reg_alamat ->> 'rt') AS rt,
+	(reg_alamat ->> 'rw') AS rw,
+	(reg_alamat ->> 'kota') AS kota,
+	(reg_alamat ->> 'alamat') AS alamat,
+	(reg_alamat ->> 'kodePOS') AS kodepos,
+	(reg_alamat ->> 'propinsi') AS propinsi,
+	mst.propinsi_get_detail(reg_alamat ->> 'propinsi') AS propinsi_nama,
+	(reg_alamat ->> 'kota') AS kota,
+	mst.kota_get_detail(reg_alamat ->> 'kota') as kota_nama,
+	(reg_alamat ->> 'kecamatan') AS kecamatan,
+	mst.kecamatan_get_detail(reg_alamat ->> 'kecamatan') AS kecamatan_nama,
+	(reg_alamat ->> 'kelurahan') AS kelurahan,
+	mst.keluarahan_get_detail(reg_alamat ->> 'keluarahan') AS keluarahan_nama,
+	
+	(reg_alamat_ktp ->> 'rt') AS rt_ktp,
+	(reg_alamat_ktp ->> 'rw') AS rw_ktp,
+	(reg_alamat_ktp ->> 'kota') AS kota_ktp,
+	(reg_alamat_ktp ->> 'alamat') AS alamat_ktp,
+	(reg_alamat_ktp ->> 'kodePOS') AS kodepos_ktp,
+	(reg_alamat_ktp ->> 'propinsi') AS propinsi_ktp,
+	(reg_alamat_ktp ->> 'kecamatan') AS kecamatan_ktp,
+	(reg_alamat_ktp ->> 'kelurahan') AS kelurahan_ktp
+	FROM mst.registrasi
+2019-05-08 11:03:03.362 WIB [1439] ERROR:  syntax error at or near "reg_alamat_ktp" at character 2
+2019-05-08 11:03:03.362 WIB [1439] STATEMENT:  (reg_alamat_ktp ->> 'rt_ktp') AS rt_ktp,
+	(reg_alamat_ktp ->> 'rw_ktp') AS rw_ktp,
+	(reg_alamat_ktp ->> 'kota_ktp') AS kota_ktp,
+	(reg_alamat_ktp ->> 'alamat_ktp') AS alamat_ktp,
+	(reg_alamat_ktp ->> 'kodePOS_ktp') AS kodepos_ktp,
+	(reg_alamat_ktp ->> 'propinsi_ktp') AS propinsi_ktp,
+	(reg_alamat_ktp ->> 'kecamatan_ktp') AS kecamatan_ktp,
+	(reg_alamat_ktp ->> 'kelurahan_ktp') AS kelurahan_ktp
+	FROM mst.registrasi
+2019-05-08 11:08:40.190 WIB [1439] ERROR:  syntax error at or near "FROM" at character 1623
+2019-05-08 11:08:40.190 WIB [1439] STATEMENT:  SELECT 
+	reg_id,
+	reg_nama,
+	reg_email,
+	reg_date,
+	(reg_pribadi ->> 'kk' ) AS kk,
+	(reg_pribadi ->> 'nik' ) AS nik,
+	(reg_pribadi ->> 'noHP' ) AS noHP,
+	(reg_pribadi ->> 'agama' )::int AS agama,
+	mst.agama_get_detail(reg_pribadi ->> 'agama' ) AS agama_nama,
+	(reg_pribadi ->> 'pekerjaan' ) AS pekerjaan,
+	(reg_alamat ->> 'rt') AS rt,
+	(reg_alamat ->> 'rw') AS rw,
+	(reg_alamat ->> 'kota') AS kota,
+	(reg_alamat ->> 'alamat') AS alamat,
+	(reg_alamat ->> 'kodePOS') AS kodepos,
+	(reg_alamat ->> 'propinsi') AS propinsi,
+	mst.propinsi_get_detail(reg_alamat ->> 'propinsi') AS propinsi_nama,
+	(reg_alamat ->> 'kota') AS kota,
+	mst.kota_get_detail(reg_alamat ->> 'kota') as kota_nama,
+	(reg_alamat ->> 'kecamatan') AS kecamatan,
+	mst.kecamatan_get_detail(reg_alamat ->> 'kecamatan') AS kecamatan_nama,
+	(reg_alamat ->> 'kelurahan') AS kelurahan,
+	mst.kelurahan_get_detail(reg_alamat ->> 'keluarahan') AS keluarahan_nama,
+	
+	
+	(reg_alamat_ktp ->> 'rtK') AS rtKTP,
+	(reg_alamat_ktp ->> 'rwKTP') AS rwKTP,
+	(reg_alamat_ktp ->> 'kotaKTP') AS kotaKTP,
+	(reg_alamat_ktp ->> 'alamatKTP') AS alamatKTP,
+	(reg_alamat_ktp ->> 'kodePOSKTP') AS kodeposKTP,
+	(reg_alamat_ktp ->> 'propinsiKTP') AS propinsiKTP,
+	mst.propinsi_get_detail(reg_alamat_ktp ->> 'propinsiKTP') AS propinsiKTP_nama,
+	(reg_alamat_ktp ->> 'kotaKTP') AS kotaKTP,
+	mst.kota_get_detail(reg_alamat_ktp ->> 'kotaKTP') as kotaKTP_nama,
+	(reg_alamat_ktp ->> 'kecamatanKTP') AS kecamatanKTP,
+	mst.kecamatan_get_detail(reg_alamat_ktp ->> 'kecamatanKTP') AS kecamatanKTP_nama,
+	(reg_alamat_ktp ->> 'kelurahanKTP') AS kelurahanKTP,
+	mst.kelurahan_get_detail(reg_alamat_ktp ->> 'kelurahanKTP') AS keluarahanKTP_nama,
+	FROM mst.registrasi
+2019-05-08 11:37:28.141 WIB [1696] ERROR:  syntax error at or near "(" at character 131
+2019-05-08 11:37:28.141 WIB [1696] STATEMENT:   SELECT reg_id, reg_nama, reg_email, reg_date,        (reg_pribadi ->> "kk") AS kk,        (reg_pribadi ->> "nik") AS nik         (reg_pribadi ->> "noHP") AS noHP,         (reg_pribadi ->> "agama")::int AS agama,        mst.agama_get_detail(reg_pribadi ->> "agama") AS agama_nama,         (reg_pribadi ->> "pekerjaan" ) AS pekerjaan,         (reg_alamat ->> "rt") AS rt,         (reg_alamat ->> "rw") AS rw,         (reg_alamat ->> "kota") AS kota,            (reg_alamat ->> "alamat") AS alamat,            (reg_alamat ->> "kodePOS") AS kodepos,          (reg_alamat ->> "propinsi") AS propinsi,            mst.propinsi_get_detail(reg_alamat ->> "propinsi") AS propinsi_nama,            (reg_alamat ->> "kota") AS kota,         mst.kota_get_detail(reg_alamat ->> "kota") as kota_nama,            (reg_alamat ->> "kecamatan") AS kecamatan,          mst.kecamatan_get_detail(reg_alamat ->> "kecamatan") AS kecamatan_nama,         (reg_alamat ->> "kelurahan") AS kelurahan,          mst.kelurahan_get_detail(reg_alamat ->> "keluarahan") AS keluarahan_nama,           (reg_alamat_ktp ->> "rtK") AS rtKTP,            (reg_alamat_ktp ->> "rwKTP") AS rwKTP,          (reg_alamat_ktp ->> "kotaKTP") AS kotaKTP,          (reg_alamat_ktp ->> "alamatKTP") AS alamatKTP,          (reg_alamat_ktp ->> "kodePOSKTP") AS kodeposKTP,            (reg_alamat_ktp ->> "propinsiKTP") AS propinsiKTP,          mst.propinsi_get_detail(reg_alamat_ktp ->> "propinsiKTP") AS propinsiKTP_nama,          (reg_alamat_ktp ->> "kotaKTP") AS kotaKTP,          mst.kota_get_detail(reg_alamat_ktp ->> "kotaKTP") as kotaKTP_nama,          (reg_alamat_ktp ->> "kecamatanKTP") AS kecamatanKTP,            mst.kecamatan_get_detail(reg_alamat_ktp ->> "kecamatanKTP") AS kecamatanKTP_nama,           (reg_alamat_ktp ->> "kelurahanKTP") AS kelurahanKTP,            mst.kelurahan_get_detail(reg_alamat_ktp ->> "kelurahanKTP") AS keluarahanKTP_nama           FROM mst.registrasi         WHERE reg_id = 'dedysty811230'
+2019-05-08 11:37:52.125 WIB [1699] ERROR:  syntax error at or near "(" at character 131
+2019-05-08 11:37:52.125 WIB [1699] STATEMENT:   SELECT reg_id, reg_nama, reg_email, reg_date,        (reg_pribadi ->> "kk") AS kk,        (reg_pribadi ->> "nik") AS nik         (reg_pribadi ->> "noHP") AS noHP,         (reg_pribadi ->> "agama")::int AS agama,        mst.agama_get_detail(reg_pribadi ->> "agama") AS agama_nama,         (reg_pribadi ->> "pekerjaan" ) AS pekerjaan,         (reg_alamat ->> "rt") AS rt,         (reg_alamat ->> "rw") AS rw,         (reg_alamat ->> "kota") AS kota,            (reg_alamat ->> "alamat") AS alamat,            (reg_alamat ->> "kodePOS") AS kodepos,          (reg_alamat ->> "propinsi") AS propinsi,            mst.propinsi_get_detail(reg_alamat ->> "propinsi") AS propinsi_nama,            (reg_alamat ->> "kota") AS kota,         mst.kota_get_detail(reg_alamat ->> "kota") as kota_nama,            (reg_alamat ->> "kecamatan") AS kecamatan,          mst.kecamatan_get_detail(reg_alamat ->> "kecamatan") AS kecamatan_nama,         (reg_alamat ->> "kelurahan") AS kelurahan,          mst.kelurahan_get_detail(reg_alamat ->> "keluarahan") AS keluarahan_nama,           (reg_alamat_ktp ->> "rtK") AS rtKTP,            (reg_alamat_ktp ->> "rwKTP") AS rwKTP,          (reg_alamat_ktp ->> "kotaKTP") AS kotaKTP,          (reg_alamat_ktp ->> "alamatKTP") AS alamatKTP,          (reg_alamat_ktp ->> "kodePOSKTP") AS kodeposKTP,            (reg_alamat_ktp ->> "propinsiKTP") AS propinsiKTP,          mst.propinsi_get_detail(reg_alamat_ktp ->> "propinsiKTP") AS propinsiKTP_nama,          (reg_alamat_ktp ->> "kotaKTP") AS kotaKTP,          mst.kota_get_detail(reg_alamat_ktp ->> "kotaKTP") as kotaKTP_nama,          (reg_alamat_ktp ->> "kecamatanKTP") AS kecamatanKTP,            mst.kecamatan_get_detail(reg_alamat_ktp ->> "kecamatanKTP") AS kecamatanKTP_nama,           (reg_alamat_ktp ->> "kelurahanKTP") AS kelurahanKTP,            mst.kelurahan_get_detail(reg_alamat_ktp ->> "kelurahanKTP") AS keluarahanKTP_nama           FROM mst.registrasi         WHERE reg_id = 'dedysty811230'
+2019-05-08 11:39:55.983 WIB [1706] ERROR:  syntax error at or near "(" at character 131
+2019-05-08 11:39:55.983 WIB [1706] STATEMENT:   SELECT reg_id, reg_nama, reg_email, reg_date,        (reg_pribadi ->> "kk") AS kk,        (reg_pribadi ->> "nik") AS nik         (reg_pribadi ->> "noHP") AS noHP,         (reg_pribadi ->> "agama") AS agama,        mst.agama_get_detail(reg_pribadi ->> "agama") AS agama_nama,         (reg_pribadi ->> "pekerjaan" ) AS pekerjaan,         (reg_alamat ->> "rt") AS rt,         (reg_alamat ->> "rw") AS rw,         (reg_alamat ->> "kota") AS kota,            (reg_alamat ->> "alamat") AS alamat,            (reg_alamat ->> "kodePOS") AS kodepos,          (reg_alamat ->> "propinsi") AS propinsi,            mst.propinsi_get_detail(reg_alamat ->> "propinsi") AS propinsi_nama,            (reg_alamat ->> "kota") AS kota,         mst.kota_get_detail(reg_alamat ->> "kota") as kota_nama,            (reg_alamat ->> "kecamatan") AS kecamatan,          mst.kecamatan_get_detail(reg_alamat ->> "kecamatan") AS kecamatan_nama,         (reg_alamat ->> "kelurahan") AS kelurahan,          mst.kelurahan_get_detail(reg_alamat ->> "keluarahan") AS keluarahan_nama,           (reg_alamat_ktp ->> "rtK") AS rtKTP,            (reg_alamat_ktp ->> "rwKTP") AS rwKTP,          (reg_alamat_ktp ->> "kotaKTP") AS kotaKTP,          (reg_alamat_ktp ->> "alamatKTP") AS alamatKTP,          (reg_alamat_ktp ->> "kodePOSKTP") AS kodeposKTP,            (reg_alamat_ktp ->> "propinsiKTP") AS propinsiKTP,          mst.propinsi_get_detail(reg_alamat_ktp ->> "propinsiKTP") AS propinsiKTP_nama,          (reg_alamat_ktp ->> "kotaKTP") AS kotaKTP,          mst.kota_get_detail(reg_alamat_ktp ->> "kotaKTP") as kotaKTP_nama,          (reg_alamat_ktp ->> "kecamatanKTP") AS kecamatanKTP,            mst.kecamatan_get_detail(reg_alamat_ktp ->> "kecamatanKTP") AS kecamatanKTP_nama,           (reg_alamat_ktp ->> "kelurahanKTP") AS kelurahanKTP,            mst.kelurahan_get_detail(reg_alamat_ktp ->> "kelurahanKTP") AS keluarahanKTP_nama           FROM mst.registrasi         WHERE reg_id = 'dedysty811230'
+2019-05-08 11:40:02.730 WIB [1706] ERROR:  syntax error at or near "(" at character 131
+2019-05-08 11:40:02.730 WIB [1706] STATEMENT:   SELECT reg_id, reg_nama, reg_email, reg_date,        (reg_pribadi ->> "kk") AS kk,        (reg_pribadi ->> "nik") AS nik         (reg_pribadi ->> "noHP") AS noHP,         (reg_pribadi ->> "agama") AS agama,        mst.agama_get_detail(reg_pribadi ->> "agama") AS agama_nama,         (reg_pribadi ->> "pekerjaan" ) AS pekerjaan,         (reg_alamat ->> "rt") AS rt,         (reg_alamat ->> "rw") AS rw,         (reg_alamat ->> "kota") AS kota,            (reg_alamat ->> "alamat") AS alamat,            (reg_alamat ->> "kodePOS") AS kodepos,          (reg_alamat ->> "propinsi") AS propinsi,            mst.propinsi_get_detail(reg_alamat ->> "propinsi") AS propinsi_nama,            (reg_alamat ->> "kota") AS kota,         mst.kota_get_detail(reg_alamat ->> "kota") as kota_nama,            (reg_alamat ->> "kecamatan") AS kecamatan,          mst.kecamatan_get_detail(reg_alamat ->> "kecamatan") AS kecamatan_nama,         (reg_alamat ->> "kelurahan") AS kelurahan,          mst.kelurahan_get_detail(reg_alamat ->> "keluarahan") AS keluarahan_nama,           (reg_alamat_ktp ->> "rtK") AS rtKTP,            (reg_alamat_ktp ->> "rwKTP") AS rwKTP,          (reg_alamat_ktp ->> "kotaKTP") AS kotaKTP,          (reg_alamat_ktp ->> "alamatKTP") AS alamatKTP,          (reg_alamat_ktp ->> "kodePOSKTP") AS kodeposKTP,            (reg_alamat_ktp ->> "propinsiKTP") AS propinsiKTP,          mst.propinsi_get_detail(reg_alamat_ktp ->> "propinsiKTP") AS propinsiKTP_nama,          (reg_alamat_ktp ->> "kotaKTP") AS kotaKTP,          mst.kota_get_detail(reg_alamat_ktp ->> "kotaKTP") as kotaKTP_nama,          (reg_alamat_ktp ->> "kecamatanKTP") AS kecamatanKTP,            mst.kecamatan_get_detail(reg_alamat_ktp ->> "kecamatanKTP") AS kecamatanKTP_nama,           (reg_alamat_ktp ->> "kelurahanKTP") AS kelurahanKTP,            mst.kelurahan_get_detail(reg_alamat_ktp ->> "kelurahanKTP") AS keluarahanKTP_nama           FROM mst.registrasi         WHERE reg_id = 'dedysty811230'
+2019-05-08 11:51:25.802 WIB [1742] ERROR:  syntax error at or near "(" at character 130
+2019-05-08 11:51:25.802 WIB [1742] STATEMENT:  SELECT reg_id, reg_nama, reg_email, reg_date,        (reg_pribadi ->> "kk") AS kk,        (reg_pribadi ->> "nik") AS nik         (reg_pribadi ->> "noHP") AS noHP,        (reg_pribadi ->> "agama") AS agama,        mst.agama_get_detail(reg_pribadi ->> "agama") AS agama_nama,        (reg_pribadi ->> "pekerjaan" ) AS pekerjaan,        (reg_alamat ->> "rt") AS rt,        (reg_alamat ->> "rw") AS rw,        (reg_alamat ->> "kota") AS kota,        (reg_alamat ->> "alamat") AS alamat,        (reg_alamat ->> "kodePOS") AS kodepos,        (reg_alamat ->> "propinsi") AS propinsi,        mst.propinsi_get_detail(reg_alamat ->> "propinsi") AS propinsi_nama,        (reg_alamat ->> "kota") AS kota,        mst.kota_get_detail(reg_alamat ->> "kota") as kota_nama,        (reg_alamat ->> "kecamatan") AS kecamatan,         mst.kecamatan_get_detail(reg_alamat ->> "kecamatan") AS kecamatan_nama,        (reg_alamat ->> "kelurahan") AS kelurahan,        mst.kelurahan_get_detail(reg_alamat ->> "keluarahan") AS keluarahan_nama,        (reg_alamat_ktp ->> "rtK") AS rtKTP,        (reg_alamat_ktp ->> "rwKTP") AS rwKTP,         (reg_alamat_ktp ->> "kotaKTP") AS kotaKTP,         (reg_alamat_ktp ->> "alamatKTP") AS alamatKTP,         (reg_alamat_ktp ->> "kodePOSKTP") AS kodeposKTP,         (reg_alamat_ktp ->> "propinsiKTP") AS propinsiKTP,         mst.propinsi_get_detail(reg_alamat_ktp ->> "propinsiKTP") AS propinsiKTP_nama,          (reg_alamat_ktp ->> "kotaKTP") AS kotaKTP,         mst.kota_get_detail(reg_alamat_ktp ->> "kotaKTP") as kotaKTP_nama,        (reg_alamat_ktp ->> "kecamatanKTP") AS kecamatanKTP,        mst.kecamatan_get_detail(reg_alamat_ktp ->> "kecamatanKTP") AS kecamatanKTP_nama,         (reg_alamat_ktp ->> "kelurahanKTP") AS kelurahanKTP,        mst.kelurahan_get_detail(reg_alamat_ktp ->> "kelurahanKTP") AS keluarahanKTP_nama          FROM mst.registrasi          WHERE reg_id = 'dedysty811230'
+2019-05-08 11:52:59.201 WIB [1747] ERROR:  syntax error at or near "(" at character 130
+2019-05-08 11:52:59.201 WIB [1747] STATEMENT:  SELECT reg_id, reg_nama, reg_email, reg_date,        (reg_pribadi ->> "kk") AS kk,        (reg_pribadi ->> "nik") AS nik         (reg_pribadi ->> "noHP") AS noHP,        (reg_pribadi ->> "agama") AS agama,        mst.agama_get_detail(reg_pribadi ->> "agama") AS agama_nama         FROM mst.registrasi          WHERE reg_id = 'dedysty811230'
+2019-05-08 11:53:25.456 WIB [1750] ERROR:  syntax error at or near "(" at character 130
+2019-05-08 11:53:25.456 WIB [1750] STATEMENT:  SELECT reg_id, reg_nama, reg_email, reg_date,        (reg_pribadi ->> "kk") AS kk,        (reg_pribadi ->> "nik") AS nik         (reg_pribadi ->> "noHP") AS noHP,        (reg_pribadi ->> "agama") AS agama,        mst.agama_get_detail(reg_pribadi ->> "agama") AS agama_nama         FROM mst.registrasi          WHERE reg_id = 'dedysty811230'
+2019-05-08 11:53:43.925 WIB [1751] ERROR:  column "kk" does not exist at character 70
+2019-05-08 11:53:43.925 WIB [1751] STATEMENT:  SELECT reg_id, reg_nama, reg_email, reg_date,        reg_pribadi ->> "kk" AS kk         FROM mst.registrasi          WHERE reg_id = 'dedysty811230'
+2019-05-08 11:54:07.291 WIB [1754] ERROR:  column "kk" does not exist at character 71
+2019-05-08 11:54:07.291 WIB [1754] STATEMENT:  SELECT reg_id, reg_nama, reg_email, reg_date,        (reg_pribadi ->> "kk") AS kk         FROM mst.registrasi          WHERE reg_id = 'dedysty811230'
+2019-05-08 12:31:37.187 WIB [1868] ERROR:  syntax error at or near "(" at character 91
+2019-05-08 12:31:37.187 WIB [1868] STATEMENT:  SELECT reg_id, reg_nama, reg_email, reg_date,        (reg_pribadi ->> 'kk') AS kk         (reg_pribadi ->> 'nik') AS nik         (reg_pribadi ->> 'noHP') AS noHP,        (reg_pribadi ->> 'agama') AS agama,        mst.agama_get_detail(reg_pribadi ->> 'agama') AS agama_nama,        (reg_pribadi ->> 'pekerjaan' ) AS pekerjaan,        (reg_alamat ->> 'rt') AS rt,        (reg_alamat ->> 'rw') AS rw,        (reg_alamat ->> 'kota') AS kota,        (reg_alamat ->> 'alamat') AS alamat,        (reg_alamat ->> 'kodePOS') AS kodepos,        (reg_alamat ->> 'propinsi') AS propinsi,        mst.propinsi_get_detail(reg_alamat ->> 'propinsi') AS propinsi_nama,        (reg_alamat ->> 'kota') AS kota,        mst.kota_get_detail(reg_alamat ->> 'kota') as kota_nama,        (reg_alamat ->> 'kecamatan') AS kecamatan,         mst.kecamatan_get_detail(reg_alamat ->> 'kecamatan') AS kecamatan_nama,        (reg_alamat ->> 'kelurahan') AS kelurahan,        mst.kelurahan_get_detail(reg_alamat ->> 'keluarahan') AS keluarahan_nama,        (reg_alamat_ktp ->> 'rtK') AS rtKTP,        (reg_alamat_ktp ->> 'rwKTP') AS rwKTP,         (reg_alamat_ktp ->> 'kotaKTP') AS kotaKTP,         (reg_alamat_ktp ->> 'alamatKTP') AS alamatKTP,         (reg_alamat_ktp ->> 'kodePOSKTP') AS kodeposKTP,         (reg_alamat_ktp ->> 'propinsiKTP') AS propinsiKTP,         mst.propinsi_get_detail(reg_alamat_ktp ->> 'propinsiKTP') AS propinsiKTP_nama,          (reg_alamat_ktp ->> 'kotaKTP') AS kotaKTP,         mst.kota_get_detail(reg_alamat_ktp ->> 'kotaKTP') as kotaKTP_nama,        (reg_alamat_ktp ->> 'kecamatanKTP') AS kecamatanKTP,        mst.kecamatan_get_detail(reg_alamat_ktp ->> 'kecamatanKTP') AS kecamatanKTP_nama,         (reg_alamat_ktp ->> 'kelurahanKTP') AS kelurahanKTP,        mst.kelurahan_get_detail(reg_alamat_ktp ->> 'kelurahanKTP') AS keluarahanKTP_nama          FROM mst.registrasi          WHERE reg_id = 'dedysty811230'
+2019-05-08 12:32:15.298 WIB [1871] ERROR:  syntax error at or near "(" at character 91
+2019-05-08 12:32:15.298 WIB [1871] STATEMENT:  SELECT reg_id, reg_nama, reg_email, reg_date,        (reg_pribadi ->> 'kk') AS kk         (reg_pribadi ->> 'nik') AS nik         (reg_pribadi ->> 'noHP') AS noHP,        (reg_pribadi ->> 'agama') AS agama         FROM mst.registrasi          WHERE reg_id = 'dedysty811230'
+2019-05-08 12:32:30.779 WIB [1873] ERROR:  syntax error at or near "(" at character 91
+2019-05-08 12:32:30.779 WIB [1873] STATEMENT:  SELECT reg_id, reg_nama, reg_email, reg_date,        (reg_pribadi ->> 'kk') AS kk         (reg_pribadi ->> 'nik') AS nik         (reg_pribadi ->> 'noHP') AS noHP,        (reg_pribadi ->> 'agama') AS agama         FROM mst.registrasi          WHERE reg_id = 'dedysty811230'
+2019-05-08 13:07:45.460 WIB [1439] ERROR:  unterminated quoted identifier at or near ""; 
+	BEGIN
+		maritalnama := marital_nama FROM mst.marital WHERE marital_id = p_marital;
+	RETURN maritalnama;
+	END
+	" at character 142
+2019-05-08 13:07:45.460 WIB [1439] STATEMENT:  CREATE OR REPLACE FUNCTION "mst"."marital_get_detail"("p_marital" text)
+	  RETURNS "pg_catalog"."text" AS $BODY$DECLARE 
+		 maritalnama text = "; 
+	BEGIN
+		maritalnama := marital_nama FROM mst.marital WHERE marital_id = p_marital;
+	RETURN maritalnama;
+	END
+	$BODY$
+	  LANGUAGE plpgsql VOLATILE
+	  COST 100
+2019-05-08 13:08:51.353 WIB [1439] ERROR:  zero-length delimited identifier at or near """" at character 142
+2019-05-08 13:08:51.353 WIB [1439] STATEMENT:  CREATE OR REPLACE FUNCTION "mst"."marital_get_detail"("p_marital" text)
+	  RETURNS "pg_catalog"."text" AS $BODY$DECLARE 
+		 maritalnama text = ""; 
+	BEGIN
+		maritalnama := marital_nama FROM mst.marital WHERE marital_id = p_marital;
+	RETURN maritalnama;
+	END
+	$BODY$
+	  LANGUAGE plpgsql VOLATILE
+	  COST 100
+2019-05-08 13:09:01.210 WIB [1439] ERROR:  zero-length delimited identifier at or near """" at character 142
+2019-05-08 13:09:01.210 WIB [1439] STATEMENT:  CREATE OR REPLACE FUNCTION "mst"."marital_get_detail"("p_marital" text)
+	  RETURNS "pg_catalog"."text" AS $BODY$DECLARE 
+		 maritalnama text = ""; 
+	BEGIN
+		maritalnama := marital_nama FROM mst.marital WHERE marital_id = p_marital;
+	RETURN maritalnama;
+	END
+	$BODY$
+	  LANGUAGE plpgsql VOLATILE
+	  COST 100
+2019-05-08 13:09:24.953 WIB [1439] ERROR:  operator does not exist: integer = text at character 55
+2019-05-08 13:09:24.953 WIB [1439] HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+2019-05-08 13:09:24.953 WIB [1439] QUERY:  SELECT marital_nama FROM mst.marital WHERE marital_id = p_marital
+2019-05-08 13:09:24.953 WIB [1439] CONTEXT:  PL/pgSQL function marital_get_detail(text) line 4 at assignment
+2019-05-08 13:09:24.953 WIB [1439] STATEMENT:  select mst.marital_get_detail('1')
+2019-05-08 13:09:53.329 WIB [1439] ERROR:  function json_array_elements(jsonb) does not exist at character 161
+2019-05-08 13:09:53.329 WIB [1439] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2019-05-08 13:09:53.329 WIB [1439] STATEMENT:  -- {"rt": "05", "rw": "06", "kota": 3374, "alamat": "SEMARANG", "kodePOS": "50192", "propinsi": 33, "kecamatan": "3374080", "kelurahan": "3374080006"}
+	
+	SELECT 
+	json_array_elements(reg_pribadi)  FROM mst.registrasi
+2019-05-08 13:10:51.062 WIB [2028] ERROR:  function mst.marital_get_detail(text) does not exist at character 542
+2019-05-08 13:10:51.062 WIB [2028] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2019-05-08 13:10:51.062 WIB [2028] STATEMENT:  SELECT reg_id, reg_nama, reg_email, TO_CHAR(reg_date,'DD/MM/YYYY') AS reg_date,        (reg_pribadi ->> 'tempatLahir') AS tempatLahir,         (reg_pribadi ->> 'tanggalLahir') AS tanggalLahir,         (reg_pribadi ->> 'nik') AS nik,         (reg_pribadi ->> 'kk') AS kk,         (reg_pribadi ->> 'noHP') AS noHP,        (reg_pribadi ->> 'pekerjaan' ) AS pekerjaan,        (reg_pribadi ->> 'agama') AS agama,         mst.agama_get_detail(reg_pribadi ->> 'agama') AS agama_nama,         (reg_pribadi ->> 'statusNikah') AS statusNikah,         mst.marital_get_detail(reg_pribadi ->> 'statusNikah') AS statusNikah_nama,         (reg_alamat ->> 'rt') AS rt,        (reg_alamat ->> 'rw') AS rw,        (reg_alamat ->> 'kota') AS kota,        (reg_alamat ->> 'alamat') AS alamat,        (reg_alamat ->> 'kodePOS') AS kodepos,        (reg_alamat ->> 'propinsi') AS propinsi,        mst.propinsi_get_detail(reg_alamat ->> 'propinsi') AS propinsi_nama,        (reg_alamat ->> 'kota') AS kota,        mst.kota_get_detail(reg_alamat ->> 'kota') as kota_nama,        (reg_alamat ->> 'kecamatan') AS kecamatan,         mst.kecamatan_get_detail(reg_alamat ->> 'kecamatan') AS kecamatan_nama,        (reg_alamat ->> 'kelurahan') AS kelurahan,        mst.kelurahan_get_detail(reg_alamat ->> 'keluarahan') AS keluarahan_nama,        (reg_alamat_ktp ->> 'rtK') AS rtKTP,        (reg_alamat_ktp ->> 'rwKTP') AS rwKTP,         (reg_alamat_ktp ->> 'kotaKTP') AS kotaKTP,         (reg_alamat_ktp ->> 'alamatKTP') AS alamatKTP,         (reg_alamat_ktp ->> 'kodePOSKTP') AS kodeposKTP,         (reg_alamat_ktp ->> 'propinsiKTP') AS propinsiKTP,         mst.propinsi_get_detail(reg_alamat_ktp ->> 'propinsiKTP') AS propinsiKTP_nama,          (reg_alamat_ktp ->> 'kotaKTP') AS kotaKTP,         mst.kota_get_detail(reg_alamat_ktp ->> 'kotaKTP') as kotaKTP_nama,        (reg_alamat_ktp ->> 'kecamatanKTP') AS kecamatanKTP,        mst.kecamatan_get_detail(reg_alamat_ktp ->> 'kecamatanKTP') AS kecamatanKTP_nama,         (reg_alamat_ktp ->> 'kelurahanKTP') AS kelurahanKTP,        mst.kelurahan_get_detail(reg_alamat_ktp ->> 'kelurahanKTP') AS keluarahanKTP_nama          FROM mst.registrasi          WHERE reg_id = 'dedysty811230'
+2019-05-08 13:12:09.572 WIB [2034] ERROR:  function to_char(text, unknown) does not exist at character 144
+2019-05-08 13:12:09.572 WIB [2034] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2019-05-08 13:12:09.572 WIB [2034] STATEMENT:  SELECT reg_id, reg_nama, reg_email, TO_CHAR(reg_date,'DD/MM/YYYY') AS reg_date,        (reg_pribadi ->> 'tempatLahir') AS tempatLahir,         TO_CHAR((reg_pribadi ->> 'tanggalLahir'),'DD/MM/YYYY')  AS tanggalLahir,         (reg_pribadi ->> 'nik') AS nik,         (reg_pribadi ->> 'kk') AS kk,         (reg_pribadi ->> 'noHP') AS noHP,        (reg_pribadi ->> 'pekerjaan' ) AS pekerjaan,        (reg_pribadi ->> 'agama') AS agama,         mst.agama_get_detail(reg_pribadi ->> 'agama') AS agama_nama,         (reg_pribadi ->> 'statusNikah') AS statusNikah,         mst.marital_get_detail((reg_pribadi ->> 'statusNikah')::int) AS statusNikah_nama,         (reg_alamat ->> 'rt') AS rt,        (reg_alamat ->> 'rw') AS rw,        (reg_alamat ->> 'kota') AS kota,        (reg_alamat ->> 'alamat') AS alamat,        (reg_alamat ->> 'kodePOS') AS kodepos,        (reg_alamat ->> 'propinsi') AS propinsi,        mst.propinsi_get_detail(reg_alamat ->> 'propinsi') AS propinsi_nama,        (reg_alamat ->> 'kota') AS kota,        mst.kota_get_detail(reg_alamat ->> 'kota') as kota_nama,        (reg_alamat ->> 'kecamatan') AS kecamatan,         mst.kecamatan_get_detail(reg_alamat ->> 'kecamatan') AS kecamatan_nama,        (reg_alamat ->> 'kelurahan') AS kelurahan,        mst.kelurahan_get_detail(reg_alamat ->> 'keluarahan') AS keluarahan_nama,        (reg_alamat_ktp ->> 'rtK') AS rtKTP,        (reg_alamat_ktp ->> 'rwKTP') AS rwKTP,         (reg_alamat_ktp ->> 'kotaKTP') AS kotaKTP,         (reg_alamat_ktp ->> 'alamatKTP') AS alamatKTP,         (reg_alamat_ktp ->> 'kodePOSKTP') AS kodeposKTP,         (reg_alamat_ktp ->> 'propinsiKTP') AS propinsiKTP,         mst.propinsi_get_detail(reg_alamat_ktp ->> 'propinsiKTP') AS propinsiKTP_nama,          (reg_alamat_ktp ->> 'kotaKTP') AS kotaKTP,         mst.kota_get_detail(reg_alamat_ktp ->> 'kotaKTP') as kotaKTP_nama,        (reg_alamat_ktp ->> 'kecamatanKTP') AS kecamatanKTP,        mst.kecamatan_get_detail(reg_alamat_ktp ->> 'kecamatanKTP') AS kecamatanKTP_nama,         (reg_alamat_ktp ->> 'kelurahanKTP') AS kelurahanKTP,        mst.kelurahan_get_detail(reg_alamat_ktp ->> 'kelurahanKTP') AS keluarahanKTP_nama          FROM mst.registrasi          WHERE reg_id = 'dedysty811230'
+2019-05-08 15:49:11.602 WIB [1439] ERROR:  function json_array_elements(jsonb) does not exist at character 161
+2019-05-08 15:49:11.602 WIB [1439] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2019-05-08 15:49:11.602 WIB [1439] STATEMENT:  -- {"rt": "05", "rw": "06", "kota": 3374, "alamat": "SEMARANG", "kodePOS": "50192", "propinsi": 33, "kecamatan": "3374080", "kelurahan": "3374080006"}
+	
+	SELECT 
+	json_array_elements(reg_pribadi)  FROM mst.registrasi
+2019-05-09 08:09:17.406 WIB [24] LOG:  stats_timestamp 2019-05-09 08:09:17.409586+07 is later than collector's time 2019-05-09 08:09:17.405271+07 for database 81921

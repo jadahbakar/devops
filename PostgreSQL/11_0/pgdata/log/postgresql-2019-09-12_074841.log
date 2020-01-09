@@ -1,0 +1,24 @@
+2019-09-12 07:48:41.202 WIB [19] LOG:  database system was interrupted; last known up at 2019-09-11 02:43:37 WIB
+2019-09-12 07:48:55.565 WIB [19] LOG:  database system was not properly shut down; automatic recovery in progress
+2019-09-12 07:48:55.791 WIB [19] LOG:  redo starts at 0/FD8A128
+2019-09-12 07:48:55.792 WIB [19] LOG:  invalid record length at 0/FD8A160: wanted 24, got 0
+2019-09-12 07:48:55.792 WIB [19] LOG:  redo done at 0/FD8A128
+2019-09-12 07:48:56.299 WIB [1] LOG:  database system is ready to accept connections
+2019-09-12 12:16:44.306 WIB [72] ERROR:  relation "mst.userinfo" does not exist at character 13
+2019-09-12 12:16:44.306 WIB [72] STATEMENT:  INSERT INTO mst.userinfo(username,departname,created) VALUES($1,$2,$3) returning uid;
+2019-09-12 12:18:01.423 WIB [77] ERROR:  relation "mst.userinfo" does not exist at character 13
+2019-09-12 12:18:01.423 WIB [77] STATEMENT:  INSERT INTO mst.userinfo(username,departname) VALUES($1,$2,$3) returning uid;
+2019-09-12 12:18:17.121 WIB [78] ERROR:  relation "mst.userinfo" does not exist at character 13
+2019-09-12 12:18:17.121 WIB [78] STATEMENT:  INSERT INTO mst.userinfo(username,departname) VALUES($1,$2,$3) returning uid;
+2019-09-12 13:49:09.321 WIB [89] ERROR:  relation "mst.userinfo" does not exist at character 13
+2019-09-12 13:49:09.321 WIB [89] STATEMENT:  INSERT INTO mst.userinfo(username,departname) VALUES($1,$2,$3) returning uid;
+2019-09-12 13:49:40.643 WIB [92] ERROR:  database "testing" is being accessed by other users
+2019-09-12 13:49:40.643 WIB [92] DETAIL:  There are 3 other sessions using the database.
+2019-09-12 13:49:40.643 WIB [92] STATEMENT:  DROP DATABASE "testing"
+2019-09-12 13:53:51.855 WIB [114] ERROR:  column "departname" of relation "userinfo" does not exist at character 35
+2019-09-12 13:53:51.855 WIB [114] STATEMENT:  INSERT INTO mst.userinfo(username,departname) VALUES($1,$2,$3) returning uid;
+2019-09-12 13:54:22.584 WIB [117] ERROR:  INSERT has more expressions than target columns at character 60
+2019-09-12 13:54:22.584 WIB [117] STATEMENT:  INSERT INTO mst.userinfo(username,department) VALUES($1,$2,$3) returning uid;
+2019-09-12 14:08:16.904 WIB [24] LOG:  stats_timestamp 2019-09-12 14:08:16.909824+07 is later than collector's time 2019-09-12 14:08:16.904606+07 for database 221184
+2019-09-12 15:13:13.050 WIB [24] LOG:  stats_timestamp 2019-09-12 15:13:13.073912+07 is later than collector's time 2019-09-12 15:13:13.050909+07 for database 0
+2019-09-13 11:32:38.547 WIB [24] LOG:  stats_timestamp 2019-09-13 11:32:38.556189+07 is later than collector's time 2019-09-13 11:32:38.546702+07 for database 0

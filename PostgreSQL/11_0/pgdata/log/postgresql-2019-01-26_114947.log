@@ -1,0 +1,31 @@
+2019-01-26 11:49:47.655 WIB [19] LOG:  database system was interrupted; last known up at 2019-01-25 05:27:39 WIB
+2019-01-26 11:50:04.688 WIB [19] LOG:  database system was not properly shut down; automatic recovery in progress
+2019-01-26 11:50:05.039 WIB [19] LOG:  redo starts at 0/584DB50
+2019-01-26 11:50:05.040 WIB [19] LOG:  invalid record length at 0/584DB88: wanted 24, got 0
+2019-01-26 11:50:05.040 WIB [19] LOG:  redo done at 0/584DB50
+2019-01-26 11:50:06.088 WIB [1] LOG:  database system is ready to accept connections
+2019-01-26 14:23:09.291 WIB [26] FATAL:  password authentication failed for user "postgres"
+2019-01-26 14:23:09.291 WIB [26] DETAIL:  Password does not match for user "postgres".
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-01-26 14:24:11.272 WIB [29] FATAL:  password authentication failed for user "test"
+2019-01-26 14:24:11.272 WIB [29] DETAIL:  Password does not match for user "test".
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-01-26 14:24:17.462 WIB [31] FATAL:  password authentication failed for user "test"
+2019-01-26 14:24:17.462 WIB [31] DETAIL:  Password does not match for user "test".
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-01-26 14:27:26.352 WIB [37] ERROR:  type "ltree" does not exist at character 74
+2019-01-26 14:27:26.352 WIB [37] STATEMENT:  
+	create table tree(
+	    id serial primary key,
+	    letter char,
+	    path ltree
+	);
+	create index tree_path_idx on tree using gist (path);
+2019-01-26 14:28:02.094 WIB [37] ERROR:  permission denied to create extension "ltree"
+2019-01-26 14:28:02.094 WIB [37] HINT:  Must be superuser to create this extension.
+2019-01-26 14:28:02.094 WIB [37] STATEMENT:  CREATE EXTENSION ltree;
+	
+2019-01-26 14:36:33.567 WIB [37] ERROR:  unterminated quoted string at or near "' @> path;
+	" at character 37
+2019-01-26 14:36:33.567 WIB [37] STATEMENT:  select count(*) from tree where ‘A.C' @> path;
+	

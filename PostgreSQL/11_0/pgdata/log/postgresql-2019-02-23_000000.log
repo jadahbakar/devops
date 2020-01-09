@@ -1,0 +1,5 @@
+2019-02-23 09:43:11.038 WIB [26] LOG:  stats_timestamp 2019-02-23 09:43:11.043137+07 is later than collector's time 2019-02-23 09:43:11.038142+07 for database 81921
+2019-02-23 11:02:06.281 WIB [26] LOG:  stats_timestamp 2019-02-23 11:02:06.292298+07 is later than collector's time 2019-02-23 11:02:06.281308+07 for database 0
+2019-02-24 08:22:26.227 WIB [1790] FATAL:  password authentication failed for user "test"
+2019-02-24 08:22:26.227 WIB [1790] DETAIL:  Password does not match for user "test".
+	Connection matched pg_hba.conf line 95: "host all all all md5"

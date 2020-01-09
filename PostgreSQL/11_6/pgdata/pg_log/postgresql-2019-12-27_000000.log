@@ -1,0 +1,14 @@
+2019-12-27 01:45:14.442 UTC [34] FATAL:  password authentication failed for user "teknotama"
+2019-12-27 01:45:14.442 UTC [34] DETAIL:  Password does not match for user "teknotama".
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-12-27 01:45:28.226 UTC [35] FATAL:  password authentication failed for user "teknotama"
+2019-12-27 01:45:28.226 UTC [35] DETAIL:  Password does not match for user "teknotama".
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-12-27 01:45:32.842 UTC [36] FATAL:  password authentication failed for user "teknotama"
+2019-12-27 01:45:32.842 UTC [36] DETAIL:  Password does not match for user "teknotama".
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-12-27 01:46:13.799 UTC [38] FATAL:  password authentication failed for user "teknotama"
+2019-12-27 01:46:13.799 UTC [38] DETAIL:  Password does not match for user "teknotama".
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-12-27 02:48:36.313 UTC [31] LOG:  stats_timestamp 2019-12-27 09:48:36.313751+07 is later than collector's time 2019-12-27 09:48:36.313094+07 for database 32768
+2019-12-27 02:49:36.273 UTC [31] LOG:  stats_timestamp 2019-12-27 09:49:36.275412+07 is later than collector's time 2019-12-27 09:49:36.273054+07 for database 0

@@ -1,0 +1,29 @@
+2019-03-20 22:44:30.698 WIB [12103] ERROR:  permission denied to create extension "pgcrypto"
+2019-03-20 22:44:30.698 WIB [12103] HINT:  Must be superuser to create this extension.
+2019-03-20 22:44:30.698 WIB [12103] STATEMENT:  CREATE EXTENSION IF NOT EXISTS pgcrypto WITH SCHEMA public;
+	
+	
+	
+2019-03-20 22:44:30.705 WIB [12103] ERROR:  extension "pgcrypto" does not exist
+2019-03-20 22:44:30.705 WIB [12103] STATEMENT:  COMMENT ON EXTENSION pgcrypto IS 'cryptographic functions';
+	
+	
+	
+2019-03-20 22:45:16.206 WIB [12106] ERROR:  permission denied to create extension "pgcrypto"
+2019-03-20 22:45:16.206 WIB [12106] HINT:  Must be superuser to create this extension.
+2019-03-20 22:45:16.206 WIB [12106] STATEMENT:  CREATE EXTENSION pgcrypto;
+2019-03-20 22:45:42.933 WIB [12110] FATAL:  password authentication failed for user "postgres"
+2019-03-20 22:45:42.933 WIB [12110] DETAIL:  Password does not match for user "postgres".
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-03-20 22:48:31.397 WIB [12111] ERROR:  database "eplanning_190121" is being accessed by other users
+2019-03-20 22:48:31.397 WIB [12111] DETAIL:  There are 2 other sessions using the database.
+2019-03-20 22:48:31.397 WIB [12111] STATEMENT:  DROP DATABASE eplanning_190121;
+	
+2019-03-20 22:48:49.614 WIB [12121] ERROR:  database "eplanning_190121" is being accessed by other users
+2019-03-20 22:48:49.614 WIB [12121] DETAIL:  There are 2 other sessions using the database.
+2019-03-20 22:48:49.614 WIB [12121] STATEMENT:  DROP DATABASE eplanning_190121;
+	
+2019-03-20 22:49:06.775 WIB [12121] ERROR:  database "eplanning_190121" is being accessed by other users
+2019-03-20 22:49:06.775 WIB [12121] DETAIL:  There is 1 other session using the database.
+2019-03-20 22:49:06.775 WIB [12121] STATEMENT:  DROP DATABASE eplanning_190121;
+	

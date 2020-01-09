@@ -1,0 +1,10 @@
+2019-04-16 20:42:00.215 WIB [19] LOG:  database system was interrupted; last known up at 2019-04-16 20:36:56 WIB
+2019-04-16 20:42:19.167 WIB [19] LOG:  database system was not properly shut down; automatic recovery in progress
+2019-04-16 20:42:19.376 WIB [19] LOG:  redo starts at 0/A772770
+2019-04-16 20:42:19.376 WIB [19] LOG:  invalid record length at 0/A7727A8: wanted 24, got 0
+2019-04-16 20:42:19.376 WIB [19] LOG:  redo done at 0/A772770
+2019-04-16 20:42:19.928 WIB [1] LOG:  database system is ready to accept connections
+2019-04-16 20:58:43.771 WIB [26] FATAL:  database "planning" does not exist
+2019-04-16 20:58:50.210 WIB [27] FATAL:  database "planning" does not exist
+2019-04-16 20:58:52.365 WIB [28] FATAL:  database "planning" does not exist
+2019-04-16 20:58:53.311 WIB [29] FATAL:  database "planning" does not exist

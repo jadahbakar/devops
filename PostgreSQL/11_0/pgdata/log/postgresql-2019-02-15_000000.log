@@ -1,0 +1,98 @@
+2019-02-15 10:11:39.936 WIB [24] LOG:  stats_timestamp 2019-02-15 10:11:39.940403+07 is later than collector's time 2019-02-15 10:11:39.935982+07 for database 81921
+2019-02-15 10:28:02.854 WIB [1617] ERROR:  syntax error at or near "crypt" at character 1
+2019-02-15 10:28:02.854 WIB [1617] STATEMENT:  crypt
+2019-02-15 10:38:11.780 WIB [1617] ERROR:  syntax error at or near "$" at character 207
+2019-02-15 10:38:11.780 WIB [1617] STATEMENT:  CREATE OR REPLACE FUNCTION sec.users_wud(p_action TEXT,p_user_id INTEGER,p_user_nama TEXT,p_user_pass TEXT,p_user_email TEXT,p_user_role TEXT, p_user_sts INTEGER)
+	    RETURNS TEXT
+	    LANGUAGE 'plpgsql'
+	AS $BODY
+	$DECLARE
+		 xsts TEXT = 'fail'; 
+	BEGIN 
+	
+	CASE 
+		WHEN p_action = 'i' THEN
+		BEGIN
+			IF NOT EXISTS (SELECT user_nama FROM sec.userid WHERE user_nama = p_user_nama) THEN
+				INSERT INTO sec.users(user_id, user_nama, user_pass, user_email, user_role) 
+				VALUES (p_user_id, upper(p_user_nama), p_user_pass, p_user_email, p_user_role::INTEGER); 
+				xsts = 'pass';
+			END IF;
+		END;
+		
+		WHEN p_action = 'u' THEN
+		BEGIN
+			IF EXISTS (SELECT user_id FROM sec.userid WHERE user_id = p_user_id) THEN
+				UPDATE sec.users SET 
+					user_nama = upper(p_user_nama),
+					user_pass = p_user_pass,
+					useremail = p_user_email,
+					user_role = p_user_role::integer
+				WHERE user_id = p_user_id;
+				xsts = 'pass';
+			END IF;
+		END;
+		
+		WHEN p_action = 'd' THEN 
+		BEGIN
+			IF EXISTS (SELECT user_id FROM sec.user_id WHERE user_id	= p_user_id) THEN
+				UPDATE sec.userid SET user_sts = 0 WHERE user_id = p_user_id;
+				xsts = 'pass';
+			END IF;
+		END;
+		
+		WHEN p_action = 'a' THEN 
+		BEGIN	
+			IF EXISTS (SELECT user_id FROM sec.userid WHERE user_id	= p_user_id) THEN
+				UPDATE sec.userid SET user_sts = 1 WHERE user_id = p_user_id;
+				xsts = 'pass';
+			END IF;
+		END;
+	
+	END CASE;
+	RETURN xsts;
+	END
+	$BODY$;
+2019-02-15 10:46:27.138 WIB [1617] ERROR:  invalid input syntax for integer: "dedy3012" at character 30
+2019-02-15 10:46:27.138 WIB [1617] STATEMENT:  
+	SELECT sec.userid_wud ('i', 'dedy3012', 'dedy styawan', 'a', 'dedy.styawan@gmail.com', '1', 1 );
+	
+2019-02-15 10:47:02.317 WIB [1617] ERROR:  invalid input syntax for integer: "dedy3012" at character 29
+2019-02-15 10:47:02.317 WIB [1617] STATEMENT:  SELECT sec.userid_wud ('i', 'dedy3012', 'dedy styawan', 'a', 'dedy.styawan@gmail.com', '1', 1 );
+	
+2019-02-15 10:58:07.021 WIB [24] LOG:  stats_timestamp 2019-02-15 10:58:07.325151+07 is later than collector's time 2019-02-15 10:58:07.021339+07 for database 81921
+2019-02-15 10:59:19.630 WIB [1617] ERROR:  relation "sec.users" does not exist at character 13
+2019-02-15 10:59:19.630 WIB [1617] QUERY:  INSERT INTO sec.users(user_id, user_nama, user_pass, user_email, user_role) 
+				VALUES (p_user_id, upper(p_user_nama), p_user_pass, p_user_email, p_user_role::INTEGER)
+2019-02-15 10:59:19.630 WIB [1617] CONTEXT:  PL/pgSQL function sec.userid_wud(text,text,text,text,text,text,integer) line 9 at SQL statement
+2019-02-15 10:59:19.630 WIB [1617] STATEMENT:  
+	SELECT sec.userid_wud ('i', 'dedy3012', 'dedy styawan', 'a', 'dedy.styawan@gmail.com', '1', 1 );
+	
+2019-02-15 11:10:25.503 WIB [1617] ERROR:  relation "sec.user_id" does not exist at character 36
+2019-02-15 11:10:25.503 WIB [1617] QUERY:  SELECT EXISTS (SELECT user_id FROM sec.user_id WHERE user_id = p_user_id)
+2019-02-15 11:10:25.503 WIB [1617] CONTEXT:  PL/pgSQL function sec.userid_wud(text,text,text,text,text,text,integer) line 30 at IF
+2019-02-15 11:10:25.503 WIB [1617] STATEMENT:  
+	SELECT sec.userid_wud('d', 'dedy3012', 'dedy styawan', 'a', 'dedy.styawan@gmail.com', '1', 1 );
+	
+	
+2019-02-15 11:11:15.722 WIB [1617] ERROR:  syntax error at or near "*" at character 8
+2019-02-15 11:11:15.722 WIB [1617] STATEMENT:  delete * from sec.userid;
+	
+2019-02-15 11:21:56.220 WIB [1617] ERROR:  column "p_username" does not exist at character 139
+2019-02-15 11:21:56.220 WIB [1617] QUERY:  SELECT row_to_json(t) FROM  
+			(
+				SELECT user_id, user_nama, user_sts, user_email, user_role
+				FROM sec.userid 
+				WHERE
+					user_id = p_username AND  
+					user_pass = crypt(p_userpass, user_pass)
+			) t
+2019-02-15 11:21:56.220 WIB [1617] CONTEXT:  PL/pgSQL function sec.users_login(text,text) line 2 at RETURN QUERY
+2019-02-15 11:21:56.220 WIB [1617] STATEMENT:  SELECT sec.users_login('dedy3012','a');
+	
+2019-02-15 11:24:16.205 WIB [1617] ERROR:  function sec.users_login(unknown, unknown) does not exist at character 9
+2019-02-15 11:24:16.205 WIB [1617] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2019-02-15 11:24:16.205 WIB [1617] STATEMENT:  
+	SELECT sec.users_login('dedy3012','a');
+	
+2019-02-15 14:04:53.536 WIB [24] LOG:  stats_timestamp 2019-02-15 14:04:53.538907+07 is later than collector's time 2019-02-15 14:04:53.536725+07 for database 81921

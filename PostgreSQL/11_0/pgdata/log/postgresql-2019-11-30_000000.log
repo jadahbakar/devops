@@ -1,0 +1,18 @@
+2019-11-30 11:39:12.915 WIB [24] LOG:  stats_timestamp 2019-11-30 11:39:12.924933+07 is later than collector's time 2019-11-30 11:39:12.915034+07 for database 221184
+2019-11-30 13:28:15.742 WIB [24] LOG:  stats_timestamp 2019-11-30 13:28:15.752879+07 is later than collector's time 2019-11-30 13:28:15.742944+07 for database 1
+2019-11-30 13:39:15.020 WIB [10260] ERROR:  permission denied for schema mst at character 15
+2019-11-30 13:39:15.020 WIB [10260] STATEMENT:  SELECT * FROM "mst"."cabang_bpd" LIMIT 1000 OFFSET 0
+2019-11-30 13:39:24.089 WIB [10260] ERROR:  permission denied for schema mst
+2019-11-30 13:39:24.089 WIB [10260] STATEMENT:  ALTER TABLE "mst"."cabang_bpd" RENAME TO "cabang";
+2019-11-30 13:39:31.671 WIB [10260] ERROR:  permission denied for schema mst
+2019-11-30 13:39:31.671 WIB [10260] STATEMENT:  ALTER TABLE "mst"."cabang_bpd" RENAME TO "cabang";
+2019-11-30 13:39:47.826 WIB [10260] ERROR:  permission denied for schema mst
+2019-11-30 13:39:47.826 WIB [10260] STATEMENT:  ALTER TABLE "mst"."cabang_bpd" RENAME TO "cabang";
+2019-11-30 13:46:33.653 WIB [10271] ERROR:  null value in column "wilayah_nama" violates not-null constraint
+2019-11-30 13:46:33.653 WIB [10271] DETAIL:  Failing row contains (1, null).
+2019-11-30 13:46:33.653 WIB [10271] STATEMENT:  INSERT INTO mst.wilayah (wilayah_id)  
+	SELECT cabang_wilayah from mst.cabang group by cabang_wilayah Order by cabang_wilayah
+2019-11-30 13:52:14.339 WIB [24] LOG:  stats_timestamp 2019-11-30 13:52:14.34788+07 is later than collector's time 2019-11-30 13:52:14.339897+07 for database 344084
+2019-11-30 15:55:37.173 WIB [24] LOG:  stats_timestamp 2019-11-30 15:55:37.181683+07 is later than collector's time 2019-11-30 15:55:37.173144+07 for database 81921
+2019-11-30 15:56:37.130 WIB [24] LOG:  stats_timestamp 2019-11-30 15:56:37.133663+07 is later than collector's time 2019-11-30 15:56:37.130631+07 for database 0
+2019-11-30 15:59:06.954 WIB [24] LOG:  stats_timestamp 2019-11-30 15:59:06.963354+07 is later than collector's time 2019-11-30 15:59:06.954716+07 for database 0

@@ -1,0 +1,11 @@
+2019-12-16 01:31:11.070 UTC [26] LOG:  database system was interrupted; last known up at 2019-12-16 01:07:41 UTC
+2019-12-16 01:31:19.254 UTC [26] LOG:  database system was not properly shut down; automatic recovery in progress
+2019-12-16 01:31:19.393 UTC [26] LOG:  redo starts at 0/2BA8090
+2019-12-16 01:31:19.394 UTC [26] LOG:  invalid record length at 0/2BA8170: wanted 24, got 0
+2019-12-16 01:31:19.394 UTC [26] LOG:  redo done at 0/2BA8138
+2019-12-16 01:31:19.759 UTC [1] LOG:  database system is ready to accept connections
+2019-12-16 02:13:31.865 UTC [38] ERROR:  permission denied to set role "postgres"
+2019-12-16 02:13:31.865 UTC [38] STATEMENT:  SET ROLE postgres
+2019-12-16 02:14:24.296 UTC [40] FATAL:  password authentication failed for user "postgres"
+2019-12-16 02:14:24.296 UTC [40] DETAIL:  Password does not match for user "postgres".
+	Connection matched pg_hba.conf line 95: "host all all all md5"

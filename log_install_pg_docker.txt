@@ -1,0 +1,63 @@
+
+
+su -l postgres -c "/usr/pgsql-11/bin/initdb --pgdata='/var/lib/pgsql/data' --auth='ident'"  >> "/var/lib/pgsql/initdb.log" 2>&1 < /dev/null
+
+sudo -u postgres -H postgres --single -c config_file=/var/lib/pgsql/data/postgresql.conf -D /var/lib/pgsql/data
+
+su -l postgres -c "config_file=/var/lib/pgsql/data/postgresql.conf -D /var/lib/pgsql/data"
+
+sudo -u postgres -H /var/lib/pgsql -- psql -d postgres -c config_file=/var/lib/pgsql/data/postgresql.conf -D /var/lib/pgsql/data
+
+sudo -u postgres -H -- psql -d postgres -c config_file=/var/lib/pgsql/data/postgresql.conf -D /var/lib/pgsql/data
+
+
+$ pg_ctlcluster 11 main status
+pg_ctl: server is running (PID: 15544)
+/usr/lib/postgresql/11/bin/postgres "-D" "/var/lib/postgresql/11/main" "-c" "config_file=/etc/postgresql/11/main/postgresql.conf"
+
+/usr/pgsql-11/bin/postgres
+/var/lib/pgsql/data
+
+
+/usr/pgsql-11/bin/postgres "-D" "/var/lib/pgsql/data" "-c"  "config_file=/var/lib/pgsql/data/postgresql.conf"
+
+
+/usr/pgsql-11/bin/postgres
+
+
+
+
+
+su -l postgres -c "config_file=/var/lib/pgsql/data/postgresql.conf -D /var/lib/pgsql/data"
+
+
+su -l postgres -c "/usr/pgsql-11/bin/postgres -D /var/lib/pgsql/data -c config_file=/var/lib/pgsql/data/postgresql.conf"
+
+
+sudo su - postgres psql -d postgres -c config_file=/var/lib/pgsql/data/postgresql.conf -D /var/lib/pgsql/data
+
+sudo -u postgres  psql -c "config_file=/var/lib/pgsql/data/postgresql.conf -D /var/lib/pgsql/data"
+
+sudo -u postgres  psql -c "/usr/pgsql-11/bin/postgres -D /var/lib/pgsql/data -c config_file=/var/lib/pgsql/data/postgresql.conf -D /var/lib/pgsql/data"
+
+
+
+sudo -u postgres -H postgres --single /usr/pgsql-11/bin/postgres "-D" "/var/lib/pgsql/data" "-c" "config_file=/var/lib/pgsql/data/postgresql.conf"
+
+
+
+ sudo -u postgres postgres psql -c ALTER USER postgres ENCRYPTED PASSWORD 'postgres*123';"
+
+
+
+
+
+
+
+
+yang ini bisa
+
+sudo -u postgres  /usr/pgsql-11/bin/postgres "-D" "/var/lib/pgsql/data" "-c" "config_file=/var/lib/pgsql/data/postgresql.conf"
+
+
+

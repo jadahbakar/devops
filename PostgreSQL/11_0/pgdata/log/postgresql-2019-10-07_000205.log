@@ -1,0 +1,14 @@
+2019-10-07 00:02:05.293 WIB [19] LOG:  database system was interrupted; last known up at 2019-10-02 22:10:45 WIB
+2019-10-07 00:02:23.855 WIB [19] LOG:  database system was not properly shut down; automatic recovery in progress
+2019-10-07 00:02:24.113 WIB [19] LOG:  redo starts at 0/FE27CD8
+2019-10-07 00:02:24.114 WIB [19] LOG:  invalid record length at 0/FE27D10: wanted 24, got 0
+2019-10-07 00:02:24.114 WIB [19] LOG:  redo done at 0/FE27CD8
+2019-10-07 00:02:24.808 WIB [1] LOG:  database system is ready to accept connections
+2019-10-07 08:30:16.218 WIB [314] ERROR:  function mst.registrasi_to_user_customer(text, text) does not exist
+2019-10-07 08:30:16.218 WIB [314] STATEMENT:  DROP FUNCTION "mst"."registrasi_to_user_customer"("p_regid" text, "p_referal" text)
+2019-10-07 10:34:35.826 WIB [24] LOG:  stats_timestamp 2019-10-07 10:34:35.834181+07 is later than collector's time 2019-10-07 10:34:35.826175+07 for database 0
+2019-10-07 10:48:08.550 WIB [496] ERROR:  column "reg_approve" is of type jsonb but expression is of type text at character 41
+2019-10-07 10:48:08.550 WIB [496] HINT:  You will need to rewrite or cast the expression.
+2019-10-07 10:48:08.550 WIB [496] QUERY:  UPDATE mst.registrasi set reg_approve = p_approve WHERE reg_id = p_regid
+2019-10-07 10:48:08.550 WIB [496] CONTEXT:  PL/pgSQL function mst.registrasi_to_user_customer(text,text,text) line 4 at SQL statement
+2019-10-07 10:48:08.550 WIB [496] STATEMENT:  SELECT mst.registrasi_to_user_customer('dedysty811230', 'dedy@gmail.com', '{"userId":"dedy3012","dateApprove":"2019-10-7 10:48:8"}')

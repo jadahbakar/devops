@@ -1,0 +1,6 @@
+2020-01-08 12:31:56.894 UTC [26] LOG:  database system was interrupted; last known up at 2020-01-07 11:46:31 UTC
+2020-01-08 12:32:14.850 UTC [26] LOG:  database system was not properly shut down; automatic recovery in progress
+2020-01-08 12:32:15.076 UTC [26] LOG:  redo starts at 0/2BAC448
+2020-01-08 12:32:15.077 UTC [26] LOG:  invalid record length at 0/2BAC480: wanted 24, got 0
+2020-01-08 12:32:15.077 UTC [26] LOG:  redo done at 0/2BAC448
+2020-01-08 12:32:15.583 UTC [1] LOG:  database system is ready to accept connections

@@ -1,0 +1,711 @@
+2019-11-25 07:48:28.206 WIB [28] ERROR:  duplicate key value violates unique constraint "userid_pkey"
+2019-11-25 07:48:28.206 WIB [28] DETAIL:  Key (user_id)=(dedysty811230) already exists.
+2019-11-25 07:48:28.206 WIB [28] STATEMENT:  INSERT INTO sec.userid (user_id, user_nama, user_pass, user_email, user_role) 
+				SELECT reg_id, reg_nama, reg_password, reg_email, 4 FROM mst.registrasi
+2019-11-25 08:43:08.541 WIB [29] ERROR:  syntax error at or near "END" at character 924
+2019-11-25 08:43:08.541 WIB [29] STATEMENT:  CREATE OR REPLACE FUNCTION "mst"."_navicat_temp_stored_proc"("p_regid" text, "p_referal" text, "p_approve" text)
+	  RETURNS "pg_catalog"."text" AS $BODY$
+		DECLARE 
+		 status text = 'error'; 
+		 aproval text;
+	BEGIN
+	aproval = '{"userid": "'||p_approve||'","dateApprove":"'||now()::text||'"}';
+	UPDATE mst.registrasi set reg_approve = aproval::jsonb WHERE reg_id = p_regid;
+	
+	IF NOT EXISTS (SELECT customer_id FROM mst.customer WHERE customer_id = p_regid) THEN
+		INSERT INTO mst.customer (customer_id, customer_referal_customer_id, customer_pribadi, customer_alamat, customer_alamat_ktp) 
+			SELECT reg_id, p_referal, reg_pribadi, reg_alamat, reg_alamat_ktp FROM mst.registrasi WHERE reg_id = p_regid;
+		
+			BEGIN 
+			INSERT INTO sec.userid (user_id, user_nama, user_pass, user_email, user_role) 
+				SELECT reg_id, reg_nama, reg_password, reg_email, 4 FROM mst.registrasi;
+			EXCEPTION WHEN unique_violation THEN status = 'duplicate'
+			END; 
+	status = 'success';	
+	END IF;
+	
+	RETURN status;
+	END
+	$BODY$
+	  LANGUAGE plpgsql VOLATILE
+	  COST 100
+2019-11-25 08:43:28.618 WIB [29] ERROR:  syntax error at or near "END" at character 928
+2019-11-25 08:43:28.618 WIB [29] STATEMENT:  CREATE OR REPLACE FUNCTION "mst"."_navicat_temp_stored_proc"("p_regid" text, "p_referal" text, "p_approve" text)
+	  RETURNS "pg_catalog"."text" AS $BODY$
+		DECLARE 
+		 status text = 'error'; 
+		 aproval text;
+	BEGIN
+	aproval = '{"userid": "'||p_approve||'","dateApprove":"'||now()::text||'"}';
+	UPDATE mst.registrasi set reg_approve = aproval::jsonb WHERE reg_id = p_regid;
+	
+	IF NOT EXISTS (SELECT customer_id FROM mst.customer WHERE customer_id = p_regid) THEN
+		INSERT INTO mst.customer (customer_id, customer_referal_customer_id, customer_pribadi, customer_alamat, customer_alamat_ktp) 
+			SELECT reg_id, p_referal, reg_pribadi, reg_alamat, reg_alamat_ktp FROM mst.registrasi WHERE reg_id = p_regid;
+			
+			BEGIN 
+				INSERT INTO sec.userid (user_id, user_nama, user_pass, user_email, user_role) 
+					SELECT reg_id, reg_nama, reg_password, reg_email, 4 FROM mst.registrasi;
+				EXCEPTION WHEN unique_violation THEN status = 'duplicate'
+			END;
+			
+	status = 'success';	
+	END IF;
+	
+	RETURN status;
+	END
+	$BODY$
+	  LANGUAGE plpgsql VOLATILE
+	  COST 100
+2019-11-25 08:43:40.002 WIB [28] ERROR:  duplicate key value violates unique constraint "userid_pkey"
+2019-11-25 08:43:40.002 WIB [28] DETAIL:  Key (user_id)=(dedysty811230) already exists.
+2019-11-25 08:43:40.002 WIB [28] STATEMENT:  INSERT INTO sec.userid (user_id, user_nama, user_pass, user_email, user_role) 
+				SELECT reg_id, reg_nama, reg_password, reg_email, 4 FROM mst.registrasi
+2019-11-25 08:50:05.267 WIB [29] ERROR:  syntax error at or near "IF" at character 637
+2019-11-25 08:50:05.267 WIB [29] STATEMENT:  CREATE OR REPLACE FUNCTION "mst"."_navicat_temp_stored_proc"("p_regid" text, "p_referal" text, "p_approve" text)
+	  RETURNS "pg_catalog"."text" AS $BODY$
+		DECLARE 
+		 status text = 'error'; 
+		 aproval text;
+	BEGIN
+	aproval = '{"userid": "'||p_approve||'","dateApprove":"'||now()::text||'"}';
+	UPDATE mst.registrasi set reg_approve = aproval::jsonb WHERE reg_id = p_regid;
+			BEGIN 
+				INSERT INTO sec.userid (user_id, user_nama, user_pass, user_email, user_role) 
+					SELECT reg_id, reg_nama, reg_password, reg_email, 4 FROM mst.registrasi;
+				EXCEPTION WHEN unique_violation THEN  RAISE NOTICE 'row skipped';
+			END;
+	status = 'success';	
+	END IF;
+	
+	RETURN status;
+	END
+	$BODY$
+	  LANGUAGE plpgsql VOLATILE
+	  COST 100
+2019-11-25 09:03:22.269 WIB [28] ERROR:  syntax error at or near "END" at character 1152
+2019-11-25 09:03:22.269 WIB [28] STATEMENT:  CREATE OR REPLACE FUNCTION "mst"."registrasi_to_user_customer"("p_regid" text, "p_referal" text, "p_approve" text)
+	  RETURNS json AS $BODY$
+		DECLARE 
+		 status  TEXT = 'error'; 
+		 message TEXT = '';
+		 result  TEXT = '';
+		 aproval text;
+	BEGIN
+	aproval = '{"userid": "'||p_approve||'","dateApprove":"'||now()::text||'"}';
+	UPDATE mst.registrasi set reg_approve = aproval::jsonb WHERE reg_id = p_regid;
+	
+	IF NOT EXISTS (SELECT customer_id FROM mst.customer WHERE customer_id = p_regid) THEN
+		INSERT INTO mst.customer (customer_id, customer_referal_customer_id, customer_pribadi, customer_alamat, customer_alamat_ktp) 
+			SELECT reg_id, p_referal, reg_pribadi, reg_alamat, reg_alamat_ktp FROM mst.registrasi WHERE reg_id = p_regid;
+			
+			BEGIN 
+				INSERT INTO sec.userid (user_id, user_nama, user_pass, user_email, user_role) 
+					SELECT reg_id, reg_nama, reg_password, reg_email, 4 FROM mst.registrasi;
+				EXCEPTION WHEN unique_violation THEN  
+					BEGIN 
+					status = 'error';
+					message = 'Duplicate UserId';
+					result = '{"status": "'||status||'",",message":"'||message||'"}'::json;
+					RETURN result;
+					END;
+			END;
+	
+		status = 'success';	
+		message = ''
+	END IF;
+	
+	result = '{"status": "'||status||'",",message":"'||message||'"}'::json;
+	RETURN result;
+	END
+	$BODY$
+	  LANGUAGE plpgsql VOLATILE
+2019-11-25 09:04:32.728 WIB [28] ERROR:  syntax error at or near "END" at character 1152
+2019-11-25 09:04:32.728 WIB [28] STATEMENT:  CREATE OR REPLACE FUNCTION "mst"."registrasi_to_user_customer"("p_regid" text, "p_referal" text, "p_approve" text)
+	  RETURNS json AS $BODY$
+		DECLARE 
+		 status  TEXT = 'error'; 
+		 message TEXT = '';
+		 result  TEXT = '';
+		 aproval text;
+	BEGIN
+	aproval = '{"userid": "'||p_approve||'","dateApprove":"'||now()::text||'"}';
+	UPDATE mst.registrasi set reg_approve = aproval::jsonb WHERE reg_id = p_regid;
+	
+	IF NOT EXISTS (SELECT customer_id FROM mst.customer WHERE customer_id = p_regid) THEN
+		INSERT INTO mst.customer (customer_id, customer_referal_customer_id, customer_pribadi, customer_alamat, customer_alamat_ktp) 
+			SELECT reg_id, p_referal, reg_pribadi, reg_alamat, reg_alamat_ktp FROM mst.registrasi WHERE reg_id = p_regid;
+			
+			BEGIN 
+				INSERT INTO sec.userid (user_id, user_nama, user_pass, user_email, user_role) 
+					SELECT reg_id, reg_nama, reg_password, reg_email, 4 FROM mst.registrasi;
+				EXCEPTION WHEN unique_violation THEN  
+					BEGIN 
+					status = 'error';
+					message = 'Duplicate UserId';
+					result = '{"status": "'||status||'",",message":"'||message||'"}'::json;
+					RETURN result;
+					END;
+			END;
+	
+		status = 'success';	
+		message = ''
+	END IF;
+	result = '{"status": "'||status||'",",message":"'||message||'"}'::json;
+	RETURN result;
+	END
+	$BODY$
+	  LANGUAGE plpgsql VOLATILE
+2019-11-25 09:05:00.056 WIB [28] ERROR:  invalid input syntax for type json at character 59
+2019-11-25 09:05:00.056 WIB [28] DETAIL:  Token ""}" is invalid.
+2019-11-25 09:05:00.056 WIB [28] QUERY:  SELECT '{"status": "'||status||'",",message":"'||message||'"}'::json
+2019-11-25 09:05:00.056 WIB [28] CONTEXT:  JSON data, line 1: "}
+	PL/pgSQL function registrasi_to_user_customer(text,text,text) line 30 at assignment
+2019-11-25 09:05:00.056 WIB [28] STATEMENT:  SELECT
+		mst.registrasi_to_user_customer ( 'AdityaF070907', 'dedy@styawan.com', 'dedy3012' ) AS status
+2019-11-25 09:08:17.608 WIB [28] ERROR:  invalid input syntax for type json at character 59
+2019-11-25 09:08:17.608 WIB [28] DETAIL:  Token ""}" is invalid.
+2019-11-25 09:08:17.608 WIB [28] QUERY:  SELECT '{"status": "'||status||'",",message":"'||message||'"}'::json
+2019-11-25 09:08:17.608 WIB [28] CONTEXT:  JSON data, line 1: "}
+	PL/pgSQL function registrasi_to_user_customer(text,text,text) line 30 at assignment
+2019-11-25 09:08:17.608 WIB [28] STATEMENT:  SELECT
+		mst.registrasi_to_user_customer ( 'AdityaF070907', 'dedy@styawan.com', 'dedy3012' ) AS status
+2019-11-25 09:09:46.664 WIB [28] ERROR:  invalid input syntax for type json at character 59
+2019-11-25 09:09:46.664 WIB [28] DETAIL:  Token ""}" is invalid.
+2019-11-25 09:09:46.664 WIB [28] QUERY:  SELECT '{"status": "'||status||'",",message":"'||message||'"}'::json
+2019-11-25 09:09:46.664 WIB [28] CONTEXT:  JSON data, line 1: "}
+	PL/pgSQL function registrasi_to_user_customer(text,text,text) line 30 at assignment
+2019-11-25 09:09:46.664 WIB [28] STATEMENT:  SELECT
+		mst.registrasi_to_user_customer ( 'AdityaF070907', 'dedy@styawan.com', 'dedy3012' ) AS status
+2019-11-25 09:10:14.475 WIB [28] ERROR:  cannot change return type of existing function
+2019-11-25 09:10:14.475 WIB [28] HINT:  Use DROP FUNCTION registrasi_to_user_customer(text,text,text) first.
+2019-11-25 09:10:14.475 WIB [28] STATEMENT:  CREATE OR REPLACE FUNCTION "mst"."registrasi_to_user_customer"("p_regid" text, "p_referal" text, "p_approve" text)
+	  RETURNS jsonb AS $BODY$
+		DECLARE 
+		 status  TEXT = 'error'; 
+		 message TEXT = '';
+		 result  TEXT = '';
+		 aproval text;
+	BEGIN
+	aproval = '{"userid": "'||p_approve||'","dateApprove":"'||now()::text||'"}';
+	UPDATE mst.registrasi set reg_approve = aproval::jsonb WHERE reg_id = p_regid;
+	
+	IF NOT EXISTS (SELECT customer_id FROM mst.customer WHERE customer_id = p_regid) THEN
+		INSERT INTO mst.customer (customer_id, customer_referal_customer_id, customer_pribadi, customer_alamat, customer_alamat_ktp) 
+			SELECT reg_id, p_referal, reg_pribadi, reg_alamat, reg_alamat_ktp FROM mst.registrasi WHERE reg_id = p_regid;
+			
+			BEGIN 
+				INSERT INTO sec.userid (user_id, user_nama, user_pass, user_email, user_role) 
+					SELECT reg_id, reg_nama, reg_password, reg_email, 4 FROM mst.registrasi;
+				EXCEPTION WHEN unique_violation THEN  
+					BEGIN 
+					status = 'error';
+					message = 'Duplicate UserId';
+					result = '{"status": "'||status||'",",message":"'||message||'"}'::json;
+					RETURN result;
+					END;
+			END;
+	
+		status = 'success';	
+		message = '';
+	END IF;
+	result = '{"status": "'||status||'",",message":"'||message||'"}'::json;
+	RETURN result;
+	END
+	$BODY$
+	  LANGUAGE plpgsql VOLATILE
+2019-11-25 09:10:52.927 WIB [28] ERROR:  invalid input syntax for type json at character 59
+2019-11-25 09:10:52.927 WIB [28] DETAIL:  Token ""}" is invalid.
+2019-11-25 09:10:52.927 WIB [28] QUERY:  SELECT '{"status": "'||status||'",",message":"'||message||'"}'::jsonb
+2019-11-25 09:10:52.927 WIB [28] CONTEXT:  JSON data, line 1: "}
+	PL/pgSQL function registrasi_to_user_customer(text,text,text) line 30 at assignment
+2019-11-25 09:10:52.927 WIB [28] STATEMENT:  SELECT
+		mst.registrasi_to_user_customer ( 'AdityaF070907', 'dedy@styawan.com', 'dedy3012' ) AS status
+2019-11-25 09:19:15.661 WIB [28] ERROR:  syntax error at or near "mst" at character 1
+2019-11-25 09:19:15.661 WIB [28] STATEMENT:  mst.registrasi_to_user_customer ( 'AdityaF070907', 'dedy@styawan.com', 'dedy3012' ) AS status
+2019-11-25 09:21:40.468 WIB [29] ERROR:  invalid input syntax for type json at character 47
+2019-11-25 09:21:40.468 WIB [29] DETAIL:  The input string ended unexpectedly.
+2019-11-25 09:21:40.468 WIB [29] CONTEXT:  JSON data, line 1: 
+2019-11-25 09:21:40.468 WIB [29] STATEMENT:  UPDATE "mst"."registrasi" SET "reg_approve" = '' WHERE "reg_id" = 'AdityaF070907'
+2019-11-25 09:21:42.814 WIB [29] ERROR:  invalid input syntax for type json at character 47
+2019-11-25 09:21:42.814 WIB [29] DETAIL:  The input string ended unexpectedly.
+2019-11-25 09:21:42.814 WIB [29] CONTEXT:  JSON data, line 1: 
+2019-11-25 09:21:42.814 WIB [29] STATEMENT:  UPDATE "mst"."registrasi" SET "reg_approve" = '' WHERE "reg_id" = 'AdityaF070907'
+2019-11-25 09:21:42.825 WIB [29] ERROR:  invalid input syntax for type json at character 47
+2019-11-25 09:21:42.825 WIB [29] DETAIL:  The input string ended unexpectedly.
+2019-11-25 09:21:42.825 WIB [29] CONTEXT:  JSON data, line 1: 
+2019-11-25 09:21:42.825 WIB [29] STATEMENT:  UPDATE "mst"."registrasi" SET "reg_approve" = '' WHERE "reg_id" = 'AdityaF070907'
+2019-11-25 09:21:50.560 WIB [29] ERROR:  invalid input syntax for type json at character 47
+2019-11-25 09:21:50.560 WIB [29] DETAIL:  The input string ended unexpectedly.
+2019-11-25 09:21:50.560 WIB [29] CONTEXT:  JSON data, line 1: 
+2019-11-25 09:21:50.560 WIB [29] STATEMENT:  UPDATE "mst"."registrasi" SET "reg_approve" = '' WHERE "reg_id" = 'AdityaF070907'
+2019-11-25 09:37:10.669 WIB [28] ERROR:  syntax error at or near "EXCEPTION" at character 722
+2019-11-25 09:37:10.669 WIB [28] STATEMENT:  CREATE OR REPLACE FUNCTION "mst"."registrasi_to_user_customer"("p_regid" text, "p_referal" text, "p_approve" text)
+	  RETURNS jsonb AS $BODY$
+		DECLARE 
+		 status  TEXT = 'error'; 
+		 message TEXT = '';
+		 result  jsonb;
+		 aproval text;
+	BEGIN
+	
+	IF NOT EXISTS (SELECT customer_id FROM mst.customer WHERE customer_id = p_regid) THEN
+		INSERT INTO mst.customer (customer_id, customer_referal_customer_id, customer_pribadi, customer_alamat, customer_alamat_ktp) 
+		SELECT reg_id, p_referal, reg_pribadi, reg_alamat, reg_alamat_ktp FROM mst.registrasi WHERE reg_id = p_regid;
+		
+		INSERT INTO sec.userid (user_id, user_nama, user_pass, user_email, user_role) 
+			SELECT reg_id, reg_nama, reg_password, reg_email, 4 FROM mst.registrasi;
+		EXCEPTION WHEN unique_violation THEN  
+			BEGIN 
+			status = 'error';
+			message = 'Duplicate UserId';
+			result = to_jsonb('{"status": "'||status||'",",message":"'||message||'"}');
+			RETURN result;
+			END;
+			
+			aproval = '{"userid": "'||p_approve||'","dateApprove":"'||now()::text||'"}';
+			UPDATE mst.registrasi set reg_approve = aproval::jsonb WHERE reg_id = p_regid;
+			status = 'success';	
+			message = '';
+			result = to_jsonb('{"status": "'||status||'",",message":"'||message||'"}');
+	ELSE 
+		status = 'error';
+		message = 'Duplicate Customer';
+		result = to_jsonb('{"status": "'||status||'",",message":"'||message||'"}');
+	-- 	RETURN result;
+	END IF;
+	
+	RETURN result;
+	END
+	$BODY$
+	  LANGUAGE plpgsql VOLATILE
+2019-11-25 09:37:27.815 WIB [28] ERROR:  syntax error at or near "EXCEPTION" at character 722
+2019-11-25 09:37:27.815 WIB [28] STATEMENT:  CREATE OR REPLACE FUNCTION "mst"."registrasi_to_user_customer"("p_regid" text, "p_referal" text, "p_approve" text)
+	  RETURNS jsonb AS $BODY$
+		DECLARE 
+		 status  TEXT = 'error'; 
+		 message TEXT = '';
+		 result  jsonb;
+		 aproval text;
+	BEGIN
+	
+	IF NOT EXISTS (SELECT customer_id FROM mst.customer WHERE customer_id = p_regid) THEN
+		INSERT INTO mst.customer (customer_id, customer_referal_customer_id, customer_pribadi, customer_alamat, customer_alamat_ktp) 
+		SELECT reg_id, p_referal, reg_pribadi, reg_alamat, reg_alamat_ktp FROM mst.registrasi WHERE reg_id = p_regid;
+		
+		INSERT INTO sec.userid (user_id, user_nama, user_pass, user_email, user_role) 
+			SELECT reg_id, reg_nama, reg_password, reg_email, 4 FROM mst.registrasi;
+		EXCEPTION WHEN unique_violation THEN  
+			BEGIN 
+				status = 'error';
+				message = 'Duplicate UserId';
+				result = to_jsonb('{"status": "'||status||'",",message":"'||message||'"}');
+				RETURN result;
+			END;
+			
+			aproval = '{"userid": "'||p_approve||'","dateApprove":"'||now()::text||'"}';
+			UPDATE mst.registrasi set reg_approve = aproval::jsonb WHERE reg_id = p_regid;
+			status = 'success';	
+			message = '';
+			result = to_jsonb('{"status": "'||status||'",",message":"'||message||'"}');
+	ELSE 
+		status = 'error';
+		message = 'Duplicate Customer';
+		result = to_jsonb('{"status": "'||status||'",",message":"'||message||'"}');
+	-- 	RETURN result;
+	END IF;
+	
+	RETURN result;
+	END
+	$BODY$
+	  LANGUAGE plpgsql VOLATILE
+2019-11-25 09:37:28.697 WIB [28] ERROR:  syntax error at or near "EXCEPTION" at character 722
+2019-11-25 09:37:28.697 WIB [28] STATEMENT:  CREATE OR REPLACE FUNCTION "mst"."registrasi_to_user_customer"("p_regid" text, "p_referal" text, "p_approve" text)
+	  RETURNS jsonb AS $BODY$
+		DECLARE 
+		 status  TEXT = 'error'; 
+		 message TEXT = '';
+		 result  jsonb;
+		 aproval text;
+	BEGIN
+	
+	IF NOT EXISTS (SELECT customer_id FROM mst.customer WHERE customer_id = p_regid) THEN
+		INSERT INTO mst.customer (customer_id, customer_referal_customer_id, customer_pribadi, customer_alamat, customer_alamat_ktp) 
+		SELECT reg_id, p_referal, reg_pribadi, reg_alamat, reg_alamat_ktp FROM mst.registrasi WHERE reg_id = p_regid;
+		
+		INSERT INTO sec.userid (user_id, user_nama, user_pass, user_email, user_role) 
+			SELECT reg_id, reg_nama, reg_password, reg_email, 4 FROM mst.registrasi;
+		EXCEPTION WHEN unique_violation THEN  
+			BEGIN 
+				status = 'error';
+				message = 'Duplicate UserId';
+				result = to_jsonb('{"status": "'||status||'",",message":"'||message||'"}');
+				RETURN result;
+			END;
+			
+			aproval = '{"userid": "'||p_approve||'","dateApprove":"'||now()::text||'"}';
+			UPDATE mst.registrasi set reg_approve = aproval::jsonb WHERE reg_id = p_regid;
+			status = 'success';	
+			message = '';
+			result = to_jsonb('{"status": "'||status||'",",message":"'||message||'"}');
+	ELSE 
+		status = 'error';
+		message = 'Duplicate Customer';
+		result = to_jsonb('{"status": "'||status||'",",message":"'||message||'"}');
+	-- 	RETURN result;
+	END IF;
+	
+	RETURN result;
+	END
+	$BODY$
+	  LANGUAGE plpgsql VOLATILE
+2019-11-25 09:37:28.974 WIB [28] ERROR:  syntax error at or near "EXCEPTION" at character 722
+2019-11-25 09:37:28.974 WIB [28] STATEMENT:  CREATE OR REPLACE FUNCTION "mst"."registrasi_to_user_customer"("p_regid" text, "p_referal" text, "p_approve" text)
+	  RETURNS jsonb AS $BODY$
+		DECLARE 
+		 status  TEXT = 'error'; 
+		 message TEXT = '';
+		 result  jsonb;
+		 aproval text;
+	BEGIN
+	
+	IF NOT EXISTS (SELECT customer_id FROM mst.customer WHERE customer_id = p_regid) THEN
+		INSERT INTO mst.customer (customer_id, customer_referal_customer_id, customer_pribadi, customer_alamat, customer_alamat_ktp) 
+		SELECT reg_id, p_referal, reg_pribadi, reg_alamat, reg_alamat_ktp FROM mst.registrasi WHERE reg_id = p_regid;
+		
+		INSERT INTO sec.userid (user_id, user_nama, user_pass, user_email, user_role) 
+			SELECT reg_id, reg_nama, reg_password, reg_email, 4 FROM mst.registrasi;
+		EXCEPTION WHEN unique_violation THEN  
+			BEGIN 
+				status = 'error';
+				message = 'Duplicate UserId';
+				result = to_jsonb('{"status": "'||status||'",",message":"'||message||'"}');
+				RETURN result;
+			END;
+			
+			aproval = '{"userid": "'||p_approve||'","dateApprove":"'||now()::text||'"}';
+			UPDATE mst.registrasi set reg_approve = aproval::jsonb WHERE reg_id = p_regid;
+			status = 'success';	
+			message = '';
+			result = to_jsonb('{"status": "'||status||'",",message":"'||message||'"}');
+	ELSE 
+		status = 'error';
+		message = 'Duplicate Customer';
+		result = to_jsonb('{"status": "'||status||'",",message":"'||message||'"}');
+	-- 	RETURN result;
+	END IF;
+	
+	RETURN result;
+	END
+	$BODY$
+	  LANGUAGE plpgsql VOLATILE
+2019-11-25 09:37:29.192 WIB [28] ERROR:  syntax error at or near "EXCEPTION" at character 722
+2019-11-25 09:37:29.192 WIB [28] STATEMENT:  CREATE OR REPLACE FUNCTION "mst"."registrasi_to_user_customer"("p_regid" text, "p_referal" text, "p_approve" text)
+	  RETURNS jsonb AS $BODY$
+		DECLARE 
+		 status  TEXT = 'error'; 
+		 message TEXT = '';
+		 result  jsonb;
+		 aproval text;
+	BEGIN
+	
+	IF NOT EXISTS (SELECT customer_id FROM mst.customer WHERE customer_id = p_regid) THEN
+		INSERT INTO mst.customer (customer_id, customer_referal_customer_id, customer_pribadi, customer_alamat, customer_alamat_ktp) 
+		SELECT reg_id, p_referal, reg_pribadi, reg_alamat, reg_alamat_ktp FROM mst.registrasi WHERE reg_id = p_regid;
+		
+		INSERT INTO sec.userid (user_id, user_nama, user_pass, user_email, user_role) 
+			SELECT reg_id, reg_nama, reg_password, reg_email, 4 FROM mst.registrasi;
+		EXCEPTION WHEN unique_violation THEN  
+			BEGIN 
+				status = 'error';
+				message = 'Duplicate UserId';
+				result = to_jsonb('{"status": "'||status||'",",message":"'||message||'"}');
+				RETURN result;
+			END;
+			
+			aproval = '{"userid": "'||p_approve||'","dateApprove":"'||now()::text||'"}';
+			UPDATE mst.registrasi set reg_approve = aproval::jsonb WHERE reg_id = p_regid;
+			status = 'success';	
+			message = '';
+			result = to_jsonb('{"status": "'||status||'",",message":"'||message||'"}');
+	ELSE 
+		status = 'error';
+		message = 'Duplicate Customer';
+		result = to_jsonb('{"status": "'||status||'",",message":"'||message||'"}');
+	-- 	RETURN result;
+	END IF;
+	
+	RETURN result;
+	END
+	$BODY$
+	  LANGUAGE plpgsql VOLATILE
+2019-11-25 09:37:29.413 WIB [28] ERROR:  syntax error at or near "EXCEPTION" at character 722
+2019-11-25 09:37:29.413 WIB [28] STATEMENT:  CREATE OR REPLACE FUNCTION "mst"."registrasi_to_user_customer"("p_regid" text, "p_referal" text, "p_approve" text)
+	  RETURNS jsonb AS $BODY$
+		DECLARE 
+		 status  TEXT = 'error'; 
+		 message TEXT = '';
+		 result  jsonb;
+		 aproval text;
+	BEGIN
+	
+	IF NOT EXISTS (SELECT customer_id FROM mst.customer WHERE customer_id = p_regid) THEN
+		INSERT INTO mst.customer (customer_id, customer_referal_customer_id, customer_pribadi, customer_alamat, customer_alamat_ktp) 
+		SELECT reg_id, p_referal, reg_pribadi, reg_alamat, reg_alamat_ktp FROM mst.registrasi WHERE reg_id = p_regid;
+		
+		INSERT INTO sec.userid (user_id, user_nama, user_pass, user_email, user_role) 
+			SELECT reg_id, reg_nama, reg_password, reg_email, 4 FROM mst.registrasi;
+		EXCEPTION WHEN unique_violation THEN  
+			BEGIN 
+				status = 'error';
+				message = 'Duplicate UserId';
+				result = to_jsonb('{"status": "'||status||'",",message":"'||message||'"}');
+				RETURN result;
+			END;
+			
+			aproval = '{"userid": "'||p_approve||'","dateApprove":"'||now()::text||'"}';
+			UPDATE mst.registrasi set reg_approve = aproval::jsonb WHERE reg_id = p_regid;
+			status = 'success';	
+			message = '';
+			result = to_jsonb('{"status": "'||status||'",",message":"'||message||'"}');
+	ELSE 
+		status = 'error';
+		message = 'Duplicate Customer';
+		result = to_jsonb('{"status": "'||status||'",",message":"'||message||'"}');
+	-- 	RETURN result;
+	END IF;
+	
+	RETURN result;
+	END
+	$BODY$
+	  LANGUAGE plpgsql VOLATILE
+2019-11-25 09:37:29.646 WIB [28] ERROR:  syntax error at or near "EXCEPTION" at character 722
+2019-11-25 09:37:29.646 WIB [28] STATEMENT:  CREATE OR REPLACE FUNCTION "mst"."registrasi_to_user_customer"("p_regid" text, "p_referal" text, "p_approve" text)
+	  RETURNS jsonb AS $BODY$
+		DECLARE 
+		 status  TEXT = 'error'; 
+		 message TEXT = '';
+		 result  jsonb;
+		 aproval text;
+	BEGIN
+	
+	IF NOT EXISTS (SELECT customer_id FROM mst.customer WHERE customer_id = p_regid) THEN
+		INSERT INTO mst.customer (customer_id, customer_referal_customer_id, customer_pribadi, customer_alamat, customer_alamat_ktp) 
+		SELECT reg_id, p_referal, reg_pribadi, reg_alamat, reg_alamat_ktp FROM mst.registrasi WHERE reg_id = p_regid;
+		
+		INSERT INTO sec.userid (user_id, user_nama, user_pass, user_email, user_role) 
+			SELECT reg_id, reg_nama, reg_password, reg_email, 4 FROM mst.registrasi;
+		EXCEPTION WHEN unique_violation THEN  
+			BEGIN 
+				status = 'error';
+				message = 'Duplicate UserId';
+				result = to_jsonb('{"status": "'||status||'",",message":"'||message||'"}');
+				RETURN result;
+			END;
+			
+			aproval = '{"userid": "'||p_approve||'","dateApprove":"'||now()::text||'"}';
+			UPDATE mst.registrasi set reg_approve = aproval::jsonb WHERE reg_id = p_regid;
+			status = 'success';	
+			message = '';
+			result = to_jsonb('{"status": "'||status||'",",message":"'||message||'"}');
+	ELSE 
+		status = 'error';
+		message = 'Duplicate Customer';
+		result = to_jsonb('{"status": "'||status||'",",message":"'||message||'"}');
+	-- 	RETURN result;
+	END IF;
+	
+	RETURN result;
+	END
+	$BODY$
+	  LANGUAGE plpgsql VOLATILE
+2019-11-25 09:37:29.830 WIB [28] ERROR:  syntax error at or near "EXCEPTION" at character 722
+2019-11-25 09:37:29.830 WIB [28] STATEMENT:  CREATE OR REPLACE FUNCTION "mst"."registrasi_to_user_customer"("p_regid" text, "p_referal" text, "p_approve" text)
+	  RETURNS jsonb AS $BODY$
+		DECLARE 
+		 status  TEXT = 'error'; 
+		 message TEXT = '';
+		 result  jsonb;
+		 aproval text;
+	BEGIN
+	
+	IF NOT EXISTS (SELECT customer_id FROM mst.customer WHERE customer_id = p_regid) THEN
+		INSERT INTO mst.customer (customer_id, customer_referal_customer_id, customer_pribadi, customer_alamat, customer_alamat_ktp) 
+		SELECT reg_id, p_referal, reg_pribadi, reg_alamat, reg_alamat_ktp FROM mst.registrasi WHERE reg_id = p_regid;
+		
+		INSERT INTO sec.userid (user_id, user_nama, user_pass, user_email, user_role) 
+			SELECT reg_id, reg_nama, reg_password, reg_email, 4 FROM mst.registrasi;
+		EXCEPTION WHEN unique_violation THEN  
+			BEGIN 
+				status = 'error';
+				message = 'Duplicate UserId';
+				result = to_jsonb('{"status": "'||status||'",",message":"'||message||'"}');
+				RETURN result;
+			END;
+			
+			aproval = '{"userid": "'||p_approve||'","dateApprove":"'||now()::text||'"}';
+			UPDATE mst.registrasi set reg_approve = aproval::jsonb WHERE reg_id = p_regid;
+			status = 'success';	
+			message = '';
+			result = to_jsonb('{"status": "'||status||'",",message":"'||message||'"}');
+	ELSE 
+		status = 'error';
+		message = 'Duplicate Customer';
+		result = to_jsonb('{"status": "'||status||'",",message":"'||message||'"}');
+	-- 	RETURN result;
+	END IF;
+	
+	RETURN result;
+	END
+	$BODY$
+	  LANGUAGE plpgsql VOLATILE
+2019-11-25 09:38:44.253 WIB [28] ERROR:  syntax error at or near "EXCEPTION" at character 722
+2019-11-25 09:38:44.253 WIB [28] STATEMENT:  CREATE OR REPLACE FUNCTION "mst"."registrasi_to_user_customer"("p_regid" text, "p_referal" text, "p_approve" text)
+	  RETURNS jsonb AS $BODY$
+		DECLARE 
+		 status  TEXT = 'error'; 
+		 message TEXT = '';
+		 result  jsonb;
+		 aproval text;
+	BEGIN
+	
+	IF NOT EXISTS (SELECT customer_id FROM mst.customer WHERE customer_id = p_regid) THEN
+		INSERT INTO mst.customer (customer_id, customer_referal_customer_id, customer_pribadi, customer_alamat, customer_alamat_ktp) 
+		SELECT reg_id, p_referal, reg_pribadi, reg_alamat, reg_alamat_ktp FROM mst.registrasi WHERE reg_id = p_regid;
+		
+		INSERT INTO sec.userid (user_id, user_nama, user_pass, user_email, user_role) 
+			SELECT reg_id, reg_nama, reg_password, reg_email, 4 FROM mst.registrasi;
+		EXCEPTION WHEN unique_violation THEN  
+			BEGIN 
+				status = 'error';
+				message = 'Duplicate UserId';
+				result = to_jsonb('{"status": "'||status||'",",message":"'||message||'"}');
+				RETURN result;
+			END;
+			
+	ELSE 
+		status = 'error';
+		message = 'Duplicate Customer';
+		result = to_jsonb('{"status": "'||status||'",",message":"'||message||'"}');
+	-- 	RETURN result;
+	END IF;
+	
+	RETURN result;
+	END
+	$BODY$
+	  LANGUAGE plpgsql VOLATILE
+2019-11-25 09:38:45.151 WIB [28] ERROR:  syntax error at or near "EXCEPTION" at character 722
+2019-11-25 09:38:45.151 WIB [28] STATEMENT:  CREATE OR REPLACE FUNCTION "mst"."registrasi_to_user_customer"("p_regid" text, "p_referal" text, "p_approve" text)
+	  RETURNS jsonb AS $BODY$
+		DECLARE 
+		 status  TEXT = 'error'; 
+		 message TEXT = '';
+		 result  jsonb;
+		 aproval text;
+	BEGIN
+	
+	IF NOT EXISTS (SELECT customer_id FROM mst.customer WHERE customer_id = p_regid) THEN
+		INSERT INTO mst.customer (customer_id, customer_referal_customer_id, customer_pribadi, customer_alamat, customer_alamat_ktp) 
+		SELECT reg_id, p_referal, reg_pribadi, reg_alamat, reg_alamat_ktp FROM mst.registrasi WHERE reg_id = p_regid;
+		
+		INSERT INTO sec.userid (user_id, user_nama, user_pass, user_email, user_role) 
+			SELECT reg_id, reg_nama, reg_password, reg_email, 4 FROM mst.registrasi;
+		EXCEPTION WHEN unique_violation THEN  
+			BEGIN 
+				status = 'error';
+				message = 'Duplicate UserId';
+				result = to_jsonb('{"status": "'||status||'",",message":"'||message||'"}');
+				RETURN result;
+			END;
+			
+	ELSE 
+		status = 'error';
+		message = 'Duplicate Customer';
+		result = to_jsonb('{"status": "'||status||'",",message":"'||message||'"}');
+	-- 	RETURN result;
+	END IF;
+	
+	RETURN result;
+	END
+	$BODY$
+	  LANGUAGE plpgsql VOLATILE
+2019-11-25 09:38:45.347 WIB [28] ERROR:  syntax error at or near "EXCEPTION" at character 722
+2019-11-25 09:38:45.347 WIB [28] STATEMENT:  CREATE OR REPLACE FUNCTION "mst"."registrasi_to_user_customer"("p_regid" text, "p_referal" text, "p_approve" text)
+	  RETURNS jsonb AS $BODY$
+		DECLARE 
+		 status  TEXT = 'error'; 
+		 message TEXT = '';
+		 result  jsonb;
+		 aproval text;
+	BEGIN
+	
+	IF NOT EXISTS (SELECT customer_id FROM mst.customer WHERE customer_id = p_regid) THEN
+		INSERT INTO mst.customer (customer_id, customer_referal_customer_id, customer_pribadi, customer_alamat, customer_alamat_ktp) 
+		SELECT reg_id, p_referal, reg_pribadi, reg_alamat, reg_alamat_ktp FROM mst.registrasi WHERE reg_id = p_regid;
+		
+		INSERT INTO sec.userid (user_id, user_nama, user_pass, user_email, user_role) 
+			SELECT reg_id, reg_nama, reg_password, reg_email, 4 FROM mst.registrasi;
+		EXCEPTION WHEN unique_violation THEN  
+			BEGIN 
+				status = 'error';
+				message = 'Duplicate UserId';
+				result = to_jsonb('{"status": "'||status||'",",message":"'||message||'"}');
+				RETURN result;
+			END;
+			
+	ELSE 
+		status = 'error';
+		message = 'Duplicate Customer';
+		result = to_jsonb('{"status": "'||status||'",",message":"'||message||'"}');
+	-- 	RETURN result;
+	END IF;
+	
+	RETURN result;
+	END
+	$BODY$
+	  LANGUAGE plpgsql VOLATILE
+2019-11-25 09:38:45.531 WIB [28] ERROR:  syntax error at or near "EXCEPTION" at character 722
+2019-11-25 09:38:45.531 WIB [28] STATEMENT:  CREATE OR REPLACE FUNCTION "mst"."registrasi_to_user_customer"("p_regid" text, "p_referal" text, "p_approve" text)
+	  RETURNS jsonb AS $BODY$
+		DECLARE 
+		 status  TEXT = 'error'; 
+		 message TEXT = '';
+		 result  jsonb;
+		 aproval text;
+	BEGIN
+	
+	IF NOT EXISTS (SELECT customer_id FROM mst.customer WHERE customer_id = p_regid) THEN
+		INSERT INTO mst.customer (customer_id, customer_referal_customer_id, customer_pribadi, customer_alamat, customer_alamat_ktp) 
+		SELECT reg_id, p_referal, reg_pribadi, reg_alamat, reg_alamat_ktp FROM mst.registrasi WHERE reg_id = p_regid;
+		
+		INSERT INTO sec.userid (user_id, user_nama, user_pass, user_email, user_role) 
+			SELECT reg_id, reg_nama, reg_password, reg_email, 4 FROM mst.registrasi;
+		EXCEPTION WHEN unique_violation THEN  
+			BEGIN 
+				status = 'error';
+				message = 'Duplicate UserId';
+				result = to_jsonb('{"status": "'||status||'",",message":"'||message||'"}');
+				RETURN result;
+			END;
+			
+	ELSE 
+		status = 'error';
+		message = 'Duplicate Customer';
+		result = to_jsonb('{"status": "'||status||'",",message":"'||message||'"}');
+	-- 	RETURN result;
+	END IF;
+	
+	RETURN result;
+	END
+	$BODY$
+	  LANGUAGE plpgsql VOLATILE
+2019-11-25 11:29:39.453 WIB [24] LOG:  stats_timestamp 2019-11-25 11:29:39.469913+07 is later than collector's time 2019-11-25 11:29:39.452914+07 for database 0
+2019-11-25 13:57:21.747 WIB [798] ERROR:  could not open extension control file "/usr/local/share/postgresql/extension/plpgapi.control": No such file or directory
+2019-11-25 13:57:21.747 WIB [798] STATEMENT:  CREATE EXTENSION plpgapi
+2019-11-25 13:57:52.036 WIB [798] ERROR:  could not open extension control file "/usr/local/share/postgresql/extension/pldbgapi.control": No such file or directory
+2019-11-25 13:57:52.036 WIB [798] STATEMENT:  CREATE EXTENSION pldbgapi;
+	
+2019-11-25 14:03:10.582 WIB [816] ERROR:  could not open extension control file "/usr/local/share/postgresql/extension/pldbgapi.control": No such file or directory
+2019-11-25 14:03:10.582 WIB [816] STATEMENT:  CREATE EXTENSION pldbgapi;
+2019-11-25 14:32:41.420 WIB [24] LOG:  stats_timestamp 2019-11-25 14:32:41.425615+07 is later than collector's time 2019-11-25 14:32:41.420403+07 for database 295070
+2019-11-25 16:53:33.194 WIB [24] LOG:  stats_timestamp 2019-11-25 16:53:33.214375+07 is later than collector's time 2019-11-25 16:53:33.194798+07 for database 0

@@ -1,0 +1,28 @@
+2019-01-21 07:47:44.130 WIB [19] LOG:  database system was interrupted; last known up at 2019-01-20 20:26:38 WIB
+2019-01-21 07:47:58.232 WIB [19] LOG:  database system was not properly shut down; automatic recovery in progress
+2019-01-21 07:47:58.435 WIB [19] LOG:  redo starts at 0/3A0CA48
+2019-01-21 07:47:58.435 WIB [19] LOG:  invalid record length at 0/3A0CA80: wanted 24, got 0
+2019-01-21 07:47:58.435 WIB [19] LOG:  redo done at 0/3A0CA48
+2019-01-21 07:47:58.982 WIB [1] LOG:  database system is ready to accept connections
+2019-01-21 09:10:08.373 WIB [26] FATAL:  password authentication failed for user "postgres"
+2019-01-21 09:10:08.373 WIB [26] DETAIL:  Password does not match for user "postgres".
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-01-21 09:13:02.115 WIB [37] FATAL:  password authentication failed for user "bjtg"
+2019-01-21 09:13:02.115 WIB [37] DETAIL:  Password does not match for user "bjtg".
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-01-21 09:14:16.347 WIB [43] ERROR:  permission denied to create extension "pgcrypto"
+2019-01-21 09:14:16.347 WIB [43] HINT:  Must be superuser to create this extension.
+2019-01-21 09:14:16.347 WIB [43] STATEMENT:  CREATE EXTENSION IF NOT EXISTS pgcrypto WITH SCHEMA public;
+	
+	
+	
+2019-01-21 09:14:16.350 WIB [43] ERROR:  extension "pgcrypto" does not exist
+2019-01-21 09:14:16.350 WIB [43] STATEMENT:  COMMENT ON EXTENSION pgcrypto IS 'cryptographic functions';
+	
+	
+	
+2019-01-21 09:17:34.549 WIB [53] ERROR:  permission denied to create extension "pgcrypto"
+2019-01-21 09:17:34.549 WIB [53] HINT:  Must be superuser to create this extension.
+2019-01-21 09:17:34.549 WIB [53] STATEMENT:  create extension pgcrypto;
+2019-01-21 09:25:51.322 WIB [24] LOG:  stats_timestamp 2019-01-21 09:25:51.330494+07 is later than collector's time 2019-01-21 09:25:51.322527+07 for database 49554
+2019-01-21 10:47:16.321 WIB [24] LOG:  stats_timestamp 2019-01-21 10:47:16.328493+07 is later than collector's time 2019-01-21 10:47:16.321787+07 for database 49554

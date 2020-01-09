@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  pgdb:
+    container_name: postgresql_11_0
+    image: postgres:11.0-alpine
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+      - ./config/postgresql_modif.conf:/etc/postgresql.conf
+    command: postgres -c config_file=/etc/postgresql.conf
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres*123
+    ports:
+      - 5110:5110

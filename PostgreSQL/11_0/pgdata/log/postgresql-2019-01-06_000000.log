@@ -1,0 +1,59 @@
+2019-01-06 13:16:39.815 WIB [27] FATAL:  password authentication failed for user "postgres"
+2019-01-06 13:16:39.815 WIB [27] DETAIL:  Password does not match for user "postgres".
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-01-06 13:19:59.775 WIB [39] FATAL:  password authentication failed for user "test"
+2019-01-06 13:19:59.775 WIB [39] DETAIL:  Password does not match for user "test".
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-01-06 13:20:09.149 WIB [40] FATAL:  password authentication failed for user "test"
+2019-01-06 13:20:09.149 WIB [40] DETAIL:  Password does not match for user "test".
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-01-06 13:20:16.235 WIB [41] FATAL:  password authentication failed for user "test"
+2019-01-06 13:20:16.235 WIB [41] DETAIL:  Password does not match for user "test".
+	Connection matched pg_hba.conf line 95: "host all all all md5"
+2019-01-06 13:28:55.824 WIB [51] ERROR:  syntax error at or near "`" at character 101
+2019-01-06 13:28:55.824 WIB [51] STATEMENT:  
+	CREATE TABLE todo (
+	  id SERIAL,
+	  title TEXT,
+	  description TEXT,
+	  reminder TEXT,
+	  PRIMARY KEY (`id`),
+	  UNIQUE KEY `id_unique` (`id`)
+	);
+2019-01-06 13:29:07.932 WIB [51] ERROR:  syntax error at or near "'id'" at character 101
+2019-01-06 13:29:07.932 WIB [51] STATEMENT:  
+	CREATE TABLE todo (
+	  id SERIAL,
+	  title TEXT,
+	  description TEXT,
+	  reminder TEXT,
+	  PRIMARY KEY ('id'),
+	  UNIQUE KEY 'id_unique' ('id')
+	);
+2019-01-06 16:25:42.933 WIB [353] ERROR:  syntax error at or near "`" at character 18
+2019-01-06 16:25:42.933 WIB [353] STATEMENT:  INSERT INTO ToDo(`Title`, `Description`, `Reminder`) VALUES(?, ?, ?)
+2019-01-06 16:45:32.747 WIB [413] ERROR:  syntax error at or near "," at character 63
+2019-01-06 16:45:32.747 WIB [413] STATEMENT:  INSERT INTO public.todo(title, description, reminder) VALUES(?, ?, ?)
+2019-01-06 16:46:51.668 WIB [418] ERROR:  syntax error at or near "," at character 63
+2019-01-06 16:46:51.668 WIB [418] STATEMENT:  INSERT INTO public.todo(title, description, reminder) VALUES(?, ?, ?)
+2019-01-06 16:47:23.890 WIB [421] ERROR:  syntax error at or near "," at character 57
+2019-01-06 16:47:23.890 WIB [421] STATEMENT:  INSERT INTO todo (title, description, reminder) VALUES(?, ?, ?)
+2019-01-06 18:41:26.486 WIB [421] ERROR:  syntax error at or near "," at character 57
+2019-01-06 18:41:26.486 WIB [421] STATEMENT:  INSERT INTO todo (title, description, reminder) VALUES(?, ?, ?)
+2019-01-06 18:43:55.174 WIB [421] ERROR:  syntax error at or near "," at character 57
+2019-01-06 18:43:55.174 WIB [421] STATEMENT:  INSERT INTO todo (title, description, reminder) VALUES(?, ?, ?)
+2019-01-06 19:58:18.569 WIB [677] ERROR:  syntax error at or near "," at character 53
+2019-01-06 19:58:18.569 WIB [677] STATEMENT:  INSERT INTO public.todo(title, description) VALUES(?, ?) RETURNING id
+2019-01-06 19:58:44.917 WIB [679] ERROR:  syntax error at or near "," at character 53
+2019-01-06 19:58:44.917 WIB [679] STATEMENT:  INSERT INTO public.todo(title, description) VALUES(?, ?) RETURNING id
+2019-01-06 19:59:30.542 WIB [682] ERROR:  syntax error at or near "%" at character 52
+2019-01-06 19:59:30.542 WIB [682] STATEMENT:  INSERT INTO public.todo(title, description) VALUES(%s, %s) RETURNING id
+2019-01-06 20:00:28.803 WIB [686] ERROR:  operator does not exist: integer =? at character 66
+2019-01-06 20:00:28.803 WIB [686] HINT:  No operator matches the given name and argument type. You might need to add an explicit type cast.
+2019-01-06 20:00:28.803 WIB [686] STATEMENT:  SELECT id, title, description, reminder FROM public.todo WHERE id=?
+2019-01-06 20:08:15.880 WIB [711] ERROR:  operator does not exist: integer =? at character 66
+2019-01-06 20:08:15.880 WIB [711] HINT:  No operator matches the given name and argument type. You might need to add an explicit type cast.
+2019-01-06 20:08:15.880 WIB [711] STATEMENT:  SELECT id, title, description, reminder FROM public.todo WHERE id=?
+2019-01-06 20:08:46.194 WIB [711] ERROR:  operator does not exist: integer =? at character 66
+2019-01-06 20:08:46.194 WIB [711] HINT:  No operator matches the given name and argument type. You might need to add an explicit type cast.
+2019-01-06 20:08:46.194 WIB [711] STATEMENT:  SELECT id, title, description, reminder FROM public.todo WHERE id=?

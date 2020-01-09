@@ -1,0 +1,36 @@
+2019-11-28 06:01:10.444 WIB [24] LOG:  stats_timestamp 2019-11-28 06:01:10.453386+07 is later than collector's time 2019-11-28 06:01:10.444644+07 for database 106581
+2019-11-28 14:26:03.873 WIB [3503] ERROR:  operator does not exist: text = integer at character 44
+2019-11-28 14:26:03.873 WIB [3503] HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+2019-11-28 14:26:03.873 WIB [3503] STATEMENT:  select * from tmp.kota where kota_propinsi = 33
+2019-11-28 14:31:08.089 WIB [3503] ERROR:  relation "mst.kota" does not exist at character 115
+2019-11-28 14:31:08.089 WIB [3503] STATEMENT:  INSERT INTO mst.kabupaten_kota (kabupaten_kota_id, kabupaten_kota_nama) 
+	SELECT kota_id::integer, kota_nama 
+	FROM mst.kota WHERE kota_propinsi = '33' 
+	ORDER BY kota_id
+2019-11-28 14:51:08.606 WIB [24] LOG:  stats_timestamp 2019-11-28 14:51:08.606934+07 is later than collector's time 2019-11-28 14:51:08.606494+07 for database 81921
+2019-11-28 14:51:38.581 WIB [24] LOG:  stats_timestamp 2019-11-28 14:51:38.588874+07 is later than collector's time 2019-11-28 14:51:38.581874+07 for database 295070
+2019-11-28 14:52:08.547 WIB [24] LOG:  stats_timestamp 2019-11-28 14:52:08.549963+07 is later than collector's time 2019-11-28 14:52:08.547559+07 for database 0
+2019-11-28 15:43:24.266 WIB [4152] ERROR:  permission denied for schema mst at character 52
+2019-11-28 15:43:24.266 WIB [4152] STATEMENT:  SELECT kabupaten_kota_id, kabupaten_kota_nama FROM mst.kabupaten_kota
+2019-11-28 17:50:45.274 WIB [5175] ERROR:  syntax error at or near "kabupaten_kota_id" at character 236
+2019-11-28 17:50:45.274 WIB [5175] STATEMENT:  UPDATE mst.kabupaten_kota 
+	          SET kabupaten_kota_alamat = 'test', kabupaten_kota_bupati = 'test', 
+	          kabupaten_kota_telp = 'test', kabupaten_kota_pic_nama = 'test', 
+	          kabupaten_kota_pic_telp = 'test' 
+	          kabupaten_kota_id = '3374'
+2019-11-28 19:55:42.927 WIB [24] LOG:  stats_timestamp 2019-11-28 19:55:42.937104+07 is later than collector's time 2019-11-28 19:55:42.9279+07 for database 0
+2019-11-28 20:18:09.943 WIB [5776] ERROR:  syntax error at or near "mst" at character 8
+2019-11-28 20:18:09.943 WIB [5776] STATEMENT:  INSERT mst.rups (rups_date, rups_akta, rups_notaris, rups_ringkasan, rups_attachment)
+	          VALUES ('20191128', '11111', 'notaris', 'ringkasan', 'attachment')
+2019-11-28 20:24:31.071 WIB [5834] ERROR:  column "rups_attachment" does not exist at character 106
+2019-11-28 20:24:31.071 WIB [5834] STATEMENT:  SELECT setoran_modal_tanggal, setoran_modal_kabupaten_kota, setoran_modal_nominal, setoran_modal_sumber, rups_attachment 
+	        FROM mst.setoran_modal ORDER BY setoran_modal_tanggal DESC
+2019-11-28 20:31:09.358 WIB [5892] ERROR:  value "900000000000000000000" is out of range for type bigint at character 194
+2019-11-28 20:31:09.358 WIB [5892] STATEMENT:  INSERT INTO mst.setoran_modal (setoran_modal_tanggal, setoran_modal_kabupaten_kota, setoran_modal_nominal, setoran_modal_sumber, setoran_modal_attachment)
+	          VALUES ('20191128', '3374', '900000000000000000000', 'ringkasan', 'attachment')
+2019-11-28 20:31:35.879 WIB [5897] ERROR:  invalid input syntax for integer: "ringkasan" at character 212
+2019-11-28 20:31:35.879 WIB [5897] STATEMENT:  INSERT INTO mst.setoran_modal (setoran_modal_tanggal, setoran_modal_kabupaten_kota, setoran_modal_nominal, setoran_modal_sumber, setoran_modal_attachment)
+	          VALUES ('20191128', '3374', '90000000000000', 'ringkasan', 'attachment')
+2019-11-28 20:32:58.310 WIB [5909] ERROR:  invalid input syntax for integer: "sumber" at character 212
+2019-11-28 20:32:58.310 WIB [5909] STATEMENT:  INSERT INTO mst.setoran_modal (setoran_modal_tanggal, setoran_modal_kabupaten_kota, setoran_modal_nominal, setoran_modal_sumber, setoran_modal_attachment)
+	          VALUES ('20191128', '3374', '90000000000000', 'sumber', 'attachment')

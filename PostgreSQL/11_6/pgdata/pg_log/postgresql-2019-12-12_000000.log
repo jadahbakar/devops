@@ -1,0 +1,1 @@
+2019-12-15 08:43:48.156 UTC [31] LOG:  stats_timestamp 2019-12-15 15:43:48.158373+07 is later than collector's time 2019-12-15 15:43:48.155758+07 for database 16385

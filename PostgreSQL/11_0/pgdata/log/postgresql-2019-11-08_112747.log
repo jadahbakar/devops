@@ -1,0 +1,4658 @@
+2019-11-08 11:27:47.302 WIB [20] LOG:  database system was interrupted; last known up at 2019-11-08 11:23:26 WIB
+2019-11-08 11:28:00.703 WIB [21] FATAL:  the database system is starting up
+2019-11-08 11:28:00.713 WIB [22] FATAL:  the database system is starting up
+2019-11-08 11:28:00.725 WIB [23] FATAL:  the database system is starting up
+2019-11-08 11:28:04.101 WIB [20] LOG:  database system was not properly shut down; automatic recovery in progress
+2019-11-08 11:28:04.285 WIB [20] LOG:  redo starts at 0/13935BC0
+2019-11-08 11:28:05.157 WIB [24] FATAL:  the database system is starting up
+2019-11-08 11:28:05.172 WIB [25] FATAL:  the database system is starting up
+2019-11-08 11:28:05.184 WIB [26] FATAL:  the database system is starting up
+2019-11-08 11:28:07.911 WIB [20] LOG:  invalid record length at 0/13C10040: wanted 24, got 0
+2019-11-08 11:28:07.911 WIB [20] LOG:  redo done at 0/13C0FFF0
+2019-11-08 11:28:07.912 WIB [20] LOG:  last completed transaction was at log time 2019-11-08 11:23:51.49008+07
+2019-11-08 11:28:08.826 WIB [1] LOG:  database system is ready to accept connections
+2019-11-08 11:28:37.908 WIB [35] ERROR:  schema "jaringan" already exists
+2019-11-08 11:28:37.908 WIB [35] STATEMENT:  CREATE SCHEMA jaringan;
+	
+	
+	
+2019-11-08 11:28:37.912 WIB [35] ERROR:  schema "mst" already exists
+2019-11-08 11:28:37.912 WIB [35] STATEMENT:  CREATE SCHEMA mst;
+	
+	
+	
+2019-11-08 11:28:37.916 WIB [35] ERROR:  schema "sec" already exists
+2019-11-08 11:28:37.916 WIB [35] STATEMENT:  CREATE SCHEMA sec;
+	
+	
+	
+2019-11-08 11:28:37.919 WIB [35] ERROR:  schema "tmp" already exists
+2019-11-08 11:28:37.919 WIB [35] STATEMENT:  CREATE SCHEMA tmp;
+	
+	
+	
+2019-11-08 11:28:37.929 WIB [35] ERROR:  schema "trx" already exists
+2019-11-08 11:28:37.929 WIB [35] STATEMENT:  CREATE SCHEMA trx;
+	
+	
+	
+2019-11-08 11:28:38.145 WIB [35] ERROR:  type "type_admin_penyelesaian_aktivitas" already exists
+2019-11-08 11:28:38.145 WIB [35] STATEMENT:  CREATE TYPE mst.type_admin_penyelesaian_aktivitas AS (
+		jml_selesai integer,
+		jml_proses integer,
+		jml_belum integer
+	);
+	
+	
+	
+2019-11-08 11:28:38.149 WIB [35] ERROR:  type "type_admin_penyelesaian_rkf" already exists
+2019-11-08 11:28:38.149 WIB [35] STATEMENT:  CREATE TYPE mst.type_admin_penyelesaian_rkf AS (
+		jml_selesai integer,
+		jml_proses integer,
+		jml_belum integer
+	);
+	
+	
+	
+2019-11-08 11:28:38.152 WIB [35] ERROR:  type "type_admin_total_aktivitas" already exists
+2019-11-08 11:28:38.152 WIB [35] STATEMENT:  CREATE TYPE mst.type_admin_total_aktivitas AS (
+		jml_aktivitas integer,
+		jml_selesai integer,
+		jml_jt integer,
+		jml_terlambat integer
+	);
+	
+	
+	
+2019-11-08 11:28:38.155 WIB [35] ERROR:  type "type_admin_total_rkf" already exists
+2019-11-08 11:28:38.155 WIB [35] STATEMENT:  CREATE TYPE mst.type_admin_total_rkf AS (
+		divisi text,
+		jml_rkf integer,
+		jml_selesai integer,
+		jml_jt integer,
+		jml_terlambat integer
+	);
+	
+	
+	
+2019-11-08 11:28:38.158 WIB [35] ERROR:  type "type_dashboard_monitoring_pegawai" already exists
+2019-11-08 11:28:38.158 WIB [35] STATEMENT:  CREATE TYPE mst.type_dashboard_monitoring_pegawai AS (
+		nip text,
+		jml_rkf_total integer,
+		jml_rkf_selesai integer,
+		jml_rkf_proses integer,
+		jml_rkf_belum integer,
+		jml_aktivitas_total integer,
+		jml_aktivitas_selesai integer,
+		jml_aktivitas_proses integer,
+		jml_aktivitas_belum integer
+	);
+	
+	
+	
+2019-11-08 11:28:38.161 WIB [35] ERROR:  type "type_dashboard_penyelesaian_aktivitas" already exists
+2019-11-08 11:28:38.161 WIB [35] STATEMENT:  CREATE TYPE mst.type_dashboard_penyelesaian_aktivitas AS (
+		jml_selesai integer,
+		jml_proses integer,
+		jml_belum integer
+	);
+	
+	
+	
+2019-11-08 11:28:38.164 WIB [35] ERROR:  type "type_dashboard_penyelesaian_rkf" already exists
+2019-11-08 11:28:38.164 WIB [35] STATEMENT:  CREATE TYPE mst.type_dashboard_penyelesaian_rkf AS (
+		jml_selesai integer,
+		jml_proses integer,
+		jml_belum integer
+	);
+	
+	
+	
+2019-11-08 11:28:38.167 WIB [35] ERROR:  type "type_dashboard_total_aktivitas" already exists
+2019-11-08 11:28:38.167 WIB [35] STATEMENT:  CREATE TYPE mst.type_dashboard_total_aktivitas AS (
+		jml_aktivitas integer,
+		jml_selesai integer,
+		jml_jt integer,
+		jml_terlambat integer
+	);
+	
+	
+	
+2019-11-08 11:28:38.172 WIB [35] ERROR:  type "type_dashboard_total_quickwin" already exists
+2019-11-08 11:28:38.172 WIB [35] STATEMENT:  CREATE TYPE mst.type_dashboard_total_quickwin AS (
+		jml_rkf integer,
+		jml_selesai integer,
+		jml_jt integer,
+		jml_terlambat integer
+	);
+	
+	
+	
+2019-11-08 11:28:38.175 WIB [35] ERROR:  type "type_dashboard_total_rkf" already exists
+2019-11-08 11:28:38.175 WIB [35] STATEMENT:  CREATE TYPE mst.type_dashboard_total_rkf AS (
+		jml_rkf integer,
+		jml_selesai integer,
+		jml_jt integer,
+		jml_terlambat integer
+	);
+	
+	
+	
+2019-11-08 11:28:38.179 WIB [35] ERROR:  type "type_get_sum_tot_aktivitas" already exists
+2019-11-08 11:28:38.179 WIB [35] STATEMENT:  CREATE TYPE mst.type_get_sum_tot_aktivitas AS (
+		jml_kegiatan integer,
+		jml_selesai integer,
+		jml_jt integer,
+		jml_terlambat integer
+	);
+	
+	
+	
+2019-11-08 11:28:38.182 WIB [35] ERROR:  function "dashboard_jaringan" already exists with same argument types
+2019-11-08 11:28:38.182 WIB [35] STATEMENT:  CREATE FUNCTION jaringan.dashboard_jaringan(p_tahun integer) RETURNS void
+	    LANGUAGE plpgsql
+	    AS $$  
+	declare	
+		rec 		RECORD;
+		jml_bulan	INTEGER = 0;
+		jml_child	INTEGER = 0;
+		bulan		INTEGER = 0;
+		xTanggal	DATE;
+	
+	BEGIN
+	FOR rec IN
+		SELECT * FROM jaringan.pembukaan WHERE pembukaan_tahun = p_tahun ORDER BY pembukaan_id 
+		loop
+		jml_bulan := jaringan.months_between2(	
+					(rec.pembukaan_kajian_kelayakan_bisnis_start::text||'01')::date, 
+					(rec.pembukaan_kajian_kelayakan_bisnis_finish::text||'01')::date
+					) + 1;
+		xTanggal := (rec.pembukaan_kajian_kelayakan_bisnis_start::text||'01')::date;
+		FOR i IN 1..jml_bulan	
+			loop
+			INSERT INTO jaringan.tmp_awul(keterangan,id, tanggal) VALUES ('pembukaan_kajian_kelayakan_bisnis_start',rec.pembukaan_id, xTanggal);
+			xTanggal := (rec.pembukaan_kajian_kelayakan_bisnis_start::text||'01')::date + (i||' MONTH')::INTERVAL;
+	
+			END loop;
+			
+		RAISE NOTICE '% -> %', rec.pembukaan_id, jml_bulan;
+		END loop;
+	
+	
+	END
+	$$;
+	
+	
+	
+2019-11-08 11:28:38.186 WIB [35] ERROR:  function "months_between" already exists with same argument types
+2019-11-08 11:28:38.186 WIB [35] STATEMENT:  CREATE FUNCTION jaringan.months_between(t_start timestamp without time zone, t_end timestamp without time zone) RETURNS integer
+	    LANGUAGE sql IMMUTABLE STRICT
+	    AS $_$
+	        SELECT
+	            (
+	                12 * extract('years' from a.i) + extract('months' from a.i)
+	            )::integer
+	        from (
+	            values (justify_interval($2 - $1))
+	        ) as a (i)
+	    $_$;
+	
+	
+	
+2019-11-08 11:28:38.189 WIB [35] ERROR:  function "months_between2" already exists with same argument types
+2019-11-08 11:28:38.189 WIB [35] STATEMENT:  CREATE FUNCTION jaringan.months_between2(t_start timestamp without time zone, t_end timestamp without time zone) RETURNS integer
+	    LANGUAGE sql IMMUTABLE STRICT
+	    AS $_$
+	select ((extract('years' from $2)::int -  extract('years' from $1)::int) * 12) 
+	    - extract('month' from $1)::int + extract('month' from $2)::int
+	$_$;
+	
+	
+	
+2019-11-08 11:28:38.192 WIB [35] ERROR:  function "admin_monitoring_pegawai" already exists with same argument types
+2019-11-08 11:28:38.192 WIB [35] STATEMENT:  CREATE FUNCTION mst.admin_monitoring_pegawai(p_tahun integer) RETURNS TABLE(divisi text, nip text, jml_rkf_total integer, jml_rkf_selesai integer, jml_rkf_proses integer, jml_rkf_belum integer, jml_aktivitas_total integer, jml_aktivitas_selesai integer, jml_aktivitas_proses integer, jml_aktivitas_belum integer)
+	    LANGUAGE plpgsql
+	    AS $$  
+	declare	
+		periode 	RECORD;
+		rec 		RECORD;
+		recNumber	INTEGER = 0;
+		jml_child	INTEGER = 0;
+		bulan		INTEGER = 0;
+		nip			text = '';
+		jmlRKFTotal		INTEGER = 0;
+		jmlRKFSelesai 	INTEGER = 0;
+		jmlRKFProses 	INTEGER = 0;
+		jmlRKFBelum		INTEGER = 0;
+		jmlAktivitasTotal	INTEGER = 0;
+		jmlAktivitasSelesai INTEGER = 0;
+		jmlAktivitasProses	INTEGER = 0;
+		jmlAktivitasBelum	INTEGER = 0;
+	
+	begin
+	bulan:= EXTRACT(MONTH FROM now());
+	select periode_tahun, periode_jenis into periode from mst.periode where periode_tahun = p_tahun order by periode_tahun desc limit 1; 
+	--delete from tmp.dashboard_monitoring_pegawai where dmp_divisi = p_divisi;
+	create table tmp.dashboard_monitoring_pegawai (dmp_divisi text, dmp_nip text, dmp_jml_rkf_total integer,
+		dmp_jml_rkf_selesai integer, dmp_jml_rkf_proses integer, dmp_jml_rkf_belum integer, 
+		dmp_jml_aktivitas_total integer, dmp_jml_aktivitas_selesai integer, dmp_jml_aktivitas_proses integer, dmp_jml_aktivitas_belum integer); 
+	for rec in
+		select rkf_user_from, replace(((jsonb_array_elements_text(rkf_unit_pelaksana)::jsonb)-> 'pegawaiUnitKerja')::text,'"','') as user,
+			rkf_id
+			from mst.rkf 
+			where rkf_tahun = periode.periode_tahun 
+			and rkf_jenis_id = periode.periode_jenis
+			order by ((jsonb_array_elements_text(rkf_unit_pelaksana)::jsonb)-> 'pegawaiUnitKerja')::text 
+		
+		loop
+			recNumber = recNumber + 1;
+	--		raise notice 'nip -> %', nip;
+			if nip <> rec.user then 
+	--			raise notice 'Tidak Sama';
+	--			raise notice 'nip -> %', nip;
+	--			raise notice 'user-> %', rec.user;
+				jmlRKFTotal = jmlRKFTotal + 1;
+	--			raise notice 'jmlRKFTotal -> %', jmlRKFTotal;
+				jml_child = mst.dashboard_monitoring_pegawai_rkf_child(rec.rkf_id, 'selesai');
+				if jml_child = 0 then
+					jmlRKFSelesai = jmlRKFSelesai + 1;
+				end if;
+				jml_child = mst.dashboard_monitoring_pegawai_rkf_child(rec.rkf_id, 'proses');
+				if jml_child > 0 then
+					jmlRKFProses = jmlRKFProses + 1;
+				end if;	
+				jml_child = mst.dashboard_monitoring_pegawai_rkf_child(rec.rkf_id, 'belum');
+				if jml_child > 0 then
+					jmlRKFBelum = jmlRKFBelum + 1;
+				end if;
+				jmlAktivitasTotal 	= jmlAktivitasTotal + mst.dashboard_monitoring_pegawai_aktivitas_child(rec.rkf_id, 'all');
+				jmlAktivitasSelesai = jmlAktivitasSelesai + mst.dashboard_monitoring_pegawai_aktivitas_child(rec.rkf_id, 'selesai');
+				jmlAktivitasProses 	= jmlAktivitasProses + mst.dashboard_monitoring_pegawai_aktivitas_child(rec.rkf_id, 'proses');
+				jmlAktivitasBelum 	= jmlAktivitasBelum + mst.dashboard_monitoring_pegawai_aktivitas_child(rec.rkf_id, 'belum');
+				
+			
+				if recNumber > 1 then 
+					insert into tmp.dashboard_monitoring_pegawai (dmp_divisi, dmp_nip, dmp_jml_rkf_total,
+						dmp_jml_rkf_selesai, dmp_jml_rkf_proses, dmp_jml_rkf_belum, 
+						dmp_jml_aktivitas_total, dmp_jml_aktivitas_selesai, dmp_jml_aktivitas_proses, dmp_jml_aktivitas_belum) 
+					values (rec.rkf_user_from, nip, jmlRKFTotal, jmlRKFSelesai, jmlRKFProses, jmlRKFBelum, 
+						jmlAktivitasTotal, jmlAktivitasSelesai, jmlAktivitasProses, jmlAktivitasBelum);
+				end if;
+				nip = rec.user;
+				jmlRKFTotal 	= 0;
+				jmlRKFSelesai 	= 0;
+				jmlRKFProses 	= 0;
+				jmlRKFBelum 	= 0; 
+				jmlAktivitasTotal 	= 0;
+				jmlAktivitasSelesai = 0;
+				jmlAktivitasProses 	= 0;
+				jmlAktivitasBelum 	= 0;
+			else
+	--			raise notice 'Sama';
+				jmlRKFTotal = jmlRKFTotal + 1;
+				jml_child = mst.dashboard_monitoring_pegawai_rkf_child(rec.rkf_id, 'selesai');
+				if jml_child = 0 then
+					jmlRKFSelesai = jmlRKFSelesai + 1;
+				end if;
+				jml_child = mst.dashboard_monitoring_pegawai_rkf_child(rec.rkf_id, 'proses');
+				if jml_child > 0 then
+					jmlRKFProses = jmlRKFProses + 1;
+				end if;	
+				jml_child = mst.dashboard_monitoring_pegawai_rkf_child(rec.rkf_id, 'belum');
+				if jml_child > 0 then
+					jmlRKFBelum = jmlRKFBelum + 1;
+				end if;
+				jmlAktivitasTotal 	= jmlAktivitasTotal + mst.dashboard_monitoring_pegawai_aktivitas_child(rec.rkf_id, 'all');
+				jmlAktivitasSelesai = jmlAktivitasSelesai + mst.dashboard_monitoring_pegawai_aktivitas_child(rec.rkf_id, 'selesai');
+				jmlAktivitasProses 	= jmlAktivitasProses + mst.dashboard_monitoring_pegawai_aktivitas_child(rec.rkf_id, 'proses');
+				jmlAktivitasBelum 	= jmlAktivitasBelum + mst.dashboard_monitoring_pegawai_aktivitas_child(rec.rkf_id, 'belum');
+				
+			end if;
+				
+		end loop;
+	jmlRKFTotal = jmlRKFTotal + 1;
+	
+	insert into tmp.dashboard_monitoring_pegawai (dmp_divisi, dmp_nip, dmp_jml_rkf_total,
+		dmp_jml_rkf_selesai, dmp_jml_rkf_proses, dmp_jml_rkf_belum, 
+		dmp_jml_aktivitas_total, dmp_jml_aktivitas_selesai, dmp_jml_aktivitas_proses, dmp_jml_aktivitas_belum) 
+	values (rec.rkf_user_from, nip, jmlRKFTotal, jmlRKFSelesai, jmlRKFProses, jmlRKFBelum, 
+			jmlAktivitasTotal, jmlAktivitasSelesai, jmlAktivitasProses, jmlAktivitasBelum);
+					
+	return QUERY
+		select 	dmp_divisi, dmp_nip, 
+				dmp_jml_rkf_total, dmp_jml_rkf_selesai, dmp_jml_rkf_proses, dmp_jml_rkf_belum, 
+				dmp_jml_aktivitas_total, dmp_jml_aktivitas_selesai, dmp_jml_aktivitas_proses, dmp_jml_aktivitas_belum 
+		from tmp.dashboard_monitoring_pegawai;
+	
+	drop table tmp.dashboard_monitoring_pegawai;
+	END
+	$$;
+	
+	
+	
+2019-11-08 11:28:38.195 WIB [35] ERROR:  function "admin_penyelesaian_aktivitas" already exists with same argument types
+2019-11-08 11:28:38.195 WIB [35] STATEMENT:  CREATE FUNCTION mst.admin_penyelesaian_aktivitas(p_tahun integer) RETURNS mst.type_admin_penyelesaian_aktivitas
+	    LANGUAGE plpgsql
+	    AS $$  
+	declare	
+		periode 	RECORD;
+		bulan		INTEGER = 0;
+		jmlRKF INTEGER = 0;
+		jmlSelesai 	INTEGER = 0;
+		jmlProses	INTEGER = 0;
+		jmlBelum	INTEGER = 0;
+		result_record mst.type_admin_penyelesaian_aktivitas;
+	begin
+	bulan:= EXTRACT(MONTH FROM now());
+	select periode_tahun, periode_jenis into periode from mst.periode where periode_tahun = p_tahun order by periode_tahun desc limit 1; 
+	--selesai
+	jmlSelesai := 	count(t.*) from  
+					(select aktivitas_id from mst.aktivitas 
+					inner join mst.rkf on  aktivitas_proker = rkf_id 
+					where rkf_tahun = periode.periode_tahun and rkf_jenis_id = periode.periode_jenis and aktivitas_status in (3,4,5)
+					) as t;
+	--jt bulan ini dan belum selesai
+	jmlProses := count(t.*) from  
+				(select aktivitas_id from mst.aktivitas 
+				inner join mst.rkf on  aktivitas_proker = rkf_id 
+				where rkf_tahun = periode.periode_tahun and rkf_jenis_id = periode.periode_jenis and aktivitas_status in (2) 
+				) as t;
+	--terlambat
+	jmlBelum := count(t.*) from  
+				(select aktivitas_proker from mst.aktivitas 
+				inner join mst.rkf on  aktivitas_proker = rkf_id 
+				where rkf_tahun = periode.periode_tahun and rkf_jenis_id = periode.periode_jenis and aktivitas_status in (1) 
+				) as t;
+	
+	
+	result_record.jml_selesai = jmlSelesai;
+	result_record.jml_proses = jmlProses;
+	result_record.jml_belum = jmlBelum;
+	
+	RETURN result_record;
+	END
+	$$;
+	
+	
+	
+2019-11-08 11:28:38.199 WIB [35] ERROR:  function "admin_penyelesaian_rkf" already exists with same argument types
+2019-11-08 11:28:38.199 WIB [35] STATEMENT:  CREATE FUNCTION mst.admin_penyelesaian_rkf(p_tahun integer) RETURNS mst.type_admin_penyelesaian_rkf
+	    LANGUAGE plpgsql
+	    AS $$  
+	declare	
+		periode 	RECORD;
+		bulan		INTEGER = 0;
+		jmlRKF INTEGER = 0;
+		jmlSelesai 	INTEGER = 0;
+		jmlProses	INTEGER = 0;
+		jmlBelum	INTEGER = 0;
+		result_record mst.type_admin_penyelesaian_rkf;
+	begin
+	bulan:= EXTRACT(MONTH FROM now());
+	select periode_tahun, periode_jenis into periode from mst.periode where periode_tahun = p_tahun order by periode_tahun desc limit 1; 
+	--selesai
+	jmlSelesai := 	count(t.*) from  
+					(select aktivitas_proker from mst.aktivitas 
+					inner join mst.rkf on  aktivitas_proker = rkf_id 
+					where rkf_tahun = periode.periode_tahun and rkf_jenis_id = periode.periode_jenis and aktivitas_status in (3,4,5)
+					group by aktivitas_proker) as t;
+	--jt bulan ini dan belum selesai
+	jmlProses := count(t.*) from  
+				(select aktivitas_proker from mst.aktivitas 
+				inner join mst.rkf on  aktivitas_proker = rkf_id 
+				where rkf_tahun = periode.periode_tahun and rkf_jenis_id = periode.periode_jenis and aktivitas_status in (2)
+				group by aktivitas_proker) as t;
+	--terlambat
+	jmlBelum := count(t.*) from  
+				(select aktivitas_proker from mst.aktivitas 
+				inner join mst.rkf on  aktivitas_proker = rkf_id 
+				where rkf_tahun = periode.periode_tahun and rkf_jenis_id = periode.periode_jenis and aktivitas_status in (1)
+				group by aktivitas_proker) as t;
+	
+	
+	result_record.jml_selesai = jmlSelesai;
+	result_record.jml_proses = jmlProses;
+	result_record.jml_belum = jmlBelum;
+	
+	RETURN result_record;
+	END
+	$$;
+	
+	
+	
+2019-11-08 11:28:38.203 WIB [35] ERROR:  function "admin_persebaran" already exists with same argument types
+2019-11-08 11:28:38.203 WIB [35] STATEMENT:  CREATE FUNCTION mst.admin_persebaran(p_tahun integer) RETURNS TABLE(jenis text, bulan integer, jumlah bigint)
+	    LANGUAGE plpgsql
+	    AS $$ 
+	declare	
+		 periode RECORD;
+	BEGIN
+		SELECT periode_tahun, periode_jenis into periode FROM mst.periode WHERE periode_tahun = p_tahun order by periode_tahun desc limit 1; 
+		return QUERY 
+			SELECT 'rkf', (sort_desc(array(SELECT jsonb_array_elements_text(rkf_jadwal)::int)))[1] as max_bulan, count(*) 
+			FROM mst.rkf
+			WHERE rkf_tahun = periode.periode_tahun AND rkf_jenis_id = periode.periode_jenis
+			GROUP BY 
+			(sort_desc(array(SELECT jsonb_array_elements_text(rkf_jadwal)::int)))[1]
+			
+			UNION
+			SELECT 'quickwin', (sort_desc(array(SELECT jsonb_array_elements_text(rkf_jadwal)::int)))[1] as max_bulan, count(*) 
+			FROM mst.rkf
+			WHERE rkf_tahun = periode.periode_tahun AND rkf_jenis_id = periode.periode_jenis AND rkf_skala_proker = 4
+			GROUP BY 
+			(sort_desc(array(SELECT jsonb_array_elements_text(rkf_jadwal)::int)))[1]
+			union
+			SELECT 'aktivitas', aktivitas_bulan as max_bulan, count(*)
+			FROM mst.aktivitas INNER JOIN mst.rkf on aktivitas_proker = rkf_id 
+			WHERE rkf_tahun = periode.periode_tahun AND rkf_jenis_id = periode.periode_jenis
+			GROUP BY aktivitas_bulan;
+	END
+	$$;
+	
+	
+	
+2019-11-08 11:28:38.206 WIB [35] ERROR:  function "admin_total_aktivitas" already exists with same argument types
+2019-11-08 11:28:38.206 WIB [35] STATEMENT:  CREATE FUNCTION mst.admin_total_aktivitas(p_tahun integer) RETURNS mst.type_admin_total_aktivitas
+	    LANGUAGE plpgsql
+	    AS $$  
+	declare	
+		periode 	RECORD;
+		bulan		INTEGER = 0;
+		jmlAktivitas INTEGER = 0;
+		jmlSelesai 	INTEGER = 0;
+		jmlJT		INTEGER = 0;
+		jmlTerlambat	INTEGER = 0;
+		result_record mst.type_admin_total_aktivitas;
+	begin
+	bulan:= EXTRACT(MONTH FROM now());
+	select periode_tahun, periode_jenis into periode from mst.periode where periode_tahun = p_tahun order by periode_tahun desc limit 1; 
+	--total aktivitas
+	jmlAktivitas := count(*) from mst.aktivitas inner join mst.rkf on aktivitas_proker = rkf_id 
+		where rkf_tahun =  periode.periode_tahun and rkf_jenis_id = periode.periode_jenis;
+	--selesai
+	jmlSelesai := count(*) from mst.aktivitas inner join mst.rkf on aktivitas_proker = rkf_id
+		where rkf_tahun =  periode.periode_tahun and rkf_jenis_id = periode.periode_jenis 
+		and aktivitas_status in (3,4,5);
+	--jt bulan ini dan belum selesai
+	jmlJT := count(*) from mst.aktivitas 
+		inner join mst.rkf on aktivitas_proker = rkf_id
+		where rkf_tahun =  periode.periode_tahun and rkf_jenis_id = periode.periode_jenis
+		and aktivitas_status in (1,2) and aktivitas_bulan = bulan;
+	--terlambat
+	jmlTerlambat := count(*) from mst.aktivitas 
+		inner join mst.rkf on aktivitas_proker = rkf_id
+		where rkf_tahun = periode.periode_tahun and rkf_jenis_id = periode.periode_jenis
+		and aktivitas_status in (1,2) and aktivitas_bulan < bulan;
+	
+	result_record.jml_aktivitas = jmlAktivitas;
+	result_record.jml_selesai = jmlSelesai;
+	result_record.jml_jt = jmlJT;
+	result_record.jml_terlambat = jmlTerlambat;
+	
+	RETURN result_record;
+	END
+	$$;
+	
+	
+	
+2019-11-08 11:28:38.209 WIB [35] ERROR:  function "admin_total_quickwin" already exists with same argument types
+2019-11-08 11:28:38.209 WIB [35] STATEMENT:  CREATE FUNCTION mst.admin_total_quickwin(p_tahun integer) RETURNS TABLE(divisi text, jmlrkf integer, jmlselesai integer, jmljt integer, jmlterlambat integer)
+	    LANGUAGE plpgsql
+	    AS $$  
+	declare	
+		periode 	RECORD;
+		rec 		RECORD;
+		divisiId	text = '';
+		jml_child	INTEGER = 0;
+		jmlRKF 		INTEGER = 0;
+		jmlSelesai 	INTEGER = 0;
+		jmlJT		INTEGER = 0;
+		jmlTerlambat	INTEGER = 0;
+	BEGIN
+	CREATE TABLE tmp.admin_total_quickwin(divisi TEXT, jmlrkf INTEGER, jmlselesai INTEGER, jmljt INTEGER, jmlterlambat INTEGER);
+	
+	SELECT periode_tahun, periode_jenis into periode FROM mst.periode WHERE periode_tahun = p_tahun ORDER BY periode_tahun DESC LIMIT 1; 
+	FOR rec IN 
+		SELECT rkf_user_from, rkf_id FROM mst.rkf 
+			WHERE rkf_tahun = p_tahun AND rkf_jenis_id = periode.periode_jenis 
+			AND rkf_skala_proker = 4
+			ORDER BY rkf_user_from, rkf_id
+		LOOP
+			-- raise notice 'divisiid -> %', divisiId;
+			--	raise notice 'rkfid -> %', rec.rkf_id;
+			IF rec.rkf_user_from = divisiId THEN 
+				jmlRKF = jmlRKF + 1;
+				jml_child = mst.dashboard_total_quickwin_child(rec.rkf_id, 'selesai');
+				IF jml_child = 0 THEN
+					jmlSelesai = jmlSelesai + 1;
+				END IF;
+				
+				jml_child = mst.dashboard_total_quickwin_child(rec.rkf_id, 'jt');
+				IF jml_child > 0 THEN
+					jmlJT = jmlJT + 1;
+				END IF;
+				
+				jml_child = mst.dashboard_total_quickwin_child(rec.rkf_id, 'terlambat');
+				IF jml_child > 0 THEN
+					jmlTerlambat = jmlTerlambat + 1;
+				END IF;
+			ELSE
+				raise notice 'divisi kosong -> %', divisiId;
+				INSERT INTO tmp.admin_total_quickwin VALUES (divisiId, jmlRKF, jmlSelesai, jmlJT, jmlTerlambat);
+				divisiId 	= rec.rkf_user_from;
+			END IF;
+		END LOOP;
+	
+	
+	jmlRKF = jmlRKF + 1;
+	jml_child = mst.dashboard_total_quickwin_child(rec.rkf_id, 'selesai');
+	IF jml_child = 0 THEN
+		jmlSelesai = jmlSelesai + 1;
+	END IF;
+	
+	jml_child = mst.dashboard_total_quickwin_child(rec.rkf_id, 'jt');
+	IF jml_child > 0 THEN
+		jmlJT = jmlJT + 1;
+	END IF;
+	
+	jml_child = mst.dashboard_total_quickwin_child(rec.rkf_id, 'terlambat');
+	IF jml_child > 0 THEN
+		jmlTerlambat = jmlTerlambat + 1;
+	END IF;
+	
+	
+	
+	INSERT INTO tmp.admin_total_quickwin VALUES (divisiId, jmlRKF, jmlSelesai, jmlJT, jmlTerlambat);
+	DELETE FROM tmp.admin_total_quickwin t WHERE t.divisi = '';
+	RETURN QUERY 
+		SELECT * FROM tmp.admin_total_quickwin;
+	DROP TABLE tmp.admin_total_quickwin;
+	END
+	$$;
+	
+	
+	
+2019-11-08 11:28:38.211 WIB [35] ERROR:  function "admin_total_rkf" already exists with same argument types
+2019-11-08 11:28:38.211 WIB [35] STATEMENT:  CREATE FUNCTION mst.admin_total_rkf(p_tahun integer) RETURNS TABLE(divisi text, jmlrkf integer, jmlselesai integer, jmljt integer, jmlterlambat integer)
+	    LANGUAGE plpgsql
+	    AS $$  
+	declare	
+		periode 	RECORD;
+		rec 		RECORD;
+		divisiId	text = '';
+		jml_child	INTEGER = 0;
+		bulan		INTEGER = 0;
+		jmlRKF 		INTEGER = 0;
+		jmlSelesai 	INTEGER = 0;
+		jmlJT		INTEGER = 0;
+		jmlTerlambat	INTEGER = 0;
+	BEGIN
+	CREATE TABLE tmp.admin_total_rkf(divisi TEXT, jmlrkf INTEGER, jmlselesai INTEGER, jmljt INTEGER, jmlterlambat INTEGER);
+	
+	bulan:= EXTRACT(MONTH FROM now());
+	SELECT periode_tahun, periode_jenis into periode from mst.periode where periode_tahun = p_tahun order by periode_tahun desc limit 1; 
+	for rec in 
+		SELECT rkf_user_from, rkf_id from mst.rkf 
+			where rkf_tahun = periode.periode_tahun 
+			and rkf_jenis_id = periode.periode_jenis
+			order by rkf_user_from, rkf_id
+		LOOP
+			IF divisiId = rec.rkf_user_from THEN 
+				jmlRKF = jmlRKF + 1;
+				jml_child = mst.dashboard_total_quickwin_child(rec.rkf_id, 'selesai');
+				IF jml_child = 0 THEN
+					jmlSelesai = jmlSelesai + 1;
+				END IF;
+				
+				jml_child = mst.dashboard_total_quickwin_child(rec.rkf_id, 'jt');
+				IF jml_child > 0 THEN
+					jmlJT = jmlJT + 1;
+				END IF;
+				
+				jml_child = mst.dashboard_total_quickwin_child(rec.rkf_id, 'terlambat');
+				IF jml_child > 0 THEN
+					jmlTerlambat = jmlTerlambat + 1;
+				END IF;
+			else
+				jmlRKF = jmlRKF + 1;
+				if  jmlSelesai > 0 then 
+					jmlSelesai = jmlSelesai + 1;	
+				end if;
+				IF jmlJT > 0 THEN
+					jmlJT = jmlJT + 1;
+				END IF;
+				IF jmlTerlambat > 0 then
+					jmlTerlambat = jmlTerlambat + 1;
+				END IF;
+			
+			
+				INSERT INTO tmp.admin_total_rkf VALUES (divisiId, jmlRKF, jmlSelesai, jmlJT, jmlTerlambat);
+				divisiId 	= rec.rkf_user_from;
+				raise notice 'record -> %', rec.rkf_user_from; 
+				jmlRKF 		= 0;
+				jmlSelesai	= 0;
+				jmlJT		= 0;
+				jmlTerlambat= 0;
+			END IF;
+	END LOOP;
+	delete from tmp.admin_total_rkf t where t.divisi = '';
+	RETURN QUERY 
+		SELECT * FROM tmp.admin_total_rkf;
+	drop table tmp.admin_total_rkf;
+	END
+	$$;
+	
+	
+	
+2019-11-08 11:28:38.214 WIB [35] ERROR:  function "aktivitas_w" already exists with same argument types
+2019-11-08 11:28:38.214 WIB [35] STATEMENT:  CREATE FUNCTION mst.aktivitas_w(p_aktivitasproker integer, p_aktivitasnama text, p_aktivitastarget text, p_aktivitaspic jsonb, p_aktivitasbulan integer) RETURNS void
+	    LANGUAGE plpgsql
+	    AS $$
+	DECLARE
+	--	xsts text = 'fail'; 
+		urut INTEGER = 0;
+	begin
+		urut := aktivitas_urut from mst.aktivitas where aktivitas_proker = p_aktivitasProker order by aktivitas_urut desc limit 1;
+		if urut isnull then 
+			urut = 1;
+		else
+			urut = urut + 2;
+		end if;
+	
+		INSERT INTO mst.aktivitas(aktivitas_proker,aktivitas_urut, aktivitas_nama, aktivitas_target, aktivitas_pic, aktivitas_bulan ) 
+		values (p_aktivitasProker,urut,p_aktivitasNama, p_aktivitasTarget, p_aktivitasPic, p_aktivitasBulan ); 
+	--	xsts = 'pass';
+		
+	--RETURN xsts;
+	END
+	$$;
+	
+	
+	
+2019-11-08 11:28:38.217 WIB [35] ERROR:  function "bulan" already exists with same argument types
+2019-11-08 11:28:38.217 WIB [35] STATEMENT:  CREATE FUNCTION mst.bulan(p_bulan text) RETURNS text
+	    LANGUAGE plpgsql
+	    AS $$DECLARE
+		 bulan text = ''; 
+	BEGIN
+	
+	CASE 
+		WHEN p_bulan = '1' THEN bulan = 'Jan';
+		WHEN p_bulan = '2' THEN bulan = 'Feb';
+		WHEN p_bulan = '3' THEN bulan = 'Mar';
+		WHEN p_bulan = '4' THEN bulan = 'Apr';
+		WHEN p_bulan = '5' THEN bulan = 'Mei';
+		WHEN p_bulan = '6' THEN bulan = 'Jun';
+		WHEN p_bulan = '7' THEN bulan = 'Jul';
+		WHEN p_bulan = '8' THEN bulan = 'Ags';
+		WHEN p_bulan = '9' THEN bulan = 'Sep';
+		WHEN p_bulan = '10' THEN bulan = 'Okt';
+		WHEN p_bulan = '11' THEN bulan = 'Nov';
+		WHEN p_bulan = '12' THEN bulan = 'Des';
+	END CASE;
+	RETURN bulan;
+	END
+	$$;
+	
+	
+	
+2019-11-08 11:28:38.220 WIB [35] ERROR:  function "dashboard_monitoring_pegawai" already exists with same argument types
+2019-11-08 11:28:38.220 WIB [35] STATEMENT:  CREATE FUNCTION mst.dashboard_monitoring_pegawai(p_divisi text, p_tahun integer) RETURNS TABLE(nip text, jml_rkf_total integer, jml_rkf_selesai integer, jml_rkf_proses integer, jml_rkf_belum integer, jml_aktivitas_total integer, jml_aktivitas_selesai integer, jml_aktivitas_proses integer, jml_aktivitas_belum integer)
+	    LANGUAGE plpgsql
+	    AS $$  
+	declare	
+		periode 	RECORD;
+		rec 		RECORD;
+		recNumber	INTEGER = 0;
+		jml_child	INTEGER = 0;
+		bulan		INTEGER = 0;
+		nip			text = '';
+		jmlRKFTotal		INTEGER = 0;
+		jmlRKFSelesai 	INTEGER = 0;
+		jmlRKFProses 	INTEGER = 0;
+		jmlRKFBelum		INTEGER = 0;
+		jmlAktivitasTotal	INTEGER = 0;
+		jmlAktivitasSelesai INTEGER = 0;
+		jmlAktivitasProses	INTEGER = 0;
+		jmlAktivitasBelum	INTEGER = 0;
+	
+	begin
+	bulan:= EXTRACT(MONTH FROM now());
+	select periode_tahun, periode_jenis into periode from mst.periode where periode_tahun = p_tahun order by periode_tahun desc limit 1; 
+	-- delete from tmp.dashboard_monitoring_pegawai where dmp_divisi = p_divisi;
+	CREATE TABLE tmp.dashboard_monitoring_pegawai (dmp_divisi TEXT, dmp_nip TEXT, dmp_jml_rkf_total INTEGER,
+		dmp_jml_rkf_selesai INTEGER, dmp_jml_rkf_proses INTEGER, dmp_jml_rkf_belum INTEGER, 
+		dmp_jml_aktivitas_total INTEGER, dmp_jml_aktivitas_selesai INTEGER, dmp_jml_aktivitas_proses INTEGER, dmp_jml_aktivitas_belum INTEGER);
+	
+	for rec in
+		select replace(((jsonb_array_elements_text(rkf_unit_pelaksana)::jsonb)-> 'pegawaiUnitKerja')::text,'"','') as user,
+			rkf_id
+			from mst.rkf 
+			where rkf_user_from = p_divisi and rkf_tahun = periode.periode_tahun 
+			and rkf_jenis_id = periode.periode_jenis
+			order by ((jsonb_array_elements_text(rkf_unit_pelaksana)::jsonb)-> 'pegawaiUnitKerja')::text 
+		
+		loop
+			recNumber = recNumber + 1;
+	--		raise notice 'nip -> %', nip;
+			if nip <> rec.user then 
+	--			raise notice 'Tidak Sama';
+	--			raise notice 'nip -> %', nip;
+	--			raise notice 'user-> %', rec.user;
+				jmlRKFTotal = jmlRKFTotal + 1;
+	--			raise notice 'jmlRKFTotal -> %', jmlRKFTotal;
+				jml_child = mst.dashboard_monitoring_pegawai_rkf_child(rec.rkf_id, 'selesai');
+				if jml_child = 0 then
+					jmlRKFSelesai = jmlRKFSelesai + 1;
+				end if;
+				jml_child = mst.dashboard_monitoring_pegawai_rkf_child(rec.rkf_id, 'proses');
+				if jml_child > 0 then
+					jmlRKFProses = jmlRKFProses + 1;
+				end if;	
+				jml_child = mst.dashboard_monitoring_pegawai_rkf_child(rec.rkf_id, 'belum');
+				if jml_child > 0 then
+					jmlRKFBelum = jmlRKFBelum + 1;
+				end if;
+				jmlAktivitasTotal 	= jmlAktivitasTotal + mst.dashboard_monitoring_pegawai_aktivitas_child(rec.rkf_id, 'all');
+				jmlAktivitasSelesai = jmlAktivitasSelesai + mst.dashboard_monitoring_pegawai_aktivitas_child(rec.rkf_id, 'selesai');
+				jmlAktivitasProses 	= jmlAktivitasProses + mst.dashboard_monitoring_pegawai_aktivitas_child(rec.rkf_id, 'proses');
+				jmlAktivitasBelum 	= jmlAktivitasBelum + mst.dashboard_monitoring_pegawai_aktivitas_child(rec.rkf_id, 'belum');
+				
+			
+				if recNumber > 1 then 
+					insert into tmp.dashboard_monitoring_pegawai (dmp_divisi, dmp_nip, dmp_jml_rkf_total,
+						dmp_jml_rkf_selesai, dmp_jml_rkf_proses, dmp_jml_rkf_belum, 
+						dmp_jml_aktivitas_total, dmp_jml_aktivitas_selesai, dmp_jml_aktivitas_proses, dmp_jml_aktivitas_belum) 
+					values (p_divisi, nip, jmlRKFTotal, jmlRKFSelesai, jmlRKFProses, jmlRKFBelum, 
+						jmlAktivitasTotal, jmlAktivitasSelesai, jmlAktivitasProses, jmlAktivitasBelum);
+				end if;
+				nip = rec.user;
+				jmlRKFTotal 	= 0;
+				jmlRKFSelesai 	= 0;
+				jmlRKFProses 	= 0;
+				jmlRKFBelum 	= 0; 
+				jmlAktivitasTotal 	= 0;
+				jmlAktivitasSelesai = 0;
+				jmlAktivitasProses 	= 0;
+				jmlAktivitasBelum 	= 0;
+			else
+	--			raise notice 'Sama';
+				jmlRKFTotal = jmlRKFTotal + 1;
+				jml_child = mst.dashboard_monitoring_pegawai_rkf_child(rec.rkf_id, 'selesai');
+				if jml_child = 0 then
+					jmlRKFSelesai = jmlRKFSelesai + 1;
+				end if;
+				jml_child = mst.dashboard_monitoring_pegawai_rkf_child(rec.rkf_id, 'proses');
+				if jml_child > 0 then
+					jmlRKFProses = jmlRKFProses + 1;
+				end if;	
+				jml_child = mst.dashboard_monitoring_pegawai_rkf_child(rec.rkf_id, 'belum');
+				if jml_child > 0 then
+					jmlRKFBelum = jmlRKFBelum + 1;
+				end if;
+				jmlAktivitasTotal 	= jmlAktivitasTotal + mst.dashboard_monitoring_pegawai_aktivitas_child(rec.rkf_id, 'all');
+				jmlAktivitasSelesai = jmlAktivitasSelesai + mst.dashboard_monitoring_pegawai_aktivitas_child(rec.rkf_id, 'selesai');
+				jmlAktivitasProses 	= jmlAktivitasProses + mst.dashboard_monitoring_pegawai_aktivitas_child(rec.rkf_id, 'proses');
+				jmlAktivitasBelum 	= jmlAktivitasBelum + mst.dashboard_monitoring_pegawai_aktivitas_child(rec.rkf_id, 'belum');
+				
+			end if;
+				
+		end loop;
+	jmlRKFTotal = jmlRKFTotal + 1;
+	
+	insert into tmp.dashboard_monitoring_pegawai (dmp_divisi, dmp_nip, dmp_jml_rkf_total,
+		dmp_jml_rkf_selesai, dmp_jml_rkf_proses, dmp_jml_rkf_belum, 
+		dmp_jml_aktivitas_total, dmp_jml_aktivitas_selesai, dmp_jml_aktivitas_proses, dmp_jml_aktivitas_belum) 
+	values (p_divisi, nip, jmlRKFTotal, jmlRKFSelesai, jmlRKFProses, jmlRKFBelum, 
+			jmlAktivitasTotal, jmlAktivitasSelesai, jmlAktivitasProses, jmlAktivitasBelum);
+					
+	return QUERY
+		select 	dmp_nip, 
+				dmp_jml_rkf_total, dmp_jml_rkf_selesai, dmp_jml_rkf_proses, dmp_jml_rkf_belum, 
+				dmp_jml_aktivitas_total, dmp_jml_aktivitas_selesai, dmp_jml_aktivitas_proses, dmp_jml_aktivitas_belum 
+		from tmp.dashboard_monitoring_pegawai where dmp_divisi = p_divisi;
+	drop table tmp.dashboard_monitoring_pegawai;
+	END
+	$$;
+	
+	
+	
+2019-11-08 11:28:38.223 WIB [35] ERROR:  function "dashboard_monitoring_pegawai_aktivitas_child" already exists with same argument types
+2019-11-08 11:28:38.223 WIB [35] STATEMENT:  CREATE FUNCTION mst.dashboard_monitoring_pegawai_aktivitas_child(p_rkf_id integer, p_jenis text) RETURNS integer
+	    LANGUAGE plpgsql
+	    AS $$  
+	declare	
+		rec			RECORD;
+		jml_rec		INTEGER := 0;
+		jml_rec_ori	INTEGER := 0;
+		jml_rec_fnd INTEGER := 0;
+	begin
+	raise notice 'all -> %', p_rkf_id; 
+		case 
+			when p_jenis = 'all' then
+				jml_rec = count(*) from mst.aktivitas where aktivitas_proker = p_rkf_id;
+				raise notice 'all when-> %', jml_rec; 
+			when p_jenis = 'selesai' then
+				jml_rec = count(*) from mst.aktivitas where aktivitas_proker = p_rkf_id and aktivitas_status in (3,4,5);
+			when p_jenis = 'proses' then
+				jml_rec = count(*) from mst.aktivitas where aktivitas_proker = p_rkf_id and aktivitas_status in (2);			
+			when p_jenis = 'belum' then 
+				jml_rec = count(*) from mst.aktivitas where aktivitas_proker = p_rkf_id and aktivitas_status in (1);
+		end case;
+	
+	RETURN jml_rec;
+	END
+	$$;
+	
+	
+	
+2019-11-08 11:28:38.226 WIB [35] ERROR:  function "dashboard_monitoring_pegawai_old" already exists with same argument types
+2019-11-08 11:28:38.226 WIB [35] STATEMENT:  CREATE FUNCTION mst.dashboard_monitoring_pegawai_old(p_divisi text) RETURNS TABLE(nip text, jml_rkf_total integer, jml_rkf_selesai integer, jml_rkf_proses integer, jml_rkf_belum integer, jml_aktivitas_total integer, jml_aktivitas_selesai integer, jml_aktivitas_proses integer, jml_aktivitas_belum integer)
+	    LANGUAGE plpgsql
+	    AS $$  
+	declare	
+		periode 	RECORD;
+		rec 		RECORD;
+		recNumber	INTEGER = 0;
+		jml_child	INTEGER = 0;
+		bulan		INTEGER = 0;
+		nip			text = '';
+		jmlRKFTotal		INTEGER = 0;
+		jmlRKFSelesai 	INTEGER = 0;
+		jmlRKFProses 	INTEGER = 0;
+		jmlRKFBelum		INTEGER = 0;
+		jmlAktivitasTotal	INTEGER = 0;
+		jmlAktivitasSelesai INTEGER = 0;
+		jmlAktivitasProses	INTEGER = 0;
+		jmlAktivitasBelum	INTEGER = 0;
+	
+	begin
+	bulan:= EXTRACT(MONTH FROM now());
+	select periode_tahun, periode_jenis into periode from mst.periode order by periode_tahun desc limit 1; 
+	delete from tmp.dashboard_monitoring_pegawai where dmp_divisi = p_divisi;
+	for rec in
+		select replace(((jsonb_array_elements_text(rkf_unit_pelaksana)::jsonb)-> 'pegawaiUnitKerja')::text,'"','') as user,
+			rkf_id
+			from mst.rkf 
+			where rkf_user_from = p_divisi and rkf_tahun = periode.periode_tahun 
+			and rkf_jenis_id = periode.periode_jenis
+			order by ((jsonb_array_elements_text(rkf_unit_pelaksana)::jsonb)-> 'pegawaiUnitKerja')::text 
+		
+		loop
+			recNumber = recNumber + 1;
+	--		raise notice 'nip -> %', nip;
+			if nip <> rec.user then 
+	--			raise notice 'Tidak Sama';
+	--			raise notice 'nip -> %', nip;
+	--			raise notice 'user-> %', rec.user;
+				jmlRKFTotal = jmlRKFTotal + 1;
+	--			raise notice 'jmlRKFTotal -> %', jmlRKFTotal;
+				jml_child = mst.dashboard_monitoring_pegawai_rkf_child(rec.rkf_id, 'selesai');
+				if jml_child = 0 then
+					jmlRKFSelesai = jmlRKFSelesai + 1;
+				end if;
+				jml_child = mst.dashboard_monitoring_pegawai_rkf_child(rec.rkf_id, 'proses');
+				if jml_child > 0 then
+					jmlRKFProses = jmlRKFProses + 1;
+				end if;	
+				jml_child = mst.dashboard_monitoring_pegawai_rkf_child(rec.rkf_id, 'belum');
+				if jml_child > 0 then
+					jmlRKFBelum = jmlRKFBelum + 1;
+				end if;
+				jmlAktivitasTotal 	= jmlAktivitasTotal + mst.dashboard_monitoring_pegawai_aktivitas_child(rec.rkf_id, 'all');
+				jmlAktivitasSelesai = jmlAktivitasSelesai + mst.dashboard_monitoring_pegawai_aktivitas_child(rec.rkf_id, 'selesai');
+				jmlAktivitasProses 	= jmlAktivitasProses + mst.dashboard_monitoring_pegawai_aktivitas_child(rec.rkf_id, 'proses');
+				jmlAktivitasBelum 	= jmlAktivitasBelum + mst.dashboard_monitoring_pegawai_aktivitas_child(rec.rkf_id, 'belum');
+				
+			
+				if recNumber > 1 then 
+					insert into tmp.dashboard_monitoring_pegawai (dmp_divisi, dmp_nip, dmp_jml_rkf_total,
+						dmp_jml_rkf_selesai, dmp_jml_rkf_proses, dmp_jml_rkf_belum, 
+						dmp_jml_aktivitas_total, dmp_jml_aktivitas_selesai, dmp_jml_aktivitas_proses, dmp_jml_aktivitas_belum) 
+					values (p_divisi, nip, jmlRKFTotal, jmlRKFSelesai, jmlRKFProses, jmlRKFBelum, 
+						jmlAktivitasTotal, jmlAktivitasSelesai, jmlAktivitasProses, jmlAktivitasBelum);
+				end if;
+				nip = rec.user;
+				jmlRKFTotal 	= 0;
+				jmlRKFSelesai 	= 0;
+				jmlRKFProses 	= 0;
+				jmlRKFBelum 	= 0; 
+				jmlAktivitasTotal 	= 0;
+				jmlAktivitasSelesai = 0;
+				jmlAktivitasProses 	= 0;
+				jmlAktivitasBelum 	= 0;
+			else
+	--			raise notice 'Sama';
+				jmlRKFTotal = jmlRKFTotal + 1;
+				jml_child = mst.dashboard_monitoring_pegawai_rkf_child(rec.rkf_id, 'selesai');
+				if jml_child = 0 then
+					jmlRKFSelesai = jmlRKFSelesai + 1;
+				end if;
+				jml_child = mst.dashboard_monitoring_pegawai_rkf_child(rec.rkf_id, 'proses');
+				if jml_child > 0 then
+					jmlRKFProses = jmlRKFProses + 1;
+				end if;	
+				jml_child = mst.dashboard_monitoring_pegawai_rkf_child(rec.rkf_id, 'belum');
+				if jml_child > 0 then
+					jmlRKFBelum = jmlRKFBelum + 1;
+				end if;
+				jmlAktivitasTotal 	= jmlAktivitasTotal + mst.dashboard_monitoring_pegawai_aktivitas_child(rec.rkf_id, 'all');
+				jmlAktivitasSelesai = jmlAktivitasSelesai + mst.dashboard_monitoring_pegawai_aktivitas_child(rec.rkf_id, 'selesai');
+				jmlAktivitasProses 	= jmlAktivitasProses + mst.dashboard_monitoring_pegawai_aktivitas_child(rec.rkf_id, 'proses');
+				jmlAktivitasBelum 	= jmlAktivitasBelum + mst.dashboard_monitoring_pegawai_aktivitas_child(rec.rkf_id, 'belum');
+				
+			end if;
+				
+		end loop;
+	jmlRKFTotal = jmlRKFTotal + 1;
+	
+	insert into tmp.dashboard_monitoring_pegawai (dmp_divisi, dmp_nip, dmp_jml_rkf_total,
+		dmp_jml_rkf_selesai, dmp_jml_rkf_proses, dmp_jml_rkf_belum, 
+		dmp_jml_aktivitas_total, dmp_jml_aktivitas_selesai, dmp_jml_aktivitas_proses, dmp_jml_aktivitas_belum) 
+	values (p_divisi, nip, jmlRKFTotal, jmlRKFSelesai, jmlRKFProses, jmlRKFBelum, 
+			jmlAktivitasTotal, jmlAktivitasSelesai, jmlAktivitasProses, jmlAktivitasBelum);
+					
+	return QUERY
+		select 	dmp_nip, 
+				dmp_jml_rkf_total, dmp_jml_rkf_selesai, dmp_jml_rkf_proses, dmp_jml_rkf_belum, 
+				dmp_jml_aktivitas_total, dmp_jml_aktivitas_selesai, dmp_jml_aktivitas_proses, dmp_jml_aktivitas_belum 
+		from tmp.dashboard_monitoring_pegawai where dmp_divisi = p_divisi;
+	END
+	$$;
+	
+	
+	
+2019-11-08 11:28:38.229 WIB [35] ERROR:  function "dashboard_monitoring_pegawai_rkf_child" already exists with same argument types
+2019-11-08 11:28:38.229 WIB [35] STATEMENT:  CREATE FUNCTION mst.dashboard_monitoring_pegawai_rkf_child(p_rkf_id integer, p_jenis text) RETURNS integer
+	    LANGUAGE plpgsql
+	    AS $$  
+	declare	
+		rec			RECORD;
+		jml_rec		INTEGER := 0;
+		jml_rec_ori	INTEGER := 0;
+		jml_rec_fnd INTEGER := 0;
+	begin
+	jml_rec_ori := count(*) from mst.aktivitas where aktivitas_proker = p_rkf_id;
+		case 
+			when p_jenis = 'selesai' then
+				select aktivitas_id into rec from mst.aktivitas where aktivitas_proker = p_rkf_id and aktivitas_status in (3,4,5);
+				if found then 
+					jml_rec_fnd = count(*) from mst.aktivitas where aktivitas_proker = p_rkf_id and aktivitas_status in (3,4,5);
+					jml_rec = jml_rec_ori - jml_rec_fnd;
+				else
+					jml_rec = -1;
+				end if;
+			when p_jenis = 'proses' then
+				select aktivitas_id into rec from mst.aktivitas where aktivitas_proker = p_rkf_id and aktivitas_status in (2);
+				if found then 
+					jml_rec_fnd = count(*) from mst.aktivitas where aktivitas_proker = p_rkf_id and aktivitas_status in (2);
+					jml_rec = jml_rec_fnd;
+				else
+					jml_rec = -1;
+				end if;
+				
+			when p_jenis = 'belum' then 
+				select aktivitas_id into rec from mst.aktivitas where aktivitas_proker = p_rkf_id and aktivitas_status in (1);
+				if found then 
+					jml_rec_fnd = count(*) from mst.aktivitas where aktivitas_proker = p_rkf_id and aktivitas_status in (1);
+					jml_rec = jml_rec_fnd;
+				else
+					jml_rec = -1;
+				end if;
+		end case;
+	
+	RETURN jml_rec;
+	END
+	$$;
+	
+	
+	
+2019-11-08 11:28:38.232 WIB [35] ERROR:  function "dashboard_penyelesaian_aktivitas" already exists with same argument types
+2019-11-08 11:28:38.232 WIB [35] STATEMENT:  CREATE FUNCTION mst.dashboard_penyelesaian_aktivitas(p_divisi text, p_tahun integer) RETURNS mst.type_dashboard_penyelesaian_aktivitas
+	    LANGUAGE plpgsql
+	    AS $$  
+	declare	
+		periode 	RECORD;
+		bulan		INTEGER = 0;
+		jmlRKF INTEGER = 0;
+		jmlSelesai 	INTEGER = 0;
+		jmlProses	INTEGER = 0;
+		jmlBelum	INTEGER = 0;
+		result_record mst.type_dashboard_penyelesaian_aktivitas;
+	begin
+	bulan:= EXTRACT(MONTH FROM now());
+	select periode_tahun, periode_jenis into periode from mst.periode where periode_tahun = p_tahun order by periode_tahun desc limit 1; 
+	--selesai
+	jmlSelesai := 	count(t.*) from  
+					(select aktivitas_id from mst.aktivitas 
+					inner join mst.rkf on  aktivitas_proker = rkf_id 
+					where rkf_user_from = p_divisi and rkf_tahun = periode.periode_tahun and rkf_jenis_id = periode.periode_jenis and aktivitas_status in (3,4,5)
+					) as t;
+	--jt bulan ini dan belum selesai
+	jmlProses := count(t.*) from  
+				(select aktivitas_id from mst.aktivitas 
+				inner join mst.rkf on  aktivitas_proker = rkf_id 
+				where rkf_user_from = p_divisi and rkf_tahun = periode.periode_tahun and rkf_jenis_id = periode.periode_jenis and aktivitas_status in (2) 
+				) as t;
+	--terlambat
+	jmlBelum := count(t.*) from  
+				(select aktivitas_proker from mst.aktivitas 
+				inner join mst.rkf on  aktivitas_proker = rkf_id 
+				where rkf_user_from = p_divisi and rkf_tahun = periode.periode_tahun and rkf_jenis_id = periode.periode_jenis and aktivitas_status in (1) 
+				) as t;
+	
+	
+	result_record.jml_selesai = jmlSelesai;
+	result_record.jml_proses = jmlProses;
+	result_record.jml_belum = jmlBelum;
+	
+	RETURN result_record;
+	END
+	$$;
+	
+	
+	
+2019-11-08 11:28:38.237 WIB [35] ERROR:  function "dashboard_penyelesaian_aktivitas_old" already exists with same argument types
+2019-11-08 11:28:38.237 WIB [35] STATEMENT:  CREATE FUNCTION mst.dashboard_penyelesaian_aktivitas_old(p_divisi text) RETURNS mst.type_dashboard_penyelesaian_aktivitas
+	    LANGUAGE plpgsql
+	    AS $$  
+	declare	
+		periode 	RECORD;
+		bulan		INTEGER = 0;
+		jmlRKF INTEGER = 0;
+		jmlSelesai 	INTEGER = 0;
+		jmlProses	INTEGER = 0;
+		jmlBelum	INTEGER = 0;
+		result_record mst.type_dashboard_penyelesaian_aktivitas;
+	begin
+	bulan:= EXTRACT(MONTH FROM now());
+	select periode_tahun, periode_jenis into periode from mst.periode order by periode_tahun desc limit 1; 
+	--selesai
+	jmlSelesai := 	count(t.*) from  
+					(select aktivitas_id from mst.aktivitas 
+					inner join mst.rkf on  aktivitas_proker = rkf_id 
+					where rkf_user_from = p_divisi and rkf_tahun = periode.periode_tahun and rkf_jenis_id = periode.periode_jenis and aktivitas_status in (3,4,5)
+					) as t;
+	--jt bulan ini dan belum selesai
+	jmlProses := count(t.*) from  
+				(select aktivitas_id from mst.aktivitas 
+				inner join mst.rkf on  aktivitas_proker = rkf_id 
+				where rkf_user_from = p_divisi and rkf_tahun = periode.periode_tahun and rkf_jenis_id = periode.periode_jenis and aktivitas_status in (2) 
+				) as t;
+	--terlambat
+	jmlBelum := count(t.*) from  
+				(select aktivitas_proker from mst.aktivitas 
+				inner join mst.rkf on  aktivitas_proker = rkf_id 
+				where rkf_user_from = p_divisi and rkf_tahun = periode.periode_tahun and rkf_jenis_id = periode.periode_jenis and aktivitas_status in (1) 
+				) as t;
+	
+	
+	result_record.jml_selesai = jmlSelesai;
+	result_record.jml_proses = jmlProses;
+	result_record.jml_belum = jmlBelum;
+	
+	RETURN result_record;
+	END
+	$$;
+	
+	
+	
+2019-11-08 11:28:38.241 WIB [35] ERROR:  function "dashboard_penyelesaian_rkf" already exists with same argument types
+2019-11-08 11:28:38.241 WIB [35] STATEMENT:  CREATE FUNCTION mst.dashboard_penyelesaian_rkf(p_divisi text, p_tahun integer) RETURNS mst.type_dashboard_penyelesaian_rkf
+	    LANGUAGE plpgsql
+	    AS $$  
+	declare	
+		periode 	RECORD;
+		bulan		INTEGER = 0;
+		jmlRKF INTEGER = 0;
+		jmlSelesai 	INTEGER = 0;
+		jmlProses	INTEGER = 0;
+		jmlBelum	INTEGER = 0;
+		result_record mst.type_dashboard_penyelesaian_rkf;
+	begin
+	bulan:= EXTRACT(MONTH FROM now());
+	select periode_tahun, periode_jenis into periode from mst.periode where periode_tahun = p_tahun order by periode_tahun desc limit 1; 
+	--selesai
+	jmlSelesai := 	count(t.*) from  
+					(select aktivitas_proker from mst.aktivitas 
+					inner join mst.rkf on  aktivitas_proker = rkf_id 
+					where rkf_user_from = p_divisi and rkf_tahun = periode.periode_tahun and rkf_jenis_id = periode.periode_jenis and aktivitas_status in (3,4,5)
+					group by aktivitas_proker) as t;
+	--jt bulan ini dan belum selesai
+	jmlProses := count(t.*) from  
+				(select aktivitas_proker from mst.aktivitas 
+				inner join mst.rkf on  aktivitas_proker = rkf_id 
+				where rkf_user_from = p_divisi and rkf_tahun = periode.periode_tahun and rkf_jenis_id = periode.periode_jenis and aktivitas_status in (2)
+				group by aktivitas_proker) as t;
+	--terlambat
+	jmlBelum := count(t.*) from  
+				(select aktivitas_proker from mst.aktivitas 
+				inner join mst.rkf on  aktivitas_proker = rkf_id 
+				where rkf_user_from = p_divisi and rkf_tahun = periode.periode_tahun and rkf_jenis_id = periode.periode_jenis and aktivitas_status in (1)
+				group by aktivitas_proker) as t;
+	
+	
+	result_record.jml_selesai = jmlSelesai;
+	result_record.jml_proses = jmlProses;
+	result_record.jml_belum = jmlBelum;
+	
+	RETURN result_record;
+	END
+	$$;
+	
+	
+	
+2019-11-08 11:28:38.244 WIB [35] ERROR:  function "dashboard_penyelesaian_rkf_old" already exists with same argument types
+2019-11-08 11:28:38.244 WIB [35] STATEMENT:  CREATE FUNCTION mst.dashboard_penyelesaian_rkf_old(p_divisi text) RETURNS mst.type_dashboard_penyelesaian_rkf
+	    LANGUAGE plpgsql
+	    AS $$  
+	declare	
+		periode 	RECORD;
+		bulan		INTEGER = 0;
+		jmlRKF INTEGER = 0;
+		jmlSelesai 	INTEGER = 0;
+		jmlProses	INTEGER = 0;
+		jmlBelum	INTEGER = 0;
+		result_record mst.type_dashboard_penyelesaian_rkf;
+	begin
+	bulan:= EXTRACT(MONTH FROM now());
+	select periode_tahun, periode_jenis into periode from mst.periode order by periode_tahun desc limit 1; 
+	--selesai
+	jmlSelesai := 	count(t.*) from  
+					(select aktivitas_proker from mst.aktivitas 
+					inner join mst.rkf on  aktivitas_proker = rkf_id 
+					where rkf_user_from = p_divisi and rkf_tahun = periode.periode_tahun and rkf_jenis_id = periode.periode_jenis and aktivitas_status in (3,4,5)
+					group by aktivitas_proker) as t;
+	--jt bulan ini dan belum selesai
+	jmlProses := count(t.*) from  
+				(select aktivitas_proker from mst.aktivitas 
+				inner join mst.rkf on  aktivitas_proker = rkf_id 
+				where rkf_user_from = p_divisi and rkf_tahun = periode.periode_tahun and rkf_jenis_id = periode.periode_jenis and aktivitas_status in (2)
+				group by aktivitas_proker) as t;
+	--terlambat
+	jmlBelum := count(t.*) from  
+				(select aktivitas_proker from mst.aktivitas 
+				inner join mst.rkf on  aktivitas_proker = rkf_id 
+				where rkf_user_from = p_divisi and rkf_tahun = periode.periode_tahun and rkf_jenis_id = periode.periode_jenis and aktivitas_status in (1)
+				group by aktivitas_proker) as t;
+	
+	
+	result_record.jml_selesai = jmlSelesai;
+	result_record.jml_proses = jmlProses;
+	result_record.jml_belum = jmlBelum;
+	
+	RETURN result_record;
+	END
+	$$;
+	
+	
+	
+2019-11-08 11:28:38.246 WIB [35] ERROR:  function "dashboard_persebaran" already exists with same argument types
+2019-11-08 11:28:38.246 WIB [35] STATEMENT:  CREATE FUNCTION mst.dashboard_persebaran(p_divisi text, p_tahun integer) RETURNS TABLE(jenis text, bulan integer, jumlah bigint)
+	    LANGUAGE plpgsql
+	    AS $$ 
+	declare	
+		 periode RECORD;
+	begin
+		select periode_tahun, periode_jenis into periode from mst.periode where periode_tahun = p_tahun order by periode_tahun desc limit 1; 
+		return QUERY 
+			select 'rkf', (sort_desc(array(select jsonb_array_elements_text(rkf_jadwal)::int)))[1] as max_bulan, count(*) 
+			from mst.rkf
+			where rkf_user_from = p_divisi and rkf_tahun = periode.periode_tahun and rkf_jenis_id = periode.periode_jenis
+			group by 
+			(sort_desc(array(select jsonb_array_elements_text(rkf_jadwal)::int)))[1]
+			
+			UNION
+			select 'quickwin', (sort_desc(array(select jsonb_array_elements_text(rkf_jadwal)::int)))[1] as max_bulan, count(*) 
+			from mst.rkf
+			where rkf_user_from = p_divisi and rkf_tahun = periode.periode_tahun and rkf_jenis_id = periode.periode_jenis and rkf_skala_proker = 4
+			group by 
+			(sort_desc(array(select jsonb_array_elements_text(rkf_jadwal)::int)))[1]
+			union
+			select 'aktivitas', aktivitas_bulan as max_bulan, count(*)
+			from mst.aktivitas inner join mst.rkf on aktivitas_proker = rkf_id 
+			where rkf_user_from = p_divisi and rkf_tahun = periode.periode_tahun and rkf_jenis_id = periode.periode_jenis
+			group by aktivitas_bulan;
+	end
+	$$;
+	
+	
+	
+2019-11-08 11:28:38.250 WIB [35] ERROR:  function "dashboard_persebaran2" already exists with same argument types
+2019-11-08 11:28:38.250 WIB [35] STATEMENT:  CREATE FUNCTION mst.dashboard_persebaran2(p_divisi text) RETURNS text
+	    LANGUAGE plpgsql
+	    AS $$ 
+	declare	
+		 bln INTEGER := 1;
+		 periode RECORD;
+	begin
+		select periode_tahun, periode_jenis into periode from mst.periode order by periode_tahun desc limit 1; 
+		for  bln in  1..12
+		loop 
+			raise notice '%', bln; 
+		end loop;
+	return 'masuk';
+	end
+	$$;
+	
+	
+	
+2019-11-08 11:28:38.252 WIB [35] ERROR:  function "dashboard_persebaran_child" already exists with same argument types
+2019-11-08 11:28:38.252 WIB [35] STATEMENT:  CREATE FUNCTION mst.dashboard_persebaran_child(p_divisi text, p_bulan integer) RETURNS TABLE(dataku text[])
+	    LANGUAGE plpgsql
+	    AS $$ 
+	declare	
+		 periode RECORD;
+	begin
+		select periode_tahun, periode_jenis into periode from mst.periode order by periode_tahun desc limit 1; 
+		return QUERY 
+		select array_agg(t) from (
+			select 'rkf : '|| count(*) 
+			from mst.rkf
+			where rkf_user_from = p_divisi and rkf_tahun = periode.periode_tahun and rkf_jenis_id = periode.periode_jenis 
+			 	and (sort_desc(array(select jsonb_array_elements_text(rkf_jadwal)::int)))[1] = p_bulan
+			
+			UNION
+			select 'quickwin : '|| count(*) 
+			from mst.rkf
+			where rkf_user_from = p_divisi and rkf_tahun = periode.periode_tahun and rkf_jenis_id = periode.periode_jenis and rkf_quick_win = 1
+				and (sort_desc(array(select jsonb_array_elements_text(rkf_jadwal)::int)))[1] = p_bulan
+			union
+			select 'aktivitas '||count(*)
+			from mst.aktivitas inner join mst.rkf on aktivitas_proker = rkf_id 
+			where rkf_user_from = p_divisi and rkf_tahun = periode.periode_tahun and rkf_jenis_id = periode.periode_jenis
+				and aktivitas_bulan = p_bulan
+			) t;
+	end
+	$$;
+	
+	
+	
+2019-11-08 11:28:38.255 WIB [35] ERROR:  function "dashboard_persebaran_old" already exists with same argument types
+2019-11-08 11:28:38.255 WIB [35] STATEMENT:  CREATE FUNCTION mst.dashboard_persebaran_old(p_divisi text) RETURNS TABLE(jenis text, bulan integer, jumlah bigint)
+	    LANGUAGE plpgsql
+	    AS $$ 
+	declare	
+		 periode RECORD;
+	begin
+		select periode_tahun, periode_jenis into periode from mst.periode order by periode_tahun desc limit 1; 
+		return QUERY 
+			select 'rkf', (sort_desc(array(select jsonb_array_elements_text(rkf_jadwal)::int)))[1] as max_bulan, count(*) 
+			from mst.rkf
+			where rkf_user_from = p_divisi and rkf_tahun = periode.periode_tahun and rkf_jenis_id = periode.periode_jenis
+			group by 
+			(sort_desc(array(select jsonb_array_elements_text(rkf_jadwal)::int)))[1]
+			
+			UNION
+			select 'quickwin', (sort_desc(array(select jsonb_array_elements_text(rkf_jadwal)::int)))[1] as max_bulan, count(*) 
+			from mst.rkf
+			where rkf_user_from = p_divisi and rkf_tahun = periode.periode_tahun and rkf_jenis_id = periode.periode_jenis and rkf_skala_proker = 4
+			group by 
+			(sort_desc(array(select jsonb_array_elements_text(rkf_jadwal)::int)))[1]
+			union
+			select 'aktivitas', aktivitas_bulan as max_bulan, count(*)
+			from mst.aktivitas inner join mst.rkf on aktivitas_proker = rkf_id 
+			where rkf_user_from = p_divisi and rkf_tahun = periode.periode_tahun and rkf_jenis_id = periode.periode_jenis
+			group by aktivitas_bulan;
+	end
+	$$;
+	
+	
+	
+2019-11-08 11:28:38.258 WIB [35] ERROR:  function "dashboard_total_aktivitas" already exists with same argument types
+2019-11-08 11:28:38.258 WIB [35] STATEMENT:  CREATE FUNCTION mst.dashboard_total_aktivitas(p_divisi text, p_tahun integer) RETURNS mst.type_dashboard_total_aktivitas
+	    LANGUAGE plpgsql
+	    AS $$  
+	declare	
+		periode 	RECORD;
+		bulan		INTEGER = 0;
+		jmlAktivitas INTEGER = 0;
+		jmlSelesai 	INTEGER = 0;
+		jmlJT		INTEGER = 0;
+		jmlTerlambat	INTEGER = 0;
+		result_record mst.type_dashboard_total_aktivitas;
+	begin
+	bulan:= EXTRACT(MONTH FROM now());
+	select periode_tahun, periode_jenis into periode from mst.periode where periode_tahun = p_tahun order by periode_tahun desc limit 1; 
+	--total aktivitas
+	jmlAktivitas := count(*) from mst.aktivitas inner join mst.rkf on aktivitas_proker = rkf_id 
+		where rkf_user_from = p_divisi and rkf_tahun =  periode.periode_tahun and rkf_jenis_id = periode.periode_jenis;
+	--selesai
+	jmlSelesai := count(*) from mst.aktivitas inner join mst.rkf on aktivitas_proker = rkf_id
+		where rkf_user_from = p_divisi and rkf_tahun =  periode.periode_tahun and rkf_jenis_id = periode.periode_jenis 
+		and aktivitas_status in (3,4,5);
+	--jt bulan ini dan belum selesai
+	jmlJT := count(*) from mst.aktivitas 
+		inner join mst.rkf on aktivitas_proker = rkf_id
+		where rkf_user_from = p_divisi and rkf_tahun =  periode.periode_tahun and rkf_jenis_id = periode.periode_jenis
+		and aktivitas_status in (1,2) and aktivitas_bulan = bulan;
+	--terlambat
+	jmlTerlambat := count(*) from mst.aktivitas 
+		inner join mst.rkf on aktivitas_proker = rkf_id
+		where rkf_user_from = p_divisi and rkf_tahun = periode.periode_tahun and rkf_jenis_id = periode.periode_jenis
+		and aktivitas_status in (1,2) and aktivitas_bulan < bulan;
+	
+	
+	result_record.jml_aktivitas = jmlAktivitas;
+	result_record.jml_selesai = jmlSelesai;
+	result_record.jml_jt = jmlJT;
+	result_record.jml_terlambat = jmlTerlambat;
+	
+	RETURN result_record;
+	END
+	$$;
+	
+	
+	
+2019-11-08 11:28:38.260 WIB [35] ERROR:  function "dashboard_total_aktivitas_old" already exists with same argument types
+2019-11-08 11:28:38.260 WIB [35] STATEMENT:  CREATE FUNCTION mst.dashboard_total_aktivitas_old(p_divisi text) RETURNS mst.type_dashboard_total_aktivitas
+	    LANGUAGE plpgsql
+	    AS $$  
+	declare	
+		periode 	RECORD;
+		bulan		INTEGER = 0;
+		jmlAktivitas INTEGER = 0;
+		jmlSelesai 	INTEGER = 0;
+		jmlJT		INTEGER = 0;
+		jmlTerlambat	INTEGER = 0;
+		result_record mst.type_dashboard_total_aktivitas;
+	begin
+	bulan:= EXTRACT(MONTH FROM now());
+	select periode_tahun, periode_jenis into periode from mst.periode order by periode_tahun desc limit 1; 
+	--total aktivitas
+	jmlAktivitas := count(*) from mst.aktivitas inner join mst.rkf on aktivitas_proker = rkf_id 
+		where rkf_user_from = p_divisi and rkf_tahun =  periode.periode_tahun and rkf_jenis_id = periode.periode_jenis;
+	--selesai
+	jmlSelesai := count(*) from mst.aktivitas inner join mst.rkf on aktivitas_proker = rkf_id
+		where rkf_user_from = p_divisi and rkf_tahun =  periode.periode_tahun and rkf_jenis_id = periode.periode_jenis 
+		and aktivitas_status in (3,4,5);
+	--jt bulan ini dan belum selesai
+	jmlJT := count(*) from mst.aktivitas 
+		inner join mst.rkf on aktivitas_proker = rkf_id
+		where rkf_user_from = p_divisi and rkf_tahun =  periode.periode_tahun and rkf_jenis_id = periode.periode_jenis
+		and aktivitas_status in (1,2) and aktivitas_bulan = bulan;
+	--terlambat
+	jmlTerlambat := count(*) from mst.aktivitas 
+		inner join mst.rkf on aktivitas_proker = rkf_id
+		where rkf_user_from = p_divisi and rkf_tahun = periode.periode_tahun and rkf_jenis_id = periode.periode_jenis
+		and aktivitas_status in (1,2) and aktivitas_bulan < bulan;
+	
+	
+	result_record.jml_aktivitas = jmlAktivitas;
+	result_record.jml_selesai = jmlSelesai;
+	result_record.jml_jt = jmlJT;
+	result_record.jml_terlambat = jmlTerlambat;
+	
+	RETURN result_record;
+	END
+	$$;
+	
+	
+	
+2019-11-08 11:28:38.264 WIB [35] ERROR:  function "dashboard_total_quickwin" already exists with same argument types
+2019-11-08 11:28:38.264 WIB [35] STATEMENT:  CREATE FUNCTION mst.dashboard_total_quickwin(p_divisi text) RETURNS mst.type_dashboard_total_quickwin
+	    LANGUAGE plpgsql
+	    AS $$  
+	declare	
+		periode 	RECORD;
+		bulan		INTEGER = 0;
+		jmlRKF INTEGER = 0;
+		jmlSelesai 	INTEGER = 0;
+		jmlJT		INTEGER = 0;
+		jmlTerlambat	INTEGER = 0;
+		result_record mst.type_dashboard_total_quickwin;
+	begin
+	bulan:= EXTRACT(MONTH FROM now());
+	select periode_tahun, periode_jenis into periode from mst.periode order by periode_tahun desc limit 1; 
+	--total aktivitas
+	jmlRKF := 	count(*) from mst.rkf 
+				where rkf_user_from = p_divisi and rkf_tahun = periode.periode_tahun 
+				and rkf_jenis_id = periode.periode_jenis and rkf_quick_win = 1;
+	--selesai
+	jmlSelesai := 	count(t.*) from  
+					(select aktivitas_proker from mst.aktivitas 
+					inner join mst.rkf on  aktivitas_proker = rkf_id 
+					where rkf_user_from = p_divisi and aktivitas_status in (3,4,5) and rkf_quick_win = 1
+					group by aktivitas_proker) as t;
+	--jt bulan ini dan belum selesai
+	jmlJT := count(*) from mst.aktivitas 
+		inner join mst.rkf on aktivitas_proker = rkf_id
+		where rkf_user_from = p_divisi and rkf_tahun =  periode.periode_tahun and rkf_jenis_id = periode.periode_jenis
+		and rkf_quick_win = 1
+		and aktivitas_status in (1,2) and aktivitas_bulan = bulan;
+	--terlambat
+	jmlTerlambat := count(*) from mst.aktivitas 
+		inner join mst.rkf on aktivitas_proker = rkf_id
+		where rkf_user_from = p_divisi and rkf_tahun = periode.periode_tahun and rkf_jenis_id = periode.periode_jenis
+		and rkf_quick_win = 1
+		and aktivitas_status in (1,2) and aktivitas_bulan < bulan;
+	
+	
+	result_record.jml_rkf = jmlRKF;
+	result_record.jml_selesai = jmlSelesai;
+	result_record.jml_jt = jmlJT;
+	result_record.jml_terlambat = jmlTerlambat;
+	
+	RETURN result_record;
+	END
+	$$;
+	
+	
+	
+2019-11-08 11:28:38.267 WIB [35] ERROR:  function "dashboard_total_quickwin2" already exists with same argument types
+2019-11-08 11:28:38.267 WIB [35] STATEMENT:  CREATE FUNCTION mst.dashboard_total_quickwin2(p_divisi text) RETURNS mst.type_dashboard_total_quickwin
+	    LANGUAGE plpgsql
+	    AS $$  
+	declare	
+		periode 	RECORD;
+		rec 		RECORD;
+		jml_child	INTEGER = 0;
+		jmlRKF 		INTEGER = 0;
+		jmlSelesai	INTEGER = 0;
+		jmlJT		INTEGER = 0;
+		jmlTerlambat INTEGER = 0;
+	
+		result_record mst.type_dashboard_total_quickwin;
+	begin
+	select periode_tahun, periode_jenis into periode from mst.periode order by periode_tahun desc limit 1; 
+	for rec in 
+		select rkf_id from mst.rkf 
+			where rkf_user_from = p_divisi and rkf_tahun = periode.periode_tahun 
+			and rkf_jenis_id = periode.periode_jenis and rkf_skala_proker = 4
+		loop
+			raise notice 'rkf_id %', rec.rkf_id;
+			jmlRKF = jmlRKF + 1;
+			jml_child = mst.dashboard_total_quickwin_child(rec.rkf_id, 'selesai');
+			if jml_child = 0 then
+				jmlSelesai = jmlSelesai + 1;
+			end if;
+			
+			jml_child = mst.dashboard_total_quickwin_child(rec.rkf_id, 'jt');
+			if jml_child > 0 then
+				jmlJT = jmlJT + 1;
+			end if;
+			
+			jml_child = mst.dashboard_total_quickwin_child(rec.rkf_id, 'terlambat');
+			if jml_child > 0 then
+				jmlTerlambat = jmlTerlambat + 1;
+			end if;
+				
+		
+	--		raise notice 'jml_child %', jml_child;
+		end loop;
+	
+	result_record.jml_rkf = jmlRKF;
+	result_record.jml_selesai = jmlSelesai;
+	result_record.jml_jt = jmlJT;
+	result_record.jml_terlambat = jmlTerlambat;
+	
+	RETURN result_record;
+	END
+	$$;
+	
+	
+	
+2019-11-08 11:28:38.270 WIB [35] ERROR:  function "dashboard_total_quickwin2" already exists with same argument types
+2019-11-08 11:28:38.270 WIB [35] STATEMENT:  CREATE FUNCTION mst.dashboard_total_quickwin2(p_divisi text, p_tahun integer) RETURNS mst.type_dashboard_total_quickwin
+	    LANGUAGE plpgsql
+	    AS $$  
+	declare	
+		periode 	RECORD;
+		rec 		RECORD;
+		jml_child	INTEGER = 0;
+		jmlRKF 		INTEGER = 0;
+		jmlSelesai	INTEGER = 0;
+		jmlJT		INTEGER = 0;
+		jmlTerlambat INTEGER = 0;
+	
+		result_record mst.type_dashboard_total_quickwin;
+	begin
+	select periode_tahun, periode_jenis into periode from mst.periode where periode_tahun = p_tahun order by periode_tahun desc limit 1; 
+	for rec in 
+		select rkf_id from mst.rkf 
+			where rkf_user_from = p_divisi and rkf_tahun = periode.periode_tahun 
+			and rkf_jenis_id = periode.periode_jenis and rkf_skala_proker = 4
+		loop
+			raise notice 'rkf_id %', rec.rkf_id;
+			jmlRKF = jmlRKF + 1;
+			jml_child = mst.dashboard_total_quickwin_child(rec.rkf_id, 'selesai');
+			if jml_child = 0 then
+				jmlSelesai = jmlSelesai + 1;
+			end if;
+			
+			jml_child = mst.dashboard_total_quickwin_child(rec.rkf_id, 'jt');
+			if jml_child > 0 then
+				jmlJT = jmlJT + 1;
+			end if;
+			
+			jml_child = mst.dashboard_total_quickwin_child(rec.rkf_id, 'terlambat');
+			if jml_child > 0 then
+				jmlTerlambat = jmlTerlambat + 1;
+			end if;
+				
+		
+	--		raise notice 'jml_child %', jml_child;
+		end loop;
+	
+	result_record.jml_rkf = jmlRKF;
+	result_record.jml_selesai = jmlSelesai;
+	result_record.jml_jt = jmlJT;
+	result_record.jml_terlambat = jmlTerlambat;
+	
+	RETURN result_record;
+	END
+	$$;
+	
+	
+	
+2019-11-08 11:28:38.273 WIB [35] ERROR:  function "dashboard_total_quickwin_child" already exists with same argument types
+2019-11-08 11:28:38.273 WIB [35] STATEMENT:  CREATE FUNCTION mst.dashboard_total_quickwin_child(p_rkf_id integer, p_jenis text) RETURNS integer
+	    LANGUAGE plpgsql
+	    AS $$  
+	declare	
+		rec			RECORD;
+		jml_rec		INTEGER := 0;
+		jml_rec_ori	INTEGER := 0;
+		jml_rec_fnd INTEGER := 0;
+		bulan INTEGER;
+	begin
+	bulan:= EXTRACT(MONTH FROM now());
+	jml_rec_ori := count(*) from mst.aktivitas where aktivitas_proker = p_rkf_id;
+	--raise notice 'p_jenis -> %', p_jenis;
+		case 
+			when p_jenis = 'selesai' then
+				select aktivitas_id into rec from mst.aktivitas where aktivitas_proker = p_rkf_id and aktivitas_status in (3,4,5);
+				if found then 
+					jml_rec_fnd = count(*) from mst.aktivitas where aktivitas_proker = p_rkf_id and aktivitas_status in (3,4,5);
+					jml_rec = jml_rec_ori - jml_rec_fnd;
+	--				raise notice 'masuk ke selesai -> %', jml_rec;
+				else
+					jml_rec = -1;
+				end if;
+			when p_jenis = 'jt' then
+				jml_rec_fnd = count(*) from mst.aktivitas where aktivitas_proker = p_rkf_id and aktivitas_status in (1,2) and aktivitas_bulan = bulan;
+				jml_rec = jml_rec_fnd;
+	--			raise notice 'masuk ke jt -> %', jml_rec_fnd;
+			when p_jenis = 'terlambat' then 
+				jml_rec_fnd = count(*) from mst.aktivitas where aktivitas_proker = p_rkf_id and aktivitas_status in (1,2) and aktivitas_bulan < bulan;
+				jml_rec = jml_rec_fnd;
+	--			raise notice 'masuk ke terlambat -> %', jml_rec_fnd;
+		end case;
+	
+	RETURN jml_rec;
+	END
+	$$;
+	
+	
+	
+2019-11-08 11:28:38.276 WIB [35] ERROR:  function "dashboard_total_rkf" already exists with same argument types
+2019-11-08 11:28:38.276 WIB [35] STATEMENT:  CREATE FUNCTION mst.dashboard_total_rkf(p_divisi text) RETURNS mst.type_dashboard_total_rkf
+	    LANGUAGE plpgsql
+	    AS $$  
+	declare	
+		periode 	RECORD;
+		bulan		INTEGER = 0;
+		jmlRKF INTEGER = 0;
+		jmlSelesai 	INTEGER = 0;
+		jmlJT		INTEGER = 0;
+		jmlTerlambat	INTEGER = 0;
+		result_record mst.type_dashboard_total_rkf;
+	begin
+	bulan:= EXTRACT(MONTH FROM now());
+	select periode_tahun, periode_jenis into periode from mst.periode order by periode_tahun desc limit 1; 
+	--total aktivitas
+	jmlRKF := 	count(*) from mst.rkf  
+				where rkf_user_from = p_divisi and rkf_tahun =  periode.periode_tahun and rkf_jenis_id = periode.periode_jenis;
+	--selesai
+	jmlSelesai := 	count(t.*) from  
+					(select aktivitas_proker from mst.aktivitas 
+					inner join mst.rkf on  aktivitas_proker = rkf_id 
+					where rkf_user_from = p_divisi and aktivitas_status in (3,4,5)
+					group by aktivitas_proker) as t;
+	--jt bulan ini dan belum selesai
+	jmlJT := count(t.*) from  
+			(select aktivitas_proker from mst.aktivitas 
+			inner join mst.rkf on  aktivitas_proker = rkf_id 
+			where rkf_user_from = p_divisi and aktivitas_status in (1,2) and 
+			aktivitas_bulan = EXTRACT(MONTH FROM now())
+			group by aktivitas_proker) as t;
+	--terlambat
+	jmlTerlambat := count(t.*) from  
+					(select aktivitas_proker from mst.aktivitas 
+					inner join mst.rkf on  aktivitas_proker = rkf_id 
+					where rkf_user_from = p_divisi and aktivitas_status in (1,2) and 
+					aktivitas_bulan < EXTRACT(MONTH FROM now())
+					group by aktivitas_proker) as t;
+	
+	result_record.jml_rkf = jmlRKF;
+	result_record.jml_selesai = jmlSelesai;
+	result_record.jml_jt = jmlJT;
+	result_record.jml_terlambat = jmlTerlambat;
+	
+	RETURN result_record;
+	END
+	$$;
+	
+	
+	
+2019-11-08 11:28:38.279 WIB [35] ERROR:  function "dashboard_total_rkf2" already exists with same argument types
+2019-11-08 11:28:38.279 WIB [35] STATEMENT:  CREATE FUNCTION mst.dashboard_total_rkf2(p_divisi text) RETURNS mst.type_dashboard_total_rkf
+	    LANGUAGE plpgsql
+	    AS $$  
+	declare	
+		periode 	RECORD;
+		rec 		RECORD;
+		jml_child	INTEGER = 0;
+		bulan		INTEGER = 0;
+		jmlRKF 		INTEGER = 0;
+		jmlSelesai 	INTEGER = 0;
+		jmlJT		INTEGER = 0;
+		jmlTerlambat	INTEGER = 0;
+	
+		result_record mst.type_dashboard_total_rkf;
+	begin
+	bulan:= EXTRACT(MONTH FROM now());
+	select periode_tahun, periode_jenis into periode from mst.periode order by periode_tahun desc limit 1; 
+	--total aktivitas
+	--jmlRKF := 	count(*) from mst.rkf  
+	--			where rkf_user_from = p_divisi and rkf_tahun =  periode.periode_tahun and rkf_jenis_id = periode.periode_jenis;
+	for rec in 
+		select rkf_id from mst.rkf 
+			where rkf_user_from = p_divisi and rkf_tahun = periode.periode_tahun 
+			and rkf_jenis_id = periode.periode_jenis
+		loop
+			raise notice 'rkf_id %', rec.rkf_id;
+			jmlRKF = jmlRKF + 1;
+			jml_child = mst.dashboard_total_quickwin_child(rec.rkf_id, 'selesai');
+			if jml_child = 0 then
+				jmlSelesai = jmlSelesai + 1;
+				raise notice 'jmlSelesai %', jmlSelesai;
+			end if;
+			
+			jml_child = mst.dashboard_total_quickwin_child(rec.rkf_id, 'jt');
+			if jml_child > 0 then
+				jmlJT = jmlJT + 1;
+			end if;
+			
+			jml_child = mst.dashboard_total_quickwin_child(rec.rkf_id, 'terlambat');
+			if jml_child > 0 then
+				jmlTerlambat = jmlTerlambat + 1;
+			end if;
+				
+		
+	--		raise notice 'jml_child %', jml_child;
+		end loop;
+	
+	result_record.jml_rkf 		= jmlRKF;
+	result_record.jml_selesai 	= jmlSelesai;
+	result_record.jml_jt 		= jmlJT;
+	result_record.jml_terlambat = jmlTerlambat;
+	
+	RETURN result_record;
+	END
+	$$;
+	
+	
+	
+2019-11-08 11:28:38.282 WIB [35] ERROR:  function "dashboard_total_rkf2" already exists with same argument types
+2019-11-08 11:28:38.282 WIB [35] STATEMENT:  CREATE FUNCTION mst.dashboard_total_rkf2(p_divisi text, p_tahun integer) RETURNS mst.type_dashboard_total_rkf
+	    LANGUAGE plpgsql
+	    AS $$  
+	declare	
+		periode 	RECORD;
+		rec 		RECORD;
+		jml_child	INTEGER = 0;
+		bulan		INTEGER = 0;
+		jmlRKF 		INTEGER = 0;
+		jmlSelesai 	INTEGER = 0;
+		jmlJT		INTEGER = 0;
+		jmlTerlambat	INTEGER = 0;
+	
+		result_record mst.type_dashboard_total_rkf;
+	begin
+	bulan:= EXTRACT(MONTH FROM now());
+	select periode_tahun, periode_jenis into periode from mst.periode where periode_tahun = p_tahun order by periode_tahun desc limit 1; 
+	--total aktivitas
+	--jmlRKF := 	count(*) from mst.rkf  
+	--			where rkf_user_from = p_divisi and rkf_tahun =  periode.periode_tahun and rkf_jenis_id = periode.periode_jenis;
+	for rec in 
+		select rkf_id from mst.rkf 
+			where rkf_user_from = p_divisi and rkf_tahun = periode.periode_tahun 
+			and rkf_jenis_id = periode.periode_jenis
+		loop
+			raise notice 'rkf_id %', rec.rkf_id;
+			jmlRKF = jmlRKF + 1;
+			jml_child = mst.dashboard_total_quickwin_child(rec.rkf_id, 'selesai');
+			if jml_child = 0 then
+				jmlSelesai = jmlSelesai + 1;
+				raise notice 'jmlSelesai %', jmlSelesai;
+			end if;
+			
+			jml_child = mst.dashboard_total_quickwin_child(rec.rkf_id, 'jt');
+			if jml_child > 0 then
+				jmlJT = jmlJT + 1;
+			end if;
+			
+			jml_child = mst.dashboard_total_quickwin_child(rec.rkf_id, 'terlambat');
+			if jml_child > 0 then
+				jmlTerlambat = jmlTerlambat + 1;
+			end if;
+				
+		
+	--		raise notice 'jml_child %', jml_child;
+		end loop;
+	
+	result_record.jml_rkf 		= jmlRKF;
+	result_record.jml_selesai 	= jmlSelesai;
+	result_record.jml_jt 		= jmlJT;
+	result_record.jml_terlambat = jmlTerlambat;
+	
+	RETURN result_record;
+	END
+	$$;
+	
+	
+	
+2019-11-08 11:28:38.285 WIB [35] ERROR:  function "detail_aktivitas" already exists with same argument types
+2019-11-08 11:28:38.285 WIB [35] STATEMENT:  CREATE FUNCTION mst.detail_aktivitas(p_divisi text, p_bulan integer) RETURNS TABLE(daid integer, danama text, daskala_proker integer, danama_skala_proker text, dabsc integer, danama_bsc text, daunit_pelaksana json, totalaktivitas integer, blnini_jt integer, blnini_selesai integer, blnini_proses integer, blnini_belum integer, aktselesai integer, aktproses integer, aktbelum integer)
+	    LANGUAGE plpgsql
+	    AS $$  
+	declare	
+		periode 	RECORD;
+		rec 		RECORD;
+		jml_child	INTEGER = 0;
+		bulan		INTEGER = 0;
+		totalAktivitas	INTEGER = 0;
+		bulanIniJt		INTEGER = 0;
+		bulanIniSelesai	INTEGER = 0;
+		bulanIniProses	INTEGER = 0;
+		bulanIniBelum	INTEGER = 0;
+		aktivitasSelesai	INTEGER = 0;
+		aktivitasProses		INTEGER = 0;
+		aktivitasBelum		INTEGER	= 0;
+		
+	begin
+	--bulan:= EXTRACT(MONTH FROM now());
+	bulan := p_bulan;
+	select periode_tahun, periode_jenis into periode from mst.periode order by periode_tahun desc limit 1; 
+	delete from tmp.detail_aktivitas where da_divisi = p_divisi;
+	for rec in 
+		select rkf_id, rkf_proker, rkf_skala_proker, rkf_bsc, rkf_unit_pelaksana
+		from mst.rkf 
+		where 
+			rkf_user_from = p_divisi 
+			and rkf_tahun = periode.periode_tahun 
+			and rkf_jenis_id = periode.periode_jenis
+		loop
+		
+			totalAktivitas = count(*) from mst.aktivitas 
+				where aktivitas_proker = rec.rkf_id;
+			bulanIniJt = count(*) from mst.aktivitas 
+				where aktivitas_proker = rec.rkf_id
+				and aktivitas_bulan = bulan;
+			bulanIniSelesai = count(*) from mst.aktivitas 
+				where aktivitas_proker = rec.rkf_id
+				and aktivitas_bulan = bulan and aktivitas_status in (3,4,5);
+			bulanIniProses = count(*) from mst.aktivitas 
+				where aktivitas_proker = rec.rkf_id
+				and aktivitas_bulan = bulan and aktivitas_status = 2;
+			bulanIniBelum = count(*) from mst.aktivitas 
+				where aktivitas_proker = rec.rkf_id
+				and aktivitas_bulan = bulan and aktivitas_status = 1;
+			aktivitasSelesai = count(*) from mst.aktivitas 
+				where aktivitas_proker = rec.rkf_id
+				and aktivitas_status in (3,4,5);
+			aktivitasProses = count(*) from mst.aktivitas 
+				where aktivitas_proker = rec.rkf_id
+				and aktivitas_status = 2;
+			aktivitasBelum = count(*) from mst.aktivitas 
+				where aktivitas_proker = rec.rkf_id
+				and aktivitas_status = 1;
+			raise notice '%', totalAktivitas;
+			
+			raise notice '%', rec.rkf_id;
+			raise notice '%', rec.rkf_proker;
+			raise notice '%', rec.rkf_skala_proker;
+			raise notice '%', rec.rkf_bsc;
+			raise notice '---------------------------------';
+		
+		
+			insert into tmp.detail_aktivitas (da_divisi, da_id, da_nama,	da_skala_proker, da_bsc, da_unit_pelaksana,
+				total_aktivitas, bln_ini_jt, bln_ini_selesai, bln_ini_proses, bln_ini_belum,	
+				akt_selesai, akt_proses, akt_belum)
+			values (p_divisi, rec.rkf_id, rec.rkf_proker, rec.rkf_skala_proker, rec.rkf_bsc,  rec.rkf_unit_pelaksana, 
+				totalAktivitas,	bulanIniJt,	bulanIniSelesai, bulanIniProses, bulanIniBelum,
+				aktivitasSelesai, aktivitasProses, aktivitasBelum);
+		end loop;
+		
+	return QUERY
+		select 	da_id, da_nama,	da_skala_proker, skala_proker_nama, da_bsc, bsc_nama ,  da_unit_pelaksana, 
+				total_aktivitas, bln_ini_jt, bln_ini_selesai, bln_ini_proses, bln_ini_belum, akt_selesai, akt_proses, akt_belum
+		from tmp.detail_aktivitas 
+		inner join mst.skala_proker on da_skala_proker = skala_proker_id
+		inner join mst.bsc on da_bsc = bsc_id
+		where da_divisi = p_divisi 
+		order by da_id;
+	
+	END
+	$$;
+	
+	
+	
+2019-11-08 11:28:38.289 WIB [35] ERROR:  function "detail_aktivitas" already exists with same argument types
+2019-11-08 11:28:38.289 WIB [35] STATEMENT:  CREATE FUNCTION mst.detail_aktivitas(p_divisi text, p_tahun integer, p_bulan integer) RETURNS TABLE(daid integer, danama text, daskala_proker integer, danama_skala_proker text, dabsc integer, danama_bsc text, daunit_pelaksana json, totalaktivitas integer, blnini_jt integer, blnini_selesai integer, blnini_proses integer, blnini_belum integer, aktselesai integer, aktproses integer, aktbelum integer)
+	    LANGUAGE plpgsql
+	    AS $$  
+	declare	
+		periode 	RECORD;
+		rec 		RECORD;
+		jml_child	INTEGER = 0;
+		bulan		INTEGER = 0;
+		totalAktivitas	INTEGER = 0;
+		bulanIniJt		INTEGER = 0;
+		bulanIniSelesai	INTEGER = 0;
+		bulanIniProses	INTEGER = 0;
+		bulanIniBelum	INTEGER = 0;
+		aktivitasSelesai	INTEGER = 0;
+		aktivitasProses		INTEGER = 0;
+		aktivitasBelum		INTEGER	= 0;
+		
+	begin
+	--bulan:= EXTRACT(MONTH FROM now());
+	bulan := p_bulan;
+	select periode_tahun, periode_jenis into periode from mst.periode where periode_tahun = p_tahun order by periode_tahun desc limit 1; 
+	delete from tmp.detail_aktivitas where da_divisi = p_divisi;
+	for rec in 
+		select rkf_id, rkf_proker, rkf_skala_proker, rkf_bsc, rkf_unit_pelaksana
+		from mst.rkf 
+		where 
+			rkf_user_from = p_divisi 
+			and rkf_tahun = periode.periode_tahun 
+			and rkf_jenis_id = periode.periode_jenis
+		loop
+		
+			totalAktivitas = count(*) from mst.aktivitas 
+				where aktivitas_proker = rec.rkf_id;
+			bulanIniJt = count(*) from mst.aktivitas 
+				where aktivitas_proker = rec.rkf_id
+				and aktivitas_bulan = bulan;
+			bulanIniSelesai = count(*) from mst.aktivitas 
+				where aktivitas_proker = rec.rkf_id
+				and aktivitas_bulan = bulan and aktivitas_status in (3,4,5);
+			bulanIniProses = count(*) from mst.aktivitas 
+				where aktivitas_proker = rec.rkf_id
+				and aktivitas_bulan = bulan and aktivitas_status = 2;
+			bulanIniBelum = count(*) from mst.aktivitas 
+				where aktivitas_proker = rec.rkf_id
+				and aktivitas_bulan = bulan and aktivitas_status = 1;
+			aktivitasSelesai = count(*) from mst.aktivitas 
+				where aktivitas_proker = rec.rkf_id
+				and aktivitas_status in (3,4,5);
+			aktivitasProses = count(*) from mst.aktivitas 
+				where aktivitas_proker = rec.rkf_id
+				and aktivitas_status = 2;
+			aktivitasBelum = count(*) from mst.aktivitas 
+				where aktivitas_proker = rec.rkf_id
+				and aktivitas_status = 1;
+			raise notice '%', totalAktivitas;
+			
+			raise notice '%', rec.rkf_id;
+			raise notice '%', rec.rkf_proker;
+			raise notice '%', rec.rkf_skala_proker;
+			raise notice '%', rec.rkf_bsc;
+			raise notice '---------------------------------';
+		
+		
+			insert into tmp.detail_aktivitas (da_divisi, da_id, da_nama,	da_skala_proker, da_bsc, da_unit_pelaksana,
+				total_aktivitas, bln_ini_jt, bln_ini_selesai, bln_ini_proses, bln_ini_belum,	
+				akt_selesai, akt_proses, akt_belum)
+			values (p_divisi, rec.rkf_id, rec.rkf_proker, rec.rkf_skala_proker, rec.rkf_bsc,  rec.rkf_unit_pelaksana, 
+				totalAktivitas,	bulanIniJt,	bulanIniSelesai, bulanIniProses, bulanIniBelum,
+				aktivitasSelesai, aktivitasProses, aktivitasBelum);
+		end loop;
+		
+	return QUERY
+		select 	da_id, da_nama,	da_skala_proker, skala_proker_nama, da_bsc, bsc_nama ,  da_unit_pelaksana, 
+				total_aktivitas, bln_ini_jt, bln_ini_selesai, bln_ini_proses, bln_ini_belum, akt_selesai, akt_proses, akt_belum
+		from tmp.detail_aktivitas 
+		inner join mst.skala_proker on da_skala_proker = skala_proker_id
+		inner join mst.bsc on da_bsc = bsc_id
+		where da_divisi = p_divisi 
+		order by da_id;
+	
+	END
+	$$;
+	
+	
+	
+2019-11-08 11:28:38.291 WIB [35] ERROR:  function "divisi" already exists with same argument types
+2019-11-08 11:28:38.291 WIB [35] STATEMENT:  CREATE FUNCTION mst.divisi() RETURNS TABLE(parent json)
+	    LANGUAGE plpgsql
+	    AS $$
+	BEGIN
+	RETURN QUERY
+	SELECT  json_agg(row_to_json(t))  FROM 
+			(
+			SELECT unit_kerja_id, unit_kerja_nama FROM mst.unit_kerja WHERE 
+			SUBSTRING(unit_kerja_id FROM 1 FOR 3) = '001' AND SUBSTRING(unit_kerja_id FROM 4 FOR 1) <> ''
+			ORDER BY unit_kerja_id
+			) t;	
+	END
+	$$;
+	
+	
+	
+2019-11-08 11:28:38.294 WIB [35] ERROR:  function "get_detail_notif" already exists with same argument types
+2019-11-08 11:28:38.294 WIB [35] STATEMENT:  CREATE FUNCTION mst.get_detail_notif(p_unit_kerja text, p_support_fungsi_lain text) RETURNS TABLE(rkfid integer, rkfproker text, rkfuserfrom text)
+	    LANGUAGE plpgsql
+	    AS $$ 
+	declare	
+		 periode RECORD;	
+	begin
+		select periode_tahun, periode_jenis into periode from mst.periode order by periode_tahun desc limit 1; 
+		return QUERY 
+			select rkf_id, rkf_proker, rkf_user_from
+			from mst.rkf inner join mst.unit_kerja on rkf_user_from = unit_kerja_id
+			where 
+			rkf_tahun = periode.periode_tahun and rkf_jenis_id = periode.periode_jenis and
+			rkf_user_from = p_support_fungsi_lain and 
+			rkf_fungsilain @> ('[{"unitKerja":"'||(p_unit_kerja)||'"}]')::jsonb;
+	end
+	$$;
+	
+	
+	
+2019-11-08 11:28:38.296 WIB [35] ERROR:  function "get_notes" already exists with same argument types
+2019-11-08 11:28:38.296 WIB [35] STATEMENT:  CREATE FUNCTION mst.get_notes(p_unit_kerja text, p_tahun integer) RETURNS TABLE(rkfid integer, rkfproker text, rkfuserfrom text, rkfuserfromname text, rkfnotes text, rkfjadwal jsonb)
+	    LANGUAGE plpgsql
+	    AS $$ 
+	declare	
+		 periode RECORD;
+	begin
+	--	select periode_tahun, periode_jenis into periode from mst.periode order by periode_tahun desc limit 1; 
+		select periode_tahun, periode_jenis into periode from mst.periode where periode_tahun = p_tahun order by periode_tahun desc limit 1;
+		return QUERY 
+			select rkf_id, rkf_proker, rkf_user_from, unit_kerja_nama, mst.get_notes_name(rkf_fungsilain, p_unit_kerja), rkf_jadwal
+			from mst.rkf inner join mst.unit_kerja on rkf_user_from = unit_kerja_id
+			where
+				rkf_tahun = periode.periode_tahun and rkf_jenis_id = periode.periode_jenis and 
+				rkf_fungsilain @>  ('[{"unitKerja":"'||(p_unit_kerja)||'"}]')::jsonb
+			order by rkf_user_from;
+	end
+	$$;
+	
+	
+	
+2019-11-08 11:28:38.299 WIB [35] ERROR:  function "get_notes_detail" already exists with same argument types
+2019-11-08 11:28:38.299 WIB [35] STATEMENT:  CREATE FUNCTION mst.get_notes_detail(p_unit_kerja text, p_from text) RETURNS TABLE(rkfid integer, rkfproker text, rkfnotes text, rkfjadwal jsonb)
+	    LANGUAGE plpgsql
+	    AS $$ 
+	declare	
+		 periode RECORD;
+	begin
+		select periode_tahun, periode_jenis into periode from mst.periode order by periode_tahun desc limit 1; 
+		return QUERY 
+			select rkf_id, rkf_proker, mst.get_notes_name(rkf_fungsilain, p_unit_kerja), rkf_jadwal
+			from mst.rkf 
+			where
+				rkf_tahun = periode.periode_tahun and rkf_jenis_id = periode.periode_jenis and
+				rkf_user_from = p_from and 
+				rkf_fungsilain @>  ('[{"unitKerja":"'||(p_unit_kerja)||'"}]')::jsonb 
+			order by rkf_id;
+	end
+	$$;
+	
+	
+	
+2019-11-08 11:28:38.302 WIB [35] ERROR:  function "get_notes_name" already exists with same argument types
+2019-11-08 11:28:38.302 WIB [35] STATEMENT:  CREATE FUNCTION mst.get_notes_name(p_data jsonb, p_kategori text) RETURNS text
+	    LANGUAGE plpgsql
+	    AS $$ 
+	declare	
+		 rec RECORD;
+		 xnotes text = '';
+	begin
+		for rec in 
+			select jsonb_array_elements(p_data) as data
+		loop
+			if rec.data ->> 'unitKerja' = p_kategori THEN
+			raise notice '%', rec.data ->> 'notes';
+			xnotes = rec.data ->> 'notes';
+			end if;
+		end loop;
+	RETURN xnotes;
+	end
+	$$;
+	
+	
+	
+2019-11-08 11:28:38.305 WIB [35] ERROR:  function "get_notes_ori" already exists with same argument types
+2019-11-08 11:28:38.305 WIB [35] STATEMENT:  CREATE FUNCTION mst.get_notes_ori(p_unit_kerja text) RETURNS TABLE(rkfid integer, rkfproker text, rkfuserfrom text, rkfuserfromname text, rkfnotes text, rkfjadwal jsonb)
+	    LANGUAGE plpgsql
+	    AS $$ 
+	declare	
+		 periode RECORD;
+	begin
+		select periode_tahun, periode_jenis into periode from mst.periode order by periode_tahun desc limit 1; 
+		return QUERY 
+			select rkf_id, rkf_proker, rkf_user_from, unit_kerja_nama, mst.get_notes_name(rkf_fungsilain, p_unit_kerja), rkf_jadwal
+			from mst.rkf inner join mst.unit_kerja on rkf_user_from = unit_kerja_id
+			where
+				rkf_tahun = periode.periode_tahun and rkf_jenis_id = periode.periode_jenis and 
+				rkf_fungsilain @>  ('[{"unitKerja":"'||(p_unit_kerja)||'"}]')::jsonb
+			order by rkf_user_from;
+	end
+	$$;
+	
+	
+	
+2019-11-08 11:28:38.308 WIB [35] ERROR:  function "get_notes_sum" already exists with same argument types
+2019-11-08 11:28:38.308 WIB [35] STATEMENT:  CREATE FUNCTION mst.get_notes_sum(p_unit_kerja text, p_tahun integer) RETURNS TABLE(rkfuserfrom text, rkfuserfromname text, jumlahsupport bigint)
+	    LANGUAGE plpgsql
+	    AS $$ 
+	declare	
+		 periode RECORD;	
+	begin
+	--	select periode_tahun, periode_jenis into periode from mst.periode order by periode_tahun desc limit 1; 
+	select periode_tahun, periode_jenis into periode from mst.periode where periode_tahun = p_tahun order by periode_tahun desc limit 1;
+		return QUERY 
+			select rkf_user_from, unit_kerja_nama, count(rkf_id)
+			from mst.rkf inner join mst.unit_kerja on rkf_user_from = unit_kerja_id
+			where 
+			rkf_tahun = periode.periode_tahun and rkf_jenis_id = periode.periode_jenis and 
+			rkf_fungsilain @> ('[{"unitKerja":"'||(p_unit_kerja)||'"}]')::jsonb
+			group by rkf_user_from, unit_kerja_nama;
+		
+	end
+	$$;
+	
+	
+	
+2019-11-08 11:28:38.311 WIB [35] ERROR:  function "get_notes_sum_ori" already exists with same argument types
+2019-11-08 11:28:38.311 WIB [35] STATEMENT:  CREATE FUNCTION mst.get_notes_sum_ori(p_unit_kerja text) RETURNS TABLE(rkfuserfrom text, rkfuserfromname text, jumlahsupport bigint)
+	    LANGUAGE plpgsql
+	    AS $$ 
+	declare	
+		 periode RECORD;	
+	begin
+		select periode_tahun, periode_jenis into periode from mst.periode order by periode_tahun desc limit 1; 
+		return QUERY 
+			select rkf_user_from, unit_kerja_nama, count(rkf_id)
+			from mst.rkf inner join mst.unit_kerja on rkf_user_from = unit_kerja_id
+			where 
+			rkf_tahun = periode.periode_tahun and rkf_jenis_id = periode.periode_jenis and 
+			rkf_fungsilain @> ('[{"unitKerja":"'||(p_unit_kerja)||'"}]')::jsonb
+			group by rkf_user_from, unit_kerja_nama;
+		
+	end
+	$$;
+	
+	
+	
+2019-11-08 11:28:38.313 WIB [35] ERROR:  function "jabatan_per_unitkerja" already exists with same argument types
+2019-11-08 11:28:38.313 WIB [35] STATEMENT:  CREATE FUNCTION mst.jabatan_per_unitkerja(p_unit_kerja text, p_jabatan_id text) RETURNS TABLE(parent json)
+	    LANGUAGE plpgsql
+	    AS $$
+	BEGIN
+	RETURN QUERY
+	-- 		SELECT row_to_json(t) FROM 
+	SELECT  json_agg(row_to_json(t))  FROM 
+			(
+				SELECT unit_kerja_id, jabatan_id, jabatan_nama FROM mst.jabatan_unit_kerja
+				WHERE unit_kerja_id = p_unit_kerja
+				AND SUBSTRING(jabatan_id FROM 1 FOR 7) = SUBSTRING(p_jabatan_id FROM 1 FOR 7)
+				AND SUBSTRING(jabatan_id FROM 8 FOR 1) <> '0'
+				AND SUBSTRING(jabatan_nama FROM 1 FOR 6) IN ('Kepala', 'Ketua ')
+				ORDER BY jabatan_id
+			) t;
+			
+	END
+	$$;
+	
+	
+	
+2019-11-08 11:28:38.316 WIB [35] ERROR:  function "kud_get_nama" already exists with same argument types
+2019-11-08 11:28:38.316 WIB [35] STATEMENT:  CREATE FUNCTION mst.kud_get_nama(p_kud_id integer, p_kud_tahun integer) RETURNS text
+	    LANGUAGE plpgsql
+	    AS $$ 
+	DECLARE
+		 nama text = ''; 
+	BEGIN
+		nama := kud_nama FROM mst.kud where kud_id = p_kud_id and  kud_tahun = p_kud_tahun;
+		
+	RETURN nama;
+	end
+	$$;
+	
+	
+	
+2019-11-08 11:28:38.320 WIB [35] ERROR:  function "pegawai_per_divisi" already exists with same argument types
+2019-11-08 11:28:38.320 WIB [35] STATEMENT:  CREATE FUNCTION mst.pegawai_per_divisi(p_unit_kerja text) RETURNS TABLE(parent json)
+	    LANGUAGE plpgsql
+	    AS $$
+	BEGIN
+	RETURN QUERY
+	SELECT  json_agg(row_to_json(t))  FROM 
+			(
+			SELECT pegawai_id, pegawai_nama, pegawai_jabatan FROM mst.pegawai 
+			WHERE pegawai_unit_kerja = p_unit_kerja 
+			) t;	
+	END
+	$$;
+	
+	
+	
+2019-11-08 11:28:38.323 WIB [35] ERROR:  function "pegawai_per_unitkerja" already exists with same argument types
+2019-11-08 11:28:38.323 WIB [35] STATEMENT:  CREATE FUNCTION mst.pegawai_per_unitkerja(p_unit_kerja text, p_jabatan_id text) RETURNS TABLE(parent json)
+	    LANGUAGE plpgsql
+	    AS $$
+	BEGIN
+	RETURN QUERY
+	-- 		SELECT row_to_json(t) FROM 
+	SELECT  json_agg(row_to_json(t))  FROM 
+			(
+			SELECT pegawai_id, pegawai_nama, pegawai_jabatan FROM mst.pegawai 
+			WHERE pegawai_unit_kerja = p_unit_kerja 
+			AND (
+	-- 			mengambil pegawai tetap
+				SUBSTRING(pegawai_jabatan FROM 1 FOR 8) = SUBSTRING(p_jabatan_id FROM 1 FOR 8) 
+	-- 			mengakomodir pegawai kontrak : B001PPBKON (dengan huruf belakang KON)
+				OR SUBSTRING(pegawai_jabatan FROM 1 FOR 8) = SUBSTRING(p_jabatan_id FROM 1 FOR 8)
+				)
+			AND SUBSTRING(pegawai_jabatan FROM 8 FOR 1) <> '0'
+			) t;	
+	END
+	$$;
+	
+	
+	
+2019-11-08 11:28:38.325 WIB [35] ERROR:  function "posbiaya_get_nama" already exists with same argument types
+2019-11-08 11:28:38.325 WIB [35] STATEMENT:  CREATE FUNCTION mst.posbiaya_get_nama(p_posbiaya_id integer) RETURNS text
+	    LANGUAGE plpgsql
+	    AS $$ 
+	DECLARE
+		 nama text = ''; 
+	BEGIN
+		nama := posbiaya_nama FROM mst.posbiaya where posbiaya_id = p_posbiaya_id;
+		
+	RETURN nama;
+	end
+	$$;
+	
+	
+	
+2019-11-08 11:28:38.328 WIB [35] ERROR:  function "rkf_ganti_jenis" already exists with same argument types
+2019-11-08 11:28:38.328 WIB [35] STATEMENT:  CREATE FUNCTION mst.rkf_ganti_jenis(p_tahun integer, p_jenis_before integer, p_jenis_after integer) RETURNS text
+	    LANGUAGE plpgsql
+	    AS $$DECLARE  
+		 xsts text = 'fail'; 
+	BEGIN 
+		IF NOT EXISTS (SELECT rkf_tahun  FROM mst.rkf WHERE rkf_tahun = p_tahun AND rkf_jenis_id = p_jenis_after) THEN
+		    IF NOT EXISTS (SELECT periode_tahun FROM mst.periode WHERE periode_tahun = p_tahun ) THEN 
+				INSERT INTO mst.periode (periode_tahun, periode_jenis) VALUES (p_tahun, p_jenis_after);
+			ELSE 
+			    UPDATE mst.periode SET periode_jenis = p_jenis_after WHERE periode_tahun = p_tahun;
+			END IF;
+		    
+			
+			
+			CREATE TABLE tmp.rkf AS SELECT * FROM mst.rkf WHERE rkf_tahun = p_tahun AND rkf_jenis_id = p_jenis_before;
+	
+			UPDATE tmp.rkf SET rkf_jenis_id = p_jenis_after, rkf_otor = '',  
+								rkf_time_otor= null, rkf_note_otor ='', rkf_sts = 0;
+	
+			INSERT INTO mst.rkf(rkf_sts, rkf_user, rkf_user_from, rkf_tahun, rkf_jenis_id, 
+								rkf_proker, rkf_status_proker, rkf_skala_proker, rkf_kat_proker,
+								rkf_bsc, rkf_konsultan, rkf_unit_pelaksana, rkf_visi, rkf_misi, 
+								rkf_coreplan, rkf_kud, rkf_tujuan_proker, rkf_indikator, rkf_targetfin, 
+								rkf_jadwal, rkf_anggaran, rkf_fungsilain, rkf_time_input, rkf_otor, 
+								rkf_time_otor, rkf_note_otor, rkf_tlaudit) 
+					SELECT  rkf_sts, rkf_user, rkf_user_from, rkf_tahun, rkf_jenis_id, 
+							rkf_proker, rkf_status_proker, rkf_skala_proker, rkf_kat_proker,
+							rkf_bsc, rkf_konsultan, rkf_unit_pelaksana, rkf_visi, rkf_misi, 
+							rkf_coreplan, rkf_kud, rkf_tujuan_proker, rkf_indikator, rkf_targetfin, 
+							rkf_jadwal, rkf_anggaran, rkf_fungsilain, rkf_time_input, rkf_otor, 
+							rkf_time_otor, rkf_note_otor, rkf_tlaudit
+					FROM tmp.rkf;
+	
+			DROP TABLE tmp.rkf;
+			xsts = 'pass';
+		END IF;
+	RETURN xsts;
+	END
+	$$;
+	
+	
+	
+2019-11-08 11:28:38.331 WIB [35] ERROR:  function "tlaudit_get_nama" already exists with same argument types
+2019-11-08 11:28:38.331 WIB [35] STATEMENT:  CREATE FUNCTION mst.tlaudit_get_nama(p_tlaudit integer) RETURNS text
+	    LANGUAGE plpgsql
+	    AS $$ 
+	DECLARE
+		 nama text = ''; 
+	BEGIN
+		nama := tindak_lanjut_nama FROM mst.tindak_lanjut 
+				where tindak_lanjut_id = p_tlaudit;
+		
+	RETURN nama;
+	end
+	$$;
+	
+	
+	
+2019-11-08 11:28:38.335 WIB [35] ERROR:  function "trg_crypt_users_pass" already exists with same argument types
+2019-11-08 11:28:38.335 WIB [35] STATEMENT:  CREATE FUNCTION sec.trg_crypt_users_pass() RETURNS trigger
+	    LANGUAGE plpgsql
+	    AS $_$DECLARE
+	BEGIN
+	--     IF substr(NEW.passwd, 1, 3) <> '$1$' THEN
+	        NEW.userpass := crypt( NEW.userpass, gen_salt('bf', 7) );
+	--     END IF;
+	    RETURN NEW;
+	END;
+	$_$;
+	
+	
+	
+2019-11-08 11:28:38.338 WIB [35] ERROR:  function "genenrate_aktivitas" already exists with same argument types
+2019-11-08 11:28:38.338 WIB [35] STATEMENT:  CREATE FUNCTION tmp.genenrate_aktivitas() RETURNS void
+	    LANGUAGE plpgsql
+	    AS $$
+	DECLARE
+		bulan text = ''; 
+		rec RECORD;
+		query text;
+	    intvl INTEGER = 1;
+	begin
+		query := 'SELECT * FROM mst.aktivitas_detail ORDER BY aktivitas_detail_id';
+		for rec in execute query
+		loop
+			update mst.aktivitas_detail set aktivitas_detail_date = now() - interval '1 day';
+		end loop;
+	
+	END
+	$$;
+	
+	
+	
+2019-11-08 11:28:38.344 WIB [35] ERROR:  relation "jenis_kantor" already exists
+2019-11-08 11:28:38.344 WIB [35] STATEMENT:  CREATE TABLE jaringan.jenis_kantor (
+	    jenis_kantor_id integer NOT NULL,
+	    jenis_kantor_nama text
+	);
+	
+	
+	
+2019-11-08 11:28:38.349 WIB [35] ERROR:  relation "jenis_tanah_bangunan" already exists
+2019-11-08 11:28:38.349 WIB [35] STATEMENT:  CREATE TABLE jaringan.jenis_tanah_bangunan (
+	    jenis_tanah_bangunan_id integer NOT NULL,
+	    jenis_tanah_bangunan_nama text
+	);
+	
+	
+	
+2019-11-08 11:28:38.352 WIB [35] ERROR:  relation "kecamatan" already exists
+2019-11-08 11:28:38.352 WIB [35] STATEMENT:  CREATE TABLE jaringan.kecamatan (
+	    kecamatan_kota text NOT NULL,
+	    kecamatan_id text NOT NULL,
+	    kecamatan_nama text NOT NULL
+	);
+	
+	
+	
+2019-11-08 11:28:38.356 WIB [35] ERROR:  relation "kelurahan" already exists
+2019-11-08 11:28:38.356 WIB [35] STATEMENT:  CREATE TABLE jaringan.kelurahan (
+	    kelurahan_kecamatan text NOT NULL,
+	    kelurahan_id text NOT NULL,
+	    kelurahan_nama text NOT NULL
+	);
+	
+	
+	
+2019-11-08 11:28:38.359 WIB [35] ERROR:  relation "kota" already exists
+2019-11-08 11:28:38.359 WIB [35] STATEMENT:  CREATE TABLE jaringan.kota (
+	    kota_propinsi text NOT NULL,
+	    kota_id text NOT NULL,
+	    kota_nama text NOT NULL
+	);
+	
+	
+	
+2019-11-08 11:28:38.363 WIB [35] ERROR:  relation "pembukaan" already exists
+2019-11-08 11:28:38.363 WIB [35] STATEMENT:  CREATE TABLE jaringan.pembukaan (
+	    pembukaan_id bigint NOT NULL,
+	    pembukaan_tahun integer,
+	    pembukaan_jenis_kantor integer,
+	    pembukaan_pengusul text,
+	    pembukaan_propinsi text,
+	    pembukaan_kota text,
+	    pembukaan_kecamatan text,
+	    pembukaan_kelurahan text,
+	    pembukaan_tanah integer,
+	    pembukaan_bangunan integer,
+	    pembukaan_rencana_pengadaan_tanah integer,
+	    pembukaan_anggaran_pengadaan_tanah bigint,
+	    pembukaan_rencana_pengadaan_bangunan integer,
+	    pembukaan_anggaran_pengadaan_bangunan bigint,
+	    pembukaan_status integer,
+	    pembukaan_kajian_kelayakan_bisnis_start integer,
+	    pembukaan_kajian_kelayakan_tanah_bangunan_start integer,
+	    pembukaan_pengadaan_tanah_bangunan_start integer,
+	    pembukaan_penyiapan_tanah_bangunan_start integer,
+	    pembukaan_penyiapan_infrastruktur_pendukung_start integer,
+	    pembukaan_penyiapan_infrastruktur_it_start integer,
+	    pembukaan_pengadaan_sdm_start integer,
+	    pembukaan_perijinan_start integer,
+	    pembukaan_pembukaan_start integer,
+	    pembukaan_kajian_kelayakan_bisnis_finish integer,
+	    pembukaan_kajian_kelayakan_tanah_bangunan_finish integer,
+	    pembukaan_pengadaan_tanah_bangunan_finish integer,
+	    pembukaan_penyiapan_tanah_bangunan_finish integer,
+	    pembukaan_penyiapan_infrastruktur_pendukung_finish integer,
+	    pembukaan_penyiapan_infrastruktur_it_finish integer,
+	    pembukaan_pengadaan_sdm_finish integer,
+	    pembukaan_perijinan_finish integer,
+	    pembukaan_pembukaan_finish integer,
+	    pembukaan_kajian_kelayakan_bisnis_divisi text,
+	    pembukaan_kajian_kelayakan_tanah_bangunan_divisi text,
+	    pembukaan_pengadaan_tanah_bangunan_divisi text,
+	    pembukaan_penyiapan_tanah_bangunan_divisi text,
+	    pembukaan_penyiapan_infrastruktur_pendukung_divisi text,
+	    pembukaan_penyiapan_infrastruktur_it_divisi text,
+	    pembukaan_pengadaan_sdm_divisi text,
+	    pembukaan_perijinan_divisi text,
+	    pembukaan_pembukaan_divisi text
+	);
+	
+	
+	
+2019-11-08 11:28:38.367 WIB [35] ERROR:  relation "pembukaan_pembukaan_id_seq" already exists
+2019-11-08 11:28:38.367 WIB [35] STATEMENT:  CREATE SEQUENCE jaringan.pembukaan_pembukaan_id_seq
+	    START WITH 1
+	    INCREMENT BY 1
+	    NO MINVALUE
+	    NO MAXVALUE
+	    CACHE 1;
+	
+	
+	
+2019-11-08 11:28:38.375 WIB [35] ERROR:  relation "pengusul" already exists
+2019-11-08 11:28:38.375 WIB [35] STATEMENT:  CREATE TABLE jaringan.pengusul (
+	    pengusul_id text NOT NULL,
+	    pengusul_nama text
+	);
+	
+	
+	
+2019-11-08 11:28:38.379 WIB [35] ERROR:  relation "penutupan" already exists
+2019-11-08 11:28:38.379 WIB [35] STATEMENT:  CREATE TABLE jaringan.penutupan (
+	    penutupan_id bigint NOT NULL,
+	    penutupan_tahun integer,
+	    penutupan_jenis_kantor integer,
+	    penutupan_pengusul text,
+	    penutupan_propinsi text,
+	    penutupan_kota text,
+	    penutupan_kecamatan text,
+	    penutupan_kelurahan text,
+	    penutupan_status integer,
+	    penutupan_kajian_kelayakan_bisnis_start integer,
+	    penutupan_perijinan_start integer,
+	    penutupan_penutupan_start integer,
+	    penutupan_kajian_kelayakan_bisnis_finish integer,
+	    penutupan_perijinan_finish integer,
+	    penutupan_penutupan_finish integer,
+	    penutupan_kajian_kelayakan_bisnis_divisi text,
+	    penutupan_perijinan_divisi text,
+	    penutupan_penutupan_divisi text
+	);
+	
+	
+	
+2019-11-08 11:28:38.382 WIB [35] ERROR:  relation "penutupan_penutupan_id_seq" already exists
+2019-11-08 11:28:38.382 WIB [35] STATEMENT:  CREATE SEQUENCE jaringan.penutupan_penutupan_id_seq
+	    START WITH 1
+	    INCREMENT BY 1
+	    NO MINVALUE
+	    NO MAXVALUE
+	    CACHE 1;
+	
+	
+	
+2019-11-08 11:28:38.387 WIB [35] ERROR:  relation "perubahan" already exists
+2019-11-08 11:28:38.387 WIB [35] STATEMENT:  CREATE TABLE jaringan.perubahan (
+	    perubahan_id bigint NOT NULL,
+	    perubahan_tahun integer,
+	    perubahan_jenis_kantor_semula integer,
+	    perubahan_jenis_kantor_menjadi integer,
+	    perubahan_nama_semula text,
+	    perubahan_nama_menjadi text,
+	    perubahan_pengusul text,
+	    perubahan_propinsi text,
+	    perubahan_kota text,
+	    perubahan_kecamatan text,
+	    perubahan_kelurahan text,
+	    perubahan_tanah integer,
+	    perubahan_bangunan integer,
+	    perubahan_rencana_pengadaan_tanah integer,
+	    perubahan_anggaran_pengadaan_tanah bigint,
+	    perubahan_rencana_pengadaan_bangunan integer,
+	    perubahan_anggaran_pengadaan_bangunan bigint,
+	    perubahan_status integer,
+	    perubahan_kajian_kelayakan_bisnis_start integer,
+	    perubahan_kajian_kelayakan_tanah_bangunan_start integer,
+	    perubahan_pengadaan_tanah_bangunan_start integer,
+	    perubahan_penyiapan_tanah_bangunan_start integer,
+	    perubahan_penyiapan_infrastruktur_pendukung_start integer,
+	    perubahan_penyiapan_infrastruktur_it_start integer,
+	    perubahan_pengadaan_sdm_start integer,
+	    perubahan_perijinan_start integer,
+	    perubahan_perubahan_start integer,
+	    perubahan_kajian_kelayakan_bisnis_finish integer,
+	    perubahan_kajian_kelayakan_tanah_bangunan_finish integer,
+	    perubahan_pengadaan_tanah_bangunan_finish integer,
+	    perubahan_penyiapan_tanah_bangunan_finish integer,
+	    perubahan_penyiapan_infrastruktur_pendukung_finish integer,
+	    perubahan_penyiapan_infrastruktur_it_finish integer,
+	    perubahan_pengadaan_sdm_finish integer,
+	    perubahan_perijinan_finish integer,
+	    perubahan_perubahan_finish integer,
+	    perubahan_kajian_kelayakan_bisnis_divisi text,
+	    perubahan_kajian_kelayakan_tanah_bangunan_divisi text,
+	    perubahan_pengadaan_tanah_bangunan_divisi text,
+	    perubahan_penyiapan_tanah_bangunan_divisi text,
+	    perubahan_penyiapan_infrastruktur_pendukung_divisi text,
+	    perubahan_penyiapan_infrastruktur_it_divisi text,
+	    perubahan_pengadaan_sdm_divisi text,
+	    perubahan_perijinan_divisi text,
+	    perubahan_perubahan_divisi text
+	);
+	
+	
+	
+2019-11-08 11:28:38.393 WIB [35] ERROR:  relation "perubahan_perubahan_id_seq" already exists
+2019-11-08 11:28:38.393 WIB [35] STATEMENT:  CREATE SEQUENCE jaringan.perubahan_perubahan_id_seq
+	    START WITH 1
+	    INCREMENT BY 1
+	    NO MINVALUE
+	    NO MAXVALUE
+	    CACHE 1;
+	
+	
+	
+2019-11-08 11:28:38.398 WIB [35] ERROR:  relation "propinsi" already exists
+2019-11-08 11:28:38.398 WIB [35] STATEMENT:  CREATE TABLE jaringan.propinsi (
+	    propinsi_id text NOT NULL,
+	    propinsi_nama text NOT NULL,
+	    propinsi_ibu_kota text
+	);
+	
+	
+	
+2019-11-08 11:28:38.401 WIB [35] ERROR:  relation "relokasi" already exists
+2019-11-08 11:28:38.401 WIB [35] STATEMENT:  CREATE TABLE jaringan.relokasi (
+	    relokasi_id bigint NOT NULL,
+	    relokasi_tahun integer,
+	    relokasi_jenis_kantor integer,
+	    relokasi_pengusul text,
+	    relokasi_propinsi_semula text,
+	    relokasi_kota_semula text,
+	    relokasi_kecamatan_semula text,
+	    relokasi_kelurahan_semula text,
+	    relokasi_alamat_semula text,
+	    relokasi_propinsi_menjadi text,
+	    relokasi_kota_menjadi text,
+	    relokasi_kecamatan_menjadi text,
+	    relokasi_kelurahan_menjadi text,
+	    relokasi_alamat_menjadi text,
+	    relokasi_tanah integer,
+	    relokasi_bangunan integer,
+	    relokasi_rencana_pengadaan_tanah integer,
+	    relokasi_anggaran_pengadaan_tanah bigint,
+	    relokasi_rencana_pengadaan_bangunan integer,
+	    relokasi_anggaran_pengadaan_bangunan bigint,
+	    relokasi_status integer,
+	    relokasi_kajian_kelayakan_bisnis_start integer,
+	    relokasi_kajian_kelayakan_tanah_bangunan_start integer,
+	    relokasi_pengadaan_tanah_bangunan_start integer,
+	    relokasi_penyiapan_tanah_bangunan_start integer,
+	    relokasi_penyiapan_infrastruktur_pendukung_start integer,
+	    relokasi_penyiapan_infrastruktur_it_start integer,
+	    relokasi_pengadaan_sdm_start integer,
+	    relokasi_perijinan_start integer,
+	    relokasi_relokasi_start integer,
+	    relokasi_kajian_kelayakan_bisnis_finish integer,
+	    relokasi_kajian_kelayakan_tanah_bangunan_finish integer,
+	    relokasi_pengadaan_tanah_bangunan_finish integer,
+	    relokasi_penyiapan_tanah_bangunan_finish integer,
+	    relokasi_penyiapan_infrastruktur_pendukung_finish integer,
+	    relokasi_penyiapan_infrastruktur_it_finish integer,
+	    relokasi_pengadaan_sdm_finish integer,
+	    relokasi_perijinan_finish integer,
+	    relokasi_relokasi_finish integer,
+	    relokasi_kajian_kelayakan_bisnis_divisi text,
+	    relokasi_kajian_kelayakan_tanah_bangunan_divisi text,
+	    relokasi_pengadaan_tanah_bangunan_divisi text,
+	    relokasi_penyiapan_tanah_bangunan_divisi text,
+	    relokasi_penyiapan_infrastruktur_pendukung_divisi text,
+	    relokasi_penyiapan_infrastruktur_it_divisi text,
+	    relokasi_pengadaan_sdm_divisi text,
+	    relokasi_perijinan_divisi text,
+	    relokasi_relokasi_divisi text
+	);
+	
+	
+	
+2019-11-08 11:28:38.404 WIB [35] ERROR:  relation "relokasi_relokasi_id_seq" already exists
+2019-11-08 11:28:38.404 WIB [35] STATEMENT:  CREATE SEQUENCE jaringan.relokasi_relokasi_id_seq
+	    START WITH 1
+	    INCREMENT BY 1
+	    NO MINVALUE
+	    NO MAXVALUE
+	    CACHE 1;
+	
+	
+	
+2019-11-08 11:28:38.409 WIB [35] ERROR:  relation "rencana_pengadaan_bangunan" already exists
+2019-11-08 11:28:38.409 WIB [35] STATEMENT:  CREATE TABLE jaringan.rencana_pengadaan_bangunan (
+	    rencana_pengadaan_bangunan_id integer NOT NULL,
+	    rencana_pengadaan_bangunan_nama text
+	);
+	
+	
+	
+2019-11-08 11:28:38.412 WIB [35] ERROR:  relation "rencana_pengadaan_tanah" already exists
+2019-11-08 11:28:38.412 WIB [35] STATEMENT:  CREATE TABLE jaringan.rencana_pengadaan_tanah (
+	    rencana_pengadaan_tanah_id integer NOT NULL,
+	    rencana_pengadaan_tanah_nama text
+	);
+	
+	
+	
+2019-11-08 11:28:38.415 WIB [35] ERROR:  relation "tmp_awul" already exists
+2019-11-08 11:28:38.415 WIB [35] STATEMENT:  CREATE TABLE jaringan.tmp_awul (
+	    keterangan text,
+	    id integer,
+	    tanggal date
+	);
+	
+	
+	
+2019-11-08 11:28:38.418 WIB [35] ERROR:  relation "seq_aktivitas" already exists
+2019-11-08 11:28:38.418 WIB [35] STATEMENT:  CREATE SEQUENCE mst.seq_aktivitas
+	    START WITH 1
+	    INCREMENT BY 1
+	    NO MINVALUE
+	    NO MAXVALUE
+	    CACHE 1;
+	
+	
+	
+2019-11-08 11:28:38.421 WIB [35] ERROR:  relation "aktivitas" already exists
+2019-11-08 11:28:38.421 WIB [35] STATEMENT:  CREATE TABLE mst.aktivitas (
+	    aktivitas_proker integer,
+	    aktivitas_id bigint DEFAULT nextval('mst.seq_aktivitas'::regclass) NOT NULL,
+	    aktivitas_urut integer,
+	    aktivitas_nama text,
+	    aktivitas_target text,
+	    aktivitas_pic jsonb,
+	    aktivitas_bulan integer,
+	    aktivitas_status integer DEFAULT 1,
+	    aktivitas_penjelasan text,
+	    aktivitas_otor_user text,
+	    aktivitas_otor_time timestamp without time zone
+	);
+	
+	
+	
+2019-11-08 11:28:38.425 WIB [35] ERROR:  relation "aktivitas_detail_old" already exists
+2019-11-08 11:28:38.425 WIB [35] STATEMENT:  CREATE TABLE mst.aktivitas_detail_old (
+	    aktivitas_master_id integer,
+	    aktivitas_detail_bulan integer,
+	    aktivitas_detail_status integer,
+	    aktivitas_detail_penjelasan text,
+	    aktivitas_detail_date timestamp without time zone DEFAULT now(),
+	    aktivitas_detail_otor_user bigint,
+	    aktivitas_detail_otor_time timestamp without time zone,
+	    aktivitas_detail_id text DEFAULT ((date_part('year'::text, now()))::text || nextval(('mst.seq_aktivitas_detail'::text)::regclass))
+	);
+	
+	
+	
+2019-11-08 11:28:38.430 WIB [35] ERROR:  relation "bangun_renovasi" already exists
+2019-11-08 11:28:38.430 WIB [35] STATEMENT:  CREATE TABLE mst.bangun_renovasi (
+	    bangun_renovasi_id integer NOT NULL,
+	    bangun_renovasi_jenis integer,
+	    bangun_renovasi_uraian text,
+	    bangun_renovasi_status integer,
+	    bangun_renovasi_kepemilikan_aset integer,
+	    bangun_renovasi_alamat text,
+	    bangun_renovasi_anggaran bigint,
+	    bangun_renovasi_jadwal_bulan jsonb,
+	    bangun_renovasi_divisi text
+	);
+	
+	
+	
+2019-11-08 11:28:38.438 WIB [35] ERROR:  relation "bangun_renovasi_bangun_renovasi_id_seq" already exists
+2019-11-08 11:28:38.438 WIB [35] STATEMENT:  CREATE SEQUENCE mst.bangun_renovasi_bangun_renovasi_id_seq
+	    AS integer
+	    START WITH 1
+	    INCREMENT BY 1
+	    NO MINVALUE
+	    NO MAXVALUE
+	    CACHE 1;
+	
+	
+	
+2019-11-08 11:28:38.445 WIB [35] ERROR:  relation "barang" already exists
+2019-11-08 11:28:38.445 WIB [35] STATEMENT:  CREATE TABLE mst.barang (
+	    barang_kelompok integer NOT NULL,
+	    barang_id integer NOT NULL,
+	    barang_nama text,
+	    barang_harga bigint
+	);
+	
+	
+	
+2019-11-08 11:28:38.449 WIB [35] ERROR:  relation "barang_barang_id_seq" already exists
+2019-11-08 11:28:38.449 WIB [35] STATEMENT:  CREATE SEQUENCE mst.barang_barang_id_seq
+	    AS integer
+	    START WITH 1
+	    INCREMENT BY 1
+	    NO MINVALUE
+	    NO MAXVALUE
+	    CACHE 1;
+	
+	
+	
+2019-11-08 11:28:38.454 WIB [35] ERROR:  relation "bsc_id_seq" already exists
+2019-11-08 11:28:38.454 WIB [35] STATEMENT:  CREATE SEQUENCE mst.bsc_id_seq
+	    START WITH 5
+	    INCREMENT BY 1
+	    MINVALUE 5
+	    NO MAXVALUE
+	    CACHE 1;
+	
+	
+	
+2019-11-08 11:28:38.457 WIB [35] ERROR:  relation "bsc" already exists
+2019-11-08 11:28:38.457 WIB [35] STATEMENT:  CREATE TABLE mst.bsc (
+	    bsc_id integer DEFAULT nextval('mst.bsc_id_seq'::regclass) NOT NULL,
+	    bsc_sts integer DEFAULT 1,
+	    bsc_nama text NOT NULL
+	);
+	
+	
+	
+2019-11-08 11:28:38.478 WIB [35] ERROR:  relation "coa_sub1" already exists
+2019-11-08 11:28:38.478 WIB [35] STATEMENT:  CREATE TABLE mst.coa_sub1 (
+	    coa_sub1_header text,
+	    coa_sub1_id text,
+	    coa_sub1_nama text
+	);
+	
+	
+	
+2019-11-08 11:28:38.481 WIB [35] ERROR:  relation "coa_sub2" already exists
+2019-11-08 11:28:38.481 WIB [35] STATEMENT:  CREATE TABLE mst.coa_sub2 (
+	    coa_sub2_sub1 text,
+	    coa_sub2_id text,
+	    coa_sub2_nama text
+	);
+	
+	
+	
+2019-11-08 11:28:38.486 WIB [35] ERROR:  relation "coa_sub3" already exists
+2019-11-08 11:28:38.486 WIB [35] STATEMENT:  CREATE TABLE mst.coa_sub3 (
+	    coa_sub3_2 text,
+	    coa_sub3_id text,
+	    coa_sub3_nama text
+	);
+	
+	
+	
+2019-11-08 11:28:38.490 WIB [35] ERROR:  relation "coreplan_id_seq" already exists
+2019-11-08 11:28:38.490 WIB [35] STATEMENT:  CREATE SEQUENCE mst.coreplan_id_seq
+	    START WITH 6
+	    INCREMENT BY 1
+	    MINVALUE 6
+	    NO MAXVALUE
+	    CACHE 1;
+	
+	
+	
+2019-11-08 11:28:38.495 WIB [35] ERROR:  relation "coreplan" already exists
+2019-11-08 11:28:38.495 WIB [35] STATEMENT:  CREATE TABLE mst.coreplan (
+	    cp_id integer DEFAULT nextval('mst.coreplan_id_seq'::regclass) NOT NULL,
+	    cp_kode text,
+	    cp_nama text
+	);
+	
+	
+	
+2019-11-08 11:28:38.509 WIB [35] ERROR:  relation "detail_kompetensi" already exists
+2019-11-08 11:28:38.509 WIB [35] STATEMENT:  CREATE TABLE mst.detail_kompetensi (
+	    jnskom_id text,
+	    dtlkom_sts text DEFAULT '1'::text,
+	    dtlkom_id text,
+	    dtlkom_nama text,
+	    dtlkom_bobot integer
+	);
+	
+	
+	
+2019-11-08 11:28:38.529 WIB [35] ERROR:  relation "edukasi" already exists
+2019-11-08 11:28:38.529 WIB [35] STATEMENT:  CREATE TABLE mst.edukasi (
+	    eduid text NOT NULL,
+	    edunama text NOT NULL
+	);
+	
+	
+	
+2019-11-08 11:28:38.542 WIB [35] ERROR:  relation "golongan" already exists
+2019-11-08 11:28:38.542 WIB [35] STATEMENT:  CREATE TABLE mst.golongan (
+	    golid text NOT NULL,
+	    golpangkat text
+	);
+	
+	
+	
+2019-11-08 11:28:38.554 WIB [35] ERROR:  relation "hubkerja" already exists
+2019-11-08 11:28:38.554 WIB [35] STATEMENT:  CREATE TABLE mst.hubkerja (
+	    hubker_id text NOT NULL,
+	    hubker_jenis text,
+	    hubker_nama text,
+	    hubker_uraian text
+	);
+	
+	
+	
+2019-11-08 11:28:38.572 WIB [35] ERROR:  relation "inisiatif_sasaran" already exists
+2019-11-08 11:28:38.572 WIB [35] STATEMENT:  CREATE TABLE mst.inisiatif_sasaran (
+	    is_id integer,
+	    is_tahun integer,
+	    is_inisiatif_cp text,
+	    is_inisiatif_cp_target text,
+	    is_sasaran_cp text,
+	    is_kpi text,
+	    is_kpi_target text
+	);
+	
+	
+	
+2019-11-08 11:28:38.576 WIB [35] ERROR:  relation "isu_strategis" already exists
+2019-11-08 11:28:38.576 WIB [35] STATEMENT:  CREATE TABLE mst.isu_strategis (
+	    isu_strategis_id integer NOT NULL,
+	    isu_strategis_tahun integer,
+	    isu_strategis_nama text NOT NULL
+	);
+	
+	
+	
+2019-11-08 11:28:38.581 WIB [35] ERROR:  relation "isu_strategis_isu_strategis_id_seq" already exists
+2019-11-08 11:28:38.581 WIB [35] STATEMENT:  CREATE SEQUENCE mst.isu_strategis_isu_strategis_id_seq
+	    AS integer
+	    START WITH 1
+	    INCREMENT BY 1
+	    NO MINVALUE
+	    NO MAXVALUE
+	    CACHE 1;
+	
+	
+	
+2019-11-08 11:28:38.588 WIB [35] ERROR:  relation "jabatan" already exists
+2019-11-08 11:28:38.588 WIB [35] STATEMENT:  CREATE TABLE mst.jabatan (
+	    jabatan_id text NOT NULL,
+	    jabatan_nama text,
+	    jabatan_level integer,
+	    jabatan_gol_rendah text,
+	    jabatan_gol_tinggi text
+	);
+	
+	
+	
+2019-11-08 11:28:38.601 WIB [35] ERROR:  relation "jabatan_unit_kerja" already exists
+2019-11-08 11:28:38.601 WIB [35] STATEMENT:  CREATE TABLE mst.jabatan_unit_kerja (
+	    unit_kerja_id text NOT NULL,
+	    jabatan_id text NOT NULL,
+	    jabatan_nama text NOT NULL
+	);
+	
+	
+	
+2019-11-08 11:28:38.606 WIB [35] ERROR:  relation "jenis_aktiva" already exists
+2019-11-08 11:28:38.606 WIB [35] STATEMENT:  CREATE TABLE mst.jenis_aktiva (
+	    jenis_aktiva_id integer NOT NULL,
+	    jenis_aktiva_nama text
+	);
+	
+	
+	
+2019-11-08 11:28:38.610 WIB [35] ERROR:  relation "jenis_aktiva_jenis_aktiva_id_seq" already exists
+2019-11-08 11:28:38.610 WIB [35] STATEMENT:  CREATE SEQUENCE mst.jenis_aktiva_jenis_aktiva_id_seq
+	    AS integer
+	    START WITH 1
+	    INCREMENT BY 1
+	    NO MINVALUE
+	    NO MAXVALUE
+	    CACHE 1;
+	
+	
+	
+2019-11-08 11:28:38.620 WIB [35] ERROR:  relation "jenis_bangun_renovasi" already exists
+2019-11-08 11:28:38.620 WIB [35] STATEMENT:  CREATE TABLE mst.jenis_bangun_renovasi (
+	    jenis_bangun_renovasi_id integer NOT NULL,
+	    jenis_bangun_renovasi_nama text
+	);
+	
+	
+	
+2019-11-08 11:28:38.626 WIB [35] ERROR:  relation "jenis_bangun_renovasi_jenis_bangun_renovasi_id_seq" already exists
+2019-11-08 11:28:38.626 WIB [35] STATEMENT:  CREATE SEQUENCE mst.jenis_bangun_renovasi_jenis_bangun_renovasi_id_seq
+	    AS integer
+	    START WITH 1
+	    INCREMENT BY 1
+	    NO MINVALUE
+	    NO MAXVALUE
+	    CACHE 1;
+	
+	
+	
+2019-11-08 11:28:38.636 WIB [35] ERROR:  relation "jenis_kompetensi" already exists
+2019-11-08 11:28:38.636 WIB [35] STATEMENT:  CREATE TABLE mst.jenis_kompetensi (
+	    jnskom_id text NOT NULL,
+	    jnskom_nama text NOT NULL
+	);
+	
+	
+	
+2019-11-08 11:28:38.647 WIB [35] ERROR:  relation "jenis_pab" already exists
+2019-11-08 11:28:38.647 WIB [35] STATEMENT:  CREATE TABLE mst.jenis_pab (
+	    jenis_pab_id integer NOT NULL,
+	    jenis_pab_nama text
+	);
+	
+	
+	
+2019-11-08 11:28:38.650 WIB [35] ERROR:  relation "jenis_pab_jenis_pab_id_seq" already exists
+2019-11-08 11:28:38.650 WIB [35] STATEMENT:  CREATE SEQUENCE mst.jenis_pab_jenis_pab_id_seq
+	    AS integer
+	    START WITH 1
+	    INCREMENT BY 1
+	    NO MINVALUE
+	    NO MAXVALUE
+	    CACHE 1;
+	
+	
+	
+2019-11-08 11:28:38.656 WIB [35] ERROR:  relation "kategori_proker_id_seq" already exists
+2019-11-08 11:28:38.656 WIB [35] STATEMENT:  CREATE SEQUENCE mst.kategori_proker_id_seq
+	    START WITH 10
+	    INCREMENT BY 1
+	    MINVALUE 10
+	    NO MAXVALUE
+	    CACHE 1;
+	
+	
+	
+2019-11-08 11:28:38.662 WIB [35] ERROR:  relation "kategori_proker" already exists
+2019-11-08 11:28:38.662 WIB [35] STATEMENT:  CREATE TABLE mst.kategori_proker (
+	    kat_proker_id integer DEFAULT nextval('mst.kategori_proker_id_seq'::regclass) NOT NULL,
+	    kat_proker_sts integer DEFAULT 1,
+	    kat_proker_nama text NOT NULL
+	);
+	
+	
+	
+2019-11-08 11:28:38.679 WIB [35] ERROR:  relation "kepemilikan_aset" already exists
+2019-11-08 11:28:38.679 WIB [35] STATEMENT:  CREATE TABLE mst.kepemilikan_aset (
+	    kepemilikan_aset_id integer NOT NULL,
+	    kepemilikan_aset_nama text
+	);
+	
+	
+	
+2019-11-08 11:28:38.683 WIB [35] ERROR:  relation "kepemilikan_aset_kepemilikan_aset_id_seq" already exists
+2019-11-08 11:28:38.683 WIB [35] STATEMENT:  CREATE SEQUENCE mst.kepemilikan_aset_kepemilikan_aset_id_seq
+	    AS integer
+	    START WITH 1
+	    INCREMENT BY 1
+	    NO MINVALUE
+	    NO MAXVALUE
+	    CACHE 1;
+	
+	
+	
+2019-11-08 11:28:38.688 WIB [35] ERROR:  relation "kud_id_seq" already exists
+2019-11-08 11:28:38.688 WIB [35] STATEMENT:  CREATE SEQUENCE mst.kud_id_seq
+	    START WITH 13
+	    INCREMENT BY 1
+	    MINVALUE 13
+	    NO MAXVALUE
+	    CACHE 1;
+	
+	
+	
+2019-11-08 11:28:38.694 WIB [35] ERROR:  relation "kud" already exists
+2019-11-08 11:28:38.694 WIB [35] STATEMENT:  CREATE TABLE mst.kud (
+	    kud_id integer DEFAULT nextval('mst.kud_id_seq'::regclass) NOT NULL,
+	    kud_tahun integer NOT NULL,
+	    kud_nama text NOT NULL
+	);
+	
+	
+	
+2019-11-08 11:28:38.697 WIB [35] ERROR:  relation "lokasikerja" already exists
+2019-11-08 11:28:38.697 WIB [35] STATEMENT:  CREATE TABLE mst.lokasikerja (
+	    lokid text NOT NULL,
+	    loknama text NOT NULL
+	);
+	
+	
+	
+2019-11-08 11:28:38.706 WIB [35] ERROR:  relation "misi" already exists
+2019-11-08 11:28:38.706 WIB [35] STATEMENT:  CREATE TABLE mst.misi (
+	    misi_id integer NOT NULL,
+	    misi_nama text
+	);
+	
+	
+	
+2019-11-08 11:28:38.714 WIB [35] ERROR:  relation "pab" already exists
+2019-11-08 11:28:38.714 WIB [35] STATEMENT:  CREATE TABLE mst.pab (
+	    pab_rkf_id integer,
+	    pab_jenis integer,
+	    pab_nama text,
+	    pab_jadwal_bulan integer,
+	    pab_tujuan_bank text,
+	    pab_tujuan_nasabah text,
+	    pab_keterkaitan text,
+	    pab_deskripsi text,
+	    pab_resiko text,
+	    pab_mitigasi_resiko text
+	);
+	
+	
+	
+2019-11-08 11:28:38.718 WIB [35] ERROR:  relation "pegawai" already exists
+2019-11-08 11:28:38.718 WIB [35] STATEMENT:  CREATE TABLE mst.pegawai (
+	    pegawai_unit_kerja text NOT NULL,
+	    pegawai_jabatan text NOT NULL,
+	    pegawai_id text NOT NULL,
+	    pegawai_nama text NOT NULL
+	);
+	
+	
+	
+2019-11-08 11:28:38.723 WIB [35] ERROR:  relation "periode" already exists
+2019-11-08 11:28:38.723 WIB [35] STATEMENT:  CREATE TABLE mst.periode (
+	    periode_tahun integer NOT NULL,
+	    periode_jenis integer NOT NULL
+	);
+	
+	
+	
+2019-11-08 11:28:38.727 WIB [35] ERROR:  relation "pos_coa" already exists
+2019-11-08 11:28:38.727 WIB [35] STATEMENT:  CREATE TABLE mst.pos_coa (
+	    pos_coa_jenis text,
+	    pos_coa_header_id text,
+	    pos_coa_header_nama text,
+	    pos_coa_sub1_id text,
+	    pos_coa_sub1_nama text,
+	    pos_coa_sub2_id text,
+	    pos_coa_sub2_nama text,
+	    pos_coa_sub3_id text,
+	    pos_coa_sub3_nama text,
+	    pos_coa_jenis_nama text
+	);
+	
+	
+	
+2019-11-08 11:28:38.731 WIB [35] ERROR:  relation "posbiaya_id_seq" already exists
+2019-11-08 11:28:38.731 WIB [35] STATEMENT:  CREATE SEQUENCE mst.posbiaya_id_seq
+	    START WITH 17
+	    INCREMENT BY 1
+	    MINVALUE 17
+	    NO MAXVALUE
+	    CACHE 1;
+	
+	
+	
+2019-11-08 11:28:38.735 WIB [35] ERROR:  relation "posbiaya" already exists
+2019-11-08 11:28:38.735 WIB [35] STATEMENT:  CREATE TABLE mst.posbiaya (
+	    posbiaya_sts integer DEFAULT 1 NOT NULL,
+	    posbiaya_id integer DEFAULT nextval('mst.posbiaya_id_seq'::regclass) NOT NULL,
+	    posbiaya_nama text NOT NULL
+	);
+	
+	
+	
+2019-11-08 11:28:38.750 WIB [35] ERROR:  relation "rakb" already exists
+2019-11-08 11:28:38.750 WIB [35] STATEMENT:  CREATE TABLE mst.rakb (
+	    rakb_id integer NOT NULL,
+	    rakb_nama text
+	);
+	
+	
+	
+2019-11-08 11:28:38.756 WIB [35] ERROR:  relation "rakb_rakb_id_seq" already exists
+2019-11-08 11:28:38.756 WIB [35] STATEMENT:  CREATE SEQUENCE mst.rakb_rakb_id_seq
+	    AS integer
+	    START WITH 1
+	    INCREMENT BY 1
+	    NO MINVALUE
+	    NO MAXVALUE
+	    CACHE 1;
+	
+	
+	
+2019-11-08 11:28:38.762 WIB [35] ERROR:  relation "rkbu" already exists
+2019-11-08 11:28:38.762 WIB [35] STATEMENT:  CREATE TABLE mst.rkbu (
+	    rkbu_id integer NOT NULL,
+	    rkbu_barang_kelompok integer DEFAULT 1,
+	    rkbu_barang_kode integer,
+	    rkbu_barang_nama text,
+	    rkbu_status integer,
+	    rkbu_jumlah bigint,
+	    rkbu_estimasi_harga bigint,
+	    rkbu_tahun integer,
+	    rkbu_jadwal_bulan integer,
+	    rkbu_divisi text
+	);
+	
+	
+	
+2019-11-08 11:28:38.768 WIB [35] ERROR:  relation "rkbu_rkbu_id_seq" already exists
+2019-11-08 11:28:38.768 WIB [35] STATEMENT:  CREATE SEQUENCE mst.rkbu_rkbu_id_seq
+	    AS integer
+	    START WITH 1
+	    INCREMENT BY 1
+	    NO MINVALUE
+	    NO MAXVALUE
+	    CACHE 1;
+	
+	
+	
+2019-11-08 11:28:38.777 WIB [35] ERROR:  relation "rkf" already exists
+2019-11-08 11:28:38.777 WIB [35] STATEMENT:  CREATE TABLE mst.rkf (
+	    rkf_sts integer DEFAULT 1,
+	    rkf_id integer NOT NULL,
+	    rkf_user text,
+	    rkf_user_from text,
+	    rkf_tahun integer,
+	    rkf_jenis_id integer,
+	    rkf_proker text,
+	    rkf_status_proker integer,
+	    rkf_skala_proker integer,
+	    rkf_kat_proker integer,
+	    rkf_bsc integer,
+	    rkf_konsultan integer,
+	    rkf_unit_pelaksana jsonb,
+	    rkf_visi jsonb,
+	    rkf_misi jsonb,
+	    rkf_coreplan jsonb,
+	    rkf_kud jsonb,
+	    rkf_tujuan_proker jsonb,
+	    rkf_indikator jsonb,
+	    rkf_targetfin jsonb,
+	    rkf_jadwal jsonb,
+	    rkf_anggaran jsonb,
+	    rkf_fungsilain jsonb,
+	    rkf_time_input timestamp without time zone DEFAULT now(),
+	    rkf_otor text,
+	    rkf_time_otor timestamp without time zone,
+	    rkf_note_otor text,
+	    rkf_tlaudit jsonb,
+	    rkf_quick_win integer DEFAULT 0,
+	    rkf_transformasi_bpd integer,
+	    rkf_rakb integer,
+	    rkf_isu_strategis jsonb
+	);
+	
+	
+	
+2019-11-08 11:28:38.856 WIB [35] ERROR:  relation "rkf_jenis" already exists
+2019-11-08 11:28:38.856 WIB [35] STATEMENT:  CREATE TABLE mst.rkf_jenis (
+	    rkf_jenis_id integer NOT NULL,
+	    rkf_jenis_nama text NOT NULL
+	);
+	
+	
+	
+2019-11-08 11:28:38.874 WIB [35] ERROR:  relation "rkf_map" already exists
+2019-11-08 11:28:38.874 WIB [35] STATEMENT:  CREATE TABLE mst.rkf_map (
+	    rkf_map_from_id integer,
+	    rkf_map_from_divisi text,
+	    rkf_map_from_tahun integer,
+	    rkf_map_from_jenis integer,
+	    rkf_map_to_id integer,
+	    rkf_map_to_divisi text,
+	    rkf_map_to_tahun integer,
+	    rkf_map_to_jenis integer
+	);
+	
+	
+	
+2019-11-08 11:28:38.882 WIB [35] ERROR:  relation "rkf_rkf_id_seq" already exists
+2019-11-08 11:28:38.882 WIB [35] STATEMENT:  CREATE SEQUENCE mst.rkf_rkf_id_seq
+	    START WITH 1
+	    INCREMENT BY 1
+	    NO MINVALUE
+	    NO MAXVALUE
+	    CACHE 1;
+	
+	
+	
+2019-11-08 11:28:38.889 WIB [35] ERROR:  relation "satuan_id_seq" already exists
+2019-11-08 11:28:38.889 WIB [35] STATEMENT:  CREATE SEQUENCE mst.satuan_id_seq
+	    START WITH 5
+	    INCREMENT BY 1
+	    MINVALUE 5
+	    NO MAXVALUE
+	    CACHE 1;
+	
+	
+	
+2019-11-08 11:28:38.893 WIB [35] ERROR:  relation "satuan" already exists
+2019-11-08 11:28:38.893 WIB [35] STATEMENT:  CREATE TABLE mst.satuan (
+	    satuan_sts integer DEFAULT 1 NOT NULL,
+	    satuan_id integer DEFAULT nextval('mst.satuan_id_seq'::regclass) NOT NULL,
+	    satuan_nama text NOT NULL
+	);
+	
+	
+	
+2019-11-08 11:28:38.905 WIB [35] ERROR:  relation "seq_aktifitas" already exists
+2019-11-08 11:28:38.905 WIB [35] STATEMENT:  CREATE SEQUENCE mst.seq_aktifitas
+	    START WITH 1
+	    INCREMENT BY 1
+	    NO MINVALUE
+	    NO MAXVALUE
+	    CACHE 1;
+	
+	
+	
+2019-11-08 11:28:38.909 WIB [35] ERROR:  relation "seq_aktivitas_detail" already exists
+2019-11-08 11:28:38.909 WIB [35] STATEMENT:  CREATE SEQUENCE mst.seq_aktivitas_detail
+	    START WITH 1
+	    INCREMENT BY 1
+	    NO MINVALUE
+	    NO MAXVALUE
+	    CACHE 1
+	    CYCLE;
+	
+	
+	
+2019-11-08 11:28:38.918 WIB [35] ERROR:  relation "seq_rkf" already exists
+2019-11-08 11:28:38.918 WIB [35] STATEMENT:  CREATE SEQUENCE mst.seq_rkf
+	    START WITH 1
+	    INCREMENT BY 1
+	    NO MINVALUE
+	    NO MAXVALUE
+	    CACHE 1;
+	
+	
+	
+2019-11-08 11:28:38.922 WIB [35] ERROR:  relation "skala_proker_id_seq" already exists
+2019-11-08 11:28:38.922 WIB [35] STATEMENT:  CREATE SEQUENCE mst.skala_proker_id_seq
+	    START WITH 4
+	    INCREMENT BY 1
+	    MINVALUE 4
+	    NO MAXVALUE
+	    CACHE 1;
+	
+	
+	
+2019-11-08 11:28:38.926 WIB [35] ERROR:  relation "skala_proker" already exists
+2019-11-08 11:28:38.926 WIB [35] STATEMENT:  CREATE TABLE mst.skala_proker (
+	    skala_proker_id integer DEFAULT nextval('mst.skala_proker_id_seq'::regclass) NOT NULL,
+	    skala_proker_sts integer DEFAULT 1,
+	    skala_proker_nama text NOT NULL
+	);
+	
+	
+	
+2019-11-08 11:28:38.944 WIB [35] ERROR:  relation "sop" already exists
+2019-11-08 11:28:38.944 WIB [35] STATEMENT:  CREATE TABLE mst.sop (
+	    sopsts text DEFAULT '1'::text,
+	    sopid text NOT NULL,
+	    sopnama text
+	);
+	
+	
+	
+2019-11-08 11:28:38.958 WIB [35] ERROR:  relation "status_aktivitas" already exists
+2019-11-08 11:28:38.958 WIB [35] STATEMENT:  CREATE TABLE mst.status_aktivitas (
+	    status_aktifitas_id integer NOT NULL,
+	    status_aktifitas_nama text
+	);
+	
+	
+	
+2019-11-08 11:28:38.961 WIB [35] ERROR:  relation "sts_proker_id_seq" already exists
+2019-11-08 11:28:38.961 WIB [35] STATEMENT:  CREATE SEQUENCE mst.sts_proker_id_seq
+	    START WITH 3
+	    INCREMENT BY 1
+	    MINVALUE 3
+	    NO MAXVALUE
+	    CACHE 1;
+	
+	
+	
+2019-11-08 11:28:38.967 WIB [35] ERROR:  relation "status_proker" already exists
+2019-11-08 11:28:38.967 WIB [35] STATEMENT:  CREATE TABLE mst.status_proker (
+	    sts_proker_id integer DEFAULT nextval('mst.sts_proker_id_seq'::regclass) NOT NULL,
+	    sts_proker_sts integer DEFAULT 1,
+	    sts_proker_nama text NOT NULL
+	);
+	
+	
+	
+2019-11-08 11:28:38.981 WIB [35] ERROR:  relation "strategis_inisiatif" already exists
+2019-11-08 11:28:38.981 WIB [35] STATEMENT:  CREATE TABLE mst.strategis_inisiatif (
+	    strategis_inisiatif_master integer,
+	    strategis_inisiatif_id integer,
+	    strategis_inisiatif_nama text
+	);
+	
+	
+	
+2019-11-08 11:28:38.986 WIB [35] ERROR:  relation "strategis_inisiatif_tahun" already exists
+2019-11-08 11:28:38.986 WIB [35] STATEMENT:  CREATE TABLE mst.strategis_inisiatif_tahun (
+	    strategis_inisiatif_id integer,
+	    strategis_inisiatif_tahun integer,
+	    strategis_inisiatif_value text
+	);
+	
+	
+	
+2019-11-08 11:28:38.990 WIB [35] ERROR:  relation "strategis_master" already exists
+2019-11-08 11:28:38.990 WIB [35] STATEMENT:  CREATE TABLE mst.strategis_master (
+	    strategis_master_id integer
+	);
+	
+	
+	
+2019-11-08 11:28:38.994 WIB [35] ERROR:  relation "strategis_sasaran" already exists
+2019-11-08 11:28:38.994 WIB [35] STATEMENT:  CREATE TABLE mst.strategis_sasaran (
+	    strategis_sasaran_master integer,
+	    strategis_sasaran_id integer,
+	    strategis_sasaran_nama text
+	);
+	
+	
+	
+2019-11-08 11:28:38.997 WIB [35] ERROR:  relation "strategis_sasaran_tahun" already exists
+2019-11-08 11:28:38.997 WIB [35] STATEMENT:  CREATE TABLE mst.strategis_sasaran_tahun (
+	    strategis_sasaran_id integer,
+	    strategis_sasaran_tahun integer,
+	    strategis_sasaran_value text
+	);
+	
+	
+	
+2019-11-08 11:28:39.002 WIB [35] ERROR:  relation "tahun" already exists
+2019-11-08 11:28:39.002 WIB [35] STATEMENT:  CREATE TABLE mst.tahun (
+	    tahun integer
+	);
+	
+	
+	
+2019-11-08 11:28:39.006 WIB [35] ERROR:  relation "tindak_lanjut_id_seq" already exists
+2019-11-08 11:28:39.006 WIB [35] STATEMENT:  CREATE SEQUENCE mst.tindak_lanjut_id_seq
+	    START WITH 6
+	    INCREMENT BY 1
+	    MINVALUE 6
+	    NO MAXVALUE
+	    CACHE 1;
+	
+	
+	
+2019-11-08 11:28:39.010 WIB [35] ERROR:  relation "tindak_lanjut" already exists
+2019-11-08 11:28:39.010 WIB [35] STATEMENT:  CREATE TABLE mst.tindak_lanjut (
+	    tindak_lanjut_id integer DEFAULT nextval('mst.tindak_lanjut_id_seq'::regclass) NOT NULL,
+	    tindak_lanjut_sts integer DEFAULT 1,
+	    tindak_lanjut_nama text NOT NULL
+	);
+	
+	
+	
+2019-11-08 11:28:39.022 WIB [35] ERROR:  relation "tingkat" already exists
+2019-11-08 11:28:39.022 WIB [35] STATEMENT:  CREATE TABLE mst.tingkat (
+	    tingname text,
+	    tinglvl text,
+	    tinggolr text,
+	    tinggolt text
+	);
+	
+	
+	
+2019-11-08 11:28:39.038 WIB [35] ERROR:  relation "transformasi_bpd" already exists
+2019-11-08 11:28:39.038 WIB [35] STATEMENT:  CREATE TABLE mst.transformasi_bpd (
+	    transformasi_bpd_id integer NOT NULL,
+	    transformasi_bpd_nama text
+	);
+	
+	
+	
+2019-11-08 11:28:39.042 WIB [35] ERROR:  relation "transformasi_bpd_transformasi_bpd_id_seq" already exists
+2019-11-08 11:28:39.042 WIB [35] STATEMENT:  CREATE SEQUENCE mst.transformasi_bpd_transformasi_bpd_id_seq
+	    AS integer
+	    START WITH 1
+	    INCREMENT BY 1
+	    NO MINVALUE
+	    NO MAXVALUE
+	    CACHE 1;
+	
+	
+	
+2019-11-08 11:28:39.051 WIB [35] ERROR:  relation "unit_kerja" already exists
+2019-11-08 11:28:39.051 WIB [35] STATEMENT:  CREATE TABLE mst.unit_kerja (
+	    unit_kerja_id text NOT NULL,
+	    unit_kerja_nama text NOT NULL
+	);
+	
+	
+	
+2019-11-08 11:28:39.054 WIB [35] ERROR:  relation "unitkerja" already exists
+2019-11-08 11:28:39.054 WIB [35] STATEMENT:  CREATE TABLE mst.unitkerja (
+	    uker_kategori text NOT NULL,
+	    uker_id text NOT NULL,
+	    uker_nama text NOT NULL,
+	    uker_sts integer DEFAULT 1 NOT NULL
+	);
+	
+	
+	
+2019-11-08 11:28:39.070 WIB [35] ERROR:  relation "upload_dokumen" already exists
+2019-11-08 11:28:39.070 WIB [35] STATEMENT:  CREATE TABLE mst.upload_dokumen (
+	    upload_dokumen_id integer NOT NULL,
+	    upload_dokument_tahun integer,
+	    upload_dokumen_jenis integer,
+	    upload_dokumen_nama text NOT NULL,
+	    upload_dokumen_link text NOT NULL
+	);
+	
+	
+	
+2019-11-08 11:28:39.073 WIB [35] ERROR:  relation "upload_dokumen_aktivitas" already exists
+2019-11-08 11:28:39.073 WIB [35] STATEMENT:  CREATE TABLE mst.upload_dokumen_aktivitas (
+	    doc_aktivitas_id integer,
+	    doc_aktivitas_nama text
+	);
+	
+	
+	
+2019-11-08 11:28:39.077 WIB [35] ERROR:  relation "upload_dokumen_upload_dokumen_id_seq" already exists
+2019-11-08 11:28:39.077 WIB [35] STATEMENT:  CREATE SEQUENCE mst.upload_dokumen_upload_dokumen_id_seq
+	    AS integer
+	    START WITH 1
+	    INCREMENT BY 1
+	    NO MINVALUE
+	    NO MAXVALUE
+	    CACHE 1;
+	
+	
+	
+2019-11-08 11:28:39.083 WIB [35] ERROR:  relation "visi" already exists
+2019-11-08 11:28:39.083 WIB [35] STATEMENT:  CREATE TABLE mst.visi (
+	    visi_id integer NOT NULL,
+	    visi_nama text
+	);
+	
+	
+	
+2019-11-08 11:28:39.093 WIB [35] ERROR:  relation "data_pegawai" already exists
+2019-11-08 11:28:39.093 WIB [35] STATEMENT:  CREATE TABLE public.data_pegawai (
+	    pegawai_id integer,
+	    nama character varying,
+	    jabatan_id character varying,
+	    jabatan character varying,
+	    unit_kerja_id character varying,
+	    unit_kerja character varying
+	);
+	
+	
+	
+2019-11-08 11:28:39.097 WIB [35] ERROR:  relation "periode" already exists
+2019-11-08 11:28:39.097 WIB [35] STATEMENT:  CREATE TABLE public.periode (
+	    periode_tahun integer,
+	    periode_jenis integer
+	);
+	
+	
+	
+2019-11-08 11:28:39.102 WIB [35] ERROR:  relation "xdata" already exists
+2019-11-08 11:28:39.102 WIB [35] STATEMENT:  CREATE TABLE public.xdata (
+	    generate_menu json
+	);
+	
+	
+	
+2019-11-08 11:28:39.106 WIB [35] ERROR:  relation "roles" already exists
+2019-11-08 11:28:39.106 WIB [35] STATEMENT:  CREATE TABLE sec.roles (
+	    role_id integer NOT NULL,
+	    role_status integer DEFAULT 1,
+	    role_name text
+	);
+	
+	
+	
+2019-11-08 11:28:39.121 WIB [35] ERROR:  relation "roles_role_id_seq" already exists
+2019-11-08 11:28:39.121 WIB [35] STATEMENT:  CREATE SEQUENCE sec.roles_role_id_seq
+	    START WITH 1
+	    INCREMENT BY 1
+	    NO MINVALUE
+	    NO MAXVALUE
+	    CACHE 1;
+	
+	
+	
+2019-11-08 11:28:39.127 WIB [35] ERROR:  relation "userid" already exists
+2019-11-08 11:28:39.127 WIB [35] STATEMENT:  CREATE TABLE sec.userid (
+	    userid_kode text NOT NULL,
+	    userid_role text NOT NULL
+	);
+	
+	
+	
+2019-11-08 11:28:39.132 WIB [35] ERROR:  relation "users" already exists
+2019-11-08 11:28:39.132 WIB [35] STATEMENT:  CREATE TABLE sec.users (
+	    userid integer NOT NULL,
+	    username text NOT NULL,
+	    userpass text NOT NULL,
+	    userfullname text NOT NULL,
+	    usersts text DEFAULT 'active'::text NOT NULL,
+	    useremail text,
+	    userrole integer
+	);
+	
+	
+	
+2019-11-08 11:28:39.153 WIB [35] ERROR:  relation "users_userid_seq" already exists
+2019-11-08 11:28:39.153 WIB [35] STATEMENT:  CREATE SEQUENCE sec.users_userid_seq
+	    START WITH 1
+	    INCREMENT BY 1
+	    NO MINVALUE
+	    NO MAXVALUE
+	    CACHE 1;
+	
+	
+	
+2019-11-08 11:28:39.159 WIB [35] ERROR:  relation "detail_aktivitas" already exists
+2019-11-08 11:28:39.159 WIB [35] STATEMENT:  CREATE TABLE tmp.detail_aktivitas (
+	    da_divisi text,
+	    da_id integer,
+	    da_nama text,
+	    da_skala_proker integer,
+	    da_nama_skala_proker text,
+	    da_unit_pelaksana json,
+	    da_bsc integer,
+	    da_nama_bsc text,
+	    total_aktivitas integer,
+	    bln_ini_jt integer,
+	    bln_ini_selesai integer,
+	    bln_ini_proses integer,
+	    bln_ini_belum integer,
+	    akt_selesai integer,
+	    akt_proses integer,
+	    akt_belum integer
+	);
+	
+	
+	
+2019-11-08 11:28:39.162 WIB [35] ERROR:  relation "mas_agung" already exists
+2019-11-08 11:28:39.162 WIB [35] STATEMENT:  CREATE TABLE tmp.mas_agung (
+	    jenis text,
+	    headerid text,
+	    headernama text,
+	    sub1id text,
+	    sub1nama text,
+	    sub2id text,
+	    sub2nama text,
+	    sub3id text,
+	    sub3nama text
+	);
+	
+	
+	
+2019-11-08 11:28:39.168 WIB [35] ERROR:  relation "pembukaan" already exists
+2019-11-08 11:28:39.168 WIB [35] STATEMENT:  CREATE TABLE tmp.pembukaan (
+	    pembukaan_id bigint NOT NULL,
+	    pembukaan_tahun integer,
+	    pembukaan_jenis_kantor integer,
+	    pembukaan_pengusul text,
+	    pembukaan_propinsi text,
+	    pembukaan_kota text,
+	    pembukaan_kecamatan text,
+	    pembukaan_kelurahan text,
+	    pembukaan_tanah integer,
+	    pembukaan_bangunan integer,
+	    pembukaan_rencana_pengadaan_tanah integer,
+	    pembukaan_anggaran_pengadaan_tanah bigint,
+	    pembukaan_rencana_pengadaan_bangunan integer,
+	    pembukaan_anggaran_pengadaan_bangunan bigint,
+	    pembukaan_status integer,
+	    pembukaan_kajian_kelayakan_bisnis_start integer,
+	    pembukaan_kajian_kelayakan_tanah_bangunan_start integer,
+	    pembukaan_pengadaan_tanah_bangunan_start integer,
+	    pembukaan_penyiapan_tanah_bangunan_start integer,
+	    pembukaan_penyiapan_infrastruktur_pendukung_start integer,
+	    pembukaan_penyiapan_infrastruktur_it_start integer,
+	    pembukaan_pengadaan_sdm_start integer,
+	    pembukaan_perijinan_start integer,
+	    pembukaan_pembukaan_start integer,
+	    pembukaan_kajian_kelayakan_bisnis_finish integer,
+	    pembukaan_kajian_kelayakan_tanah_bangunan_finish integer,
+	    pembukaan_pengadaan_tanah_bangunan_finish integer,
+	    pembukaan_penyiapan_tanah_bangunan_finish integer,
+	    pembukaan_penyiapan_infrastruktur_pendukung_finish integer,
+	    pembukaan_penyiapan_infrastruktur_it_finish integer,
+	    pembukaan_pengadaan_sdm_finish integer,
+	    pembukaan_perijinan_finish integer,
+	    pembukaan_pembukaan_finish integer,
+	    pembukaan_kajian_kelayakan_bisnis_divisi text,
+	    pembukaan_kajian_kelayakan_tanah_bangunan_divisi text,
+	    pembukaan_pengadaan_tanah_bangunan_divisi text,
+	    pembukaan_penyiapan_tanah_bangunan_divisi text,
+	    pembukaan_penyiapan_infrastruktur_pendukung_divisi text,
+	    pembukaan_penyiapan_infrastruktur_it_divisi text,
+	    pembukaan_pengadaan_sdm_divisi text,
+	    pembukaan_perijinan_divisi text,
+	    pembukaan_pembukaan_divisi text
+	);
+	
+	
+	
+2019-11-08 11:28:39.172 WIB [35] ERROR:  relation "penutupan" already exists
+2019-11-08 11:28:39.172 WIB [35] STATEMENT:  CREATE TABLE tmp.penutupan (
+	    penutupan_id bigint NOT NULL,
+	    penutupan_tahun integer,
+	    penutupan_jenis_kantor integer,
+	    penutupan_pengusul text,
+	    penutupan_propinsi text,
+	    penutupan_kota text,
+	    penutupan_kecamatan text,
+	    penutupan_kelurahan text,
+	    penutupan_status integer,
+	    penutupan_kajian_kelayakan_bisnis_start integer,
+	    penutupan_perijinan_start integer,
+	    penutupan_penutupan_start integer,
+	    penutupan_kajian_kelayakan_bisnis_finish integer,
+	    penutupan_perijinan_finish integer,
+	    penutupan_penutupan_finish integer,
+	    penutupan_kajian_kelayakan_bisnis_divisi text,
+	    penutupan_perijinan_divisi text,
+	    penutupan_penutupan_divisi text
+	);
+	
+	
+	
+2019-11-08 11:28:39.178 WIB [35] ERROR:  relation "perubahan" already exists
+2019-11-08 11:28:39.178 WIB [35] STATEMENT:  CREATE TABLE tmp.perubahan (
+	    perubahan_id bigint NOT NULL,
+	    perubahan_tahun integer,
+	    perubahan_jenis_kantor_semula integer,
+	    perubahan_jenis_kantor_menjadi integer,
+	    perubahan_nama_semula text,
+	    perubahan_nama_menjadi text,
+	    perubahan_pengusul text,
+	    perubahan_propinsi text,
+	    perubahan_kota text,
+	    perubahan_kecamatan text,
+	    perubahan_kelurahan text,
+	    perubahan_tanah integer,
+	    perubahan_bangunan integer,
+	    perubahan_rencana_pengadaan_tanah integer,
+	    perubahan_anggaran_pengadaan_tanah bigint,
+	    perubahan_rencana_pengadaan_bangunan integer,
+	    perubahan_anggaran_pengadaan_bangunan bigint,
+	    perubahan_status integer,
+	    perubahan_kajian_kelayakan_bisnis_start integer,
+	    perubahan_kajian_kelayakan_tanah_bangunan_start integer,
+	    perubahan_pengadaan_tanah_bangunan_start integer,
+	    perubahan_penyiapan_tanah_bangunan_start integer,
+	    perubahan_penyiapan_infrastruktur_pendukung_start integer,
+	    perubahan_penyiapan_infrastruktur_it_start integer,
+	    perubahan_pengadaan_sdm_start integer,
+	    perubahan_perijinan_start integer,
+	    perubahan_perubahan_start integer,
+	    perubahan_kajian_kelayakan_bisnis_finish integer,
+	    perubahan_kajian_kelayakan_tanah_bangunan_finish integer,
+	    perubahan_pengadaan_tanah_bangunan_finish integer,
+	    perubahan_penyiapan_tanah_bangunan_finish integer,
+	    perubahan_penyiapan_infrastruktur_pendukung_finish integer,
+	    perubahan_penyiapan_infrastruktur_it_finish integer,
+	    perubahan_pengadaan_sdm_finish integer,
+	    perubahan_perijinan_finish integer,
+	    perubahan_perubahan_finish integer,
+	    perubahan_kajian_kelayakan_bisnis_divisi text,
+	    perubahan_kajian_kelayakan_tanah_bangunan_divisi text,
+	    perubahan_pengadaan_tanah_bangunan_divisi text,
+	    perubahan_penyiapan_tanah_bangunan_divisi text,
+	    perubahan_penyiapan_infrastruktur_pendukung_divisi text,
+	    perubahan_penyiapan_infrastruktur_it_divisi text,
+	    perubahan_pengadaan_sdm_divisi text,
+	    perubahan_perijinan_divisi text,
+	    perubahan_perubahan_divisi text
+	);
+	
+	
+	
+2019-11-08 11:28:39.183 WIB [35] ERROR:  relation "relokasi" already exists
+2019-11-08 11:28:39.183 WIB [35] STATEMENT:  CREATE TABLE tmp.relokasi (
+	    relokasi_id bigint NOT NULL,
+	    relokasi_tahun integer,
+	    relokasi_jenis_kantor integer,
+	    relokasi_pengusul text,
+	    relokasi_propinsi_semula text,
+	    relokasi_kota_semula text,
+	    relokasi_kecamatan_semula text,
+	    relokasi_kelurahan_semula text,
+	    relokasi_alamat_semula text,
+	    relokasi_propinsi_menjadi text,
+	    relokasi_kota_menjadi text,
+	    relokasi_kecamatan_menjadi text,
+	    relokasi_kelurahan_menjadi text,
+	    relokasi_alamat_menjadi text,
+	    relokasi_tanah integer,
+	    relokasi_bangunan integer,
+	    relokasi_rencana_pengadaan_tanah integer,
+	    relokasi_anggaran_pengadaan_tanah bigint,
+	    relokasi_rencana_pengadaan_bangunan integer,
+	    relokasi_anggaran_pengadaan_bangunan bigint,
+	    relokasi_status integer,
+	    relokasi_kajian_kelayakan_bisnis_start integer,
+	    relokasi_kajian_kelayakan_tanah_bangunan_start integer,
+	    relokasi_pengadaan_tanah_bangunan_start integer,
+	    relokasi_penyiapan_tanah_bangunan_start integer,
+	    relokasi_penyiapan_infrastruktur_pendukung_start integer,
+	    relokasi_penyiapan_infrastruktur_it_start integer,
+	    relokasi_pengadaan_sdm_start integer,
+	    relokasi_perijinan_start integer,
+	    relokasi_relokasi_start integer,
+	    relokasi_kajian_kelayakan_bisnis_finish integer,
+	    relokasi_kajian_kelayakan_tanah_bangunan_finish integer,
+	    relokasi_pengadaan_tanah_bangunan_finish integer,
+	    relokasi_penyiapan_tanah_bangunan_finish integer,
+	    relokasi_penyiapan_infrastruktur_pendukung_finish integer,
+	    relokasi_penyiapan_infrastruktur_it_finish integer,
+	    relokasi_pengadaan_sdm_finish integer,
+	    relokasi_perijinan_finish integer,
+	    relokasi_relokasi_finish integer,
+	    relokasi_kajian_kelayakan_bisnis_divisi text,
+	    relokasi_kajian_kelayakan_tanah_bangunan_divisi text,
+	    relokasi_pengadaan_tanah_bangunan_divisi text,
+	    relokasi_penyiapan_tanah_bangunan_divisi text,
+	    relokasi_penyiapan_infrastruktur_pendukung_divisi text,
+	    relokasi_penyiapan_infrastruktur_it_divisi text,
+	    relokasi_pengadaan_sdm_divisi text,
+	    relokasi_perijinan_divisi text,
+	    relokasi_relokasi_divisi text
+	);
+	
+	
+	
+2019-11-08 11:28:39.187 WIB [35] ERROR:  relation "rkf_kosong" already exists
+2019-11-08 11:28:39.187 WIB [35] STATEMENT:  CREATE TABLE tmp.rkf_kosong (
+	    rkf_sts integer,
+	    rkf_id integer,
+	    rkf_user text,
+	    rkf_user_from text,
+	    rkf_tahun integer,
+	    rkf_jenis_id integer,
+	    rkf_proker text,
+	    rkf_status_proker integer,
+	    rkf_skala_proker integer,
+	    rkf_kat_proker integer,
+	    rkf_bsc integer,
+	    rkf_konsultan integer,
+	    rkf_unit_pelaksana jsonb,
+	    rkf_visi jsonb,
+	    rkf_misi jsonb,
+	    rkf_coreplan jsonb,
+	    rkf_kud jsonb,
+	    rkf_tujuan_proker jsonb,
+	    rkf_indikator jsonb,
+	    rkf_targetfin jsonb,
+	    rkf_jadwal jsonb,
+	    rkf_anggaran jsonb,
+	    rkf_fungsilain jsonb,
+	    rkf_time_input timestamp without time zone,
+	    rkf_otor text,
+	    rkf_time_otor timestamp without time zone,
+	    rkf_note_otor text,
+	    rkf_tlaudit jsonb,
+	    rkf_quick_win integer,
+	    rkf_transformasi_bpd integer,
+	    rkf_rakb integer,
+	    rkf_isu_strategis jsonb
+	);
+	
+	
+	
+2019-11-08 11:28:39.192 WIB [35] ERROR:  relation "rkf_perubahan" already exists
+2019-11-08 11:28:39.192 WIB [35] STATEMENT:  CREATE TABLE tmp.rkf_perubahan (
+	    rkf_sts integer DEFAULT 1,
+	    rkf_id integer NOT NULL,
+	    rkf_user integer,
+	    rkf_user_from text,
+	    rkf_tahun integer,
+	    rkf_jenis_id integer,
+	    rkf_proker text,
+	    rkf_status_proker integer,
+	    rkf_skala_proker integer,
+	    rkf_kat_proker integer,
+	    rkf_bsc integer,
+	    rkf_konsultan integer,
+	    rkf_unit_pelaksana jsonb,
+	    rkf_visi jsonb,
+	    rkf_misi jsonb,
+	    rkf_coreplan jsonb,
+	    rkf_kud jsonb,
+	    rkf_tujuan_proker jsonb,
+	    rkf_indikator jsonb,
+	    rkf_targetfin jsonb,
+	    rkf_jadwal jsonb,
+	    rkf_anggaran jsonb,
+	    rkf_fungsilain jsonb,
+	    rkf_time_input timestamp(6) without time zone DEFAULT now(),
+	    rkf_otor text,
+	    rkf_time_otor timestamp(6) without time zone,
+	    rkf_note_otor text,
+	    rkf_tlaudit jsonb
+	);
+	
+	
+	
+2019-11-08 11:28:39.262 WIB [35] ERROR:  relation "rkf_sebelum_cleansing" already exists
+2019-11-08 11:28:39.262 WIB [35] STATEMENT:  CREATE TABLE tmp.rkf_sebelum_cleansing (
+	    rkf_sts integer DEFAULT 1,
+	    rkf_id integer DEFAULT nextval('mst.rkf_rkf_id_seq'::regclass) NOT NULL,
+	    rkf_user text,
+	    rkf_user_from text,
+	    rkf_tahun integer,
+	    rkf_jenis_id integer,
+	    rkf_proker text,
+	    rkf_status_proker integer,
+	    rkf_skala_proker integer,
+	    rkf_kat_proker integer,
+	    rkf_bsc integer,
+	    rkf_konsultan integer,
+	    rkf_unit_pelaksana jsonb,
+	    rkf_visi jsonb,
+	    rkf_misi jsonb,
+	    rkf_coreplan jsonb,
+	    rkf_kud jsonb,
+	    rkf_tujuan_proker jsonb,
+	    rkf_indikator jsonb,
+	    rkf_targetfin jsonb,
+	    rkf_jadwal jsonb,
+	    rkf_anggaran jsonb,
+	    rkf_fungsilain jsonb,
+	    rkf_time_input timestamp(6) without time zone DEFAULT now(),
+	    rkf_otor text,
+	    rkf_time_otor timestamp(6) without time zone,
+	    rkf_note_otor text,
+	    rkf_tlaudit jsonb,
+	    rkf_quick_win integer DEFAULT 0,
+	    rkf_transformasi_bpd integer,
+	    rkf_rakb integer,
+	    rkf_isu_strategis jsonb
+	);
+	
+	
+	
+2019-11-08 11:28:39.315 WIB [35] ERROR:  relation "rkf" already exists
+2019-11-08 11:28:39.315 WIB [35] STATEMENT:  CREATE TABLE trx.rkf (
+	    rkf_sts integer DEFAULT 1,
+	    rkf_id integer DEFAULT nextval('mst.rkf_rkf_id_seq'::regclass) NOT NULL,
+	    rkf_user integer,
+	    rkf_user_from text,
+	    rkf_tahun integer,
+	    rkf_jenis_id integer,
+	    rkf_proker text,
+	    rkf_status_proker integer,
+	    rkf_skala_proker integer,
+	    rkf_kat_proker integer,
+	    rkf_bsc integer,
+	    rkf_konsultan integer,
+	    rkf_unit_pelaksana jsonb,
+	    rkf_visi jsonb,
+	    rkf_misi jsonb,
+	    rkf_coreplan jsonb,
+	    rkf_kud jsonb,
+	    rkf_tujuan_proker jsonb,
+	    rkf_indikator jsonb,
+	    rkf_targetfin jsonb,
+	    rkf_jadwal jsonb,
+	    rkf_anggaran jsonb,
+	    rkf_fungsilain jsonb,
+	    rkf_time_input timestamp(6) without time zone DEFAULT now(),
+	    rkf_otor text,
+	    rkf_time_otor timestamp(6) without time zone,
+	    rkf_note_otor text,
+	    rkf_tlaudit jsonb
+	);
+	
+	
+	
+2019-11-08 11:28:39.366 WIB [35] ERROR:  relation "rkf_190320" already exists
+2019-11-08 11:28:39.366 WIB [35] STATEMENT:  CREATE TABLE trx.rkf_190320 (
+	    rkf_sts integer DEFAULT 1,
+	    rkf_id integer DEFAULT nextval('mst.rkf_rkf_id_seq'::regclass) NOT NULL,
+	    rkf_user integer,
+	    rkf_user_from text,
+	    rkf_tahun integer,
+	    rkf_jenis_id integer,
+	    rkf_proker text,
+	    rkf_status_proker integer,
+	    rkf_skala_proker integer,
+	    rkf_kat_proker integer,
+	    rkf_bsc integer,
+	    rkf_konsultan integer,
+	    rkf_unit_pelaksana jsonb,
+	    rkf_visi jsonb,
+	    rkf_misi jsonb,
+	    rkf_coreplan jsonb,
+	    rkf_kud jsonb,
+	    rkf_tujuan_proker jsonb,
+	    rkf_indikator jsonb,
+	    rkf_targetfin jsonb,
+	    rkf_jadwal jsonb,
+	    rkf_anggaran jsonb,
+	    rkf_fungsilain jsonb,
+	    rkf_time_input timestamp(6) without time zone DEFAULT now(),
+	    rkf_otor text,
+	    rkf_time_otor timestamp(6) without time zone,
+	    rkf_note_otor text,
+	    rkf_tlaudit jsonb
+	);
+	
+	
+	
+2019-11-08 11:28:39.421 WIB [35] ERROR:  relation "rkf_backup_mas_agung" already exists
+2019-11-08 11:28:39.421 WIB [35] STATEMENT:  CREATE TABLE trx.rkf_backup_mas_agung (
+	    rkf_sts integer,
+	    rkf_id integer,
+	    rkf_user integer,
+	    rkf_user_from text,
+	    rkf_tahun integer,
+	    rkf_jenis_id integer,
+	    rkf_proker text,
+	    rkf_status_proker integer,
+	    rkf_skala_proker integer,
+	    rkf_kat_proker integer,
+	    rkf_bsc integer,
+	    rkf_konsultan integer,
+	    rkf_unit_pelaksana jsonb,
+	    rkf_visi jsonb,
+	    rkf_misi jsonb,
+	    rkf_coreplan jsonb,
+	    rkf_kud jsonb,
+	    rkf_tujuan_proker jsonb,
+	    rkf_indikator jsonb,
+	    rkf_targetfin jsonb,
+	    rkf_jadwal jsonb,
+	    rkf_anggaran jsonb,
+	    rkf_fungsilain jsonb,
+	    rkf_time_input timestamp without time zone,
+	    rkf_otor text,
+	    rkf_time_otor timestamp without time zone,
+	    rkf_note_otor text,
+	    rkf_tlaudit jsonb
+	);
+	
+	
+	
+2019-11-08 11:28:39.520 WIB [35] ERROR:  duplicate key value violates unique constraint "jenis_kantor_pkey"
+2019-11-08 11:28:39.520 WIB [35] DETAIL:  Key (jenis_kantor_id)=(1) already exists.
+2019-11-08 11:28:39.520 WIB [35] CONTEXT:  COPY jenis_kantor, line 1
+2019-11-08 11:28:39.520 WIB [35] STATEMENT:  COPY jaringan.jenis_kantor (jenis_kantor_id, jenis_kantor_nama) FROM stdin;
+	
+2019-11-08 11:28:39.531 WIB [35] ERROR:  duplicate key value violates unique constraint "jenis_tanah_bangunan_pkey"
+2019-11-08 11:28:39.531 WIB [35] DETAIL:  Key (jenis_tanah_bangunan_id)=(1) already exists.
+2019-11-08 11:28:39.531 WIB [35] CONTEXT:  COPY jenis_tanah_bangunan, line 1
+2019-11-08 11:28:39.531 WIB [35] STATEMENT:  COPY jaringan.jenis_tanah_bangunan (jenis_tanah_bangunan_id, jenis_tanah_bangunan_nama) FROM stdin;
+	
+2019-11-08 11:28:39.574 WIB [35] ERROR:  duplicate key value violates unique constraint "kecamatan_pkey"
+2019-11-08 11:28:39.574 WIB [35] DETAIL:  Key (kecamatan_id)=(1101010) already exists.
+2019-11-08 11:28:39.574 WIB [35] CONTEXT:  COPY kecamatan, line 1
+2019-11-08 11:28:39.574 WIB [35] STATEMENT:  COPY jaringan.kecamatan (kecamatan_kota, kecamatan_id, kecamatan_nama) FROM stdin;
+	
+2019-11-08 11:28:39.630 WIB [35] ERROR:  duplicate key value violates unique constraint "kelurahan_pkey"
+2019-11-08 11:28:39.630 WIB [35] DETAIL:  Key (kelurahan_id)=(1101010001) already exists.
+2019-11-08 11:28:39.630 WIB [35] CONTEXT:  COPY kelurahan, line 1
+2019-11-08 11:28:39.630 WIB [35] STATEMENT:  COPY jaringan.kelurahan (kelurahan_kecamatan, kelurahan_id, kelurahan_nama) FROM stdin;
+	
+2019-11-08 11:28:39.719 WIB [35] ERROR:  duplicate key value violates unique constraint "kota_pkey"
+2019-11-08 11:28:39.719 WIB [35] DETAIL:  Key (kota_id)=(1101) already exists.
+2019-11-08 11:28:39.719 WIB [35] CONTEXT:  COPY kota, line 1
+2019-11-08 11:28:39.719 WIB [35] STATEMENT:  COPY jaringan.kota (kota_propinsi, kota_id, kota_nama) FROM stdin;
+	
+2019-11-08 11:28:39.727 WIB [35] ERROR:  duplicate key value violates unique constraint "pembukaan_pkey"
+2019-11-08 11:28:39.727 WIB [35] DETAIL:  Key (pembukaan_id)=(6) already exists.
+2019-11-08 11:28:39.727 WIB [35] CONTEXT:  COPY pembukaan, line 1
+2019-11-08 11:28:39.727 WIB [35] STATEMENT:  COPY jaringan.pembukaan (pembukaan_id, pembukaan_tahun, pembukaan_jenis_kantor, pembukaan_pengusul, pembukaan_propinsi, pembukaan_kota, pembukaan_kecamatan, pembukaan_kelurahan, pembukaan_tanah, pembukaan_bangunan, pembukaan_rencana_pengadaan_tanah, pembukaan_anggaran_pengadaan_tanah, pembukaan_rencana_pengadaan_bangunan, pembukaan_anggaran_pengadaan_bangunan, pembukaan_status, pembukaan_kajian_kelayakan_bisnis_start, pembukaan_kajian_kelayakan_tanah_bangunan_start, pembukaan_pengadaan_tanah_bangunan_start, pembukaan_penyiapan_tanah_bangunan_start, pembukaan_penyiapan_infrastruktur_pendukung_start, pembukaan_penyiapan_infrastruktur_it_start, pembukaan_pengadaan_sdm_start, pembukaan_perijinan_start, pembukaan_pembukaan_start, pembukaan_kajian_kelayakan_bisnis_finish, pembukaan_kajian_kelayakan_tanah_bangunan_finish, pembukaan_pengadaan_tanah_bangunan_finish, pembukaan_penyiapan_tanah_bangunan_finish, pembukaan_penyiapan_infrastruktur_pendukung_finish, pembukaan_penyiapan_infrastruktur_it_finish, pembukaan_pengadaan_sdm_finish, pembukaan_perijinan_finish, pembukaan_pembukaan_finish, pembukaan_kajian_kelayakan_bisnis_divisi, pembukaan_kajian_kelayakan_tanah_bangunan_divisi, pembukaan_pengadaan_tanah_bangunan_divisi, pembukaan_penyiapan_tanah_bangunan_divisi, pembukaan_penyiapan_infrastruktur_pendukung_divisi, pembukaan_penyiapan_infrastruktur_it_divisi, pembukaan_pengadaan_sdm_divisi, pembukaan_perijinan_divisi, pembukaan_pembukaan_divisi) FROM stdin;
+	
+2019-11-08 11:28:39.737 WIB [35] ERROR:  duplicate key value violates unique constraint "pengusul_pkey"
+2019-11-08 11:28:39.737 WIB [35] DETAIL:  Key (pengusul_id)=(001) already exists.
+2019-11-08 11:28:39.737 WIB [35] CONTEXT:  COPY pengusul, line 1
+2019-11-08 11:28:39.737 WIB [35] STATEMENT:  COPY jaringan.pengusul (pengusul_id, pengusul_nama) FROM stdin;
+	
+2019-11-08 11:28:39.749 WIB [35] ERROR:  duplicate key value violates unique constraint "perubahan_pkey"
+2019-11-08 11:28:39.749 WIB [35] DETAIL:  Key (perubahan_id)=(1) already exists.
+2019-11-08 11:28:39.749 WIB [35] CONTEXT:  COPY perubahan, line 1
+2019-11-08 11:28:39.749 WIB [35] STATEMENT:  COPY jaringan.perubahan (perubahan_id, perubahan_tahun, perubahan_jenis_kantor_semula, perubahan_jenis_kantor_menjadi, perubahan_nama_semula, perubahan_nama_menjadi, perubahan_pengusul, perubahan_propinsi, perubahan_kota, perubahan_kecamatan, perubahan_kelurahan, perubahan_tanah, perubahan_bangunan, perubahan_rencana_pengadaan_tanah, perubahan_anggaran_pengadaan_tanah, perubahan_rencana_pengadaan_bangunan, perubahan_anggaran_pengadaan_bangunan, perubahan_status, perubahan_kajian_kelayakan_bisnis_start, perubahan_kajian_kelayakan_tanah_bangunan_start, perubahan_pengadaan_tanah_bangunan_start, perubahan_penyiapan_tanah_bangunan_start, perubahan_penyiapan_infrastruktur_pendukung_start, perubahan_penyiapan_infrastruktur_it_start, perubahan_pengadaan_sdm_start, perubahan_perijinan_start, perubahan_perubahan_start, perubahan_kajian_kelayakan_bisnis_finish, perubahan_kajian_kelayakan_tanah_bangunan_finish, perubahan_pengadaan_tanah_bangunan_finish, perubahan_penyiapan_tanah_bangunan_finish, perubahan_penyiapan_infrastruktur_pendukung_finish, perubahan_penyiapan_infrastruktur_it_finish, perubahan_pengadaan_sdm_finish, perubahan_perijinan_finish, perubahan_perubahan_finish, perubahan_kajian_kelayakan_bisnis_divisi, perubahan_kajian_kelayakan_tanah_bangunan_divisi, perubahan_pengadaan_tanah_bangunan_divisi, perubahan_penyiapan_tanah_bangunan_divisi, perubahan_penyiapan_infrastruktur_pendukung_divisi, perubahan_penyiapan_infrastruktur_it_divisi, perubahan_pengadaan_sdm_divisi, perubahan_perijinan_divisi, perubahan_perubahan_divisi) FROM stdin;
+	
+2019-11-08 11:28:39.761 WIB [35] ERROR:  duplicate key value violates unique constraint "propinsi_pkey"
+2019-11-08 11:28:39.761 WIB [35] DETAIL:  Key (propinsi_id)=(11) already exists.
+2019-11-08 11:28:39.761 WIB [35] CONTEXT:  COPY propinsi, line 1
+2019-11-08 11:28:39.761 WIB [35] STATEMENT:  COPY jaringan.propinsi (propinsi_id, propinsi_nama, propinsi_ibu_kota) FROM stdin;
+	
+2019-11-08 11:28:39.768 WIB [35] ERROR:  duplicate key value violates unique constraint "relokasi_pkey"
+2019-11-08 11:28:39.768 WIB [35] DETAIL:  Key (relokasi_id)=(6) already exists.
+2019-11-08 11:28:39.768 WIB [35] CONTEXT:  COPY relokasi, line 1
+2019-11-08 11:28:39.768 WIB [35] STATEMENT:  COPY jaringan.relokasi (relokasi_id, relokasi_tahun, relokasi_jenis_kantor, relokasi_pengusul, relokasi_propinsi_semula, relokasi_kota_semula, relokasi_kecamatan_semula, relokasi_kelurahan_semula, relokasi_alamat_semula, relokasi_propinsi_menjadi, relokasi_kota_menjadi, relokasi_kecamatan_menjadi, relokasi_kelurahan_menjadi, relokasi_alamat_menjadi, relokasi_tanah, relokasi_bangunan, relokasi_rencana_pengadaan_tanah, relokasi_anggaran_pengadaan_tanah, relokasi_rencana_pengadaan_bangunan, relokasi_anggaran_pengadaan_bangunan, relokasi_status, relokasi_kajian_kelayakan_bisnis_start, relokasi_kajian_kelayakan_tanah_bangunan_start, relokasi_pengadaan_tanah_bangunan_start, relokasi_penyiapan_tanah_bangunan_start, relokasi_penyiapan_infrastruktur_pendukung_start, relokasi_penyiapan_infrastruktur_it_start, relokasi_pengadaan_sdm_start, relokasi_perijinan_start, relokasi_relokasi_start, relokasi_kajian_kelayakan_bisnis_finish, relokasi_kajian_kelayakan_tanah_bangunan_finish, relokasi_pengadaan_tanah_bangunan_finish, relokasi_penyiapan_tanah_bangunan_finish, relokasi_penyiapan_infrastruktur_pendukung_finish, relokasi_penyiapan_infrastruktur_it_finish, relokasi_pengadaan_sdm_finish, relokasi_perijinan_finish, relokasi_relokasi_finish, relokasi_kajian_kelayakan_bisnis_divisi, relokasi_kajian_kelayakan_tanah_bangunan_divisi, relokasi_pengadaan_tanah_bangunan_divisi, relokasi_penyiapan_tanah_bangunan_divisi, relokasi_penyiapan_infrastruktur_pendukung_divisi, relokasi_penyiapan_infrastruktur_it_divisi, relokasi_pengadaan_sdm_divisi, relokasi_perijinan_divisi, relokasi_relokasi_divisi) FROM stdin;
+	
+2019-11-08 11:28:39.774 WIB [35] ERROR:  duplicate key value violates unique constraint "rencana_pengadaan_bangunan_pkey"
+2019-11-08 11:28:39.774 WIB [35] DETAIL:  Key (rencana_pengadaan_bangunan_id)=(1) already exists.
+2019-11-08 11:28:39.774 WIB [35] CONTEXT:  COPY rencana_pengadaan_bangunan, line 1
+2019-11-08 11:28:39.774 WIB [35] STATEMENT:  COPY jaringan.rencana_pengadaan_bangunan (rencana_pengadaan_bangunan_id, rencana_pengadaan_bangunan_nama) FROM stdin;
+	
+2019-11-08 11:28:39.781 WIB [35] ERROR:  duplicate key value violates unique constraint "rencana_pengadaan_tanah_pkey"
+2019-11-08 11:28:39.781 WIB [35] DETAIL:  Key (rencana_pengadaan_tanah_id)=(1) already exists.
+2019-11-08 11:28:39.781 WIB [35] CONTEXT:  COPY rencana_pengadaan_tanah, line 1
+2019-11-08 11:28:39.781 WIB [35] STATEMENT:  COPY jaringan.rencana_pengadaan_tanah (rencana_pengadaan_tanah_id, rencana_pengadaan_tanah_nama) FROM stdin;
+	
+2019-11-08 11:28:39.805 WIB [35] ERROR:  duplicate key value violates unique constraint "bangun_renovasi_pkey"
+2019-11-08 11:28:39.805 WIB [35] DETAIL:  Key (bangun_renovasi_id)=(68) already exists.
+2019-11-08 11:28:39.805 WIB [35] CONTEXT:  COPY bangun_renovasi, line 1
+2019-11-08 11:28:39.805 WIB [35] STATEMENT:  COPY mst.bangun_renovasi (bangun_renovasi_id, bangun_renovasi_jenis, bangun_renovasi_uraian, bangun_renovasi_status, bangun_renovasi_kepemilikan_aset, bangun_renovasi_alamat, bangun_renovasi_anggaran, bangun_renovasi_jadwal_bulan, bangun_renovasi_divisi) FROM stdin;
+	
+2019-11-08 11:28:39.813 WIB [35] ERROR:  duplicate key value violates unique constraint "barang_pkey"
+2019-11-08 11:28:39.813 WIB [35] DETAIL:  Key (barang_id)=(1) already exists.
+2019-11-08 11:28:39.813 WIB [35] CONTEXT:  COPY barang, line 1
+2019-11-08 11:28:39.813 WIB [35] STATEMENT:  COPY mst.barang (barang_kelompok, barang_id, barang_nama, barang_harga) FROM stdin;
+	
+2019-11-08 11:28:39.820 WIB [35] ERROR:  duplicate key value violates unique constraint "bsc_pkey"
+2019-11-08 11:28:39.820 WIB [35] DETAIL:  Key (bsc_id)=(1) already exists.
+2019-11-08 11:28:39.820 WIB [35] CONTEXT:  COPY bsc, line 1
+2019-11-08 11:28:39.820 WIB [35] STATEMENT:  COPY mst.bsc (bsc_id, bsc_sts, bsc_nama) FROM stdin;
+	
+2019-11-08 11:28:39.832 WIB [35] ERROR:  duplicate key value violates unique constraint "coreplan_pkey"
+2019-11-08 11:28:39.832 WIB [35] DETAIL:  Key (cp_id)=(1) already exists.
+2019-11-08 11:28:39.832 WIB [35] CONTEXT:  COPY coreplan, line 1
+2019-11-08 11:28:39.832 WIB [35] STATEMENT:  COPY mst.coreplan (cp_id, cp_kode, cp_nama) FROM stdin;
+	
+2019-11-08 11:28:39.844 WIB [35] ERROR:  duplicate key value violates unique constraint "edukasi_pkey"
+2019-11-08 11:28:39.844 WIB [35] DETAIL:  Key (eduid)=(SD) already exists.
+2019-11-08 11:28:39.844 WIB [35] CONTEXT:  COPY edukasi, line 1
+2019-11-08 11:28:39.844 WIB [35] STATEMENT:  COPY mst.edukasi (eduid, edunama) FROM stdin;
+	
+2019-11-08 11:28:39.851 WIB [35] ERROR:  duplicate key value violates unique constraint "golongan_pkey"
+2019-11-08 11:28:39.851 WIB [35] DETAIL:  Key (golid)=(A1) already exists.
+2019-11-08 11:28:39.851 WIB [35] CONTEXT:  COPY golongan, line 1
+2019-11-08 11:28:39.851 WIB [35] STATEMENT:  COPY mst.golongan (golid, golpangkat) FROM stdin;
+	
+2019-11-08 11:28:39.858 WIB [35] ERROR:  duplicate key value violates unique constraint "hubkerja_pkey"
+2019-11-08 11:28:39.858 WIB [35] DETAIL:  Key (hubker_id)=(ES) already exists.
+2019-11-08 11:28:39.858 WIB [35] CONTEXT:  COPY hubkerja, line 1
+2019-11-08 11:28:39.858 WIB [35] STATEMENT:  COPY mst.hubkerja (hubker_id, hubker_jenis, hubker_nama, hubker_uraian) FROM stdin;
+	
+2019-11-08 11:28:39.892 WIB [35] ERROR:  duplicate key value violates unique constraint "isu_strategis_pkey"
+2019-11-08 11:28:39.892 WIB [35] DETAIL:  Key (isu_strategis_id)=(1) already exists.
+2019-11-08 11:28:39.892 WIB [35] CONTEXT:  COPY isu_strategis, line 1
+2019-11-08 11:28:39.892 WIB [35] STATEMENT:  COPY mst.isu_strategis (isu_strategis_id, isu_strategis_tahun, isu_strategis_nama) FROM stdin;
+	
+2019-11-08 11:28:39.898 WIB [35] ERROR:  duplicate key value violates unique constraint "jabatan_pkey"
+2019-11-08 11:28:39.898 WIB [35] DETAIL:  Key (jabatan_id)=(j01) already exists.
+2019-11-08 11:28:39.898 WIB [35] CONTEXT:  COPY jabatan, line 1
+2019-11-08 11:28:39.898 WIB [35] STATEMENT:  COPY mst.jabatan (jabatan_id, jabatan_nama, jabatan_level, jabatan_gol_rendah, jabatan_gol_tinggi) FROM stdin;
+	
+2019-11-08 11:28:39.923 WIB [35] ERROR:  duplicate key value violates unique constraint "jabatan_unit_kerja_pkey"
+2019-11-08 11:28:39.923 WIB [35] DETAIL:  Key (jabatan_id, unit_kerja_id)=(B001AKA001, 001AKA) already exists.
+2019-11-08 11:28:39.923 WIB [35] CONTEXT:  COPY jabatan_unit_kerja, line 1
+2019-11-08 11:28:39.923 WIB [35] STATEMENT:  COPY mst.jabatan_unit_kerja (unit_kerja_id, jabatan_id, jabatan_nama) FROM stdin;
+	
+2019-11-08 11:28:39.931 WIB [35] ERROR:  duplicate key value violates unique constraint "jenis_aktiva_pkey"
+2019-11-08 11:28:39.931 WIB [35] DETAIL:  Key (jenis_aktiva_id)=(1) already exists.
+2019-11-08 11:28:39.931 WIB [35] CONTEXT:  COPY jenis_aktiva, line 1
+2019-11-08 11:28:39.931 WIB [35] STATEMENT:  COPY mst.jenis_aktiva (jenis_aktiva_id, jenis_aktiva_nama) FROM stdin;
+	
+2019-11-08 11:28:39.938 WIB [35] ERROR:  duplicate key value violates unique constraint "jenis_bangun_renovasi_pkey"
+2019-11-08 11:28:39.938 WIB [35] DETAIL:  Key (jenis_bangun_renovasi_id)=(1) already exists.
+2019-11-08 11:28:39.938 WIB [35] CONTEXT:  COPY jenis_bangun_renovasi, line 1
+2019-11-08 11:28:39.938 WIB [35] STATEMENT:  COPY mst.jenis_bangun_renovasi (jenis_bangun_renovasi_id, jenis_bangun_renovasi_nama) FROM stdin;
+	
+2019-11-08 11:28:39.954 WIB [35] ERROR:  duplicate key value violates unique constraint "jenis_kompetensi_pkey"
+2019-11-08 11:28:39.954 WIB [35] DETAIL:  Key (jnskom_id)=(kw) already exists.
+2019-11-08 11:28:39.954 WIB [35] CONTEXT:  COPY jenis_kompetensi, line 1
+2019-11-08 11:28:39.954 WIB [35] STATEMENT:  COPY mst.jenis_kompetensi (jnskom_id, jnskom_nama) FROM stdin;
+	
+2019-11-08 11:28:39.964 WIB [35] ERROR:  duplicate key value violates unique constraint "jenis_pab_pkey"
+2019-11-08 11:28:39.964 WIB [35] DETAIL:  Key (jenis_pab_id)=(1) already exists.
+2019-11-08 11:28:39.964 WIB [35] CONTEXT:  COPY jenis_pab, line 1
+2019-11-08 11:28:39.964 WIB [35] STATEMENT:  COPY mst.jenis_pab (jenis_pab_id, jenis_pab_nama) FROM stdin;
+	
+2019-11-08 11:28:39.972 WIB [35] ERROR:  duplicate key value violates unique constraint "kategori_proker_pkey"
+2019-11-08 11:28:39.972 WIB [35] DETAIL:  Key (kat_proker_id)=(2) already exists.
+2019-11-08 11:28:39.972 WIB [35] CONTEXT:  COPY kategori_proker, line 1
+2019-11-08 11:28:39.972 WIB [35] STATEMENT:  COPY mst.kategori_proker (kat_proker_id, kat_proker_sts, kat_proker_nama) FROM stdin;
+	
+2019-11-08 11:28:39.980 WIB [35] ERROR:  duplicate key value violates unique constraint "kepemilikan_aset_pkey"
+2019-11-08 11:28:39.980 WIB [35] DETAIL:  Key (kepemilikan_aset_id)=(1) already exists.
+2019-11-08 11:28:39.980 WIB [35] CONTEXT:  COPY kepemilikan_aset, line 1
+2019-11-08 11:28:39.980 WIB [35] STATEMENT:  COPY mst.kepemilikan_aset (kepemilikan_aset_id, kepemilikan_aset_nama) FROM stdin;
+	
+2019-11-08 11:28:39.988 WIB [35] ERROR:  duplicate key value violates unique constraint "kud_pkey"
+2019-11-08 11:28:39.988 WIB [35] DETAIL:  Key (kud_id)=(2) already exists.
+2019-11-08 11:28:39.988 WIB [35] CONTEXT:  COPY kud, line 1
+2019-11-08 11:28:39.988 WIB [35] STATEMENT:  COPY mst.kud (kud_id, kud_tahun, kud_nama) FROM stdin;
+	
+2019-11-08 11:28:39.995 WIB [35] ERROR:  duplicate key value violates unique constraint "lokasikerja_pkey"
+2019-11-08 11:28:39.995 WIB [35] DETAIL:  Key (lokid)=(kanpus) already exists.
+2019-11-08 11:28:39.995 WIB [35] CONTEXT:  COPY lokasikerja, line 1
+2019-11-08 11:28:39.995 WIB [35] STATEMENT:  COPY mst.lokasikerja (lokid, loknama) FROM stdin;
+	
+2019-11-08 11:28:40.002 WIB [35] ERROR:  duplicate key value violates unique constraint "misi_pkey"
+2019-11-08 11:28:40.002 WIB [35] DETAIL:  Key (misi_id)=(1) already exists.
+2019-11-08 11:28:40.002 WIB [35] CONTEXT:  COPY misi, line 1
+2019-11-08 11:28:40.002 WIB [35] STATEMENT:  COPY mst.misi (misi_id, misi_nama) FROM stdin;
+	
+2019-11-08 11:28:40.026 WIB [35] ERROR:  duplicate key value violates unique constraint "pegawai_pkey"
+2019-11-08 11:28:40.026 WIB [35] DETAIL:  Key (pegawai_id)=(1285) already exists.
+2019-11-08 11:28:40.026 WIB [35] CONTEXT:  COPY pegawai, line 1
+2019-11-08 11:28:40.026 WIB [35] STATEMENT:  COPY mst.pegawai (pegawai_unit_kerja, pegawai_jabatan, pegawai_id, pegawai_nama) FROM stdin;
+	
+2019-11-08 11:28:40.034 WIB [35] ERROR:  duplicate key value violates unique constraint "periode_pkey"
+2019-11-08 11:28:40.034 WIB [35] DETAIL:  Key (periode_tahun)=(2019) already exists.
+2019-11-08 11:28:40.034 WIB [35] CONTEXT:  COPY periode, line 1
+2019-11-08 11:28:40.034 WIB [35] STATEMENT:  COPY mst.periode (periode_tahun, periode_jenis) FROM stdin;
+	
+2019-11-08 11:28:40.079 WIB [35] ERROR:  duplicate key value violates unique constraint "posbiaya_pkey"
+2019-11-08 11:28:40.079 WIB [35] DETAIL:  Key (posbiaya_id)=(1) already exists.
+2019-11-08 11:28:40.079 WIB [35] CONTEXT:  COPY posbiaya, line 1
+2019-11-08 11:28:40.079 WIB [35] STATEMENT:  COPY mst.posbiaya (posbiaya_sts, posbiaya_id, posbiaya_nama) FROM stdin;
+	
+2019-11-08 11:28:40.087 WIB [35] ERROR:  duplicate key value violates unique constraint "rakb_pkey"
+2019-11-08 11:28:40.087 WIB [35] DETAIL:  Key (rakb_id)=(1) already exists.
+2019-11-08 11:28:40.087 WIB [35] CONTEXT:  COPY rakb, line 1
+2019-11-08 11:28:40.087 WIB [35] STATEMENT:  COPY mst.rakb (rakb_id, rakb_nama) FROM stdin;
+	
+2019-11-08 11:28:40.097 WIB [35] ERROR:  duplicate key value violates unique constraint "rkbu_pkey"
+2019-11-08 11:28:40.097 WIB [35] DETAIL:  Key (rkbu_id)=(154) already exists.
+2019-11-08 11:28:40.097 WIB [35] CONTEXT:  COPY rkbu, line 1
+2019-11-08 11:28:40.097 WIB [35] STATEMENT:  COPY mst.rkbu (rkbu_id, rkbu_barang_kelompok, rkbu_barang_kode, rkbu_barang_nama, rkbu_status, rkbu_jumlah, rkbu_estimasi_harga, rkbu_tahun, rkbu_jadwal_bulan, rkbu_divisi) FROM stdin;
+	
+2019-11-08 11:28:40.121 WIB [35] ERROR:  duplicate key value violates unique constraint "rkf_pkey"
+2019-11-08 11:28:40.121 WIB [35] DETAIL:  Key (rkf_id)=(7) already exists.
+2019-11-08 11:28:40.121 WIB [35] CONTEXT:  COPY rkf, line 1
+2019-11-08 11:28:40.121 WIB [35] STATEMENT:  COPY mst.rkf (rkf_sts, rkf_id, rkf_user, rkf_user_from, rkf_tahun, rkf_jenis_id, rkf_proker, rkf_status_proker, rkf_skala_proker, rkf_kat_proker, rkf_bsc, rkf_konsultan, rkf_unit_pelaksana, rkf_visi, rkf_misi, rkf_coreplan, rkf_kud, rkf_tujuan_proker, rkf_indikator, rkf_targetfin, rkf_jadwal, rkf_anggaran, rkf_fungsilain, rkf_time_input, rkf_otor, rkf_time_otor, rkf_note_otor, rkf_tlaudit, rkf_quick_win, rkf_transformasi_bpd, rkf_rakb, rkf_isu_strategis) FROM stdin;
+	
+2019-11-08 11:28:40.131 WIB [35] ERROR:  duplicate key value violates unique constraint "rkf_jenis_pkey"
+2019-11-08 11:28:40.131 WIB [35] DETAIL:  Key (rkf_jenis_id)=(1) already exists.
+2019-11-08 11:28:40.131 WIB [35] CONTEXT:  COPY rkf_jenis, line 1
+2019-11-08 11:28:40.131 WIB [35] STATEMENT:  COPY mst.rkf_jenis (rkf_jenis_id, rkf_jenis_nama) FROM stdin;
+	
+2019-11-08 11:28:40.133 WIB [35] ERROR:  column "rkf_map_from_id" of relation "rkf_map" does not exist
+2019-11-08 11:28:40.133 WIB [35] STATEMENT:  COPY mst.rkf_map (rkf_map_from_id, rkf_map_from_divisi, rkf_map_from_tahun, rkf_map_from_jenis, rkf_map_to_id, rkf_map_to_divisi, rkf_map_to_tahun, rkf_map_to_jenis) FROM stdin;
+	
+2019-11-08 11:28:40.139 WIB [35] ERROR:  duplicate key value violates unique constraint "satuan_pkey"
+2019-11-08 11:28:40.139 WIB [35] DETAIL:  Key (satuan_id)=(1) already exists.
+2019-11-08 11:28:40.139 WIB [35] CONTEXT:  COPY satuan, line 1
+2019-11-08 11:28:40.139 WIB [35] STATEMENT:  COPY mst.satuan (satuan_sts, satuan_id, satuan_nama) FROM stdin;
+	
+2019-11-08 11:28:40.146 WIB [35] ERROR:  duplicate key value violates unique constraint "skala_proker_pkey"
+2019-11-08 11:28:40.146 WIB [35] DETAIL:  Key (skala_proker_id)=(3) already exists.
+2019-11-08 11:28:40.146 WIB [35] CONTEXT:  COPY skala_proker, line 1
+2019-11-08 11:28:40.146 WIB [35] STATEMENT:  COPY mst.skala_proker (skala_proker_id, skala_proker_sts, skala_proker_nama) FROM stdin;
+	
+2019-11-08 11:28:40.156 WIB [35] ERROR:  duplicate key value violates unique constraint "status_aktivitas_pkey"
+2019-11-08 11:28:40.156 WIB [35] DETAIL:  Key (status_aktifitas_id)=(2) already exists.
+2019-11-08 11:28:40.156 WIB [35] CONTEXT:  COPY status_aktivitas, line 1
+2019-11-08 11:28:40.156 WIB [35] STATEMENT:  COPY mst.status_aktivitas (status_aktifitas_id, status_aktifitas_nama) FROM stdin;
+	
+2019-11-08 11:28:40.163 WIB [35] ERROR:  duplicate key value violates unique constraint "status_proker_pkey"
+2019-11-08 11:28:40.163 WIB [35] DETAIL:  Key (sts_proker_id)=(2) already exists.
+2019-11-08 11:28:40.163 WIB [35] CONTEXT:  COPY status_proker, line 1
+2019-11-08 11:28:40.163 WIB [35] STATEMENT:  COPY mst.status_proker (sts_proker_id, sts_proker_sts, sts_proker_nama) FROM stdin;
+	
+2019-11-08 11:28:40.212 WIB [35] ERROR:  duplicate key value violates unique constraint "tindak_lanjut_pkey"
+2019-11-08 11:28:40.212 WIB [35] DETAIL:  Key (tindak_lanjut_id)=(1) already exists.
+2019-11-08 11:28:40.212 WIB [35] CONTEXT:  COPY tindak_lanjut, line 1
+2019-11-08 11:28:40.212 WIB [35] STATEMENT:  COPY mst.tindak_lanjut (tindak_lanjut_id, tindak_lanjut_sts, tindak_lanjut_nama) FROM stdin;
+	
+2019-11-08 11:28:40.224 WIB [35] ERROR:  duplicate key value violates unique constraint "transformasi_bpd_pkey"
+2019-11-08 11:28:40.224 WIB [35] DETAIL:  Key (transformasi_bpd_id)=(1) already exists.
+2019-11-08 11:28:40.224 WIB [35] CONTEXT:  COPY transformasi_bpd, line 1
+2019-11-08 11:28:40.224 WIB [35] STATEMENT:  COPY mst.transformasi_bpd (transformasi_bpd_id, transformasi_bpd_nama) FROM stdin;
+	
+2019-11-08 11:28:40.232 WIB [35] ERROR:  duplicate key value violates unique constraint "unit_kerja_pkey"
+2019-11-08 11:28:40.232 WIB [35] DETAIL:  Key (unit_kerja_id)=(001AKA) already exists.
+2019-11-08 11:28:40.232 WIB [35] CONTEXT:  COPY unit_kerja, line 1
+2019-11-08 11:28:40.232 WIB [35] STATEMENT:  COPY mst.unit_kerja (unit_kerja_id, unit_kerja_nama) FROM stdin;
+	
+2019-11-08 11:28:40.238 WIB [35] ERROR:  duplicate key value violates unique constraint "unitkerja_pkey"
+2019-11-08 11:28:40.238 WIB [35] DETAIL:  Key (uker_id, uker_kategori, uker_sts)=(ES, new, 1) already exists.
+2019-11-08 11:28:40.238 WIB [35] CONTEXT:  COPY unitkerja, line 1
+2019-11-08 11:28:40.238 WIB [35] STATEMENT:  COPY mst.unitkerja (uker_kategori, uker_id, uker_nama, uker_sts) FROM stdin;
+	
+2019-11-08 11:28:40.245 WIB [35] ERROR:  duplicate key value violates unique constraint "upload_dokumen_pkey"
+2019-11-08 11:28:40.245 WIB [35] DETAIL:  Key (upload_dokumen_id)=(4) already exists.
+2019-11-08 11:28:40.245 WIB [35] CONTEXT:  COPY upload_dokumen, line 1
+2019-11-08 11:28:40.245 WIB [35] STATEMENT:  COPY mst.upload_dokumen (upload_dokumen_id, upload_dokument_tahun, upload_dokumen_jenis, upload_dokumen_nama, upload_dokumen_link) FROM stdin;
+	
+2019-11-08 11:28:40.257 WIB [35] ERROR:  duplicate key value violates unique constraint "visi_pkey"
+2019-11-08 11:28:40.257 WIB [35] DETAIL:  Key (visi_id)=(1) already exists.
+2019-11-08 11:28:40.257 WIB [35] CONTEXT:  COPY visi, line 1
+2019-11-08 11:28:40.257 WIB [35] STATEMENT:  COPY mst.visi (visi_id, visi_nama) FROM stdin;
+	
+2019-11-08 11:28:40.273 WIB [35] ERROR:  duplicate key value violates unique constraint "roles_pkey"
+2019-11-08 11:28:40.273 WIB [35] DETAIL:  Key (role_id)=(1) already exists.
+2019-11-08 11:28:40.273 WIB [35] CONTEXT:  COPY roles, line 1
+2019-11-08 11:28:40.273 WIB [35] STATEMENT:  COPY sec.roles (role_id, role_status, role_name) FROM stdin;
+	
+2019-11-08 11:28:40.281 WIB [35] ERROR:  duplicate key value violates unique constraint "userid_pkey"
+2019-11-08 11:28:40.281 WIB [35] DETAIL:  Key (userid_kode)=(2217) already exists.
+2019-11-08 11:28:40.281 WIB [35] CONTEXT:  COPY userid, line 1
+2019-11-08 11:28:40.281 WIB [35] STATEMENT:  COPY sec.userid (userid_kode, userid_role) FROM stdin;
+	
+2019-11-08 11:28:40.291 WIB [35] ERROR:  function gen_salt(unknown, integer) does not exist at character 29
+2019-11-08 11:28:40.291 WIB [35] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2019-11-08 11:28:40.291 WIB [35] QUERY:  SELECT crypt( NEW.userpass, gen_salt('bf', 7) )
+2019-11-08 11:28:40.291 WIB [35] CONTEXT:  PL/pgSQL function sec.trg_crypt_users_pass() line 4 at assignment
+	COPY users, line 1: "4	2217	$2a$07$1.o9EN.iXevdIXWTwDAgz.0dRJkRBzGJb9ZxESD1gBDDtBccNxcnG	2217	active	\N	3"
+2019-11-08 11:28:40.291 WIB [35] STATEMENT:  COPY sec.users (userid, username, userpass, userfullname, usersts, useremail, userrole) FROM stdin;
+	
+2019-11-08 11:28:40.323 WIB [35] ERROR:  duplicate key value violates unique constraint "pembukaan_pkey"
+2019-11-08 11:28:40.323 WIB [35] DETAIL:  Key (pembukaan_id)=(6) already exists.
+2019-11-08 11:28:40.323 WIB [35] CONTEXT:  COPY pembukaan, line 1
+2019-11-08 11:28:40.323 WIB [35] STATEMENT:  COPY tmp.pembukaan (pembukaan_id, pembukaan_tahun, pembukaan_jenis_kantor, pembukaan_pengusul, pembukaan_propinsi, pembukaan_kota, pembukaan_kecamatan, pembukaan_kelurahan, pembukaan_tanah, pembukaan_bangunan, pembukaan_rencana_pengadaan_tanah, pembukaan_anggaran_pengadaan_tanah, pembukaan_rencana_pengadaan_bangunan, pembukaan_anggaran_pengadaan_bangunan, pembukaan_status, pembukaan_kajian_kelayakan_bisnis_start, pembukaan_kajian_kelayakan_tanah_bangunan_start, pembukaan_pengadaan_tanah_bangunan_start, pembukaan_penyiapan_tanah_bangunan_start, pembukaan_penyiapan_infrastruktur_pendukung_start, pembukaan_penyiapan_infrastruktur_it_start, pembukaan_pengadaan_sdm_start, pembukaan_perijinan_start, pembukaan_pembukaan_start, pembukaan_kajian_kelayakan_bisnis_finish, pembukaan_kajian_kelayakan_tanah_bangunan_finish, pembukaan_pengadaan_tanah_bangunan_finish, pembukaan_penyiapan_tanah_bangunan_finish, pembukaan_penyiapan_infrastruktur_pendukung_finish, pembukaan_penyiapan_infrastruktur_it_finish, pembukaan_pengadaan_sdm_finish, pembukaan_perijinan_finish, pembukaan_pembukaan_finish, pembukaan_kajian_kelayakan_bisnis_divisi, pembukaan_kajian_kelayakan_tanah_bangunan_divisi, pembukaan_pengadaan_tanah_bangunan_divisi, pembukaan_penyiapan_tanah_bangunan_divisi, pembukaan_penyiapan_infrastruktur_pendukung_divisi, pembukaan_penyiapan_infrastruktur_it_divisi, pembukaan_pengadaan_sdm_divisi, pembukaan_perijinan_divisi, pembukaan_pembukaan_divisi) FROM stdin;
+	
+2019-11-08 11:28:40.333 WIB [35] ERROR:  duplicate key value violates unique constraint "perubahan_pkey"
+2019-11-08 11:28:40.333 WIB [35] DETAIL:  Key (perubahan_id)=(1) already exists.
+2019-11-08 11:28:40.333 WIB [35] CONTEXT:  COPY perubahan, line 1
+2019-11-08 11:28:40.333 WIB [35] STATEMENT:  COPY tmp.perubahan (perubahan_id, perubahan_tahun, perubahan_jenis_kantor_semula, perubahan_jenis_kantor_menjadi, perubahan_nama_semula, perubahan_nama_menjadi, perubahan_pengusul, perubahan_propinsi, perubahan_kota, perubahan_kecamatan, perubahan_kelurahan, perubahan_tanah, perubahan_bangunan, perubahan_rencana_pengadaan_tanah, perubahan_anggaran_pengadaan_tanah, perubahan_rencana_pengadaan_bangunan, perubahan_anggaran_pengadaan_bangunan, perubahan_status, perubahan_kajian_kelayakan_bisnis_start, perubahan_kajian_kelayakan_tanah_bangunan_start, perubahan_pengadaan_tanah_bangunan_start, perubahan_penyiapan_tanah_bangunan_start, perubahan_penyiapan_infrastruktur_pendukung_start, perubahan_penyiapan_infrastruktur_it_start, perubahan_pengadaan_sdm_start, perubahan_perijinan_start, perubahan_perubahan_start, perubahan_kajian_kelayakan_bisnis_finish, perubahan_kajian_kelayakan_tanah_bangunan_finish, perubahan_pengadaan_tanah_bangunan_finish, perubahan_penyiapan_tanah_bangunan_finish, perubahan_penyiapan_infrastruktur_pendukung_finish, perubahan_penyiapan_infrastruktur_it_finish, perubahan_pengadaan_sdm_finish, perubahan_perijinan_finish, perubahan_perubahan_finish, perubahan_kajian_kelayakan_bisnis_divisi, perubahan_kajian_kelayakan_tanah_bangunan_divisi, perubahan_pengadaan_tanah_bangunan_divisi, perubahan_penyiapan_tanah_bangunan_divisi, perubahan_penyiapan_infrastruktur_pendukung_divisi, perubahan_penyiapan_infrastruktur_it_divisi, perubahan_pengadaan_sdm_divisi, perubahan_perijinan_divisi, perubahan_perubahan_divisi) FROM stdin;
+	
+2019-11-08 11:28:40.340 WIB [35] ERROR:  duplicate key value violates unique constraint "relokasi_pkey"
+2019-11-08 11:28:40.340 WIB [35] DETAIL:  Key (relokasi_id)=(6) already exists.
+2019-11-08 11:28:40.340 WIB [35] CONTEXT:  COPY relokasi, line 1
+2019-11-08 11:28:40.340 WIB [35] STATEMENT:  COPY tmp.relokasi (relokasi_id, relokasi_tahun, relokasi_jenis_kantor, relokasi_pengusul, relokasi_propinsi_semula, relokasi_kota_semula, relokasi_kecamatan_semula, relokasi_kelurahan_semula, relokasi_alamat_semula, relokasi_propinsi_menjadi, relokasi_kota_menjadi, relokasi_kecamatan_menjadi, relokasi_kelurahan_menjadi, relokasi_alamat_menjadi, relokasi_tanah, relokasi_bangunan, relokasi_rencana_pengadaan_tanah, relokasi_anggaran_pengadaan_tanah, relokasi_rencana_pengadaan_bangunan, relokasi_anggaran_pengadaan_bangunan, relokasi_status, relokasi_kajian_kelayakan_bisnis_start, relokasi_kajian_kelayakan_tanah_bangunan_start, relokasi_pengadaan_tanah_bangunan_start, relokasi_penyiapan_tanah_bangunan_start, relokasi_penyiapan_infrastruktur_pendukung_start, relokasi_penyiapan_infrastruktur_it_start, relokasi_pengadaan_sdm_start, relokasi_perijinan_start, relokasi_relokasi_start, relokasi_kajian_kelayakan_bisnis_finish, relokasi_kajian_kelayakan_tanah_bangunan_finish, relokasi_pengadaan_tanah_bangunan_finish, relokasi_penyiapan_tanah_bangunan_finish, relokasi_penyiapan_infrastruktur_pendukung_finish, relokasi_penyiapan_infrastruktur_it_finish, relokasi_pengadaan_sdm_finish, relokasi_perijinan_finish, relokasi_relokasi_finish, relokasi_kajian_kelayakan_bisnis_divisi, relokasi_kajian_kelayakan_tanah_bangunan_divisi, relokasi_pengadaan_tanah_bangunan_divisi, relokasi_penyiapan_tanah_bangunan_divisi, relokasi_penyiapan_infrastruktur_pendukung_divisi, relokasi_penyiapan_infrastruktur_it_divisi, relokasi_pengadaan_sdm_divisi, relokasi_perijinan_divisi, relokasi_relokasi_divisi) FROM stdin;
+	
+2019-11-08 11:28:40.473 WIB [35] ERROR:  duplicate key value violates unique constraint "rkf_pkey"
+2019-11-08 11:28:40.473 WIB [35] DETAIL:  Key (rkf_id)=(189) already exists.
+2019-11-08 11:28:40.473 WIB [35] CONTEXT:  COPY rkf_sebelum_cleansing, line 1
+2019-11-08 11:28:40.473 WIB [35] STATEMENT:  COPY tmp.rkf_sebelum_cleansing (rkf_sts, rkf_id, rkf_user, rkf_user_from, rkf_tahun, rkf_jenis_id, rkf_proker, rkf_status_proker, rkf_skala_proker, rkf_kat_proker, rkf_bsc, rkf_konsultan, rkf_unit_pelaksana, rkf_visi, rkf_misi, rkf_coreplan, rkf_kud, rkf_tujuan_proker, rkf_indikator, rkf_targetfin, rkf_jadwal, rkf_anggaran, rkf_fungsilain, rkf_time_input, rkf_otor, rkf_time_otor, rkf_note_otor, rkf_tlaudit, rkf_quick_win, rkf_transformasi_bpd, rkf_rakb, rkf_isu_strategis) FROM stdin;
+	
+2019-11-08 11:28:40.524 WIB [35] ERROR:  duplicate key value violates unique constraint "rkf_pkey"
+2019-11-08 11:28:40.524 WIB [35] DETAIL:  Key (rkf_id)=(242) already exists.
+2019-11-08 11:28:40.524 WIB [35] CONTEXT:  COPY rkf, line 1
+2019-11-08 11:28:40.524 WIB [35] STATEMENT:  COPY trx.rkf (rkf_sts, rkf_id, rkf_user, rkf_user_from, rkf_tahun, rkf_jenis_id, rkf_proker, rkf_status_proker, rkf_skala_proker, rkf_kat_proker, rkf_bsc, rkf_konsultan, rkf_unit_pelaksana, rkf_visi, rkf_misi, rkf_coreplan, rkf_kud, rkf_tujuan_proker, rkf_indikator, rkf_targetfin, rkf_jadwal, rkf_anggaran, rkf_fungsilain, rkf_time_input, rkf_otor, rkf_time_otor, rkf_note_otor, rkf_tlaudit) FROM stdin;
+	
+2019-11-08 11:28:40.575 WIB [35] ERROR:  duplicate key value violates unique constraint "rkf_190320_pkey"
+2019-11-08 11:28:40.575 WIB [35] DETAIL:  Key (rkf_id)=(12702) already exists.
+2019-11-08 11:28:40.575 WIB [35] CONTEXT:  COPY rkf_190320, line 1
+2019-11-08 11:28:40.575 WIB [35] STATEMENT:  COPY trx.rkf_190320 (rkf_sts, rkf_id, rkf_user, rkf_user_from, rkf_tahun, rkf_jenis_id, rkf_proker, rkf_status_proker, rkf_skala_proker, rkf_kat_proker, rkf_bsc, rkf_konsultan, rkf_unit_pelaksana, rkf_visi, rkf_misi, rkf_coreplan, rkf_kud, rkf_tujuan_proker, rkf_indikator, rkf_targetfin, rkf_jadwal, rkf_anggaran, rkf_fungsilain, rkf_time_input, rkf_otor, rkf_time_otor, rkf_note_otor, rkf_tlaudit) FROM stdin;
+	
+2019-11-08 11:28:40.748 WIB [35] ERROR:  multiple primary keys for table "jenis_kantor" are not allowed
+2019-11-08 11:28:40.748 WIB [35] STATEMENT:  ALTER TABLE ONLY jaringan.jenis_kantor
+	    ADD CONSTRAINT jenis_kantor_pkey PRIMARY KEY (jenis_kantor_id);
+	
+	
+	
+2019-11-08 11:28:40.749 WIB [35] ERROR:  multiple primary keys for table "jenis_tanah_bangunan" are not allowed
+2019-11-08 11:28:40.749 WIB [35] STATEMENT:  ALTER TABLE ONLY jaringan.jenis_tanah_bangunan
+	    ADD CONSTRAINT jenis_tanah_bangunan_pkey PRIMARY KEY (jenis_tanah_bangunan_id);
+	
+	
+	
+2019-11-08 11:28:40.751 WIB [35] ERROR:  multiple primary keys for table "kecamatan" are not allowed
+2019-11-08 11:28:40.751 WIB [35] STATEMENT:  ALTER TABLE ONLY jaringan.kecamatan
+	    ADD CONSTRAINT kecamatan_pkey PRIMARY KEY (kecamatan_id);
+	
+	
+	
+2019-11-08 11:28:40.752 WIB [35] ERROR:  multiple primary keys for table "kelurahan" are not allowed
+2019-11-08 11:28:40.752 WIB [35] STATEMENT:  ALTER TABLE ONLY jaringan.kelurahan
+	    ADD CONSTRAINT kelurahan_pkey PRIMARY KEY (kelurahan_id);
+	
+	
+	
+2019-11-08 11:28:40.754 WIB [35] ERROR:  multiple primary keys for table "kota" are not allowed
+2019-11-08 11:28:40.754 WIB [35] STATEMENT:  ALTER TABLE ONLY jaringan.kota
+	    ADD CONSTRAINT kota_pkey PRIMARY KEY (kota_id);
+	
+	
+	
+2019-11-08 11:28:40.756 WIB [35] ERROR:  multiple primary keys for table "pembukaan" are not allowed
+2019-11-08 11:28:40.756 WIB [35] STATEMENT:  ALTER TABLE ONLY jaringan.pembukaan
+	    ADD CONSTRAINT pembukaan_pkey PRIMARY KEY (pembukaan_id);
+	
+	
+	
+2019-11-08 11:28:40.757 WIB [35] ERROR:  multiple primary keys for table "pengusul" are not allowed
+2019-11-08 11:28:40.757 WIB [35] STATEMENT:  ALTER TABLE ONLY jaringan.pengusul
+	    ADD CONSTRAINT pengusul_pkey PRIMARY KEY (pengusul_id);
+	
+	
+	
+2019-11-08 11:28:40.760 WIB [35] ERROR:  multiple primary keys for table "penutupan" are not allowed
+2019-11-08 11:28:40.760 WIB [35] STATEMENT:  ALTER TABLE ONLY jaringan.penutupan
+	    ADD CONSTRAINT penutupan_pkey PRIMARY KEY (penutupan_id);
+	
+	
+	
+2019-11-08 11:28:40.762 WIB [35] ERROR:  multiple primary keys for table "perubahan" are not allowed
+2019-11-08 11:28:40.762 WIB [35] STATEMENT:  ALTER TABLE ONLY jaringan.perubahan
+	    ADD CONSTRAINT perubahan_pkey PRIMARY KEY (perubahan_id);
+	
+	
+	
+2019-11-08 11:28:40.763 WIB [35] ERROR:  multiple primary keys for table "propinsi" are not allowed
+2019-11-08 11:28:40.763 WIB [35] STATEMENT:  ALTER TABLE ONLY jaringan.propinsi
+	    ADD CONSTRAINT propinsi_pkey PRIMARY KEY (propinsi_id);
+	
+	
+	
+2019-11-08 11:28:40.765 WIB [35] ERROR:  multiple primary keys for table "relokasi" are not allowed
+2019-11-08 11:28:40.765 WIB [35] STATEMENT:  ALTER TABLE ONLY jaringan.relokasi
+	    ADD CONSTRAINT relokasi_pkey PRIMARY KEY (relokasi_id);
+	
+	
+	
+2019-11-08 11:28:40.766 WIB [35] ERROR:  multiple primary keys for table "rencana_pengadaan_bangunan" are not allowed
+2019-11-08 11:28:40.766 WIB [35] STATEMENT:  ALTER TABLE ONLY jaringan.rencana_pengadaan_bangunan
+	    ADD CONSTRAINT rencana_pengadaan_bangunan_pkey PRIMARY KEY (rencana_pengadaan_bangunan_id);
+	
+	
+	
+2019-11-08 11:28:40.768 WIB [35] ERROR:  multiple primary keys for table "rencana_pengadaan_tanah" are not allowed
+2019-11-08 11:28:40.768 WIB [35] STATEMENT:  ALTER TABLE ONLY jaringan.rencana_pengadaan_tanah
+	    ADD CONSTRAINT rencana_pengadaan_tanah_pkey PRIMARY KEY (rencana_pengadaan_tanah_id);
+	
+	
+	
+2019-11-08 11:28:40.770 WIB [35] ERROR:  multiple primary keys for table "aktivitas" are not allowed
+2019-11-08 11:28:40.770 WIB [35] STATEMENT:  ALTER TABLE ONLY mst.aktivitas
+	    ADD CONSTRAINT aktivitas_pkey PRIMARY KEY (aktivitas_id);
+	
+	
+	
+2019-11-08 11:28:40.771 WIB [35] ERROR:  multiple primary keys for table "bangun_renovasi" are not allowed
+2019-11-08 11:28:40.771 WIB [35] STATEMENT:  ALTER TABLE ONLY mst.bangun_renovasi
+	    ADD CONSTRAINT bangun_renovasi_pkey PRIMARY KEY (bangun_renovasi_id);
+	
+	
+	
+2019-11-08 11:28:40.773 WIB [35] ERROR:  multiple primary keys for table "barang" are not allowed
+2019-11-08 11:28:40.773 WIB [35] STATEMENT:  ALTER TABLE ONLY mst.barang
+	    ADD CONSTRAINT barang_pkey PRIMARY KEY (barang_id);
+	
+	
+	
+2019-11-08 11:28:40.774 WIB [35] ERROR:  multiple primary keys for table "bsc" are not allowed
+2019-11-08 11:28:40.774 WIB [35] STATEMENT:  ALTER TABLE ONLY mst.bsc
+	    ADD CONSTRAINT bsc_pkey PRIMARY KEY (bsc_id);
+	
+	
+	
+2019-11-08 11:28:40.776 WIB [35] ERROR:  multiple primary keys for table "coreplan" are not allowed
+2019-11-08 11:28:40.776 WIB [35] STATEMENT:  ALTER TABLE ONLY mst.coreplan
+	    ADD CONSTRAINT coreplan_pkey PRIMARY KEY (cp_id);
+	
+	
+	
+2019-11-08 11:28:40.778 WIB [35] ERROR:  multiple primary keys for table "edukasi" are not allowed
+2019-11-08 11:28:40.778 WIB [35] STATEMENT:  ALTER TABLE ONLY mst.edukasi
+	    ADD CONSTRAINT edukasi_pkey PRIMARY KEY (eduid);
+	
+	
+	
+2019-11-08 11:28:40.780 WIB [35] ERROR:  multiple primary keys for table "golongan" are not allowed
+2019-11-08 11:28:40.780 WIB [35] STATEMENT:  ALTER TABLE ONLY mst.golongan
+	    ADD CONSTRAINT golongan_pkey PRIMARY KEY (golid);
+	
+	
+	
+2019-11-08 11:28:40.783 WIB [35] ERROR:  multiple primary keys for table "hubkerja" are not allowed
+2019-11-08 11:28:40.783 WIB [35] STATEMENT:  ALTER TABLE ONLY mst.hubkerja
+	    ADD CONSTRAINT hubkerja_pkey PRIMARY KEY (hubker_id);
+	
+	
+	
+2019-11-08 11:28:40.785 WIB [35] ERROR:  multiple primary keys for table "isu_strategis" are not allowed
+2019-11-08 11:28:40.785 WIB [35] STATEMENT:  ALTER TABLE ONLY mst.isu_strategis
+	    ADD CONSTRAINT isu_strategis_pkey PRIMARY KEY (isu_strategis_id);
+	
+	
+	
+2019-11-08 11:28:40.788 WIB [35] ERROR:  multiple primary keys for table "jabatan" are not allowed
+2019-11-08 11:28:40.788 WIB [35] STATEMENT:  ALTER TABLE ONLY mst.jabatan
+	    ADD CONSTRAINT jabatan_pkey PRIMARY KEY (jabatan_id);
+	
+	
+	
+2019-11-08 11:28:40.789 WIB [35] ERROR:  multiple primary keys for table "jabatan_unit_kerja" are not allowed
+2019-11-08 11:28:40.789 WIB [35] STATEMENT:  ALTER TABLE ONLY mst.jabatan_unit_kerja
+	    ADD CONSTRAINT jabatan_unit_kerja_pkey PRIMARY KEY (jabatan_id, unit_kerja_id);
+	
+	
+	
+2019-11-08 11:28:40.791 WIB [35] ERROR:  multiple primary keys for table "jenis_aktiva" are not allowed
+2019-11-08 11:28:40.791 WIB [35] STATEMENT:  ALTER TABLE ONLY mst.jenis_aktiva
+	    ADD CONSTRAINT jenis_aktiva_pkey PRIMARY KEY (jenis_aktiva_id);
+	
+	
+	
+2019-11-08 11:28:40.793 WIB [35] ERROR:  multiple primary keys for table "jenis_bangun_renovasi" are not allowed
+2019-11-08 11:28:40.793 WIB [35] STATEMENT:  ALTER TABLE ONLY mst.jenis_bangun_renovasi
+	    ADD CONSTRAINT jenis_bangun_renovasi_pkey PRIMARY KEY (jenis_bangun_renovasi_id);
+	
+	
+	
+2019-11-08 11:28:40.795 WIB [35] ERROR:  multiple primary keys for table "jenis_kompetensi" are not allowed
+2019-11-08 11:28:40.795 WIB [35] STATEMENT:  ALTER TABLE ONLY mst.jenis_kompetensi
+	    ADD CONSTRAINT jenis_kompetensi_pkey PRIMARY KEY (jnskom_id);
+	
+	
+	
+2019-11-08 11:28:40.796 WIB [35] ERROR:  multiple primary keys for table "jenis_pab" are not allowed
+2019-11-08 11:28:40.796 WIB [35] STATEMENT:  ALTER TABLE ONLY mst.jenis_pab
+	    ADD CONSTRAINT jenis_pab_pkey PRIMARY KEY (jenis_pab_id);
+	
+	
+	
+2019-11-08 11:28:40.797 WIB [35] ERROR:  multiple primary keys for table "kategori_proker" are not allowed
+2019-11-08 11:28:40.797 WIB [35] STATEMENT:  ALTER TABLE ONLY mst.kategori_proker
+	    ADD CONSTRAINT kategori_proker_pkey PRIMARY KEY (kat_proker_id);
+	
+	
+	
+2019-11-08 11:28:40.799 WIB [35] ERROR:  multiple primary keys for table "kepemilikan_aset" are not allowed
+2019-11-08 11:28:40.799 WIB [35] STATEMENT:  ALTER TABLE ONLY mst.kepemilikan_aset
+	    ADD CONSTRAINT kepemilikan_aset_pkey PRIMARY KEY (kepemilikan_aset_id);
+	
+	
+	
+2019-11-08 11:28:40.800 WIB [35] ERROR:  multiple primary keys for table "kud" are not allowed
+2019-11-08 11:28:40.800 WIB [35] STATEMENT:  ALTER TABLE ONLY mst.kud
+	    ADD CONSTRAINT kud_pkey PRIMARY KEY (kud_id);
+	
+	
+	
+2019-11-08 11:28:40.802 WIB [35] ERROR:  multiple primary keys for table "lokasikerja" are not allowed
+2019-11-08 11:28:40.802 WIB [35] STATEMENT:  ALTER TABLE ONLY mst.lokasikerja
+	    ADD CONSTRAINT lokasikerja_pkey PRIMARY KEY (lokid);
+	
+	
+	
+2019-11-08 11:28:40.804 WIB [35] ERROR:  multiple primary keys for table "misi" are not allowed
+2019-11-08 11:28:40.804 WIB [35] STATEMENT:  ALTER TABLE ONLY mst.misi
+	    ADD CONSTRAINT misi_pkey PRIMARY KEY (misi_id);
+	
+	
+	
+2019-11-08 11:28:40.805 WIB [35] ERROR:  multiple primary keys for table "pegawai" are not allowed
+2019-11-08 11:28:40.805 WIB [35] STATEMENT:  ALTER TABLE ONLY mst.pegawai
+	    ADD CONSTRAINT pegawai_pkey PRIMARY KEY (pegawai_id);
+	
+	
+	
+2019-11-08 11:28:40.807 WIB [35] ERROR:  multiple primary keys for table "periode" are not allowed
+2019-11-08 11:28:40.807 WIB [35] STATEMENT:  ALTER TABLE ONLY mst.periode
+	    ADD CONSTRAINT periode_pkey PRIMARY KEY (periode_tahun);
+	
+	
+	
+2019-11-08 11:28:40.808 WIB [35] ERROR:  multiple primary keys for table "posbiaya" are not allowed
+2019-11-08 11:28:40.808 WIB [35] STATEMENT:  ALTER TABLE ONLY mst.posbiaya
+	    ADD CONSTRAINT posbiaya_pkey PRIMARY KEY (posbiaya_id);
+	
+	
+	
+2019-11-08 11:28:40.810 WIB [35] ERROR:  multiple primary keys for table "rakb" are not allowed
+2019-11-08 11:28:40.810 WIB [35] STATEMENT:  ALTER TABLE ONLY mst.rakb
+	    ADD CONSTRAINT rakb_pkey PRIMARY KEY (rakb_id);
+	
+	
+	
+2019-11-08 11:28:40.811 WIB [35] ERROR:  multiple primary keys for table "rkbu" are not allowed
+2019-11-08 11:28:40.811 WIB [35] STATEMENT:  ALTER TABLE ONLY mst.rkbu
+	    ADD CONSTRAINT rkbu_pkey PRIMARY KEY (rkbu_id);
+	
+	
+	
+2019-11-08 11:28:40.813 WIB [35] ERROR:  multiple primary keys for table "rkf_jenis" are not allowed
+2019-11-08 11:28:40.813 WIB [35] STATEMENT:  ALTER TABLE ONLY mst.rkf_jenis
+	    ADD CONSTRAINT rkf_jenis_pkey PRIMARY KEY (rkf_jenis_id);
+	
+	
+	
+2019-11-08 11:28:40.815 WIB [35] ERROR:  multiple primary keys for table "rkf" are not allowed
+2019-11-08 11:28:40.815 WIB [35] STATEMENT:  ALTER TABLE ONLY mst.rkf
+	    ADD CONSTRAINT rkf_pkey PRIMARY KEY (rkf_id);
+	
+	
+	
+2019-11-08 11:28:40.816 WIB [35] ERROR:  multiple primary keys for table "satuan" are not allowed
+2019-11-08 11:28:40.816 WIB [35] STATEMENT:  ALTER TABLE ONLY mst.satuan
+	    ADD CONSTRAINT satuan_pkey PRIMARY KEY (satuan_id);
+	
+	
+	
+2019-11-08 11:28:40.818 WIB [35] ERROR:  multiple primary keys for table "skala_proker" are not allowed
+2019-11-08 11:28:40.818 WIB [35] STATEMENT:  ALTER TABLE ONLY mst.skala_proker
+	    ADD CONSTRAINT skala_proker_pkey PRIMARY KEY (skala_proker_id);
+	
+	
+	
+2019-11-08 11:28:40.819 WIB [35] ERROR:  multiple primary keys for table "sop" are not allowed
+2019-11-08 11:28:40.819 WIB [35] STATEMENT:  ALTER TABLE ONLY mst.sop
+	    ADD CONSTRAINT sop_pkey PRIMARY KEY (sopid);
+	
+	
+	
+2019-11-08 11:28:40.821 WIB [35] ERROR:  multiple primary keys for table "status_aktivitas" are not allowed
+2019-11-08 11:28:40.821 WIB [35] STATEMENT:  ALTER TABLE ONLY mst.status_aktivitas
+	    ADD CONSTRAINT status_aktivitas_pkey PRIMARY KEY (status_aktifitas_id);
+	
+	
+	
+2019-11-08 11:28:40.823 WIB [35] ERROR:  multiple primary keys for table "status_proker" are not allowed
+2019-11-08 11:28:40.823 WIB [35] STATEMENT:  ALTER TABLE ONLY mst.status_proker
+	    ADD CONSTRAINT status_proker_pkey PRIMARY KEY (sts_proker_id);
+	
+	
+	
+2019-11-08 11:28:40.825 WIB [35] ERROR:  multiple primary keys for table "tindak_lanjut" are not allowed
+2019-11-08 11:28:40.825 WIB [35] STATEMENT:  ALTER TABLE ONLY mst.tindak_lanjut
+	    ADD CONSTRAINT tindak_lanjut_pkey PRIMARY KEY (tindak_lanjut_id);
+	
+	
+	
+2019-11-08 11:28:40.826 WIB [35] ERROR:  multiple primary keys for table "transformasi_bpd" are not allowed
+2019-11-08 11:28:40.826 WIB [35] STATEMENT:  ALTER TABLE ONLY mst.transformasi_bpd
+	    ADD CONSTRAINT transformasi_bpd_pkey PRIMARY KEY (transformasi_bpd_id);
+	
+	
+	
+2019-11-08 11:28:40.828 WIB [35] ERROR:  multiple primary keys for table "unit_kerja" are not allowed
+2019-11-08 11:28:40.828 WIB [35] STATEMENT:  ALTER TABLE ONLY mst.unit_kerja
+	    ADD CONSTRAINT unit_kerja_pkey PRIMARY KEY (unit_kerja_id);
+	
+	
+	
+2019-11-08 11:28:40.829 WIB [35] ERROR:  multiple primary keys for table "unitkerja" are not allowed
+2019-11-08 11:28:40.829 WIB [35] STATEMENT:  ALTER TABLE ONLY mst.unitkerja
+	    ADD CONSTRAINT unitkerja_pkey PRIMARY KEY (uker_id, uker_kategori, uker_sts);
+	
+	
+	
+2019-11-08 11:28:40.831 WIB [35] ERROR:  multiple primary keys for table "upload_dokumen" are not allowed
+2019-11-08 11:28:40.831 WIB [35] STATEMENT:  ALTER TABLE ONLY mst.upload_dokumen
+	    ADD CONSTRAINT upload_dokumen_pkey PRIMARY KEY (upload_dokumen_id);
+	
+	
+	
+2019-11-08 11:28:40.832 WIB [35] ERROR:  multiple primary keys for table "visi" are not allowed
+2019-11-08 11:28:40.832 WIB [35] STATEMENT:  ALTER TABLE ONLY mst.visi
+	    ADD CONSTRAINT visi_pkey PRIMARY KEY (visi_id);
+	
+	
+	
+2019-11-08 11:28:40.834 WIB [35] ERROR:  multiple primary keys for table "roles" are not allowed
+2019-11-08 11:28:40.834 WIB [35] STATEMENT:  ALTER TABLE ONLY sec.roles
+	    ADD CONSTRAINT roles_pkey PRIMARY KEY (role_id);
+	
+	
+	
+2019-11-08 11:28:40.836 WIB [35] ERROR:  multiple primary keys for table "userid" are not allowed
+2019-11-08 11:28:40.836 WIB [35] STATEMENT:  ALTER TABLE ONLY sec.userid
+	    ADD CONSTRAINT userid_pkey PRIMARY KEY (userid_kode);
+	
+	
+	
+2019-11-08 11:28:40.838 WIB [35] ERROR:  multiple primary keys for table "users" are not allowed
+2019-11-08 11:28:40.838 WIB [35] STATEMENT:  ALTER TABLE ONLY sec.users
+	    ADD CONSTRAINT users_pkey PRIMARY KEY (userid);
+	
+	
+	
+2019-11-08 11:28:40.840 WIB [35] ERROR:  relation "users_username_key" already exists
+2019-11-08 11:28:40.840 WIB [35] STATEMENT:  ALTER TABLE ONLY sec.users
+	    ADD CONSTRAINT users_username_key UNIQUE (username);
+	
+	
+	
+2019-11-08 11:28:40.841 WIB [35] ERROR:  multiple primary keys for table "pembukaan" are not allowed
+2019-11-08 11:28:40.841 WIB [35] STATEMENT:  ALTER TABLE ONLY tmp.pembukaan
+	    ADD CONSTRAINT pembukaan_pkey PRIMARY KEY (pembukaan_id);
+	
+	
+	
+2019-11-08 11:28:40.843 WIB [35] ERROR:  multiple primary keys for table "penutupan" are not allowed
+2019-11-08 11:28:40.843 WIB [35] STATEMENT:  ALTER TABLE ONLY tmp.penutupan
+	    ADD CONSTRAINT penutupan_pkey PRIMARY KEY (penutupan_id);
+	
+	
+	
+2019-11-08 11:28:40.845 WIB [35] ERROR:  multiple primary keys for table "perubahan" are not allowed
+2019-11-08 11:28:40.845 WIB [35] STATEMENT:  ALTER TABLE ONLY tmp.perubahan
+	    ADD CONSTRAINT perubahan_pkey PRIMARY KEY (perubahan_id);
+	
+	
+	
+2019-11-08 11:28:40.847 WIB [35] ERROR:  multiple primary keys for table "relokasi" are not allowed
+2019-11-08 11:28:40.847 WIB [35] STATEMENT:  ALTER TABLE ONLY tmp.relokasi
+	    ADD CONSTRAINT relokasi_pkey PRIMARY KEY (relokasi_id);
+	
+	
+	
+2019-11-08 11:28:40.848 WIB [35] ERROR:  multiple primary keys for table "rkf_sebelum_cleansing" are not allowed
+2019-11-08 11:28:40.848 WIB [35] STATEMENT:  ALTER TABLE ONLY tmp.rkf_sebelum_cleansing
+	    ADD CONSTRAINT rkf_pkey PRIMARY KEY (rkf_id);
+	
+	
+	
+2019-11-08 11:28:40.850 WIB [35] ERROR:  multiple primary keys for table "rkf_190320" are not allowed
+2019-11-08 11:28:40.850 WIB [35] STATEMENT:  ALTER TABLE ONLY trx.rkf_190320
+	    ADD CONSTRAINT rkf_190320_pkey PRIMARY KEY (rkf_id);
+	
+	
+	
+2019-11-08 11:28:40.852 WIB [35] ERROR:  multiple primary keys for table "rkf" are not allowed
+2019-11-08 11:28:40.852 WIB [35] STATEMENT:  ALTER TABLE ONLY trx.rkf
+	    ADD CONSTRAINT rkf_pkey PRIMARY KEY (rkf_id);
+	
+	
+	
+2019-11-08 11:28:40.853 WIB [35] ERROR:  relation "kecamatan_kota_idx" already exists
+2019-11-08 11:28:40.853 WIB [35] STATEMENT:  CREATE INDEX kecamatan_kota_idx ON jaringan.kecamatan USING btree (kecamatan_kota);
+	
+	
+	
+2019-11-08 11:28:40.855 WIB [35] ERROR:  relation "kelurahan_kecamatan_idx" already exists
+2019-11-08 11:28:40.855 WIB [35] STATEMENT:  CREATE INDEX kelurahan_kecamatan_idx ON jaringan.kecamatan USING btree (kecamatan_kota);
+	
+	
+	
+2019-11-08 11:28:40.857 WIB [35] ERROR:  relation "kota_propinsi" already exists
+2019-11-08 11:28:40.857 WIB [35] STATEMENT:  CREATE INDEX kota_propinsi ON jaringan.kota USING btree (kota_propinsi);
+	
+	
+	
+2019-11-08 11:28:40.858 WIB [35] ERROR:  relation "kud_tahun_idx" already exists
+2019-11-08 11:28:40.858 WIB [35] STATEMENT:  CREATE INDEX kud_tahun_idx ON mst.kud USING btree (kud_tahun);
+	
+	
+	
+2019-11-08 11:28:40.859 WIB [35] ERROR:  relation "pos_coa_pos_coa_jenis_idx" already exists
+2019-11-08 11:28:40.859 WIB [35] STATEMENT:  CREATE INDEX pos_coa_pos_coa_jenis_idx ON mst.pos_coa USING btree (pos_coa_jenis);
+	
+	
+	
+2019-11-08 11:28:40.861 WIB [35] ERROR:  relation "pos_coa_pos_coa_jenis_idx_1" already exists
+2019-11-08 11:28:40.861 WIB [35] STATEMENT:  CREATE INDEX pos_coa_pos_coa_jenis_idx_1 ON mst.pos_coa USING btree (pos_coa_jenis, pos_coa_header_id, pos_coa_sub1_id);
+	
+	
+	
+2019-11-08 11:28:40.862 WIB [35] ERROR:  relation "pos_coa_pos_coa_jenis_idx_2" already exists
+2019-11-08 11:28:40.862 WIB [35] STATEMENT:  CREATE INDEX pos_coa_pos_coa_jenis_idx_2 ON mst.pos_coa USING btree (pos_coa_jenis, pos_coa_header_id, pos_coa_sub1_id, pos_coa_sub2_id);
+	
+	
+	
+2019-11-08 11:28:40.864 WIB [35] ERROR:  relation "pos_coa_pos_coa_jenis_idx_3" already exists
+2019-11-08 11:28:40.864 WIB [35] STATEMENT:  CREATE INDEX pos_coa_pos_coa_jenis_idx_3 ON mst.pos_coa USING btree (pos_coa_jenis, pos_coa_header_id, pos_coa_sub1_id, pos_coa_sub2_id, pos_coa_sub3_id);
+	
+	
+	
+2019-11-08 11:28:40.865 WIB [35] ERROR:  relation "username_idx" already exists
+2019-11-08 11:28:40.865 WIB [35] STATEMENT:  CREATE UNIQUE INDEX username_idx ON sec.users USING btree (username);
+	
+	
+	
+2019-11-08 11:28:40.870 WIB [35] ERROR:  trigger "trg_crypt_users_pass" for relation "users" already exists
+2019-11-08 11:28:40.870 WIB [35] STATEMENT:  CREATE TRIGGER trg_crypt_users_pass BEFORE INSERT OR UPDATE ON sec.users FOR EACH ROW EXECUTE PROCEDURE sec.trg_crypt_users_pass();
+	
+	
+	
+2019-11-08 13:11:50.391 WIB [47] ERROR:  syntax error at or near "select" at character 29
+2019-11-08 13:11:50.391 WIB [47] STATEMENT:  create table tmp.rkf_backup select * from mst.rkf
+2019-11-08 13:22:05.483 WIB [47] ERROR:  column "id" does not exist at character 237
+2019-11-08 13:22:05.483 WIB [47] STATEMENT:  UPDATE mst.rkf SET
+	rkf_fungsilain = jsonb_set( rkf_fungsilain, '{unitKerja}', array_to_json(
+		array_remove( ARRAY(
+			SELECT json_array_elements_text( COALESCE( rkf_fungsilain::json->'unitKerja', '[]' ) )
+		), '001PPB' )
+	)::jsonb )
+	WHERE id = 169
+	RETURNING *
+2019-11-08 13:22:14.626 WIB [47] ERROR:  path element at position 1 is not an integer: "unitKerja"
+2019-11-08 13:22:14.626 WIB [47] STATEMENT:  UPDATE mst.rkf SET
+	rkf_fungsilain = jsonb_set( rkf_fungsilain, '{unitKerja}', array_to_json(
+		array_remove( ARRAY(
+			SELECT json_array_elements_text( COALESCE( rkf_fungsilain::json->'unitKerja', '[]' ) )
+		), '001PPB' )
+	)::jsonb )
+	WHERE rkf_id = 169
+	RETURNING *
+2019-11-08 13:28:43.849 WIB [47] ERROR:  operator does not exist: text = integer at character 135
+2019-11-08 13:28:43.849 WIB [47] HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+2019-11-08 13:28:43.849 WIB [47] STATEMENT:  select elem, position
+	from mst.rkf, jsonb_array_elements(rkf_fungsilain) with ordinality arr(elem, position)
+	where elem->>'unitKerja' = 169
+2019-11-08 13:31:10.112 WIB [47] ERROR:  column "value" does not exist at character 8
+2019-11-08 13:31:10.112 WIB [47] STATEMENT:  select value #- array[ (position- 1)::text] new_value
+	from mst.rkf, jsonb_array_elements(rkf_fungsilain) with ordinality arr(elem, position)
+	where elem->>'unitKerja' = '001PPB'
+	and rkf_id = 169
+2019-11-08 13:48:34.811 WIB [47] ERROR:  function mst.support_fungsi_lain(integer, unknown, integer) does not exist at character 8
+2019-11-08 13:48:34.811 WIB [47] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2019-11-08 13:48:34.811 WIB [47] STATEMENT:  SELECT mst.support_fungsi_lain (169, '001PPB', 2866) AS rkf_id_new
+2019-11-08 13:49:15.078 WIB [47] ERROR:  column "rkf_map_divisi_from" of relation "rkf_map" does not exist at character 26
+2019-11-08 13:49:15.078 WIB [47] QUERY:  INSERT INTO mst.rkf_map (rkf_map_divisi_from, rkf_map_divisi_to, rkf_map_id_from, rkf_map_id_to) 
+	      VALUES (dari.rkf_user_from, p_divisi_to, p_rkf_id_from, rkf_id_baru)
+2019-11-08 13:49:15.078 WIB [47] CONTEXT:  PL/pgSQL function support_fungsi_lain(integer,text,text) line 33 at SQL statement
+2019-11-08 13:49:15.078 WIB [47] STATEMENT:  SELECT mst.support_fungsi_lain (169, '001PPB', '2866') AS rkf_id_new
+2019-11-09 15:37:29.638 WIB [31] LOG:  stats_timestamp 2019-11-09 15:37:29.643698+07 is later than collector's time 2019-11-09 15:37:29.634664+07 for database 13088

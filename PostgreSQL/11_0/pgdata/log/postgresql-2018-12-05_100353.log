@@ -1,0 +1,5 @@
+2018-12-05 10:06:55.151 WIB [31] ERROR:  syntax error at or near "rekening_kode" at character 65
+2018-12-05 10:06:55.151 WIB [31] STATEMENT:  select * from mst.rekening 
+	group by rekening_kode
+	having count rekening_kode > 1
+2018-12-06 12:19:22.334 WIB [25] LOG:  stats_timestamp 2018-12-06 12:19:22.343501+07 is later than collector's time 2018-12-06 12:19:22.333989+07 for database 16385
